@@ -1,5 +1,5 @@
 ﻿using AirtableApiClient;
-using static Faculti.Security.PasswordChecker;
+using static Faculti.Security.PasswordCheck;
 
 namespace Faculti
 {
@@ -65,6 +65,6 @@ namespace Faculti
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
             return IsPasswordCorrect(_email, _passwordInHash, records);
-        }
+        } //master
     }
 }

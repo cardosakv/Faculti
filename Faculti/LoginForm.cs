@@ -4,12 +4,9 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Faculti.Misc.ControlInteractives;
-using static Faculti.Misc.FormAnimation;
-using static Faculti.Misc.SyntaxValidation;
-using static Faculti.Security.PasswordChecker;
-using static Faculti.Security.PasswordEncryption;
-using static Faculti.Validation.EmailVerification;
+using Faculti.Misc;
+using Faculti.Security;
+using Faculti.Validation;
 
 namespace Faculti
 {
@@ -30,12 +27,12 @@ namespace Faculti
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            FadeIn(this);
+            FormAnimation.FadeIn(this);
 
             ParentRadioButton.Checked = false;
             TeacherRadioButton.Checked = false;
-            SetLabelHover(ForgotPasswordLinkLabel);
-            SetLabelHover(SignupLinkLabel);
+            ControlInteractives.SetLabelHover(ForgotPasswordLinkLabel);
+            ControlInteractives.SetLabelHover(SignupLinkLabel);
         }
 
         private void ParentRadioButton_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
@@ -75,7 +72,7 @@ namespace Faculti
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (IsValidEmail(EmailTextBox.Text))
+            if (Syntax.IsValidEmail(EmailTextBox.Text))
             {
                 IncorrectEmailTooltip.Visible = false;
             }
@@ -93,7 +90,7 @@ namespace Faculti
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (IsValidPassword(PasswordTextBox.Text) || PasswordTextBox.Text == String.Empty)
+            if (Syntax.IsValidPassword(PasswordTextBox.Text) || PasswordTextBox.Text == String.Empty)
             {
                 IncorrectPasswordTooltip.Visible = false;
             }
@@ -142,15 +139,15 @@ namespace Faculti
 
             // Textboxes' values saved into class if required inputs are entered and are valid.
             // Input password encrypted and credentials are checked if present in the database.
-            if (IsValidPassword(PasswordTextBox.Text) &&
-                IsValidEmail(EmailTextBox.Text) &&
+            if (Syntax.IsValidPassword(PasswordTextBox.Text) &&
+                Syntax.IsValidEmail(EmailTextBox.Text) &&
                 _userType != String.Empty)
             {
                 User sessionUser = new User
                 {
                     Type = _userType,
                     Email = EmailTextBox.Text,
-                    PasswordInHash = EncryptPlainTextToCipherText(PasswordTextBox.Text)
+                    PasswordInHash = Encryption.EncryptPlainTextToCipherText(PasswordTextBox.Text)
                 };
 
                 AirtableHelper databaseHelper = new AirtableHelper();
@@ -167,8 +164,8 @@ namespace Faculti
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (!IsPasswordCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
-                          IsEmailRegistered(sessionUser.Email, records))
+                else if (!PasswordCheck.IsPasswordCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
+                          Email.IsEmailRegistered(sessionUser.Email, records))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;
@@ -208,7 +205,7 @@ namespace Faculti
 
         private void CloseButton_Click(object sender, EventArgs e)
         {
-            FadeOut(this);
+            FormAnimation.FadeOut(this);
             Application.Exit();
         }
 

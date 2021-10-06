@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 
 namespace Faculti.Misc
 {
-    internal class SyntaxValidation
+    internal class Syntax
     {
         public static bool IsValidMobileNumber(string inputMobileNumber)
         {

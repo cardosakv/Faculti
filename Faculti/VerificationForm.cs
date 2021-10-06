@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Faculti.Validation.EmailVerification;
+using static Faculti.Validation.Email;
 using static Faculti.Misc.FormAnimation;
 
 namespace Faculti

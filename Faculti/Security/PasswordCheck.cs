@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Faculti.Security
 {
-    internal class PasswordChecker
+    internal class PasswordCheck
     {
         public static bool IsPasswordCorrect(string email, string passwordInHash, AirtableRecord[] records)
         {

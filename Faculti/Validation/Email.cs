@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Faculti.Validation
 {
-    internal class EmailVerification
+    internal class Email
     {
         public static void SendEmailVerificationCode(string recepientEmail, int code)
         {

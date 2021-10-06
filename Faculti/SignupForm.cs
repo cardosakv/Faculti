@@ -6,9 +6,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Faculti.Validation.EmailVerification;
-using static Faculti.Misc.SyntaxValidation;
-using static Faculti.Security.PasswordEncryption;
+using static Faculti.Validation.Email;
+using static Faculti.Misc.Syntax;
+using static Faculti.Security.Encryption;
 using static Faculti.Misc.FormAnimation;
 
 namespace Faculti

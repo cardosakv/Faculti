@@ -175,6 +175,7 @@
     <Compile Include="ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\SessionUser.cs" />
     <Compile Include="TeacherHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,17 +204,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Security\PasswordChecker.cs" />
+    <Compile Include="Security\PasswordCheck.cs" />
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Validation\EmailVerification.cs" />
+    <Compile Include="Validation\Email.cs" />
     <Compile Include="Misc\InternetChecker.cs" />
-    <Compile Include="Validation\SyntaxValidation.cs" />
-    <Compile Include="Security\PasswordEncryption.cs" />
+    <Compile Include="Validation\Syntax.cs" />
+    <Compile Include="Security\Encryption.cs" />
     <Compile Include="NoInternetFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>

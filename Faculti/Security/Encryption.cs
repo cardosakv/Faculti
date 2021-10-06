@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Faculti.Security
 {
-    class PasswordEncryption
+    class Encryption
     {
         private const string SecurityKey = "992fbd43528da0e45687230ff8acd9ed8ade0125";
 

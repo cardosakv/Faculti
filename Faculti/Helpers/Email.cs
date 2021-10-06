@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Net.Mail;
 using System.Windows.Forms;
 
-namespace Faculti.Validation
+namespace Faculti.Helpers
 {
     internal class Email
     {
-        public static void SendEmailVerificationCode(string recepientEmail, int code)
+        public static void SendVerificationCode(string recepientEmail, int code)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace Faculti.Validation
             }
         }
 
-        public static bool IsEmailRegistered(string email, AirtableRecord[] records)
+        public static bool IsPresentInDatabase(string email, AirtableRecord[] records)
         {
             for (int recordNum = 0; recordNum < records.Length; recordNum++)
             {

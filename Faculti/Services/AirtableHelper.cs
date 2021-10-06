@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AirtableApiClient;
 
-namespace Faculti.Database
+namespace Faculti.Services
 {
     internal class AirtableHelper
     {

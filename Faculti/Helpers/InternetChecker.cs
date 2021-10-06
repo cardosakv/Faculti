@@ -5,7 +5,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Faculti.Misc
+namespace Faculti.UI
 {
     class InternetChecker
     {

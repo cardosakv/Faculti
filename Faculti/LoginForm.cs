@@ -1,12 +1,12 @@
 ﻿using Bunifu.UI.WinForms;
-using Faculti.Database;
+using Faculti.Services;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Faculti.Misc;
-using Faculti.Security;
-using Faculti.Validation;
+using Faculti.UI;
+using Faculti.Helpers;
+using Faculti.Helpers;
 
 namespace Faculti
 {
@@ -147,7 +147,7 @@ namespace Faculti
                 {
                     Type = _userType,
                     Email = EmailTextBox.Text,
-                    PasswordInHash = Encryption.EncryptPlainTextToCipherText(PasswordTextBox.Text)
+                    PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
                 AirtableHelper databaseHelper = new AirtableHelper();
@@ -165,7 +165,7 @@ namespace Faculti
                     _timer.Tick += Timer_Tick;
                 }
                 else if (!PasswordCheck.IsPasswordCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
-                          Email.IsEmailRegistered(sessionUser.Email, records))
+                          Email.IsPresentInDatabase(sessionUser.Email, records))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;

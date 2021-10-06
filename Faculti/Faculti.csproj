@@ -168,14 +168,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\AirtableHelper.cs" />
+    <Compile Include="Services\AirtableHelper.cs" />
     <Compile Include="ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\SessionUser.cs" />
+    <Compile Include="DataClasses\SessionUser.cs" />
     <Compile Include="TeacherHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,27 +194,27 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\ControlInteractives.cs" />
-    <Compile Include="Misc\FormAnimation.cs" />
-    <Compile Include="Model\Parent.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\Teacher.cs" />
+    <Compile Include="UI\ControlInteractives.cs" />
+    <Compile Include="UI\FormAnimation.cs" />
+    <Compile Include="DataClasses\Parent.cs" />
+    <Compile Include="DataClasses\User.cs" />
+    <Compile Include="DataClasses\Teacher.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Security\PasswordCheck.cs" />
+    <Compile Include="Helpers\PasswordCheck.cs" />
     <Compile Include="SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Validation\Email.cs" />
-    <Compile Include="Misc\InternetChecker.cs" />
-    <Compile Include="Validation\Syntax.cs" />
-    <Compile Include="Security\Encryption.cs" />
+    <Compile Include="Helpers\Email.cs" />
+    <Compile Include="Helpers\InternetChecker.cs" />
+    <Compile Include="Helpers\Syntax.cs" />
+    <Compile Include="Helpers\Password.cs" />
     <Compile Include="NoInternetFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,9 +288,7 @@
   <ItemGroup>
     <None Include="Resources\logo-white.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Cards\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\lockup-white.png" />
   </ItemGroup>

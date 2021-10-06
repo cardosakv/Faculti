@@ -1,15 +1,15 @@
 ﻿using AirtableApiClient;
 using Bunifu.UI.WinForms;
-using Faculti.Database;
+using Faculti.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Faculti.Validation.Email;
-using static Faculti.Misc.Syntax;
-using static Faculti.Security.Encryption;
-using static Faculti.Misc.FormAnimation;
+using static Faculti.Helpers.Email;
+using static Faculti.UI.Syntax;
+using static Faculti.Helpers.Password;
+using static Faculti.UI.FormAnimation;
 
 namespace Faculti
 {
@@ -287,7 +287,7 @@ namespace Faculti
                 Cursor = Cursors.AppStarting;
                 Fields fields = new Fields();
                 fields.AddField("Email", email);
-                fields.AddField("Password", EncryptPlainTextToCipherText(password));
+                fields.AddField("Password", Encrypt(password));
                 fields.AddField("First Name", firstName);
                 fields.AddField("Last Name", lastName);
                 fields.AddField("Phone Number", phoneNumber);
@@ -299,7 +299,7 @@ namespace Faculti
                 Random rnd = new Random();
                 int verificationCode = rnd.Next(1000, 9999);
 
-                SendEmailVerificationCode(email, verificationCode);
+                SendVerificationCode(email, verificationCode);
 
                 VerificationForm verificationForm = new VerificationForm();
                 verificationForm.FormClosed += new FormClosedEventHandler(VerificationForm_FormClosed);

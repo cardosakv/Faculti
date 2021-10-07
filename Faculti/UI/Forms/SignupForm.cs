@@ -1,15 +1,13 @@
 ﻿using AirtableApiClient;
 using Bunifu.UI.WinForms;
-using Faculti.Database;
+using Faculti.Services;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static Faculti.Validation.Email;
-using static Faculti.Misc.Syntax;
-using static Faculti.Security.Encryption;
-using static Faculti.Misc.FormAnimation;
+using Faculti.Helpers;
+using Faculti.UI;
 
 namespace Faculti
 {
@@ -27,7 +25,7 @@ namespace Faculti
 
         private void LoginSignupForm_Load(object sender, EventArgs e)
         {
-            FadeIn(this);
+            FormAnimation.FadeIn(this);
 
             TeacherRadioButton.Checked = false;
             ParentRadioButton.Checked = false;
@@ -69,7 +67,7 @@ namespace Faculti
 
         private void PhoneNumberTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (IsValidMobileNumber(PhoneNumberTextBox.Text))
+            if (Syntax.IsValidMobileNumber(PhoneNumberTextBox.Text))
             {
                 PhoneTooltip.Visible = false;
                 phoneNumber = PhoneNumberTextBox.Text;
@@ -82,7 +80,7 @@ namespace Faculti
 
         private void EmailTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (IsValidEmail(EmailTextBox.Text))
+            if (Syntax.IsValidEmail(EmailTextBox.Text))
             {
                 EmailTooltip.Visible = false;
             }
@@ -95,7 +93,7 @@ namespace Faculti
 
         private void PasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (IsValidPassword(PasswordTextBox.Text))
+            if (Syntax.IsValidPassword(PasswordTextBox.Text))
             {
                 PasswordTooltip.Visible = false;
             }
@@ -107,12 +105,12 @@ namespace Faculti
 
         private void ConfirmPasswordTextBox_TextChanged(object sender, EventArgs e)
         {
-            if (ConfirmPasswordTextBox.Text != PasswordTextBox.Text || !IsValidPassword(PasswordTextBox.Text))
+            if (ConfirmPasswordTextBox.Text != PasswordTextBox.Text || !Syntax.IsValidPassword(PasswordTextBox.Text))
             {
                 isPasswordMatched = false;
                 ConfirmPasswordTooltip.Visible = true;
             }
-            else if (ConfirmPasswordTextBox.Text == PasswordTextBox.Text && IsValidPassword(PasswordTextBox.Text))
+            else if (ConfirmPasswordTextBox.Text == PasswordTextBox.Text && Syntax.IsValidPassword(PasswordTextBox.Text))
             {
                 isPasswordMatched = true;
                 ConfirmPasswordTooltip.Visible = false;
@@ -204,7 +202,7 @@ namespace Faculti
                 LastNameTooltip.Visible = false;
             }
 
-            if (!IsValidMobileNumber(PhoneNumberTextBox.Text))
+            if (!Syntax.IsValidMobileNumber(PhoneNumberTextBox.Text))
             {
                 errorCounter++;
                 PhoneTooltip.Visible = true;
@@ -214,18 +212,17 @@ namespace Faculti
                 PhoneTooltip.Visible = false;
             }
 
-            if (!IsValidEmail(email))
+            if (!Syntax.IsValidEmail(email))
             {
                 errorCounter++;
                 EmailTooltip.Visible = true;
             }
-            else if (IsValidEmail(email))
+            else if (Syntax.IsValidEmail(email))
             {
                 bool emailPresent = false;
 
-                AirtableHelper databaseHelper = new AirtableHelper();
-                AirtableListRecordsResponse response = await databaseHelper.ListRecords(userType);
-                var recordsArr = response.Records.ToArray();
+                AirtableClient airtableClient = new AirtableClient();
+                var recordsArr = await airtableClient.ListRecords(userType);
 
                 for (int recordNum = 0; recordNum < recordsArr.Length; recordNum++)
                 {
@@ -287,19 +284,19 @@ namespace Faculti
                 Cursor = Cursors.AppStarting;
                 Fields fields = new Fields();
                 fields.AddField("Email", email);
-                fields.AddField("Password", EncryptPlainTextToCipherText(password));
+                fields.AddField("Password", Password.Encrypt(password));
                 fields.AddField("First Name", firstName);
                 fields.AddField("Last Name", lastName);
                 fields.AddField("Phone Number", phoneNumber);
 
-                AirtableHelper helper = new AirtableHelper();
+                AirtableClient helper = new AirtableClient();
                 helper.CreateRecord(userType, fields);
 
                 // generate a random code for verification
                 Random rnd = new Random();
                 int verificationCode = rnd.Next(1000, 9999);
 
-                SendEmailVerificationCode(email, verificationCode);
+                Email.SendVerificationCode(email, verificationCode);
 
                 VerificationForm verificationForm = new VerificationForm();
                 verificationForm.FormClosed += new FormClosedEventHandler(VerificationForm_FormClosed);

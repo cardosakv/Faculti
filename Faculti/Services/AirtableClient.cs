@@ -5,18 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 using AirtableApiClient;
 
-namespace Faculti.Database
+namespace Faculti.Services
 {
-    internal class AirtableHelper
+    internal class AirtableClient
     {
         #region Secret
 
-        public string API_KEY = "keymjNiDiGUwVrc1l";
-        public string BASE_ID = "appozkjZ9cVIYBfRB";
+        public const string API_KEY = "keymjNiDiGUwVrc1l";
+        public const string BASE_ID = "appozkjZ9cVIYBfRB";
 
         #endregion Secret
 
-        public async Task<AirtableListRecordsResponse> ListRecords(
+        private readonly AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID);
+
+        public async Task<AirtableRecord[]> ListRecords(
            string tableName,
            string offset = null,
            IEnumerable<string> fields = null,
@@ -26,7 +28,7 @@ namespace Faculti.Database
            IEnumerable<Sort> sort = null,
            string view = null)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableListRecordsResponse> task = airtableBase.ListRecords(
                     tableName,
@@ -39,13 +41,13 @@ namespace Faculti.Database
                     view);
 
                 var response = await task;
-                return response;
+                return response.Records.ToArray();
             }
         }
 
         public async Task<AirtableRecord> RetrieveRecord(string tableName, string id)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableRetrieveRecordResponse> task = airtableBase.RetrieveRecord(tableName, id);
 
@@ -56,7 +58,7 @@ namespace Faculti.Database
 
         public async void CreateRecord(string tableName, Fields fields, bool typecast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceRecordResponse> task = airtableBase.CreateRecord(
                     tableName,
@@ -69,7 +71,7 @@ namespace Faculti.Database
 
         public async void UpdateRecord(string tableName, Fields fields, string id, bool typeCast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceRecordResponse> task = airtableBase.UpdateRecord(
                     tableName,
@@ -83,7 +85,7 @@ namespace Faculti.Database
 
         public async void ReplaceRecord(string tableName, Fields fields, string id, bool typeCast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceRecordResponse> task = airtableBase.ReplaceRecord(
                     tableName,
@@ -97,7 +99,7 @@ namespace Faculti.Database
 
         public async void DeleteRecord(string tableName, string id)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableDeleteRecordResponse> task = airtableBase.DeleteRecord(tableName, id);
                 var response = await task;
@@ -106,7 +108,7 @@ namespace Faculti.Database
 
         public async void CreateMultipleRecords(string tableName, Fields[] fields, bool typeCast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceMultipleRecordsResponse> task = airtableBase.CreateMultipleRecords(
                     tableName,
@@ -119,7 +121,7 @@ namespace Faculti.Database
 
         public async void UpdateMultipleRecords(string tableName, IdFields[] idFields, bool typeCast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceMultipleRecordsResponse> task = airtableBase.UpdateMultipleRecords(
                     tableName,
@@ -132,7 +134,7 @@ namespace Faculti.Database
 
         public async void ReplaceMultipleRecords(string tableName, IdFields[] idFields, bool typeCast = false)
         {
-            using (AirtableBase airtableBase = new AirtableBase(API_KEY, BASE_ID))
+            using (airtableBase)
             {
                 Task<AirtableCreateUpdateReplaceMultipleRecordsResponse> task = airtableBase.ReplaceMultipleRecords(
                     tableName,

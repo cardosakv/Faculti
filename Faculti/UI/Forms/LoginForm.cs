@@ -1,12 +1,11 @@
 ﻿using Bunifu.UI.WinForms;
-using Faculti.Database;
+using Faculti.Services;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Faculti.Misc;
-using Faculti.Security;
-using Faculti.Validation;
+using Faculti.UI;
+using Faculti.Helpers;
 
 namespace Faculti
 {
@@ -31,8 +30,8 @@ namespace Faculti
 
             ParentRadioButton.Checked = false;
             TeacherRadioButton.Checked = false;
-            ControlInteractives.SetLabelHover(ForgotPasswordLinkLabel);
-            ControlInteractives.SetLabelHover(SignupLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(ForgotPasswordLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(SignupLinkLabel);
         }
 
         private void ParentRadioButton_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
@@ -147,12 +146,11 @@ namespace Faculti
                 {
                     Type = _userType,
                     Email = EmailTextBox.Text,
-                    PasswordInHash = Encryption.EncryptPlainTextToCipherText(PasswordTextBox.Text)
+                    PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
-                AirtableHelper databaseHelper = new AirtableHelper();
-                var response = await databaseHelper.ListRecords(_userType);
-                var records = response.Records.ToArray();
+                AirtableClient airtableClient = new AirtableClient();
+                var records = await airtableClient.ListRecords(_userType);
 
                 if (sessionUser.DoesExistInDatabase(records))
                 {
@@ -164,8 +162,8 @@ namespace Faculti
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (!PasswordCheck.IsPasswordCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
-                          Email.IsEmailRegistered(sessionUser.Email, records))
+                else if (!Password.IsCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
+                          Email.IsPresentInDatabase(sessionUser.Email, records))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;

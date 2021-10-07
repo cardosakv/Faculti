@@ -1,12 +1,15 @@
 ﻿using System.Windows.Forms;
 
-namespace Faculti.Misc
+namespace Faculti.UI
 {
     /// <summary>
-    /// Adds a fade-in and fade-out animation on forms.
+    ///     Contains simple fade-in and fade-out animation on forms.
     /// </summary>
     internal class FormAnimation
     {
+        /// <summary>
+        ///     Adds a fade-in transition animation on forms.
+        /// </summary>
         public static void FadeIn(Form form)
         {
             form.Opacity = 0;
@@ -20,6 +23,9 @@ namespace Faculti.Misc
             };
         }
 
+        /// <summary>
+        ///     Adds a fade-out transition animation on forms.
+        /// </summary>
         public static void FadeOut(Form form)
         {
             Timer fadeOutTimer = new Timer { Interval = 30 };

@@ -62,27 +62,31 @@ namespace Faculti
             this.NotificationButton = new System.Windows.Forms.PictureBox();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.Pages = new Bunifu.UI.WinForms.BunifuPages();
+            this.HomePage = new System.Windows.Forms.TabPage();
+            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NewsPage = new System.Windows.Forms.TabPage();
+            this.GradesPage = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ChatPage = new System.Windows.Forms.TabPage();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CalendarPage = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.CalendarPage = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.ChatPage = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.GradesPage = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.NewsPage = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.HomePage = new System.Windows.Forms.TabPage();
-            this.Pages = new Bunifu.UI.WinForms.BunifuPages();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -91,16 +95,17 @@ namespace Faculti
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            this.CalendarPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.ChatPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Pages.SuspendLayout();
+            this.HomePage.SuspendLayout();
+            this.NewsPage.SuspendLayout();
             this.GradesPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.NewsPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.HomePage.SuspendLayout();
-            this.Pages.SuspendLayout();
+            this.ChatPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.CalendarPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // ParentHomeFormEllipse
@@ -873,6 +878,234 @@ namespace Faculti
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // Pages
+            // 
+            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Pages.AllowTransitions = false;
+            this.Pages.Controls.Add(this.HomePage);
+            this.Pages.Controls.Add(this.NewsPage);
+            this.Pages.Controls.Add(this.GradesPage);
+            this.Pages.Controls.Add(this.ChatPage);
+            this.Pages.Controls.Add(this.CalendarPage);
+            this.Pages.Location = new System.Drawing.Point(3, 60);
+            this.Pages.Multiline = true;
+            this.Pages.Name = "Pages";
+            this.Pages.Page = this.NewsPage;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "NewsPage";
+            this.Pages.PageTitle = "NewsPage";
+            this.Pages.SelectedIndex = 0;
+            this.Pages.Size = new System.Drawing.Size(856, 645);
+            this.Pages.TabIndex = 4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.Pages.Transition = animation1;
+            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
+            // 
+            // HomePage
+            // 
+            this.HomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(250)))));
+            this.HomePage.Controls.Add(this.bunifuPanel3);
+            this.HomePage.Controls.Add(this.bunifuPanel5);
+            this.HomePage.Controls.Add(this.bunifuPanel2);
+            this.HomePage.Controls.Add(this.label6);
+            this.HomePage.Controls.Add(this.label1);
+            this.HomePage.Location = new System.Drawing.Point(4, 4);
+            this.HomePage.Name = "HomePage";
+            this.HomePage.Padding = new System.Windows.Forms.Padding(3);
+            this.HomePage.Size = new System.Drawing.Size(848, 619);
+            this.HomePage.TabIndex = 0;
+            this.HomePage.Text = "HomePage";
+            // 
+            // bunifuPanel3
+            // 
+            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
+            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel3.BorderRadius = 10;
+            this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Location = new System.Drawing.Point(575, 87);
+            this.bunifuPanel3.Name = "bunifuPanel3";
+            this.bunifuPanel3.ShowBorders = false;
+            this.bunifuPanel3.Size = new System.Drawing.Size(260, 138);
+            this.bunifuPanel3.TabIndex = 16;
+            // 
+            // bunifuPanel5
+            // 
+            this.bunifuPanel5.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel5.BackgroundImage")));
+            this.bunifuPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel5.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel5.BorderRadius = 10;
+            this.bunifuPanel5.BorderThickness = 1;
+            this.bunifuPanel5.Location = new System.Drawing.Point(297, 87);
+            this.bunifuPanel5.Name = "bunifuPanel5";
+            this.bunifuPanel5.ShowBorders = false;
+            this.bunifuPanel5.Size = new System.Drawing.Size(260, 138);
+            this.bunifuPanel5.TabIndex = 16;
+            // 
+            // bunifuPanel2
+            // 
+            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
+            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
+            this.bunifuPanel2.BorderRadius = 10;
+            this.bunifuPanel2.BorderThickness = 1;
+            this.bunifuPanel2.Location = new System.Drawing.Point(19, 87);
+            this.bunifuPanel2.Name = "bunifuPanel2";
+            this.bunifuPanel2.ShowBorders = false;
+            this.bunifuPanel2.Size = new System.Drawing.Size(260, 138);
+            this.bunifuPanel2.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label6.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(166)))), ((int)(((byte)(175)))));
+            this.label6.Location = new System.Drawing.Point(18, 42);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(250, 12);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Here\'s the latest updates regarding your child";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(334, 34);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Good afternoon, Mrs. Tamad";
+            // 
+            // NewsPage
+            // 
+            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(250)))));
+            this.NewsPage.Controls.Add(this.panel6);
+            this.NewsPage.Controls.Add(this.panel4);
+            this.NewsPage.Controls.Add(this.panel3);
+            this.NewsPage.Controls.Add(this.panel2);
+            this.NewsPage.Location = new System.Drawing.Point(4, 4);
+            this.NewsPage.Name = "NewsPage";
+            this.NewsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NewsPage.Size = new System.Drawing.Size(848, 619);
+            this.NewsPage.TabIndex = 1;
+            this.NewsPage.Text = "NewsPage";
+            // 
+            // GradesPage
+            // 
+            this.GradesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
+            this.GradesPage.Controls.Add(this.pictureBox2);
+            this.GradesPage.Controls.Add(this.label3);
+            this.GradesPage.Location = new System.Drawing.Point(4, 4);
+            this.GradesPage.Name = "GradesPage";
+            this.GradesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.GradesPage.Size = new System.Drawing.Size(848, 619);
+            this.GradesPage.TabIndex = 2;
+            this.GradesPage.Text = "GradesPage";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Faculti.Properties.Resources._6ac47bf13994a07cdaf1a2345985543fcat_cries_with_gun_to_head;
+            this.pictureBox2.Location = new System.Drawing.Point(92, 49);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(709, 466);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(364, 529);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 31);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Grades";
+            // 
+            // ChatPage
+            // 
+            this.ChatPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
+            this.ChatPage.Controls.Add(this.pictureBox3);
+            this.ChatPage.Controls.Add(this.label4);
+            this.ChatPage.Location = new System.Drawing.Point(4, 4);
+            this.ChatPage.Name = "ChatPage";
+            this.ChatPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ChatPage.Size = new System.Drawing.Size(848, 619);
+            this.ChatPage.TabIndex = 3;
+            this.ChatPage.Text = "ChatPage";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Faculti.Properties.Resources._889f071a5ea4d14e457ccb4efb455c2c;
+            this.pictureBox3.Location = new System.Drawing.Point(95, 6);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(652, 539);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(389, 563);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Chat";
+            // 
+            // CalendarPage
+            // 
+            this.CalendarPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
+            this.CalendarPage.Controls.Add(this.pictureBox4);
+            this.CalendarPage.Controls.Add(this.label5);
+            this.CalendarPage.Location = new System.Drawing.Point(4, 4);
+            this.CalendarPage.Name = "CalendarPage";
+            this.CalendarPage.Padding = new System.Windows.Forms.Padding(3);
+            this.CalendarPage.Size = new System.Drawing.Size(848, 619);
+            this.CalendarPage.TabIndex = 4;
+            this.CalendarPage.Text = "CalendarPage";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Faculti.Properties.Resources.D5_sl6eW4AEl8Js;
+            this.pictureBox4.Location = new System.Drawing.Point(112, 24);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(648, 494);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(364, 521);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 31);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Calendar";
+            // 
             // CloseButton
             // 
             this.CloseButton.ActiveImage = null;
@@ -945,251 +1178,55 @@ namespace Faculti
             this.MinimizeButton.ZoomSpeed = 10;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
-            // CalendarPage
+            // panel2
             // 
-            this.CalendarPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.CalendarPage.Controls.Add(this.pictureBox4);
-            this.CalendarPage.Controls.Add(this.label5);
-            this.CalendarPage.Location = new System.Drawing.Point(4, 4);
-            this.CalendarPage.Name = "CalendarPage";
-            this.CalendarPage.Padding = new System.Windows.Forms.Padding(3);
-            this.CalendarPage.Size = new System.Drawing.Size(848, 619);
-            this.CalendarPage.TabIndex = 4;
-            this.CalendarPage.Text = "CalendarPage";
+            this.panel2.BackColor = System.Drawing.Color.Aqua;
+            this.panel2.Location = new System.Drawing.Point(30, 274);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(791, 327);
+            this.panel2.TabIndex = 2;
             // 
-            // label5
+            // panel3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(364, 521);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 31);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Calendar";
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel3.Location = new System.Drawing.Point(30, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(245, 206);
+            this.panel3.TabIndex = 3;
             // 
-            // pictureBox4
+            // panel4
             // 
-            this.pictureBox4.Image = global::Faculti.Properties.Resources.D5_sl6eW4AEl8Js;
-            this.pictureBox4.Location = new System.Drawing.Point(112, 24);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(648, 494);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Location = new System.Drawing.Point(316, 37);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(204, 206);
+            this.panel4.TabIndex = 4;
             // 
-            // ChatPage
+            // panel5
             // 
-            this.ChatPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.ChatPage.Controls.Add(this.pictureBox3);
-            this.ChatPage.Controls.Add(this.label4);
-            this.ChatPage.Location = new System.Drawing.Point(4, 4);
-            this.ChatPage.Name = "ChatPage";
-            this.ChatPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ChatPage.Size = new System.Drawing.Size(848, 619);
-            this.ChatPage.TabIndex = 3;
-            this.ChatPage.Text = "ChatPage";
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel5.Location = new System.Drawing.Point(224, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(287, 206);
+            this.panel5.TabIndex = 5;
             // 
-            // label4
+            // panel6
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(389, 563);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 31);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Chat";
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Location = new System.Drawing.Point(574, 37);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(227, 206);
+            this.panel6.TabIndex = 6;
             // 
-            // pictureBox3
+            // panel7
             // 
-            this.pictureBox3.Image = global::Faculti.Properties.Resources._889f071a5ea4d14e457ccb4efb455c2c;
-            this.pictureBox3.Location = new System.Drawing.Point(95, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(652, 539);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // GradesPage
-            // 
-            this.GradesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.GradesPage.Controls.Add(this.pictureBox2);
-            this.GradesPage.Controls.Add(this.label3);
-            this.GradesPage.Location = new System.Drawing.Point(4, 4);
-            this.GradesPage.Name = "GradesPage";
-            this.GradesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.GradesPage.Size = new System.Drawing.Size(848, 619);
-            this.GradesPage.TabIndex = 2;
-            this.GradesPage.Text = "GradesPage";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(364, 529);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Grades";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Faculti.Properties.Resources._6ac47bf13994a07cdaf1a2345985543fcat_cries_with_gun_to_head;
-            this.pictureBox2.Location = new System.Drawing.Point(92, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(709, 466);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // NewsPage
-            // 
-            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(250)))));
-            this.NewsPage.Controls.Add(this.pictureBox1);
-            this.NewsPage.Controls.Add(this.label2);
-            this.NewsPage.Location = new System.Drawing.Point(4, 4);
-            this.NewsPage.Name = "NewsPage";
-            this.NewsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NewsPage.Size = new System.Drawing.Size(848, 619);
-            this.NewsPage.TabIndex = 1;
-            this.NewsPage.Text = "NewsPage";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(388, 519);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "News";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Faculti.Properties.Resources._6b92835acb70da7f8c86b86b981eedf8;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(684, 457);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // HomePage
-            // 
-            this.HomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(250)))));
-            this.HomePage.Controls.Add(this.bunifuPanel3);
-            this.HomePage.Controls.Add(this.bunifuPanel5);
-            this.HomePage.Controls.Add(this.bunifuPanel2);
-            this.HomePage.Controls.Add(this.label6);
-            this.HomePage.Controls.Add(this.label1);
-            this.HomePage.Location = new System.Drawing.Point(4, 4);
-            this.HomePage.Name = "HomePage";
-            this.HomePage.Padding = new System.Windows.Forms.Padding(3);
-            this.HomePage.Size = new System.Drawing.Size(848, 619);
-            this.HomePage.TabIndex = 0;
-            this.HomePage.Text = "HomePage";
-            // 
-            // Pages
-            // 
-            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Pages.AllowTransitions = false;
-            this.Pages.Controls.Add(this.HomePage);
-            this.Pages.Controls.Add(this.NewsPage);
-            this.Pages.Controls.Add(this.GradesPage);
-            this.Pages.Controls.Add(this.ChatPage);
-            this.Pages.Controls.Add(this.CalendarPage);
-            this.Pages.Location = new System.Drawing.Point(3, 60);
-            this.Pages.Multiline = true;
-            this.Pages.Name = "Pages";
-            this.Pages.Page = this.HomePage;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "HomePage";
-            this.Pages.PageTitle = "HomePage";
-            this.Pages.SelectedIndex = 0;
-            this.Pages.Size = new System.Drawing.Size(856, 645);
-            this.Pages.TabIndex = 4;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.Pages.Transition = animation1;
-            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
-            // 
-            // bunifuPanel2
-            // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 10;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Location = new System.Drawing.Point(19, 87);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = false;
-            this.bunifuPanel2.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.label1.Location = new System.Drawing.Point(12, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(334, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Good afternoon, Mrs. Tamad";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label6.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(166)))), ((int)(((byte)(175)))));
-            this.label6.Location = new System.Drawing.Point(18, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(250, 12);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Here\'s the latest updates regarding your child";
-            // 
-            // bunifuPanel5
-            // 
-            this.bunifuPanel5.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel5.BackgroundImage")));
-            this.bunifuPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel5.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel5.BorderRadius = 10;
-            this.bunifuPanel5.BorderThickness = 1;
-            this.bunifuPanel5.Location = new System.Drawing.Point(297, 87);
-            this.bunifuPanel5.Name = "bunifuPanel5";
-            this.bunifuPanel5.ShowBorders = false;
-            this.bunifuPanel5.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel5.TabIndex = 16;
-            // 
-            // bunifuPanel3
-            // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BorderRadius = 10;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Location = new System.Drawing.Point(575, 87);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = false;
-            this.bunifuPanel3.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel3.TabIndex = 16;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel7.Location = new System.Drawing.Point(224, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(287, 206);
+            this.panel7.TabIndex = 5;
             // 
             // ParentHomeForm
             // 
@@ -1215,21 +1252,21 @@ namespace Faculti
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            this.CalendarPage.ResumeLayout(false);
-            this.CalendarPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.ChatPage.ResumeLayout(false);
-            this.ChatPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Pages.ResumeLayout(false);
+            this.HomePage.ResumeLayout(false);
+            this.HomePage.PerformLayout();
+            this.NewsPage.ResumeLayout(false);
             this.GradesPage.ResumeLayout(false);
             this.GradesPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.NewsPage.ResumeLayout(false);
-            this.NewsPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.HomePage.ResumeLayout(false);
-            this.HomePage.PerformLayout();
-            this.Pages.ResumeLayout(false);
+            this.ChatPage.ResumeLayout(false);
+            this.ChatPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.CalendarPage.ResumeLayout(false);
+            this.CalendarPage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1259,8 +1296,6 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuPages Pages;
         private System.Windows.Forms.TabPage HomePage;
         private System.Windows.Forms.TabPage NewsPage;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage GradesPage;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
@@ -1275,5 +1310,11 @@ namespace Faculti
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

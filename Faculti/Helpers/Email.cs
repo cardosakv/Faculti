@@ -22,7 +22,7 @@ namespace Faculti.Helpers
         /// </param>
         public static void SendVerificationCode(string recepientEmail, int code)
         {
-            try
+            try /// edited
             {
                 MailMessage mail = new MailMessage();
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");

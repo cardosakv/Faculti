@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Faculti.UI.FormAnimation;
+using Faculti.UI;
 
 namespace Faculti
 {
@@ -20,7 +20,7 @@ namespace Faculti
 
         private void ForgotPasswordForm_Load(object sender, EventArgs e)
         {
-            FadeIn(this);
+            FormAnimation.FadeIn(this);
         }
 
         private void BackButton_Click(object sender, EventArgs e)

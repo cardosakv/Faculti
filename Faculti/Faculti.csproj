@@ -169,29 +169,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Services\AirtableHelper.cs" />
-    <Compile Include="ForgotPasswordForm.cs">
+    <Compile Include="UI\Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasswordForm.Designer.cs">
+    <Compile Include="UI\Forms\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataClasses\SessionUser.cs" />
-    <Compile Include="TeacherHomeForm.cs">
+    <Compile Include="UI\Forms\TeacherHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherHomeForm.Designer.cs">
+    <Compile Include="UI\Forms\TeacherHomeForm.Designer.cs">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParentHomeForm.cs">
+    <Compile Include="UI\Forms\ParentHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParentHomeForm.Designer.cs">
+    <Compile Include="UI\Forms\ParentHomeForm.Designer.cs">
       <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UI\Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="UI\Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ControlInteractives.cs" />
@@ -205,49 +205,49 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Helpers\PasswordCheck.cs" />
-    <Compile Include="SignupForm.cs">
+    <Compile Include="UI\Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignupForm.Designer.cs">
+    <Compile Include="UI\Forms\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Email.cs" />
     <Compile Include="Helpers\InternetChecker.cs" />
     <Compile Include="Helpers\Syntax.cs" />
     <Compile Include="Helpers\Password.cs" />
-    <Compile Include="NoInternetFoundForm.cs">
+    <Compile Include="UI\Forms\NoInternetFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NoInternetFoundForm.Designer.cs">
+    <Compile Include="UI\Forms\NoInternetFoundForm.Designer.cs">
       <DependentUpon>NoInternetFoundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SplashScreen.cs">
+    <Compile Include="UI\Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.cs">
+    <Compile Include="UI\Forms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerificationForm.cs">
+    <Compile Include="UI\Forms\VerificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerificationForm.Designer.cs">
+    <Compile Include="UI\Forms\VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ForgotPasswordForm.resx">
+    <EmbeddedResource Include="UI\Forms\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherHomeForm.resx">
+    <EmbeddedResource Include="UI\Forms\TeacherHomeForm.resx">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParentHomeForm.resx">
+    <EmbeddedResource Include="UI\Forms\ParentHomeForm.resx">
       <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="UI\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NoInternetFoundForm.resx">
+    <EmbeddedResource Include="UI\Forms\NoInternetFoundForm.resx">
       <DependentUpon>NoInternetFoundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -256,13 +256,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupForm.resx">
+    <EmbeddedResource Include="UI\Forms\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
+    <EmbeddedResource Include="UI\Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerificationForm.resx">
+    <EmbeddedResource Include="UI\Forms\VerificationForm.resx">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\Faculti.exe.config" />

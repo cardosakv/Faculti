@@ -9,9 +9,9 @@ namespace Faculti.UI
     internal class ControlInteractives
     {
         /// <summary>
-        ///     Sets the label fore color brighten when the control is hovered.
+        ///     Sets the label fore color brighter when the control is hovered.
         /// </summary>
-        public static void SetLabelHover(Label label)
+        public static void SetLabelHoverEvent(Label label)
         {
             Color labelColor = label.ForeColor;
             label.MouseHover += (o, i) => { label.ForeColor = ChangeBrightness(labelColor, 1.15); };
@@ -21,23 +21,24 @@ namespace Faculti.UI
         /// <summary>
         ///     Change the brightness of a color to a certain degree.
         /// </summary>
-        ///
+        /// 
         /// <param name="c">
         ///     Input Color object.
         /// </param>
         /// 
         /// <param name="factor">
-        ///     Intensity of the color to brighten or darken. 
-        ///         >1.0 = brighten
-        ///          1.0 = no effect
-        ///         <1.0 = darken
+        ///     Intensity of the color to brighten or darken.
         /// </param>
         /// 
         /// <returns>
         ///     Color object changed to a certain brightness by a factor.
-        /// </returns>
+        ///</returns>
         private static Color ChangeBrightness(Color c, double factor)
         {
+            // Values allowed for factor:
+            //      >1.0 = brighten
+            //       1.0 = no effect
+            //      <1.0 = darken
             int r = (int)(c.R * factor) > 255 ? 255 : (int)(c.R * factor);
             int g = (int)(c.G * factor) > 255 ? 255 : (int)(c.G * factor);
             int b = (int)(c.B * factor) > 255 ? 255 : (int)(c.B * factor);

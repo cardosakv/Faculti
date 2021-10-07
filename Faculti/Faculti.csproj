@@ -168,7 +168,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\AirtableHelper.cs" />
+    <Compile Include="Services\Airtable.cs" />
     <Compile Include="UI\Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,7 +204,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\PasswordCheck.cs" />
     <Compile Include="UI\Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,7 +211,7 @@
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\Email.cs" />
-    <Compile Include="Helpers\InternetChecker.cs" />
+    <Compile Include="Helpers\Internet.cs" />
     <Compile Include="Helpers\Syntax.cs" />
     <Compile Include="Helpers\Password.cs" />
     <Compile Include="UI\Forms\NoInternetFoundForm.cs">

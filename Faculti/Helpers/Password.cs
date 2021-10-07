@@ -5,6 +5,9 @@ using System.Text;
 
 namespace Faculti.Helpers
 {
+    /// <summary>
+    ///     Helper class for passwords.
+    /// </summary>
     internal class Password
     {
         #region Secret
@@ -13,6 +16,21 @@ namespace Faculti.Helpers
 
         #endregion Secret
 
+        /// <summary>
+        ///     Checks if input password is correct matching the email in the AirtableRecord array.
+        /// </summary>
+        /// 
+        /// <param name="email">
+        ///     Email address of the user.
+        /// </param>
+        /// 
+        /// <param name="passwordInHash">
+        ///     Password of the email to check.
+        /// </param>
+        /// 
+        /// <returns>
+        ///     Boolean value if password matched that in the database or not.
+        /// </returns>
         public static bool IsCorrect(string email, string passwordInHash, AirtableRecord[] records)
         {
             for (int recordNum = 0; recordNum < records.Length; recordNum++)
@@ -32,7 +50,7 @@ namespace Faculti.Helpers
         /// </summary>
         ///
         /// <param name="passwordInCipherText">
-        ///     Encrypted/unreadable password string.
+        ///     Password string in cipher text.
         /// </param>
         ///
         /// <returns>
@@ -65,7 +83,7 @@ namespace Faculti.Helpers
         /// </summary>
         ///
         /// <param name="passwordInPlainText">
-        ///     Password string.
+        ///     Password string in plain text.
         /// </param>
         ///
         /// <returns>

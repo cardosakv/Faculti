@@ -31,8 +31,8 @@ namespace Faculti
 
             ParentRadioButton.Checked = false;
             TeacherRadioButton.Checked = false;
-            ControlInteractives.SetLabelHover(ForgotPasswordLinkLabel);
-            ControlInteractives.SetLabelHover(SignupLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(ForgotPasswordLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(SignupLinkLabel);
         }
 
         private void ParentRadioButton_CheckedChanged2(object sender, BunifuRadioButton.CheckedChangedEventArgs e)
@@ -150,7 +150,7 @@ namespace Faculti
                     PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
-                AirtableHelper databaseHelper = new AirtableHelper();
+                Airtable databaseHelper = new Airtable();
                 var response = await databaseHelper.ListRecords(_userType);
                 var records = response.Records.ToArray();
 

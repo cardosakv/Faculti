@@ -223,7 +223,7 @@ namespace Faculti
             {
                 bool emailPresent = false;
 
-                AirtableHelper databaseHelper = new AirtableHelper();
+                Airtable databaseHelper = new Airtable();
                 AirtableListRecordsResponse response = await databaseHelper.ListRecords(userType);
                 var recordsArr = response.Records.ToArray();
 
@@ -292,7 +292,7 @@ namespace Faculti
                 fields.AddField("Last Name", lastName);
                 fields.AddField("Phone Number", phoneNumber);
 
-                AirtableHelper helper = new AirtableHelper();
+                Airtable helper = new Airtable();
                 helper.CreateRecord(userType, fields);
 
                 // generate a random code for verification

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using static Faculti.UI.InternetChecker;
+using static Faculti.UI.Internet;
 using Faculti.UI;
 using Faculti.Services;
 using System.Linq;

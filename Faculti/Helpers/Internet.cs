@@ -5,17 +5,21 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Faculti.UI
+namespace Faculti.Helpers
 {
-    class InternetChecker
+    /// <summary>
+    ///     Helper class relating about internet connectivity.
+    /// </summary>
+    class Internet
     {
-        public static bool IsAvailableNetworkActive() // checks internet connectivity
+        /// <summary>
+        ///     Checks if an active internet connection is present.
+        /// </summary>
+        public static bool IsAvailableNetworkActive()
         {
-            // only recognizes changes related to Internet adapters
-            if (System.Net.NetworkInformation.NetworkInterface.GetIsNetworkAvailable())
+            if (NetworkInterface.GetIsNetworkAvailable())
             {
-                // however, this will include all adapters -- filter by opstatus and activity
-                NetworkInterface[] interfaces = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces();
+                NetworkInterface[] interfaces = NetworkInterface.GetAllNetworkInterfaces();
                 return (from face in interfaces
                         where face.OperationalStatus == OperationalStatus.Up
                         where (face.NetworkInterfaceType != NetworkInterfaceType.Tunnel) && (face.NetworkInterfaceType != NetworkInterfaceType.Loopback)

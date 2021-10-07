@@ -27,5 +27,10 @@ namespace Faculti
         {
             this.Close();
         }
+
+        private void EmailForgotTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -168,7 +168,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\Airtable.cs" />
+    <Compile Include="Services\AirtableClient.cs" />
     <Compile Include="UI\Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>

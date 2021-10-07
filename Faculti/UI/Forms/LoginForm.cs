@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows.Forms;
 using Faculti.UI;
 using Faculti.Helpers;
-using Faculti.Helpers;
 
 namespace Faculti
 {
@@ -150,9 +149,8 @@ namespace Faculti
                     PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
-                Airtable databaseHelper = new Airtable();
-                var response = await databaseHelper.ListRecords(_userType);
-                var records = response.Records.ToArray();
+                AirtableClient airtableClient = new AirtableClient();
+                var records = await airtableClient.ListRecords(_userType);
 
                 if (sessionUser.DoesExistInDatabase(records))
                 {
@@ -164,7 +162,7 @@ namespace Faculti
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (!PasswordCheck.IsPasswordCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
+                else if (!Password.IsCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
                           Email.IsPresentInDatabase(sessionUser.Email, records))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";

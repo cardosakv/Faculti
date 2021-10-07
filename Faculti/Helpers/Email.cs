@@ -1,8 +1,6 @@
 ﻿using AirtableApiClient;
 using System;
-using System.Collections.Generic;
 using System.Net.Mail;
-using System.Windows.Forms;
 
 namespace Faculti.Helpers
 {
@@ -14,11 +12,11 @@ namespace Faculti.Helpers
         /// <summary>
         ///     Sends verification code to the specified recepient email using Faculti credentials.
         /// </summary>
-        /// 
+        ///
         /// <param name="recepientEmail">
         ///     Recepient email address to send the code to.
         /// </param>
-        /// 
+        ///
         /// <param name="code">
         ///     Four digit randomly generated code.
         /// </param>
@@ -49,15 +47,15 @@ namespace Faculti.Helpers
         /// <summary>
         ///     Checks if email is present in the specified AirtableRecord array.
         /// </summary>
-        /// 
+        ///
         /// <param name="email">
         ///     Email to check.
         /// </param>
-        /// 
+        ///
         /// <param name="records">
         ///     Array of type AirtableRecord to scan.
         /// </param>
-        /// 
+        ///
         /// <returns>
         ///     Boolean value if email is present or not.
         /// </returns>
@@ -70,7 +68,7 @@ namespace Faculti.Helpers
                     return true;
                 }
             }
-            
+
             return false;
         }
     }

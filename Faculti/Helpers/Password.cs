@@ -19,15 +19,15 @@ namespace Faculti.Helpers
         /// <summary>
         ///     Checks if input password is correct matching the email in the AirtableRecord array.
         /// </summary>
-        /// 
+        ///
         /// <param name="email">
         ///     Email address of the user.
         /// </param>
-        /// 
+        ///
         /// <param name="passwordInHash">
         ///     Password of the email to check.
         /// </param>
-        /// 
+        ///
         /// <returns>
         ///     Boolean value if password matched that in the database or not.
         /// </returns>

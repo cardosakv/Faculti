@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Net.NetworkInformation;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Faculti.Helpers
 {
     /// <summary>
     ///     Helper class relating about internet connectivity.
     /// </summary>
-    class Internet
+    internal class Internet
     {
         /// <summary>
         ///     Checks if an active internet connection is present.

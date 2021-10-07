@@ -79,7 +79,7 @@ namespace Faculti
 
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
-            return PasswordCheck.IsPasswordCorrect(_email, _passwordInHash, records);
+            return Password.IsCorrect(_email, _passwordInHash, records);
         } //master
     }
 }

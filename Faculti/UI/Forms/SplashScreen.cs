@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using static Faculti.UI.Internet;
+using Faculti.Helpers;
 using Faculti.UI;
 using Faculti.Services;
 using System.Linq;
@@ -39,7 +39,7 @@ namespace Faculti
 
             // Immediately checks for internet connectivity and opens the login form when an active
             // network is detected. Otherwise, shows the 'no internet found' form.
-            if (IsAvailableNetworkActive())
+            if (Internet.IsAvailableNetworkActive())
             {
                 LoginForm loginForm = new LoginForm();
                 loginForm.Show();

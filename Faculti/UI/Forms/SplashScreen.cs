@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using static Faculti.Misc.InternetChecker;
-using Faculti.Misc;
-using Faculti.Database;
+using static Faculti.UI.Internet;
+using Faculti.UI;
+using Faculti.Services;
 using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;

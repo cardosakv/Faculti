@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
-using static Faculti.Misc.FormAnimation;
+using static Faculti.UI.FormAnimation;
 
 namespace Faculti
 {

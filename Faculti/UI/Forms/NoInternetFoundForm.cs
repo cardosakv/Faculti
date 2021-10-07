@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using static Faculti.Misc.FormAnimation;
+using static Faculti.UI.FormAnimation;
 
 namespace Faculti
 {

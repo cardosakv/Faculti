@@ -168,86 +168,85 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\AirtableHelper.cs" />
-    <Compile Include="ForgotPasswordForm.cs">
+    <Compile Include="Services\Airtable.cs" />
+    <Compile Include="UI\Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ForgotPasswordForm.Designer.cs">
+    <Compile Include="UI\Forms\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\SessionUser.cs" />
-    <Compile Include="TeacherHomeForm.cs">
+    <Compile Include="DataClasses\SessionUser.cs" />
+    <Compile Include="UI\Forms\TeacherHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeacherHomeForm.Designer.cs">
+    <Compile Include="UI\Forms\TeacherHomeForm.Designer.cs">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ParentHomeForm.cs">
+    <Compile Include="UI\Forms\ParentHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ParentHomeForm.Designer.cs">
+    <Compile Include="UI\Forms\ParentHomeForm.Designer.cs">
       <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
+    <Compile Include="UI\Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.cs">
+    <Compile Include="UI\Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc\ControlInteractives.cs" />
-    <Compile Include="Misc\FormAnimation.cs" />
-    <Compile Include="Model\Parent.cs" />
-    <Compile Include="Model\User.cs" />
-    <Compile Include="Model\Teacher.cs" />
+    <Compile Include="UI\ControlInteractives.cs" />
+    <Compile Include="UI\FormAnimation.cs" />
+    <Compile Include="DataClasses\Parent.cs" />
+    <Compile Include="DataClasses\User.cs" />
+    <Compile Include="DataClasses\Teacher.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Security\PasswordCheck.cs" />
-    <Compile Include="SignupForm.cs">
+    <Compile Include="UI\Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignupForm.Designer.cs">
+    <Compile Include="UI\Forms\SignupForm.Designer.cs">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Validation\Email.cs" />
-    <Compile Include="Misc\InternetChecker.cs" />
-    <Compile Include="Validation\Syntax.cs" />
-    <Compile Include="Security\Encryption.cs" />
-    <Compile Include="NoInternetFoundForm.cs">
+    <Compile Include="Helpers\Email.cs" />
+    <Compile Include="Helpers\Internet.cs" />
+    <Compile Include="Helpers\Syntax.cs" />
+    <Compile Include="Helpers\Password.cs" />
+    <Compile Include="UI\Forms\NoInternetFoundForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NoInternetFoundForm.Designer.cs">
+    <Compile Include="UI\Forms\NoInternetFoundForm.Designer.cs">
       <DependentUpon>NoInternetFoundForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SplashScreen.cs">
+    <Compile Include="UI\Forms\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen.Designer.cs">
+    <Compile Include="UI\Forms\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="VerificationForm.cs">
+    <Compile Include="UI\Forms\VerificationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VerificationForm.Designer.cs">
+    <Compile Include="UI\Forms\VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ForgotPasswordForm.resx">
+    <EmbeddedResource Include="UI\Forms\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TeacherHomeForm.resx">
+    <EmbeddedResource Include="UI\Forms\TeacherHomeForm.resx">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ParentHomeForm.resx">
+    <EmbeddedResource Include="UI\Forms\ParentHomeForm.resx">
       <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="UI\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NoInternetFoundForm.resx">
+    <EmbeddedResource Include="UI\Forms\NoInternetFoundForm.resx">
       <DependentUpon>NoInternetFoundForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
@@ -256,16 +255,38 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupForm.resx">
+    <EmbeddedResource Include="UI\Forms\SignupForm.resx">
       <DependentUpon>SignupForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen.resx">
+    <EmbeddedResource Include="UI\Forms\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VerificationForm.resx">
+    <EmbeddedResource Include="UI\Forms\VerificationForm.resx">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\Faculti.exe.config" />
     <None Include="packages.config" />
+    <None Include="packages\Airtable.1.1.5\.signature.p7s" />
+    <None Include="packages\Airtable.1.1.5\Airtable.1.1.5.nupkg" />
+    <None Include="packages\Airtable.1.1.5\LICENSE" />
+    <None Include="packages\Bunifu.Charts.WinForms.1.1.5\.signature.p7s" />
+    <None Include="packages\Bunifu.Charts.WinForms.1.1.5\Bunifu.Charts.WinForms.1.1.5.nupkg" />
+    <None Include="packages\Bunifu.UI.WinForms.5.2.3\.signature.p7s" />
+    <None Include="packages\Bunifu.UI.WinForms.5.2.3\Bunifu.UI.WinForms.5.2.3.nupkg" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\.signature.p7s" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\LICENSE.md" />
+    <None Include="packages\Newtonsoft.Json.13.0.1\Newtonsoft.Json.13.0.1.nupkg" />
+    <None Include="packages\NUnit.3.13.2\.signature.p7s" />
+    <None Include="packages\NUnit.3.13.2\build\NUnit.props" />
+    <None Include="packages\NUnit.3.13.2\CHANGES.md" />
+    <None Include="packages\NUnit.3.13.2\NUnit.3.13.2.nupkg" />
+    <None Include="packages\NUnit.Extension.NUnitProjectLoader.3.7.1\.signature.p7s" />
+    <None Include="packages\NUnit.Extension.NUnitProjectLoader.3.7.1\CHANGES.md" />
+    <None Include="packages\NUnit.Extension.NUnitProjectLoader.3.7.1\NUnit.Extension.NUnitProjectLoader.3.7.1.nupkg" />
+    <None Include="packages\NUnit3TestAdapter.4.0.0\.signature.p7s" />
+    <None Include="packages\NUnit3TestAdapter.4.0.0\build\net35\NUnit3TestAdapter.props" />
+    <None Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\NUnit3TestAdapter.props" />
+    <None Include="packages\NUnit3TestAdapter.4.0.0\NUnit3TestAdapter.4.0.0.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -289,7 +310,8 @@
     <None Include="Resources\logo-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cards\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="DataRepository\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lockup-white.png" />
@@ -301,7 +323,206 @@
     <None Include="Resources\crying.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\AirtableApiClient.dll" />
+    <Content Include="bin\Debug\Bunifu.Charts.WinForms.dll" />
+    <Content Include="bin\Debug\Bunifu.Charts.WinForms.xml" />
+    <Content Include="bin\Debug\Bunifu.Licensing.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.1.5.3.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.1.5.3.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuLoader.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuLoader.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuTextBox.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml" />
+    <Content Include="bin\Debug\Bunifu.UI.WinForms.Deprecated.dll" />
+    <Content Include="bin\Debug\Faculti.exe" />
+    <Content Include="bin\Debug\Faculti.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\nunit.engine.api.dll" />
+    <Content Include="bin\Debug\nunit.engine.core.dll" />
+    <Content Include="bin\Debug\nunit.engine.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\nunit.framework.xml" />
+    <Content Include="bin\Debug\NUnit3.TestAdapter.dll" />
+    <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
+    <Content Include="bin\Debug\testcentric.engine.metadata.dll" />
     <Content Include="faculti-icon.ico" />
+    <Content Include="packages\Airtable.1.1.5\airtable_64x64.png" />
+    <Content Include="packages\Airtable.1.1.5\lib\netstandard2.0\AirtableApiClient.dll" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\Assets\CHANGELOG.txt" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\Assets\Icon.png" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\Assets\LICENSE.txt" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.dll" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Charts.WinForms.xml" />
+    <Content Include="packages\Bunifu.Charts.WinForms.1.1.5\lib\net40\Bunifu.Licensing.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\Assets\CHANGELOG.txt" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\Assets\Icon.png" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\Assets\LICENSE.txt" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.Licensing.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.1.5.3.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.1.5.3.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuButton.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGauge.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuLabel.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuLoader.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuLoader.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPages.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPanel.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuRating.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuShapes.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSlider.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuTransition.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.xml" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.UI.WinForms.Deprecated.dll" />
+    <Content Include="packages\Bunifu.UI.WinForms.5.2.3\README.txt" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\lib\netstandard2.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.13.0.1\packageIcon.png" />
+    <Content Include="packages\NUnit.3.13.2\icon.png" />
+    <Content Include="packages\NUnit.3.13.2\lib\net35\nunit.framework.dll" />
+    <Content Include="packages\NUnit.3.13.2\lib\net35\nunit.framework.xml" />
+    <Content Include="packages\NUnit.3.13.2\lib\net40\nunit.framework.dll" />
+    <Content Include="packages\NUnit.3.13.2\lib\net40\nunit.framework.xml" />
+    <Content Include="packages\NUnit.3.13.2\lib\net45\nunit.framework.dll" />
+    <Content Include="packages\NUnit.3.13.2\lib\net45\nunit.framework.xml" />
+    <Content Include="packages\NUnit.3.13.2\lib\netstandard2.0\nunit.framework.dll" />
+    <Content Include="packages\NUnit.3.13.2\lib\netstandard2.0\nunit.framework.xml" />
+    <Content Include="packages\NUnit.3.13.2\LICENSE.txt" />
+    <Content Include="packages\NUnit.3.13.2\NOTICES.txt" />
+    <Content Include="packages\NUnit.Extension.NUnitProjectLoader.3.7.1\LICENSE.txt" />
+    <Content Include="packages\NUnit.Extension.NUnitProjectLoader.3.7.1\tools\nunit-project-loader.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\nunit.engine.api.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\nunit.engine.core.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\nunit.engine.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\NUnit3.TestAdapter.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\NUnit3.TestAdapter.pdb" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\net35\testcentric.engine.metadata.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\nunit.engine.api.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\nunit.engine.core.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\nunit.engine.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\NUnit3.TestAdapter.dll" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\NUnit3.TestAdapter.pdb" />
+    <Content Include="packages\NUnit3TestAdapter.4.0.0\build\netcoreapp2.1\testcentric.engine.metadata.dll" />
     <None Include="Resources\D5_sl6eW4AEl8Js.jpg" />
     <None Include="Resources\889f071a5ea4d14e457ccb4efb455c2c.jpg" />
     <None Include="Resources\3af309b1d9a9905447917b528d5f2467.jpg" />

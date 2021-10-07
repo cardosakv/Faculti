@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using AirtableApiClient;
 
-namespace Faculti.Database
+namespace Faculti.Services
 {
-    internal class AirtableHelper
+    internal class Airtable
     {
         #region Secret
 
@@ -16,7 +16,7 @@ namespace Faculti.Database
 
         #endregion Secret
 
-        public async Task<AirtableListRecordsResponse> ListRecords(
+        public async Task<AirtableRecord[]> ListRecords(
            string tableName,
            string offset = null,
            IEnumerable<string> fields = null,
@@ -39,7 +39,7 @@ namespace Faculti.Database
                     view);
 
                 var response = await task;
-                return response;
+                return response.Records.ToArray();
             }
         }
 

@@ -586,7 +586,6 @@ namespace Faculti
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculti - Confirm Account";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VerificationForm_FormClosed);
             this.Load += new System.EventHandler(this.VerificationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

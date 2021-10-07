@@ -1,5 +1,7 @@
 ﻿using AirtableApiClient;
 using Faculti.Helpers;
+using Faculti.Services.Airtable;
+using System.Threading.Tasks;
 
 namespace Faculti
 {
@@ -80,6 +82,43 @@ namespace Faculti
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
             return Password.IsCorrect(_email, _passwordInHash, records);
-        } //master
+        } 
+
+        /// <summary>
+        ///     Updates the user password in the database.
+        /// </summary>
+        public void UpdatePassword(string email, string newPassword, AirtableRecord[] records, string userType)
+        {
+            // looping through the records
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == email)
+                {
+                    var recordId = records[recordNum].Fields["Record Id"].ToString();
+
+                    var newRecordField = new Fields();
+                    newRecordField.AddField("Password", newPassword);
+
+                    AirtableClient airtableClient = new AirtableClient();
+                    airtableClient.UpdateRecord(userType, newRecordField, recordId);
+                }
+            }
+        }
+
+        public async Task<string> GetRecordId()
+        {
+            AirtableClient airtableClient = new AirtableClient();
+            var records = await airtableClient.ListRecords(_type);
+
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == _email)
+                {
+                    return records[recordNum].Fields["Record Id"].ToString();
+                }
+            }
+
+            return null;
+        }
     }
 }

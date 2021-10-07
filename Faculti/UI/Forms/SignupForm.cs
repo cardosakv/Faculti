@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Faculti.Helpers;
 using Faculti.UI;
+using Faculti.Services.Airtable;
 
 namespace Faculti
 {
@@ -129,7 +130,7 @@ namespace Faculti
             this.Close();
         }
 
-        private void PasswordRevelButton_Click(object sender, EventArgs e)
+        private void PasswordRevealButton_Click(object sender, EventArgs e)
         {
             if (isPassword1Revealed)
             {
@@ -300,7 +301,7 @@ namespace Faculti
 
                 VerificationForm verificationForm = new VerificationForm();
                 verificationForm.FormClosed += new FormClosedEventHandler(VerificationForm_FormClosed);
-                verificationForm.CopyEmailAndCode(email, verificationCode);
+                verificationForm.CopyEmailAndCode(email, verificationCode, "signup");
                 verificationForm.ShowDialog();
                 Cursor = Cursors.Default;
             }

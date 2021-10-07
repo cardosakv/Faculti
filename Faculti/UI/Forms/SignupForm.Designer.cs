@@ -262,7 +262,7 @@ namespace Faculti
             this.PasswordRevealButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PasswordRevealButton.TabIndex = 23;
             this.PasswordRevealButton.TabStop = false;
-            this.PasswordRevealButton.Click += new System.EventHandler(this.PasswordRevelButton_Click);
+            this.PasswordRevealButton.Click += new System.EventHandler(this.PasswordRevealButton_Click);
             // 
             // LogInButton
             // 

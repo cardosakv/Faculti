@@ -8,6 +8,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Faculti.Helpers;
 using Faculti.UI;
+using Faculti.Services.Airtable;
 
 namespace Faculti
 {

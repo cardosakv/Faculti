@@ -1,15 +1,12 @@
-﻿using System;
+﻿using AirtableApiClient;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using AirtableApiClient;
-using Faculti.Services.Airtable;
 
 namespace Faculti.Services.Airtable
 {
     /// <summary>
-    ///     Handles Airtable common database CRUD actions. 
+    ///     Handles Airtable common database CRUD actions.
     /// </summary>
     internal class AirtableClient
     {
@@ -30,7 +27,6 @@ namespace Faculti.Services.Airtable
            IEnumerable<Sort> sort = null,
            string view = null)
         {
-
             using (airtableBase)
             {
                 Task<AirtableListRecordsResponse> task = airtableBase.ListRecords(
@@ -47,7 +43,6 @@ namespace Faculti.Services.Airtable
                 return response.Records.ToArray();
             }
         }
-
 
         public async Task<AirtableRecord> RetrieveRecord(string tableName, string recordId)
         {

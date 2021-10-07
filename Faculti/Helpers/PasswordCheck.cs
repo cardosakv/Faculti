@@ -1,7 +1,7 @@
 ﻿using AirtableApiClient;
 using System.Collections.Generic;
 
-namespace Faculti.Security
+namespace Faculti.Helpers
 {
     internal class PasswordCheck
     {

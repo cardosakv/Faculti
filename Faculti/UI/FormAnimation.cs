@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Faculti.Misc
+namespace Faculti.UI
 {
     /// <summary>
     /// Adds a fade-in and fade-out animation on forms.

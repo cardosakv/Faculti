@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Faculti.Validation.Email;
-using static Faculti.Misc.FormAnimation;
+using static Faculti.Helpers.Email;
+using static Faculti.UI.FormAnimation;
 
 namespace Faculti
 {
@@ -146,7 +146,7 @@ namespace Faculti
         private void ResendCodeButton_Click(object sender, EventArgs e)
         {
             time = 0;
-            SendEmailVerificationCode(inputEmail, verCode);
+            SendVerificationCode(inputEmail, verCode);
             Cursor = Cursors.AppStarting;
             SuccessfulResentLabel.Visible = true;
             ResendCodeButton.ForeColor = Color.DimGray;

@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Faculti.Misc
+namespace Faculti.UI
 {
     internal class ControlInteractives
     {

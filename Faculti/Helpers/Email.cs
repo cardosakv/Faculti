@@ -43,5 +43,33 @@ namespace Faculti.Helpers
                 throw new ArgumentException(e.Message);
             }
         }
+
+        /// <summary>
+        ///     Checks if email is present in the specified AirtableRecord array.
+        /// </summary>
+        ///
+        /// <param name="email">
+        ///     Email to check.
+        /// </param>
+        ///
+        /// <param name="records">
+        ///     Array of type AirtableRecord to scan.
+        /// </param>
+        ///
+        /// <returns>
+        ///     Boolean value if email is present or not.
+        /// </returns>
+        public static bool IsPresentInDatabase(string email, AirtableRecord[] records)
+        {
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == email)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

@@ -7,7 +7,7 @@ namespace Faculti.Helpers
     /// <summary>
     ///     Helper class for emails.
     /// </summary>
-    internal class Email
+    internal class Email //////////
     {
         /// <summary>
         ///     Sends verification code to the specified recepient email using Faculti credentials.

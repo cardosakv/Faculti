@@ -125,6 +125,7 @@ namespace Faculti
 
             // Checks if required inputs are entered by the user; shows error texts when needed.
             if (String.IsNullOrEmpty(_userType)) SetUserSelectionError(true);
+
             if (PasswordTextBox.Text == String.Empty)
             {
                 IncorrectPasswordTooltip.Text = "Input password";
@@ -143,7 +144,7 @@ namespace Faculti
                 Syntax.IsValidEmail(EmailTextBox.Text) &&
                 _userType != String.Empty)
             {
-                User sessionUser = new User
+                User user = new User
                 {
                     Type = _userType,
                     Email = EmailTextBox.Text,
@@ -153,7 +154,7 @@ namespace Faculti
                 AirtableClient airtableClient = new AirtableClient();
                 var records = await airtableClient.ListRecords(_userType);
 
-                if (sessionUser.DoesExistInDatabase(records))
+                if (user.DoesExistInDatabase(records))
                 {
                     // Log in is successful.
                     LogInButton.Text = "✔ Success";
@@ -163,8 +164,8 @@ namespace Faculti
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (!Password.IsCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
-                          Email.IsPresentInDatabase(sessionUser.Email, records))
+                else if (!Password.IsCorrect(user.Email, user.PasswordInHash, records) &&
+                          Email.IsPresentInDatabase(user.Email, records))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;

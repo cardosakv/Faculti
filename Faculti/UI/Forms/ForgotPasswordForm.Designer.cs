@@ -30,18 +30,20 @@ namespace Faculti
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPasswordForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.ForgotPasswordEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.BackButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.EmailForgotTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.IncorrectEmailForgotTooltip = new System.Windows.Forms.Label();
             this.FindAccountButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.EmailForgotTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.BackButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.FirstNameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ForgotPasswordEllipse
@@ -60,41 +62,6 @@ namespace Faculti
             this.label1.TabIndex = 27;
             this.label1.Text = "Forgot Password?";
             // 
-            // BackButton
-            // 
-            this.BackButton.ActiveImage = null;
-            this.BackButton.AllowAnimations = true;
-            this.BackButton.AllowBuffering = false;
-            this.BackButton.AllowToggling = false;
-            this.BackButton.AllowZooming = false;
-            this.BackButton.AllowZoomingOnFocus = false;
-            this.BackButton.BackColor = System.Drawing.Color.Transparent;
-            this.BackButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.BackButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("BackButton.ErrorImage")));
-            this.BackButton.FadeWhenInactive = true;
-            this.BackButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.BackButton.Image = global::Faculti.Properties.Resources.minimize_button;
-            this.BackButton.ImageActive = null;
-            this.BackButton.ImageLocation = null;
-            this.BackButton.ImageMargin = 0;
-            this.BackButton.ImageSize = new System.Drawing.Size(22, 24);
-            this.BackButton.ImageZoomSize = new System.Drawing.Size(22, 24);
-            this.BackButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("BackButton.InitialImage")));
-            this.BackButton.Location = new System.Drawing.Point(21, 21);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Rotation = 90;
-            this.BackButton.ShowActiveImage = true;
-            this.BackButton.ShowCursorChanges = true;
-            this.BackButton.ShowImageBorders = false;
-            this.BackButton.ShowSizeMarkers = false;
-            this.BackButton.Size = new System.Drawing.Size(22, 24);
-            this.BackButton.TabIndex = 36;
-            this.BackButton.ToolTipText = "";
-            this.BackButton.WaitOnLoad = false;
-            this.BackButton.Zoom = 0;
-            this.BackButton.ZoomSpeed = 10;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -106,81 +73,19 @@ namespace Faculti
             this.label11.TabIndex = 37;
             this.label11.Text = "Please enter your email to find your account.";
             // 
-            // EmailForgotTextBox
+            // IncorrectEmailForgotTooltip
             // 
-            this.EmailForgotTextBox.AcceptsReturn = false;
-            this.EmailForgotTextBox.AcceptsTab = false;
-            this.EmailForgotTextBox.AnimationSpeed = 200;
-            this.EmailForgotTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.EmailForgotTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.EmailForgotTextBox.AutoSizeHeight = true;
-            this.EmailForgotTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.EmailForgotTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EmailForgotTextBox.BackgroundImage")));
-            this.EmailForgotTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.EmailForgotTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.EmailForgotTextBox.BorderColorHover = System.Drawing.Color.DarkGray;
-            this.EmailForgotTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EmailForgotTextBox.BorderRadius = 10;
-            this.EmailForgotTextBox.BorderThickness = 1;
-            this.EmailForgotTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.EmailForgotTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.EmailForgotTextBox.DefaultFont = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailForgotTextBox.DefaultText = "";
-            this.EmailForgotTextBox.FillColor = System.Drawing.Color.White;
-            this.EmailForgotTextBox.ForeColor = System.Drawing.Color.Gray;
-            this.EmailForgotTextBox.HideSelection = true;
-            this.EmailForgotTextBox.IconLeft = null;
-            this.EmailForgotTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.EmailForgotTextBox.IconPadding = 10;
-            this.EmailForgotTextBox.IconRight = null;
-            this.EmailForgotTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.EmailForgotTextBox.Lines = new string[0];
-            this.EmailForgotTextBox.Location = new System.Drawing.Point(54, 205);
-            this.EmailForgotTextBox.MaxLength = 32767;
-            this.EmailForgotTextBox.MinimumSize = new System.Drawing.Size(1, 1);
-            this.EmailForgotTextBox.Modified = false;
-            this.EmailForgotTextBox.Multiline = false;
-            this.EmailForgotTextBox.Name = "EmailForgotTextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.EmailForgotTextBox.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.EmailForgotTextBox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.EmailForgotTextBox.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Gray;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.EmailForgotTextBox.OnIdleState = stateProperties4;
-            this.EmailForgotTextBox.Padding = new System.Windows.Forms.Padding(3);
-            this.EmailForgotTextBox.PasswordChar = '\0';
-            this.EmailForgotTextBox.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
-            this.EmailForgotTextBox.PlaceholderText = "juandelacruz@email.com";
-            this.EmailForgotTextBox.ReadOnly = false;
-            this.EmailForgotTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.EmailForgotTextBox.SelectedText = "";
-            this.EmailForgotTextBox.SelectionLength = 0;
-            this.EmailForgotTextBox.SelectionStart = 0;
-            this.EmailForgotTextBox.ShortcutsEnabled = true;
-            this.EmailForgotTextBox.Size = new System.Drawing.Size(310, 36);
-            this.EmailForgotTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.EmailForgotTextBox.TabIndex = 38;
-            this.EmailForgotTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.EmailForgotTextBox.TextMarginBottom = 0;
-            this.EmailForgotTextBox.TextMarginLeft = 3;
-            this.EmailForgotTextBox.TextMarginTop = 0;
-            this.EmailForgotTextBox.TextPlaceholder = "juandelacruz@email.com";
-            this.EmailForgotTextBox.UseSystemPasswordChar = false;
-            this.EmailForgotTextBox.WordWrap = true;
+            this.IncorrectEmailForgotTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.IncorrectEmailForgotTooltip.AutoSize = true;
+            this.IncorrectEmailForgotTooltip.Cursor = System.Windows.Forms.Cursors.Default;
+            this.IncorrectEmailForgotTooltip.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrectEmailForgotTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.IncorrectEmailForgotTooltip.Location = new System.Drawing.Point(139, 247);
+            this.IncorrectEmailForgotTooltip.Name = "IncorrectEmailForgotTooltip";
+            this.IncorrectEmailForgotTooltip.Size = new System.Drawing.Size(140, 13);
+            this.IncorrectEmailForgotTooltip.TabIndex = 40;
+            this.IncorrectEmailForgotTooltip.Text = "Incorrect email format";
+            this.IncorrectEmailForgotTooltip.Visible = false;
             // 
             // FindAccountButton
             // 
@@ -201,11 +106,11 @@ namespace Faculti
             this.FindAccountButton.ColorContrastOnClick = 45;
             this.FindAccountButton.ColorContrastOnHover = 45;
             this.FindAccountButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.FindAccountButton.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.FindAccountButton.CustomizableEdges = borderEdges3;
             this.FindAccountButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.FindAccountButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.FindAccountButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -229,7 +134,7 @@ namespace Faculti
             this.FindAccountButton.IdleIconLeftImage = null;
             this.FindAccountButton.IdleIconRightImage = null;
             this.FindAccountButton.IndicateFocus = false;
-            this.FindAccountButton.Location = new System.Drawing.Point(55, 259);
+            this.FindAccountButton.Location = new System.Drawing.Point(55, 276);
             this.FindAccountButton.Name = "FindAccountButton";
             this.FindAccountButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.FindAccountButton.OnDisabledState.BorderRadius = 10;
@@ -270,6 +175,129 @@ namespace Faculti
             this.FindAccountButton.TextMarginLeft = 0;
             this.FindAccountButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.FindAccountButton.UseDefaultRadiusAndThickness = true;
+            this.FindAccountButton.Click += new System.EventHandler(this.FindAccountButton_Click);
+            // 
+            // EmailForgotTextBox
+            // 
+            this.EmailForgotTextBox.AcceptsReturn = false;
+            this.EmailForgotTextBox.AcceptsTab = false;
+            this.EmailForgotTextBox.AnimationSpeed = 200;
+            this.EmailForgotTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.EmailForgotTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.EmailForgotTextBox.AutoSizeHeight = true;
+            this.EmailForgotTextBox.BackColor = System.Drawing.Color.Transparent;
+            this.EmailForgotTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EmailForgotTextBox.BackgroundImage")));
+            this.EmailForgotTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.EmailForgotTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.EmailForgotTextBox.BorderColorHover = System.Drawing.Color.DarkGray;
+            this.EmailForgotTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.EmailForgotTextBox.BorderRadius = 10;
+            this.EmailForgotTextBox.BorderThickness = 1;
+            this.EmailForgotTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.EmailForgotTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmailForgotTextBox.DefaultFont = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailForgotTextBox.DefaultText = "";
+            this.EmailForgotTextBox.FillColor = System.Drawing.Color.White;
+            this.EmailForgotTextBox.ForeColor = System.Drawing.Color.Gray;
+            this.EmailForgotTextBox.HideSelection = true;
+            this.EmailForgotTextBox.IconLeft = null;
+            this.EmailForgotTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmailForgotTextBox.IconPadding = 10;
+            this.EmailForgotTextBox.IconRight = null;
+            this.EmailForgotTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.EmailForgotTextBox.Lines = new string[0];
+            this.EmailForgotTextBox.Location = new System.Drawing.Point(54, 205);
+            this.EmailForgotTextBox.MaxLength = 32767;
+            this.EmailForgotTextBox.MinimumSize = new System.Drawing.Size(1, 1);
+            this.EmailForgotTextBox.Modified = false;
+            this.EmailForgotTextBox.Multiline = false;
+            this.EmailForgotTextBox.Name = "EmailForgotTextBox";
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.EmailForgotTextBox.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.EmailForgotTextBox.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.EmailForgotTextBox.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Gray;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.EmailForgotTextBox.OnIdleState = stateProperties12;
+            this.EmailForgotTextBox.Padding = new System.Windows.Forms.Padding(3);
+            this.EmailForgotTextBox.PasswordChar = '\0';
+            this.EmailForgotTextBox.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
+            this.EmailForgotTextBox.PlaceholderText = "juandelacruz@email.com";
+            this.EmailForgotTextBox.ReadOnly = false;
+            this.EmailForgotTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.EmailForgotTextBox.SelectedText = "";
+            this.EmailForgotTextBox.SelectionLength = 0;
+            this.EmailForgotTextBox.SelectionStart = 0;
+            this.EmailForgotTextBox.ShortcutsEnabled = true;
+            this.EmailForgotTextBox.Size = new System.Drawing.Size(310, 36);
+            this.EmailForgotTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.EmailForgotTextBox.TabIndex = 38;
+            this.EmailForgotTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.EmailForgotTextBox.TextMarginBottom = 0;
+            this.EmailForgotTextBox.TextMarginLeft = 3;
+            this.EmailForgotTextBox.TextMarginTop = 0;
+            this.EmailForgotTextBox.TextPlaceholder = "juandelacruz@email.com";
+            this.EmailForgotTextBox.UseSystemPasswordChar = false;
+            this.EmailForgotTextBox.WordWrap = true;
+            // 
+            // BackButton
+            // 
+            this.BackButton.ActiveImage = null;
+            this.BackButton.AllowAnimations = true;
+            this.BackButton.AllowBuffering = false;
+            this.BackButton.AllowToggling = false;
+            this.BackButton.AllowZooming = false;
+            this.BackButton.AllowZoomingOnFocus = false;
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BackButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("BackButton.ErrorImage")));
+            this.BackButton.FadeWhenInactive = true;
+            this.BackButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.BackButton.Image = global::Faculti.Properties.Resources.minimize_button;
+            this.BackButton.ImageActive = null;
+            this.BackButton.ImageLocation = null;
+            this.BackButton.ImageMargin = 0;
+            this.BackButton.ImageSize = new System.Drawing.Size(22, 24);
+            this.BackButton.ImageZoomSize = new System.Drawing.Size(22, 24);
+            this.BackButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("BackButton.InitialImage")));
+            this.BackButton.Location = new System.Drawing.Point(21, 21);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Rotation = 90;
+            this.BackButton.ShowActiveImage = true;
+            this.BackButton.ShowCursorChanges = true;
+            this.BackButton.ShowImageBorders = false;
+            this.BackButton.ShowSizeMarkers = false;
+            this.BackButton.Size = new System.Drawing.Size(22, 24);
+            this.BackButton.TabIndex = 36;
+            this.BackButton.ToolTipText = "";
+            this.BackButton.WaitOnLoad = false;
+            this.BackButton.Zoom = 0;
+            this.BackButton.ZoomSpeed = 10;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
+            // FirstNameLabel
+            // 
+            this.FirstNameLabel.AutoSize = true;
+            this.FirstNameLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.FirstNameLabel.Location = new System.Drawing.Point(53, 185);
+            this.FirstNameLabel.Name = "FirstNameLabel";
+            this.FirstNameLabel.Size = new System.Drawing.Size(39, 17);
+            this.FirstNameLabel.TabIndex = 41;
+            this.FirstNameLabel.Text = "Email";
             // 
             // ForgotPasswordForm
             // 
@@ -277,6 +305,8 @@ namespace Faculti
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(419, 450);
+            this.Controls.Add(this.FirstNameLabel);
+            this.Controls.Add(this.IncorrectEmailForgotTooltip);
             this.Controls.Add(this.FindAccountButton);
             this.Controls.Add(this.EmailForgotTextBox);
             this.Controls.Add(this.label11);
@@ -284,7 +314,7 @@ namespace Faculti
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculti -Forgot Password";
             this.Load += new System.EventHandler(this.ForgotPasswordForm_Load);
             this.ResumeLayout(false);
@@ -300,5 +330,7 @@ namespace Faculti
         private System.Windows.Forms.Label label11;
         private Bunifu.UI.WinForms.BunifuTextBox EmailForgotTextBox;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 FindAccountButton;
+        private System.Windows.Forms.Label IncorrectEmailForgotTooltip;
+        private System.Windows.Forms.Label FirstNameLabel;
     }
 }

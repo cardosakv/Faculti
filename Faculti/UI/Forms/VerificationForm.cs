@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Faculti.Helpers.Email;
-using static Faculti.UI.FormAnimation;
+using Faculti.Helpers;
+using Faculti.UI;
+using Faculti.UI.Forms;
 
 namespace Faculti
 {
@@ -11,6 +12,7 @@ namespace Faculti
         public int verCode;
         public int inputCode;
         public string inputEmail;
+        public string verificationType;
 
         private Timer timer, timer2;
         public int time = 0;
@@ -32,10 +34,11 @@ namespace Faculti
             InitializeComponent();
         }
 
-        public void CopyEmailAndCode(string email, int code)
+        public void CopyEmailAndCode(string email, int code, string verType)
         {
             verCode = code;
             inputEmail = email;
+            verificationType = verType;
         }
 
         private void FirstDigitTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -146,7 +149,7 @@ namespace Faculti
         private void ResendCodeButton_Click(object sender, EventArgs e)
         {
             time = 0;
-            SendVerificationCode(inputEmail, verCode);
+            Email.SendVerificationCode(inputEmail, verCode);
             Cursor = Cursors.AppStarting;
             SuccessfulResentLabel.Visible = true;
             ResendCodeButton.ForeColor = Color.DimGray;
@@ -161,13 +164,16 @@ namespace Faculti
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             string inputCodeInString = FirstDigitTextBox.Text +
-                                        SecondDigitTextBox.Text +
-                                        ThirdDigitTextBox.Text +
-                                        FourthDigitTextBox.Text;
+                                       SecondDigitTextBox.Text +
+                                       ThirdDigitTextBox.Text +
+                                       FourthDigitTextBox.Text; // "1234" 
 
-            inputCode = Convert.ToInt32(inputCodeInString);
+            inputCode = Convert.ToInt32(inputCodeInString); // 1234
 
-            if (FirstDigitTextBox.Text == "")
+            if (FirstDigitTextBox.Text == String.Empty ||
+                SecondDigitTextBox.Text == String.Empty ||
+                ThirdDigitTextBox.Text == String.Empty ||
+                FourthDigitTextBox.Text == String.Empty)
             {
                 IncorrectCodeLabel.Visible = true;
             }
@@ -176,6 +182,7 @@ namespace Faculti
                 IncorrectCodeLabel.Visible = false;
                 ConfirmButton.Text = "✔ Account Verified";
 
+                // delay the closing of the form
                 timer2 = new Timer { Interval = 3000 };
                 timer2.Start();
                 timer2.Tick += Timer2_Tick;
@@ -211,19 +218,25 @@ namespace Faculti
         private void Timer2_Tick(object sender, EventArgs e)
         {
             timer2.Stop();
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
+
+            if (verificationType == "signup")
+            {
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();            
+                this.Close();
+            }
+            else if (verificationType == "forgot")
+            {
+                ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+                changePasswordForm.CopyEmail(inputEmail);
+                changePasswordForm.Show();
+                this.Close();
+            }
         }
 
         private void VerificationForm_Load(object sender, EventArgs e)
         {
-            FadeIn(this);
-        }
-
-        private void VerificationForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
+            FormAnimation.FadeIn(this);
         }
     }
 }

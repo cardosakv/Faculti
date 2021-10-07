@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Faculti.UI;
+using Faculti.Services.Airtable;
+using Faculti.Helpers;
 
 namespace Faculti
 {
@@ -26,6 +28,41 @@ namespace Faculti
         private void BackButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void FindAccountButton_Click(object sender, EventArgs e)
+        {
+            var email = EmailForgotTextBox.Text;
+
+            if (Syntax.IsValidEmail(email))
+            {
+                AirtableClient airtableClientParent = new AirtableClient();
+                var parentRecords = await airtableClientParent.ListRecords("Parent");
+
+                AirtableClient airtableClientTeacher = new AirtableClient();
+                var teacherRecords = await airtableClientTeacher.ListRecords("Teacher");
+
+                var isPresentInParentRecords = Email.IsPresentInDatabase(email, parentRecords);
+                var isPresentInTeacherRecords = Email.IsPresentInDatabase(email, teacherRecords);
+
+                if (isPresentInParentRecords == true || isPresentInTeacherRecords == true)
+                {
+                    Random rnd = new Random();
+                    int verificationCode = rnd.Next(1000, 9999);
+
+                    Email.SendVerificationCode(email, verificationCode);
+
+                    VerificationForm verificationForm = new VerificationForm();
+                    verificationForm.CopyEmailAndCode(email, verificationCode, "forgot");
+                    verificationForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    IncorrectEmailForgotTooltip.Text = "Account does not exist";
+                    EmailForgotTextBox.Text = String.Empty;
+                }  
+            }
         }
     }
 }

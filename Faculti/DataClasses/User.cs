@@ -105,14 +105,14 @@ namespace Faculti
             }
         }
 
-        public async Task<string> GetRecordId()
+        public async Task<string> GetRecordId(string type, string email)
         {
             AirtableClient airtableClient = new AirtableClient();
-            var records = await airtableClient.ListRecords(_type);
+            var records = await airtableClient.ListRecords(type);
 
             for (int recordNum = 0; recordNum < records.Length; recordNum++)
             {
-                if (records[recordNum].Fields["Email"].ToString() == _email)
+                if (records[recordNum].Fields["Email"].ToString() == email)
                 {
                     return records[recordNum].Fields["Record Id"].ToString();
                 }

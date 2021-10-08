@@ -229,7 +229,7 @@ namespace Faculti
             {
                 ChangePasswordForm changePasswordForm = new ChangePasswordForm();
                 changePasswordForm.CopyEmail(inputEmail);
-                changePasswordForm.Show();
+                changePasswordForm.ShowDialog();
                 this.Close();
             }
         }

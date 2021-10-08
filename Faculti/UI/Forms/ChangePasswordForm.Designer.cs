@@ -30,28 +30,29 @@ namespace Faculti.UI.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.ChangePasswordEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.PasswordTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.IncorrectEmailForgotTooltip = new System.Windows.Forms.Label();
+            this.IncorrecPasswordFormatTooltip = new System.Windows.Forms.Label();
             this.ReEnterPasswordTextbox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.PasswordNotMatchToolTip = new System.Windows.Forms.Label();
             this.ConfirmChangePasswordButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.PasswordRevealButton = new System.Windows.Forms.PictureBox();
             this.ConfirmPasswordRevealButton = new System.Windows.Forms.PictureBox();
+            this.BackButton = new Bunifu.UI.WinForms.BunifuImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordRevealButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmPasswordRevealButton)).BeginInit();
             this.SuspendLayout();
@@ -79,7 +80,7 @@ namespace Faculti.UI.Forms
             this.PasswordTextBox.BorderThickness = 1;
             this.PasswordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PasswordTextBox.DefaultFont = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.DefaultText = "";
             this.PasswordTextBox.FillColor = System.Drawing.Color.White;
             this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -96,26 +97,26 @@ namespace Faculti.UI.Forms
             this.PasswordTextBox.Modified = false;
             this.PasswordTextBox.Multiline = false;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.PasswordTextBox.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.PasswordTextBox.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.PasswordTextBox.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Gray;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.PasswordTextBox.OnIdleState = stateProperties8;
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.PasswordTextBox.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.PasswordTextBox.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.PasswordTextBox.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Gray;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.PasswordTextBox.OnIdleState = stateProperties16;
             this.PasswordTextBox.Padding = new System.Windows.Forms.Padding(3);
             this.PasswordTextBox.PasswordChar = '•';
             this.PasswordTextBox.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
@@ -136,42 +137,44 @@ namespace Faculti.UI.Forms
             this.PasswordTextBox.TextPlaceholder = "••••••••";
             this.PasswordTextBox.UseSystemPasswordChar = false;
             this.PasswordTextBox.WordWrap = true;
+            this.PasswordTextBox.TextChanged += new System.EventHandler(this.PasswordTextBox_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label11.Location = new System.Drawing.Point(107, 131);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(204, 13);
+            this.label11.Size = new System.Drawing.Size(187, 15);
             this.label11.TabIndex = 40;
             this.label11.Text = "Please enter your new password.";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label1.Location = new System.Drawing.Point(122, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 27);
+            this.label1.Size = new System.Drawing.Size(179, 24);
             this.label1.TabIndex = 41;
             this.label1.Text = "Change Password";
             // 
-            // IncorrectEmailForgotTooltip
+            // IncorrecPasswordFormatTooltip
             // 
-            this.IncorrectEmailForgotTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.IncorrectEmailForgotTooltip.AutoSize = true;
-            this.IncorrectEmailForgotTooltip.Cursor = System.Windows.Forms.Cursors.Default;
-            this.IncorrectEmailForgotTooltip.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectEmailForgotTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.IncorrectEmailForgotTooltip.Location = new System.Drawing.Point(126, 218);
-            this.IncorrectEmailForgotTooltip.Name = "IncorrectEmailForgotTooltip";
-            this.IncorrectEmailForgotTooltip.Size = new System.Drawing.Size(167, 13);
-            this.IncorrectEmailForgotTooltip.TabIndex = 42;
-            this.IncorrectEmailForgotTooltip.Text = "Incorrect password format";
-            this.IncorrectEmailForgotTooltip.Visible = false;
+            this.IncorrecPasswordFormatTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.IncorrecPasswordFormatTooltip.AutoSize = true;
+            this.IncorrecPasswordFormatTooltip.Cursor = System.Windows.Forms.Cursors.Default;
+            this.IncorrecPasswordFormatTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrecPasswordFormatTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.IncorrecPasswordFormatTooltip.Location = new System.Drawing.Point(107, 217);
+            this.IncorrecPasswordFormatTooltip.Name = "IncorrecPasswordFormatTooltip";
+            this.IncorrecPasswordFormatTooltip.Size = new System.Drawing.Size(196, 15);
+            this.IncorrecPasswordFormatTooltip.TabIndex = 42;
+            this.IncorrecPasswordFormatTooltip.Text = "Minimum of 8 characters (a-Z, 0-9)";
+            this.IncorrecPasswordFormatTooltip.Visible = false;
+            this.IncorrecPasswordFormatTooltip.Click += new System.EventHandler(this.IncorrecPasswordFormatTooltip_Click);
             // 
             // ReEnterPasswordTextbox
             // 
@@ -191,7 +194,7 @@ namespace Faculti.UI.Forms
             this.ReEnterPasswordTextbox.BorderThickness = 1;
             this.ReEnterPasswordTextbox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.ReEnterPasswordTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ReEnterPasswordTextbox.DefaultFont = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReEnterPasswordTextbox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReEnterPasswordTextbox.DefaultText = "";
             this.ReEnterPasswordTextbox.FillColor = System.Drawing.Color.White;
             this.ReEnterPasswordTextbox.ForeColor = System.Drawing.Color.Gray;
@@ -208,26 +211,26 @@ namespace Faculti.UI.Forms
             this.ReEnterPasswordTextbox.Modified = false;
             this.ReEnterPasswordTextbox.Multiline = false;
             this.ReEnterPasswordTextbox.Name = "ReEnterPasswordTextbox";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.ReEnterPasswordTextbox.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.ReEnterPasswordTextbox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.DarkGray;
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.ReEnterPasswordTextbox.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Gray;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.ReEnterPasswordTextbox.OnIdleState = stateProperties4;
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.ReEnterPasswordTextbox.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.ReEnterPasswordTextbox.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.DarkGray;
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.ReEnterPasswordTextbox.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Gray;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.ReEnterPasswordTextbox.OnIdleState = stateProperties12;
             this.ReEnterPasswordTextbox.Padding = new System.Windows.Forms.Padding(3);
             this.ReEnterPasswordTextbox.PasswordChar = '•';
             this.ReEnterPasswordTextbox.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
@@ -248,20 +251,21 @@ namespace Faculti.UI.Forms
             this.ReEnterPasswordTextbox.TextPlaceholder = "••••••••";
             this.ReEnterPasswordTextbox.UseSystemPasswordChar = false;
             this.ReEnterPasswordTextbox.WordWrap = true;
+            this.ReEnterPasswordTextbox.TextChanged += new System.EventHandler(this.ReEnterPasswordTextbox_TextChanged);
             // 
-            // label2
+            // PasswordNotMatchToolTip
             // 
-            this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.label2.Location = new System.Drawing.Point(129, 303);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 13);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Password does not match";
-            this.label2.Visible = false;
+            this.PasswordNotMatchToolTip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
+            this.PasswordNotMatchToolTip.AutoSize = true;
+            this.PasswordNotMatchToolTip.Cursor = System.Windows.Forms.Cursors.Default;
+            this.PasswordNotMatchToolTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordNotMatchToolTip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.PasswordNotMatchToolTip.Location = new System.Drawing.Point(129, 303);
+            this.PasswordNotMatchToolTip.Name = "PasswordNotMatchToolTip";
+            this.PasswordNotMatchToolTip.Size = new System.Drawing.Size(148, 15);
+            this.PasswordNotMatchToolTip.TabIndex = 44;
+            this.PasswordNotMatchToolTip.Text = "Password does not match";
+            this.PasswordNotMatchToolTip.Visible = false;
             // 
             // ConfirmChangePasswordButton
             // 
@@ -282,17 +286,17 @@ namespace Faculti.UI.Forms
             this.ConfirmChangePasswordButton.ColorContrastOnClick = 45;
             this.ConfirmChangePasswordButton.ColorContrastOnHover = 45;
             this.ConfirmChangePasswordButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ConfirmChangePasswordButton.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.ConfirmChangePasswordButton.CustomizableEdges = borderEdges2;
             this.ConfirmChangePasswordButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ConfirmChangePasswordButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ConfirmChangePasswordButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.ConfirmChangePasswordButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ConfirmChangePasswordButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.ConfirmChangePasswordButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmChangePasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmChangePasswordButton.ForeColor = System.Drawing.Color.White;
             this.ConfirmChangePasswordButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ConfirmChangePasswordButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -356,22 +360,22 @@ namespace Faculti.UI.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label4.Location = new System.Drawing.Point(52, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(69, 15);
             this.label4.TabIndex = 46;
             this.label4.Text = "Password";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label3.Location = new System.Drawing.Point(56, 245);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 17);
+            this.label3.Size = new System.Drawing.Size(129, 15);
             this.label3.TabIndex = 47;
             this.label3.Text = "Re-enter Password";
             // 
@@ -399,20 +403,56 @@ namespace Faculti.UI.Forms
             this.ConfirmPasswordRevealButton.TabStop = false;
             this.ConfirmPasswordRevealButton.Click += new System.EventHandler(this.ConfirmPasswordRevealButton_Click);
             // 
+            // BackButton
+            // 
+            this.BackButton.ActiveImage = null;
+            this.BackButton.AllowAnimations = true;
+            this.BackButton.AllowBuffering = false;
+            this.BackButton.AllowToggling = false;
+            this.BackButton.AllowZooming = false;
+            this.BackButton.AllowZoomingOnFocus = false;
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.BackButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("BackButton.ErrorImage")));
+            this.BackButton.FadeWhenInactive = true;
+            this.BackButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.BackButton.Image = global::Faculti.Properties.Resources.minimize_button;
+            this.BackButton.ImageActive = null;
+            this.BackButton.ImageLocation = null;
+            this.BackButton.ImageMargin = 0;
+            this.BackButton.ImageSize = new System.Drawing.Size(22, 24);
+            this.BackButton.ImageZoomSize = new System.Drawing.Size(22, 24);
+            this.BackButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("BackButton.InitialImage")));
+            this.BackButton.Location = new System.Drawing.Point(27, 22);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Rotation = 90;
+            this.BackButton.ShowActiveImage = true;
+            this.BackButton.ShowCursorChanges = true;
+            this.BackButton.ShowImageBorders = false;
+            this.BackButton.ShowSizeMarkers = false;
+            this.BackButton.Size = new System.Drawing.Size(22, 24);
+            this.BackButton.TabIndex = 50;
+            this.BackButton.ToolTipText = "";
+            this.BackButton.WaitOnLoad = false;
+            this.BackButton.Zoom = 0;
+            this.BackButton.ZoomSpeed = 10;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // ChangePasswordForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(419, 450);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.ConfirmPasswordRevealButton);
             this.Controls.Add(this.PasswordRevealButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ConfirmChangePasswordButton);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PasswordNotMatchToolTip);
             this.Controls.Add(this.ReEnterPasswordTextbox);
-            this.Controls.Add(this.IncorrectEmailForgotTooltip);
+            this.Controls.Add(this.IncorrecPasswordFormatTooltip);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.PasswordTextBox);
@@ -433,13 +473,14 @@ namespace Faculti.UI.Forms
         private Bunifu.UI.WinForms.BunifuTextBox PasswordTextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label IncorrectEmailForgotTooltip;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label IncorrecPasswordFormatTooltip;
+        private System.Windows.Forms.Label PasswordNotMatchToolTip;
         private Bunifu.UI.WinForms.BunifuTextBox ReEnterPasswordTextbox;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ConfirmChangePasswordButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox ConfirmPasswordRevealButton;
         private System.Windows.Forms.PictureBox PasswordRevealButton;
+        private Bunifu.UI.WinForms.BunifuImageButton BackButton;
     }
 }

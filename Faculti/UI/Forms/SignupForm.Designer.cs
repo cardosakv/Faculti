@@ -113,11 +113,11 @@ namespace Faculti
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label1.Location = new System.Drawing.Point(283, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 23);
+            this.label1.Size = new System.Drawing.Size(77, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Register";
             // 
@@ -155,17 +155,18 @@ namespace Faculti
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(630, 640);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // EmailTooltip
             // 
             this.EmailTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.EmailTooltip.AutoSize = true;
             this.EmailTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EmailTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.EmailTooltip.Location = new System.Drawing.Point(328, 321);
             this.EmailTooltip.Name = "EmailTooltip";
-            this.EmailTooltip.Size = new System.Drawing.Size(97, 11);
+            this.EmailTooltip.Size = new System.Drawing.Size(92, 12);
             this.EmailTooltip.TabIndex = 30;
             this.EmailTooltip.Text = "Invalid email address";
             this.EmailTooltip.Visible = false;
@@ -175,11 +176,11 @@ namespace Faculti
             this.PhoneTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.PhoneTooltip.AutoSize = true;
             this.PhoneTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PhoneTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.PhoneTooltip.Location = new System.Drawing.Point(92, 321);
             this.PhoneTooltip.Name = "PhoneTooltip";
-            this.PhoneTooltip.Size = new System.Drawing.Size(105, 11);
+            this.PhoneTooltip.Size = new System.Drawing.Size(93, 12);
             this.PhoneTooltip.TabIndex = 29;
             this.PhoneTooltip.Text = "Invalid phone number";
             this.PhoneTooltip.Visible = false;
@@ -189,11 +190,11 @@ namespace Faculti
             this.LastNameTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.LastNameTooltip.AutoSize = true;
             this.LastNameTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LastNameTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.LastNameTooltip.Location = new System.Drawing.Point(328, 245);
             this.LastNameTooltip.Name = "LastNameTooltip";
-            this.LastNameTooltip.Size = new System.Drawing.Size(46, 11);
+            this.LastNameTooltip.Size = new System.Drawing.Size(42, 12);
             this.LastNameTooltip.TabIndex = 28;
             this.LastNameTooltip.Text = "Required";
             this.LastNameTooltip.Visible = false;
@@ -203,11 +204,11 @@ namespace Faculti
             this.FirstNameTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.FirstNameTooltip.AutoSize = true;
             this.FirstNameTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FirstNameTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.FirstNameTooltip.Location = new System.Drawing.Point(92, 245);
             this.FirstNameTooltip.Name = "FirstNameTooltip";
-            this.FirstNameTooltip.Size = new System.Drawing.Size(46, 11);
+            this.FirstNameTooltip.Size = new System.Drawing.Size(42, 12);
             this.FirstNameTooltip.TabIndex = 27;
             this.FirstNameTooltip.Text = "Required";
             this.FirstNameTooltip.Visible = false;
@@ -217,11 +218,11 @@ namespace Faculti
             this.ConfirmPasswordTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.ConfirmPasswordTooltip.AutoSize = true;
             this.ConfirmPasswordTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ConfirmPasswordTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPasswordTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.ConfirmPasswordTooltip.Location = new System.Drawing.Point(326, 397);
             this.ConfirmPasswordTooltip.Name = "ConfirmPasswordTooltip";
-            this.ConfirmPasswordTooltip.Size = new System.Drawing.Size(123, 11);
+            this.ConfirmPasswordTooltip.Size = new System.Drawing.Size(112, 12);
             this.ConfirmPasswordTooltip.TabIndex = 26;
             this.ConfirmPasswordTooltip.Text = "Password does not match";
             this.ConfirmPasswordTooltip.Visible = false;
@@ -231,11 +232,11 @@ namespace Faculti
             this.PasswordTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.PasswordTooltip.AutoSize = true;
             this.PasswordTooltip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PasswordTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.PasswordTooltip.Location = new System.Drawing.Point(92, 397);
             this.PasswordTooltip.Name = "PasswordTooltip";
-            this.PasswordTooltip.Size = new System.Drawing.Size(165, 11);
+            this.PasswordTooltip.Size = new System.Drawing.Size(147, 12);
             this.PasswordTooltip.TabIndex = 25;
             this.PasswordTooltip.Text = "Minimum of 8 characters (a-Z, 0-9)";
             this.PasswordTooltip.Visible = false;
@@ -268,11 +269,11 @@ namespace Faculti
             // 
             this.LogInButton.AutoSize = true;
             this.LogInButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LogInButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogInButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
             this.LogInButton.Location = new System.Drawing.Point(237, 522);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(43, 17);
+            this.LogInButton.Size = new System.Drawing.Size(47, 15);
             this.LogInButton.TabIndex = 22;
             this.LogInButton.Text = "Log In";
             this.LogInButton.Click += new System.EventHandler(this.LogInButton_Click);
@@ -282,11 +283,11 @@ namespace Faculti
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label11.Location = new System.Drawing.Point(90, 524);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(145, 12);
+            this.label11.Size = new System.Drawing.Size(132, 13);
             this.label11.TabIndex = 21;
             this.label11.Text = "Already have an account?";
             // 
@@ -319,7 +320,7 @@ namespace Faculti
             this.CreateAccountButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.CreateAccountButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.CreateAccountButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.CreateAccountButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAccountButton.ForeColor = System.Drawing.Color.White;
             this.CreateAccountButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CreateAccountButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -386,11 +387,11 @@ namespace Faculti
             this.TermsPrivacyLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.TermsPrivacyLabel.AutoSize = true;
             this.TermsPrivacyLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.TermsPrivacyLabel.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TermsPrivacyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TermsPrivacyLabel.ForeColor = System.Drawing.Color.DimGray;
             this.TermsPrivacyLabel.Location = new System.Drawing.Point(113, 427);
             this.TermsPrivacyLabel.Name = "TermsPrivacyLabel";
-            this.TermsPrivacyLabel.Size = new System.Drawing.Size(231, 11);
+            this.TermsPrivacyLabel.Size = new System.Drawing.Size(211, 12);
             this.TermsPrivacyLabel.TabIndex = 19;
             this.TermsPrivacyLabel.Text = "I agree to the Terms of Service and Privacy Policy.";
             // 
@@ -452,11 +453,11 @@ namespace Faculti
             // ConfirmPasswordLabel
             // 
             this.ConfirmPasswordLabel.AutoSize = true;
-            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.ConfirmPasswordLabel.Location = new System.Drawing.Point(325, 342);
             this.ConfirmPasswordLabel.Name = "ConfirmPasswordLabel";
-            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(103, 15);
+            this.ConfirmPasswordLabel.Size = new System.Drawing.Size(107, 13);
             this.ConfirmPasswordLabel.TabIndex = 17;
             this.ConfirmPasswordLabel.Text = "Confirm Password";
             // 
@@ -478,7 +479,7 @@ namespace Faculti
             this.ConfirmPasswordTextBox.BorderThickness = 1;
             this.ConfirmPasswordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.ConfirmPasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ConfirmPasswordTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmPasswordTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmPasswordTextBox.DefaultText = "";
             this.ConfirmPasswordTextBox.FillColor = System.Drawing.Color.White;
             this.ConfirmPasswordTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -541,11 +542,11 @@ namespace Faculti
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.PasswordLabel.Location = new System.Drawing.Point(91, 342);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(57, 15);
+            this.PasswordLabel.Size = new System.Drawing.Size(61, 13);
             this.PasswordLabel.TabIndex = 15;
             this.PasswordLabel.Text = "Password";
             // 
@@ -567,7 +568,7 @@ namespace Faculti
             this.PasswordTextBox.BorderThickness = 1;
             this.PasswordTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.PasswordTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PasswordTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTextBox.DefaultText = "";
             this.PasswordTextBox.FillColor = System.Drawing.Color.White;
             this.PasswordTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -630,11 +631,11 @@ namespace Faculti
             // EmailLabel
             // 
             this.EmailLabel.AutoSize = true;
-            this.EmailLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.EmailLabel.Location = new System.Drawing.Point(325, 266);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(80, 15);
+            this.EmailLabel.Size = new System.Drawing.Size(86, 13);
             this.EmailLabel.TabIndex = 13;
             this.EmailLabel.Text = "Email Address";
             // 
@@ -656,7 +657,7 @@ namespace Faculti
             this.EmailTextBox.BorderThickness = 1;
             this.EmailTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.EmailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.EmailTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailTextBox.DefaultText = "";
             this.EmailTextBox.FillColor = System.Drawing.Color.White;
             this.EmailTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -719,11 +720,11 @@ namespace Faculti
             // PhoneNumberLabel
             // 
             this.PhoneNumberLabel.AutoSize = true;
-            this.PhoneNumberLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.PhoneNumberLabel.Location = new System.Drawing.Point(91, 266);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(84, 15);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(90, 13);
             this.PhoneNumberLabel.TabIndex = 11;
             this.PhoneNumberLabel.Text = "Phone Number";
             // 
@@ -745,7 +746,7 @@ namespace Faculti
             this.PhoneNumberTextBox.BorderThickness = 1;
             this.PhoneNumberTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.PhoneNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.PhoneNumberTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberTextBox.DefaultText = "";
             this.PhoneNumberTextBox.FillColor = System.Drawing.Color.White;
             this.PhoneNumberTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -808,11 +809,11 @@ namespace Faculti
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.LastNameLabel.Location = new System.Drawing.Point(325, 190);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(62, 15);
+            this.LastNameLabel.Size = new System.Drawing.Size(67, 13);
             this.LastNameLabel.TabIndex = 9;
             this.LastNameLabel.Text = "Last Name";
             // 
@@ -834,7 +835,7 @@ namespace Faculti
             this.LastNameTextBox.BorderThickness = 1;
             this.LastNameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.LastNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.LastNameTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameTextBox.DefaultText = "";
             this.LastNameTextBox.FillColor = System.Drawing.Color.White;
             this.LastNameTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -897,11 +898,11 @@ namespace Faculti
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.FirstNameLabel.Location = new System.Drawing.Point(90, 190);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(63, 15);
+            this.FirstNameLabel.Size = new System.Drawing.Size(67, 13);
             this.FirstNameLabel.TabIndex = 7;
             this.FirstNameLabel.Text = "First Name";
             // 
@@ -923,7 +924,7 @@ namespace Faculti
             this.FirstNameTextBox.BorderThickness = 1;
             this.FirstNameTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.FirstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.FirstNameTextBox.DefaultFont = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameTextBox.DefaultText = "";
             this.FirstNameTextBox.FillColor = System.Drawing.Color.White;
             this.FirstNameTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -1005,11 +1006,11 @@ namespace Faculti
             this.label3.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label3.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label3.Location = new System.Drawing.Point(32, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(55, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = " Teacher";
             // 
@@ -1056,11 +1057,11 @@ namespace Faculti
             this.label2.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label2.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label2.Location = new System.Drawing.Point(32, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(46, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = " Parent";
             // 
@@ -1101,7 +1102,7 @@ namespace Faculti
             // 
             // label14
             // 
-            this.label14.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(92, 384);
             this.label14.Name = "label14";
@@ -1112,7 +1113,7 @@ namespace Faculti
             // 
             // label13
             // 
-            this.label13.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(25, 420);
             this.label13.Name = "label13";

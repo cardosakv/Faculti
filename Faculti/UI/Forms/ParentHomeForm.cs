@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,9 @@ namespace Faculti
 {
     public partial class ParentHomeForm : Form
     {
-        private BunifuButton2 lastButtonClicked;
-
         public ParentHomeForm()
         {
             InitializeComponent();
-            lastButtonClicked = HomeButton;
         }
 
         private void ParentHomeForm_Load(object sender, EventArgs e)
@@ -30,49 +28,26 @@ namespace Faculti
         private void HomeButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(HomePage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = HomeButton;
-
-            if (HomeButton.Focused)
-            {
-                HomeButton.onHoverState.ForeColor = Color.White;
-                HomeButton.onHoverState.FillColor = Color.FromArgb(33, 33, 33);
-                HomeButton.onHoverState.IconLeftImage = Faculti.Properties.Resources.home_pressed;
-            }
-            else
-            {
-                HomeButton.onHoverState.ForeColor = Color.FromArgb(33, 33, 33);
-                HomeButton.onHoverState.FillColor = Color.White;
-                HomeButton.onHoverState.IconLeftImage = Faculti.Properties.Resources.home_hover;
-            }
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(NewsPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = NewsButton;
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(GradesPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = GradesButton;
         }
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(ChatPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = ChatButton;
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(CalendarPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = CalendarButton;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -147,6 +122,91 @@ namespace Faculti
         private void SettingsButton_MouseLeave(object sender, EventArgs e)
         {
             SettingsButton.Image = Faculti.Properties.Resources.settings_idle;
+        }
+
+        private void bunifuPictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            bunifuPictureBox1.Size = new Size(37, 37); 
+        }
+
+        private void DisplayTimeAndDate()
+        {
+            DateTime now = DateTime.Now;
+            string day = now.ToString("ddd");
+            string month = now.ToString("MMM");
+            string date = now.ToString("dd");
+            string time = now.ToString("hh:mm tt");
+            DateTimeLabel.Text = $"{day} • {month} {date} • {time}";
+        }
+
+        private void DateTimeTimer_Tick(object sender, EventArgs e)
+        {
+            DisplayTimeAndDate();
+        }
+
+        private void HomeButton_MouseHover(object sender, EventArgs e)
+        {
+            HomeButton.Text = "  🏡   Home";
+        }
+
+        private void HomeButton_MouseLeave(object sender, EventArgs e)
+        {
+            HomeButton.Text = "  🏚   Home";
+        }
+
+        private void NewsButton_MouseHover(object sender, EventArgs e)
+        {
+            NewsButton.Text = "  📰   News";
+        }
+
+        private void NewsButton_MouseLeave(object sender, EventArgs e)
+        {
+            NewsButton.Text = "  📄   News";
+        }
+
+        private void GradesButton_MouseHover(object sender, EventArgs e)
+        {
+            GradesButton.Text = "  ✅   Grades";
+        }
+
+        private void GradesButton_MouseLeave(object sender, EventArgs e)
+        {
+            GradesButton.Text = "  ☑   Grades";
+        }
+
+        private void ChatButton_MouseHover(object sender, EventArgs e)
+        {
+            ChatButton.Text = "  🗨   Chat";
+        }
+
+        private void ChatButton_MouseLeave(object sender, EventArgs e)
+        {
+            ChatButton.Text = "  💬   Chat";
+        }
+
+        private void CalendarButton_MouseHover(object sender, EventArgs e)
+        {
+            CalendarButton.Text = "  📅   Calendar";
+        }
+
+        private void CalendarButton_MouseLeave(object sender, EventArgs e)
+        {
+            CalendarButton.Text = "  📆   Calendar";
+        }
+
+        private void ContactsButton_MouseHover(object sender, EventArgs e)
+        {
+            ContactsButton.Text = "  ☎️   Contacts";
+        }
+
+        private void ContactsButton_MouseLeave(object sender, EventArgs e)
+        {
+            ContactsButton.Text = "  📞   Contacts";
+        }
+
+        private void ContactsButton_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage(ContactsPage);
         }
     }
 }

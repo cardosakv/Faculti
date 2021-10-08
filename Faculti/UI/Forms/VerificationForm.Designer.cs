@@ -1,4 +1,6 @@
 ﻿
+using Faculti.UI;
+
 namespace Faculti
 {
     partial class VerificationForm
@@ -94,22 +96,22 @@ namespace Faculti
             this.ResendCodeButton.AutoSize = true;
             this.ResendCodeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ResendCodeButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResendCodeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ResendCodeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             this.ResendCodeButton.Location = new System.Drawing.Point(25, 216);
             this.ResendCodeButton.Name = "ResendCodeButton";
-            this.ResendCodeButton.Size = new System.Drawing.Size(94, 17);
+            this.ResendCodeButton.Size = new System.Drawing.Size(56, 17);
             this.ResendCodeButton.TabIndex = 27;
-            this.ResendCodeButton.Text = "RESEND CODE";
+            this.ResendCodeButton.Text = "RESEND";
             this.ResendCodeButton.Click += new System.EventHandler(this.ResendCodeButton_Click);
             // 
             // SuccessfulResentLabel
             // 
             this.SuccessfulResentLabel.AutoSize = true;
-            this.SuccessfulResentLabel.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SuccessfulResentLabel.ForeColor = System.Drawing.Color.DimGray;
-            this.SuccessfulResentLabel.Location = new System.Drawing.Point(133, 217);
+            this.SuccessfulResentLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SuccessfulResentLabel.ForeColor = System.Drawing.Color.Gray;
+            this.SuccessfulResentLabel.Location = new System.Drawing.Point(117, 217);
             this.SuccessfulResentLabel.Name = "SuccessfulResentLabel";
-            this.SuccessfulResentLabel.Size = new System.Drawing.Size(154, 11);
+            this.SuccessfulResentLabel.Size = new System.Drawing.Size(187, 12);
             this.SuccessfulResentLabel.TabIndex = 29;
             this.SuccessfulResentLabel.Text = "The code was successfully resent.";
             this.SuccessfulResentLabel.Visible = false;
@@ -125,13 +127,13 @@ namespace Faculti
             this.ConfirmButton.AutoSizeLeftIcon = true;
             this.ConfirmButton.AutoSizeRightIcon = true;
             this.ConfirmButton.BackColor = System.Drawing.Color.Transparent;
-            this.ConfirmButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConfirmButton.BackgroundImage")));
             this.ConfirmButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.ConfirmButton.ButtonText = "Confirm";
             this.ConfirmButton.ButtonTextMarginLeft = 0;
             this.ConfirmButton.ColorContrastOnClick = 45;
-            this.ConfirmButton.ColorContrastOnHover = 45;
+            this.ConfirmButton.ColorContrastOnHover = 70;
             this.ConfirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             borderEdges1.BottomLeft = true;
             borderEdges1.BottomRight = true;
@@ -154,10 +156,10 @@ namespace Faculti
             this.ConfirmButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.ConfirmButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.ConfirmButton.IconSize = 25;
-            this.ConfirmButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.IdleBorderRadius = 10;
             this.ConfirmButton.IdleBorderThickness = 1;
-            this.ConfirmButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.IdleIconLeftImage = null;
             this.ConfirmButton.IdleIconRightImage = null;
             this.ConfirmButton.IndicateFocus = false;
@@ -171,27 +173,27 @@ namespace Faculti
             this.ConfirmButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.ConfirmButton.OnDisabledState.IconLeftImage = null;
             this.ConfirmButton.OnDisabledState.IconRightImage = null;
-            this.ConfirmButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.ConfirmButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.onHoverState.BorderRadius = 10;
             this.ConfirmButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.ConfirmButton.onHoverState.BorderThickness = 1;
-            this.ConfirmButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.ConfirmButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ConfirmButton.onHoverState.IconLeftImage = null;
             this.ConfirmButton.onHoverState.IconRightImage = null;
-            this.ConfirmButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.OnIdleState.BorderRadius = 10;
             this.ConfirmButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.ConfirmButton.OnIdleState.BorderThickness = 1;
-            this.ConfirmButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ConfirmButton.OnIdleState.IconLeftImage = null;
             this.ConfirmButton.OnIdleState.IconRightImage = null;
-            this.ConfirmButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.OnPressedState.BorderRadius = 10;
             this.ConfirmButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.ConfirmButton.OnPressedState.BorderThickness = 1;
-            this.ConfirmButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ConfirmButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ConfirmButton.OnPressedState.IconLeftImage = null;
             this.ConfirmButton.OnPressedState.IconRightImage = null;
@@ -225,7 +227,7 @@ namespace Faculti
             this.ThirdDigitTextBox.DefaultFont = new System.Drawing.Font("Circular Spotify Tx T Bold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThirdDigitTextBox.DefaultText = "";
             this.ThirdDigitTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.ThirdDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ThirdDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             this.ThirdDigitTextBox.HideSelection = true;
             this.ThirdDigitTextBox.IconLeft = null;
             this.ThirdDigitTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -256,7 +258,7 @@ namespace Faculti
             this.ThirdDigitTextBox.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(83)))), ((int)(((byte)(84)))));
             stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.ThirdDigitTextBox.OnIdleState = stateProperties4;
             this.ThirdDigitTextBox.Padding = new System.Windows.Forms.Padding(3);
@@ -303,7 +305,7 @@ namespace Faculti
             this.SecondDigitTextBox.DefaultFont = new System.Drawing.Font("Circular Spotify Tx T Bold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SecondDigitTextBox.DefaultText = "";
             this.SecondDigitTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.SecondDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.SecondDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             this.SecondDigitTextBox.HideSelection = true;
             this.SecondDigitTextBox.IconLeft = null;
             this.SecondDigitTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -334,7 +336,7 @@ namespace Faculti
             this.SecondDigitTextBox.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(83)))), ((int)(((byte)(84)))));
             stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.SecondDigitTextBox.OnIdleState = stateProperties8;
             this.SecondDigitTextBox.Padding = new System.Windows.Forms.Padding(3);
@@ -381,7 +383,7 @@ namespace Faculti
             this.FourthDigitTextBox.DefaultFont = new System.Drawing.Font("Circular Spotify Tx T Bold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FourthDigitTextBox.DefaultText = "";
             this.FourthDigitTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.FourthDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FourthDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             this.FourthDigitTextBox.HideSelection = true;
             this.FourthDigitTextBox.IconLeft = null;
             this.FourthDigitTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -412,7 +414,7 @@ namespace Faculti
             this.FourthDigitTextBox.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(83)))), ((int)(((byte)(84)))));
             stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.FourthDigitTextBox.OnIdleState = stateProperties12;
             this.FourthDigitTextBox.Padding = new System.Windows.Forms.Padding(3);
@@ -459,7 +461,7 @@ namespace Faculti
             this.FirstDigitTextBox.DefaultFont = new System.Drawing.Font("Circular Spotify Tx T Bold", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstDigitTextBox.DefaultText = "";
             this.FirstDigitTextBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.FirstDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FirstDigitTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             this.FirstDigitTextBox.HideSelection = true;
             this.FirstDigitTextBox.IconLeft = null;
             this.FirstDigitTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -490,7 +492,7 @@ namespace Faculti
             this.FirstDigitTextBox.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(84)))), ((int)(((byte)(83)))));
             stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(205)))), ((int)(((byte)(254)))));
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.FirstDigitTextBox.OnIdleState = stateProperties16;
             this.FirstDigitTextBox.Padding = new System.Windows.Forms.Padding(3);
@@ -525,7 +527,7 @@ namespace Faculti
             this.ConfirmationBackButton.AllowZooming = false;
             this.ConfirmationBackButton.AllowZoomingOnFocus = false;
             this.ConfirmationBackButton.BackColor = System.Drawing.Color.Transparent;
-            this.ConfirmationBackButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ConfirmationBackButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.ConfirmationBackButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("ConfirmationBackButton.ErrorImage")));
             this.ConfirmationBackButton.FadeWhenInactive = true;
             this.ConfirmationBackButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
@@ -553,21 +555,23 @@ namespace Faculti
             // 
             // IncorrectCodeLabel
             // 
-            this.IncorrectCodeLabel.AutoSize = true;
             this.IncorrectCodeLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.IncorrectCodeLabel.Location = new System.Drawing.Point(121, 256);
+            this.IncorrectCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(61)))), ((int)(((byte)(87)))));
+            this.IncorrectCodeLabel.Location = new System.Drawing.Point(60, 262);
             this.IncorrectCodeLabel.Name = "IncorrectCodeLabel";
-            this.IncorrectCodeLabel.Size = new System.Drawing.Size(85, 12);
+            this.IncorrectCodeLabel.Size = new System.Drawing.Size(207, 12);
             this.IncorrectCodeLabel.TabIndex = 30;
             this.IncorrectCodeLabel.Text = "Incorrect Code";
+            this.IncorrectCodeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.IncorrectCodeLabel.Visible = false;
             // 
             // VerificationForm
             // 
+            this.AcceptButton = this.ConfirmButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.CancelButton = this.ConfirmationBackButton;
             this.ClientSize = new System.Drawing.Size(327, 351);
             this.Controls.Add(this.IncorrectCodeLabel);
             this.Controls.Add(this.SuccessfulResentLabel);

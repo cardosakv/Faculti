@@ -50,17 +50,17 @@ namespace Faculti
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Faculti", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.label1.Location = new System.Drawing.Point(24, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 30);
+            this.label1.Size = new System.Drawing.Size(231, 30);
             this.label1.TabIndex = 2;
             this.label1.Text = "NO INTERNET FOUND";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(25, 102);
             this.label2.Name = "label2";
@@ -152,7 +152,7 @@ namespace Faculti
             this.RetryButton.AutoSizeLeftIcon = true;
             this.RetryButton.AutoSizeRightIcon = true;
             this.RetryButton.BackColor = System.Drawing.Color.Transparent;
-            this.RetryButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.RetryButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.RetryButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RetryButton.BackgroundImage")));
             this.RetryButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.RetryButton.ButtonText = "Retry";
@@ -181,10 +181,10 @@ namespace Faculti
             this.RetryButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.RetryButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.RetryButton.IconSize = 25;
-            this.RetryButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.RetryButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.RetryButton.IdleBorderRadius = 8;
             this.RetryButton.IdleBorderThickness = 1;
-            this.RetryButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.RetryButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.RetryButton.IdleIconLeftImage = null;
             this.RetryButton.IdleIconRightImage = null;
             this.RetryButton.IndicateFocus = false;
@@ -206,11 +206,11 @@ namespace Faculti
             this.RetryButton.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.RetryButton.onHoverState.IconLeftImage = null;
             this.RetryButton.onHoverState.IconRightImage = null;
-            this.RetryButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.RetryButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.RetryButton.OnIdleState.BorderRadius = 8;
             this.RetryButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.RetryButton.OnIdleState.BorderThickness = 1;
-            this.RetryButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.RetryButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.RetryButton.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.RetryButton.OnIdleState.IconLeftImage = null;
             this.RetryButton.OnIdleState.IconRightImage = null;
@@ -336,6 +336,7 @@ namespace Faculti
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NoInternetFoundForm";
+            this.Opacity = 0D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculti - No Internet Found";
             this.Shown += new System.EventHandler(this.NoInternetFoundForm_Shown);

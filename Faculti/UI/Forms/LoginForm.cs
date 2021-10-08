@@ -23,6 +23,10 @@ namespace Faculti
         {
             InitializeComponent();
             _userType = String.Empty;
+
+            ControlInteractives.SetButtonHoverEvent(LogInButton);
+            ControlInteractives.SetLabelHoverEvent(SignupLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(ForgotPasswordLinkLabel);
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

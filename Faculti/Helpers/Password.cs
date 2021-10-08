@@ -61,7 +61,7 @@ namespace Faculti.Helpers
             byte[] toEncryptArray = Convert.FromBase64String(passwordInCipherText);
 
             MD5CryptoServiceProvider objMD5CryptoService = new MD5CryptoServiceProvider();
-            byte[] securityKeyArray = objMD5CryptoService.ComputeHash(UTF8Encoding.UTF8.GetBytes(_securityKey));
+            byte[] securityKeyArray = objMD5CryptoService.ComputeHash(Encoding.UTF8.GetBytes(_securityKey));
             objMD5CryptoService.Clear();
 
             var objTripleDESCryptoService = new TripleDESCryptoServiceProvider
@@ -91,10 +91,10 @@ namespace Faculti.Helpers
         /// </returns>
         public static string Encrypt(string passwordInPlainText)
         {
-            byte[] toEncryptedArray = UTF8Encoding.UTF8.GetBytes(passwordInPlainText);
+            byte[] toEncryptedArray = Encoding.UTF8.GetBytes(passwordInPlainText);
 
             MD5CryptoServiceProvider objMD5CryptoService = new MD5CryptoServiceProvider();
-            byte[] securityKeyArray = objMD5CryptoService.ComputeHash(UTF8Encoding.UTF8.GetBytes(_securityKey));
+            byte[] securityKeyArray = objMD5CryptoService.ComputeHash(Encoding.UTF8.GetBytes(_securityKey));
             objMD5CryptoService.Clear();
 
             var objTripleDESCryptoService = new TripleDESCryptoServiceProvider

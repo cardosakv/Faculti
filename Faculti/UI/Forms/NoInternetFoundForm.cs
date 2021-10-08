@@ -13,7 +13,6 @@ namespace Faculti
         public NoInternetFoundForm()
         {
             InitializeComponent();
-            this.Opacity = 0;
         }
 
         private void NoInternetFoundForm_Shown(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using Bunifu.UI.WinForms.BunifuButton;
 
 namespace Faculti.UI
 {
@@ -14,8 +15,18 @@ namespace Faculti.UI
         public static void SetLabelHoverEvent(Label label)
         {
             Color labelColor = label.ForeColor;
-            label.MouseHover += (o, i) => { label.ForeColor = ChangeBrightness(labelColor, 1.15); };
+            label.MouseHover += (o, i) => { label.ForeColor = ChangeBrightness(labelColor, 1.20); };
             label.MouseLeave += (o, i) => { label.ForeColor = labelColor; };
+        }
+
+        /// <summary>
+        ///     Sets the button border and fill color to ligther when hovered.
+        /// </summary>
+        public static void SetButtonHoverEvent(BunifuButton2 button)
+        {
+            Color buttonColor = button.OnIdleState.FillColor;
+            button.onHoverState.FillColor = ChangeBrightness(buttonColor, 1.20); 
+            button.onHoverState.BorderColor = ChangeBrightness(buttonColor, 1.20);
         }
 
         /// <summary>

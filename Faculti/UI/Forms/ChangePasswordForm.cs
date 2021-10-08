@@ -22,7 +22,6 @@ namespace Faculti.UI.Forms
         public string userType;
         public bool isPasswordMatched = false;
 
-        private Timer _timer;
         public ChangePasswordForm()
         {
             InitializeComponent();
@@ -49,20 +48,17 @@ namespace Faculti.UI.Forms
         {
             if (PasswordTextBox.Text == String.Empty)
             {
-                IncorrecPasswordFormatTooltip.Text = "Input password";
                 IncorrecPasswordFormatTooltip.Visible = true;
             }
 
             if (ReEnterPasswordTextbox.Text == String.Empty)
             {
-                PasswordNotMatchToolTip.Text = "Input password";
                 PasswordNotMatchToolTip.Visible = true;
             }
          
 
-            if (Syntax.IsValidPassword(PasswordTextBox.Text) &&
-                (Syntax.IsValidPassword(ReEnterPasswordTextbox.Text) ||
-                ReEnterPasswordTextbox.Text != PasswordTextBox.Text))
+            if (IncorrecPasswordFormatTooltip.Visible == false &&
+                PasswordNotMatchToolTip.Visible == false)
             {
                 _password = PasswordTextBox.Text;
 
@@ -98,14 +94,11 @@ namespace Faculti.UI.Forms
                 // Update password using AirtableClient.UpdateRecord();
                 AirtableClient airtableClient = new AirtableClient();
                 airtableClient.UpdateRecord(userType, fields, recordId);
-                
-                _timer = new Timer { Interval = 2000 };
-                _timer.Start();
 
                 ConfirmChangePasswordButton.Text = "Success!";
-                
-                // declare LoginForm object
-                // show LoginForm
+                await Task.Delay(1000);
+                // declare LoginForm object x
+                // show LoginForm x
                 // close this form
                 this.Close();
                 ForgotPasswordForm obj = (ForgotPasswordForm)Application.OpenForms["ForgotPasswordForm"];

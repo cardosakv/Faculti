@@ -179,12 +179,12 @@ namespace Faculti
 
         private void NewsButton_MouseHover(object sender, EventArgs e)
         {
-            NewsButton.Text = "  📰   News";
+            NewsButton.Text = "  📰   Feed";
         }
 
         private void NewsButton_MouseLeave(object sender, EventArgs e)
         {
-            NewsButton.Text = "  📄   News";
+            NewsButton.Text = "  📄   Feed";
         }
 
         private void GradesButton_MouseHover(object sender, EventArgs e)

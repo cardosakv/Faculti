@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Faculti.UI;
 using Faculti.Helpers;
+using Faculti.Services.Airtable;
 
 namespace Faculti
 {
@@ -21,9 +22,103 @@ namespace Faculti
         public LoginForm()
         {
             InitializeComponent();
-            _userType = String.Empty;
+            _userType = string.Empty;
+
+            ControlInteractives.SetButtonHoverEvent(LogInButton);
+            ControlInteractives.SetLabelHoverEvent(SignupLinkLabel);
+            ControlInteractives.SetLabelHoverEvent(ForgotPasswordLinkLabel);
         }
 
+        private async void LogInButton_Click(object sender, EventArgs e)
+        {
+            IncorrectEmailTooltip.Visible = false;
+            IncorrectPasswordTooltip.Visible = false;
+
+            // Checks if required inputs are entered by the user; shows error texts when needed.
+            if (String.IsNullOrEmpty(_userType)) SetUserSelectionError(true);
+
+            if (PasswordTextBox.Text == String.Empty)
+            {
+                IncorrectPasswordTooltip.Text = "Input password";
+                IncorrectPasswordTooltip.Visible = true;
+            }
+
+            if (EmailTextBox.Text == String.Empty)
+            {
+                IncorrectEmailTooltip.Text = "Input email";
+                IncorrectEmailTooltip.Visible = true;
+            }
+
+            // Textboxes' values saved into class if required inputs are entered and are valid.
+            // Input password encrypted and credentials are checked if present in the database.
+            if (Syntax.IsValidPassword(PasswordTextBox.Text) &&
+                Syntax.IsValidEmail(EmailTextBox.Text) &&
+                _userType != String.Empty)
+            {
+                Cursor = Cursors.WaitCursor;
+
+                User user = new User
+                {
+                    Type = _userType,
+                    Email = EmailTextBox.Text,
+                    PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
+                };
+
+                AirtableClient airtableClient = new AirtableClient();
+                var records = await airtableClient.ListRecords(_userType);
+
+                if (user.DoesExistInDatabase(records))
+                {
+                    // Log in is successful.
+                    LogInButton.Text = "✔ Success";
+                    Cursor = Cursors.Default;
+
+                    _timer = new Timer { Interval = 2000 };
+                    _timer.Start();
+                    _timer.Tick += Timer_Tick;
+                }
+                else if (!Password.IsCorrect(user.Email, user.PasswordInHash, records) &&
+                          Email.IsPresentInDatabase(user.Email, records))
+                {
+                    IncorrectPasswordTooltip.Text = "Password is incorrect";
+                    IncorrectPasswordTooltip.Visible = true;
+                }
+                else
+                {
+                    IncorrectEmailTooltip.Text = "Email is not registered";
+                    IncorrectEmailTooltip.Visible = true;
+                }
+            }
+            else
+            {
+                // Else clear password textbox.
+                PasswordTextBox.Text = String.Empty;
+            }
+
+            Cursor = Cursors.Default;
+        }
+
+        private void SignUpLinkLabel_Click(object sender, EventArgs e)
+        {
+            SignupForm signupForm = new SignupForm();
+            signupForm.Show();
+            this.Close();
+        }
+
+        private void ForgotPasswordLinkLabel_Click(object sender, EventArgs e)
+        {
+            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
+            forgotPasswordForm.ShowDialog();
+        }
+
+
+
+
+        // ====================================================================================== //
+        //                                                                                        //
+        //                                        UI METHODS                                      //
+        //                                                                                        //
+        // ====================================================================================== //
         private void LoginForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
@@ -115,87 +210,6 @@ namespace Faculti
                 PasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
             }
         }
-
-        private async void LogInButton_Click(object sender, EventArgs e)
-        {
-            Cursor = Cursors.WaitCursor;
-            IncorrectEmailTooltip.Visible = false;
-            IncorrectPasswordTooltip.Visible = false;
-
-            // Checks if required inputs are entered by the user; shows error texts when needed.
-            if (String.IsNullOrEmpty(_userType)) SetUserSelectionError(true);
-            if (PasswordTextBox.Text == String.Empty)
-            {
-                IncorrectPasswordTooltip.Text = "Input password";
-                IncorrectPasswordTooltip.Visible = true;
-            }
-
-            if (EmailTextBox.Text == String.Empty)
-            {
-                IncorrectEmailTooltip.Text = "Input email";
-                IncorrectEmailTooltip.Visible = true;
-            }
-
-            // Textboxes' values saved into class if required inputs are entered and are valid.
-            // Input password encrypted and credentials are checked if present in the database.
-            if (Syntax.IsValidPassword(PasswordTextBox.Text) &&
-                Syntax.IsValidEmail(EmailTextBox.Text) &&
-                _userType != String.Empty)
-            {
-                User sessionUser = new User
-                {
-                    Type = _userType,
-                    Email = EmailTextBox.Text,
-                    PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
-                };
-
-                AirtableClient airtableClient = new AirtableClient();
-                var records = await airtableClient.ListRecords(_userType);
-
-                if (sessionUser.DoesExistInDatabase(records))
-                {
-                    // Log in is successful.
-                    LogInButton.Text = "✔ Success";
-                    Cursor = Cursors.Default;
-
-                    _timer = new Timer { Interval = 2000 };
-                    _timer.Start();
-                    _timer.Tick += Timer_Tick;
-                }
-                else if (!Password.IsCorrect(sessionUser.Email, sessionUser.PasswordInHash, records) &&
-                          Email.IsPresentInDatabase(sessionUser.Email, records))
-                {
-                    IncorrectPasswordTooltip.Text = "Password is incorrect";
-                    IncorrectPasswordTooltip.Visible = true;
-                }
-                else
-                {
-                    IncorrectEmailTooltip.Text = "Email is not registered";
-                    IncorrectEmailTooltip.Visible = true;
-                }
-            }
-            else
-            {
-                // Else clear password textbox.
-                PasswordTextBox.Text = String.Empty;
-            }
-
-            Cursor = Cursors.Default;
-        }
-
-        private void ForgotPasswordLinkLabel_Click(object sender, EventArgs e)
-        {
-            ForgotPasswordForm forgotPasswordForm = new ForgotPasswordForm();
-            forgotPasswordForm.ShowDialog();
-        }
-
-        private void SignUpLinkLabel_Click(object sender, EventArgs e)
-        {
-            SignupForm signupForm = new SignupForm();
-            signupForm.Show();
-            this.Close();
-        }
-
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -215,14 +229,21 @@ namespace Faculti
             {
                 TeacherHomeForm homeForm = new TeacherHomeForm();
                 homeForm.Show();
+                Cursor = Cursors.Default;
                 this.Close();
             }
             else
             {
                 ParentHomeForm homeForm = new ParentHomeForm();
                 homeForm.Show();
+                Cursor = Cursors.Default;
                 this.Close();
             }
+        }
+
+        private void LoginForm_Shown(object sender, EventArgs e)
+        {
+            FormAnimation.FadeIn(this);
         }
     }
 }

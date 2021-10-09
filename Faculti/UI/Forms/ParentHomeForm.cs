@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,12 +15,10 @@ namespace Faculti
 {
     public partial class ParentHomeForm : Form
     {
-        private BunifuButton2 lastButtonClicked;
-
         public ParentHomeForm()
         {
             InitializeComponent();
-            lastButtonClicked = HomeButton;
+            DisplayTimeAndDate();
         }
 
         private void ParentHomeForm_Load(object sender, EventArgs e)
@@ -30,49 +29,26 @@ namespace Faculti
         private void HomeButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(HomePage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = HomeButton;
-
-            if (HomeButton.Focused)
-            {
-                HomeButton.onHoverState.ForeColor = Color.White;
-                HomeButton.onHoverState.FillColor = Color.FromArgb(33, 33, 33);
-                HomeButton.onHoverState.IconLeftImage = Faculti.Properties.Resources.home_pressed;
-            }
-            else
-            {
-                HomeButton.onHoverState.ForeColor = Color.FromArgb(33, 33, 33);
-                HomeButton.onHoverState.FillColor = Color.White;
-                HomeButton.onHoverState.IconLeftImage = Faculti.Properties.Resources.home_hover;
-            }
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(NewsPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = NewsButton;
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(GradesPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = GradesButton;
         }
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(ChatPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = ChatButton;
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(CalendarPage);
-            lastButtonClicked.ApplyState(lastButtonClicked.OnIdleState);
-            lastButtonClicked = CalendarButton;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -87,48 +63,43 @@ namespace Faculti
 
         private void NotificationButton_MouseHover(object sender, EventArgs e)
         {
-            NotificationButton.Image = Faculti.Properties.Resources.bell_hover;
+            NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif_hover;
         }
 
         private void NotificationButton_MouseLeave(object sender, EventArgs e)
         {
-            NotificationButton.Image = Faculti.Properties.Resources.bell_idle;
+            NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif;
         }
 
         private void DateTimeLabel_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
         }
 
         private void DateTimeLabel_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void DateTimePictureBox_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
+
         }
 
         private void DateTimePictureBox_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void DateTimePanel_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
         }
 
         private void DateTimePanel_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -141,12 +112,139 @@ namespace Faculti
 
         private void SettingsButton_MouseHover(object sender, EventArgs e)
         {
-            SettingsButton.Image = Faculti.Properties.Resources.settings_keydown;
+            SettingsButton.Image = Faculti.Properties.Resources.settings_hover;
         }
 
         private void SettingsButton_MouseLeave(object sender, EventArgs e)
         {
             SettingsButton.Image = Faculti.Properties.Resources.settings_idle;
+        }
+
+        private void DisplayTimeAndDate()
+        {
+            DateTime now = DateTime.Now;
+            string day = now.ToString("ddd");
+            string month = now.ToString("MMM");
+            string date = now.ToString("dd");
+            string time = now.ToString("hh:mm tt");
+            DateTimeLabel.Text = $"{day} • {month} {date} • {time}";
+        }
+
+        private void DisplayRandomTips()
+        {
+            string[] tips = { "  Eat your meal  🥣",
+                              "  Drink some water  🥛",
+                              "  Take a break  💤",
+                              "  Exercise daily  💪",
+                              "  Schedule your day  📝",
+                              "  Try to meditate  🧘",
+                              "  Travel someday  ⛰️",
+                              "  Read some books  📗",
+                              "  Sleep early  🛌",
+                              "  Check schedule  📌"};
+
+            Random rnd = new Random();
+            DateTimeLabel.Text = tips[rnd.Next(0, 9)];
+        }
+
+        private void DateTime_Hover()
+        {
+            DateTimeTimer.Stop();
+            DisplayRandomTips();
+            DateTimePictureBox.Image = Faculti.Properties.Resources.tips;
+        }
+
+        private void DateTime_Leave()
+        {
+            DisplayTimeAndDate();
+            DateTimeTimer.Start();
+            DateTimeLabel.ForeColor = Color.FromArgb(162, 177, 198);
+            DateTimePictureBox.Image = Faculti.Properties.Resources.calendar_idle;
+        }
+
+        private void DateTimeTimer_Tick(object sender, EventArgs e)
+        {
+            DisplayTimeAndDate();
+        }
+
+        private void HomeButton_MouseHover(object sender, EventArgs e)
+        {
+            HomeButton.Text = "  🏡   Home";
+        }
+
+        private void HomeButton_MouseLeave(object sender, EventArgs e)
+        {
+            HomeButton.Text = "  🏚   Home";
+        }
+
+        private void NewsButton_MouseHover(object sender, EventArgs e)
+        {
+            NewsButton.Text = "  📰   Feed";
+        }
+
+        private void NewsButton_MouseLeave(object sender, EventArgs e)
+        {
+            NewsButton.Text = "  📄   Feed";
+        }
+
+        private void GradesButton_MouseHover(object sender, EventArgs e)
+        {
+            GradesButton.Text = "  ✅   Grades";
+        }
+
+        private void GradesButton_MouseLeave(object sender, EventArgs e)
+        {
+            GradesButton.Text = "  ☑   Grades";
+        }
+
+        private void ChatButton_MouseHover(object sender, EventArgs e)
+        {
+            ChatButton.Text = "  🗨   Chat";
+        }
+
+        private void ChatButton_MouseLeave(object sender, EventArgs e)
+        {
+            ChatButton.Text = "  💬   Chat";
+        }
+
+        private void CalendarButton_MouseHover(object sender, EventArgs e)
+        {
+            CalendarButton.Text = "  📅   Calendar";
+        }
+
+        private void CalendarButton_MouseLeave(object sender, EventArgs e)
+        {
+            CalendarButton.Text = "  📆   Calendar";
+        }
+
+        private void ContactsButton_MouseHover(object sender, EventArgs e)
+        {
+            ContactsButton.Text = "  ☎️   Contacts";
+        }
+
+        private void ContactsButton_MouseLeave(object sender, EventArgs e)
+        {
+            ContactsButton.Text = "  📞   Contacts";
+        }
+
+        private void ContactsButton_Click(object sender, EventArgs e)
+        {
+            Pages.SetPage(ContactsPage);
+        }
+
+        private void TopProfilePictureBox_MouseHover(object sender, EventArgs e)
+        {
+            TopProfilePictureBox.BorderRadius = 10;
+        }
+
+        private void TopProfilePictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            TopProfilePictureBox.BorderRadius = 17;
+        }
+
+        private void NotificationButton_Click(object sender, EventArgs e)
+        {
+            NotificationButton.Image = Faculti.Properties.Resources.notif_hover;
         }
     }
 }

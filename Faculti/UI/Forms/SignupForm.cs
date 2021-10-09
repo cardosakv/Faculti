@@ -1,29 +1,194 @@
 ﻿using AirtableApiClient;
 using Bunifu.UI.WinForms;
-using Faculti.Services;
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
 using Faculti.Helpers;
-using Faculti.UI;
 using Faculti.Services.Airtable;
+using Faculti.UI;
+using System;
+using System.Drawing;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Faculti.UI.Forms;
 
 namespace Faculti
 {
+    /// <summary>
+    ///     Main form for signing up to Faculti.
+    /// </summary>
     public partial class SignupForm : Form
     {
-        public string userType = null;
-        public string firstName, lastName, email, password, phoneNumber;
-        public bool isPasswordMatched = false;
-        public bool isError = true, isPassword1Revealed = false, isPassword2Revealed = false;
+        private string _userType;
+        private bool _isPasswordMatched;
+        private bool _isPassword1Revealed, _isPassword2Revealed;
 
         public SignupForm()
         {
             InitializeComponent();
+            ControlInteractives.SetLabelHoverEvent(LogInButton);
+            ControlInteractives.SetButtonHoverEvent(CreateAccountButton);
         }
 
+        private async void CreateAccountButton_Click(object sender, EventArgs e)
+        {
+            // Check for input errors in the textboxes
+            var errors = await CheckForInputErrors();
+
+            // If there are no errors, proceed to account creation
+            if (errors == 0)
+            {
+                Cursor = Cursors.WaitCursor;
+
+                // Create a new user object
+                User signupUser = new User
+                {
+                    Type = _userType,
+                    FirstName = FirstNameTextBox.Text,
+                    LastName = LastNameTextBox.Text,
+                    Email = EmailTextBox.Text,
+                    PasswordInHash = Password.Encrypt(ConfirmPasswordTextBox.Text), // encrypt the password
+                    PhoneNumber = PhoneNumberTextBox.Text
+                };
+
+                // Create an Airtable Fields object and add the user details
+                Fields fields = new Fields();
+                fields.AddField("Email", signupUser.Email);
+                fields.AddField("Password", signupUser.PasswordInHash);
+                fields.AddField("First Name", signupUser.FirstName);
+                fields.AddField("Last Name", signupUser.LastName);
+                fields.AddField("Phone Number", signupUser.PhoneNumber);
+
+                // Add user to the database
+                AirtableClient airtableClient = new AirtableClient();
+                airtableClient.CreateRecord(signupUser.Type, fields);
+
+                // Generate a random code for verification and send to email
+                int verificationCode = Randomizer.GenerateVerificationCode();
+                Email.SendVerificationCode(signupUser.Email, verificationCode);
+
+                // Show the verification form for the user to input code
+                VerificationForm verificationForm = new VerificationForm();
+                verificationForm.CopyEmailAndCode(signupUser.Email, verificationCode, "signup");
+                verificationForm.ShowDialog();
+
+                Cursor = Cursors.Default;
+            }
+        }
+
+        private void LogInButton_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
+
+        private async Task<int> CheckForInputErrors()
+        {
+            var errors = 0;
+
+            if (string.IsNullOrEmpty(_userType))
+            {
+                errors++;
+                SetBorderError(ParentCheckPanel);
+                SetBorderError(TeacherCheckPanel);
+            }
+            else
+            {
+                SetDefaultBorder(ParentCheckPanel);
+                SetDefaultBorder(TeacherCheckPanel);
+            }
+
+            if (FirstNameTextBox.Text == string.Empty)
+            {
+                errors++;
+                FirstNameTooltip.Visible = true;
+            }
+            else
+            {
+                FirstNameTooltip.Visible = false;
+            }
+
+            if (LastNameTextBox.Text == string.Empty)
+            {
+                errors++;
+                LastNameTooltip.Visible = true;
+            }
+            else
+            {
+                LastNameTooltip.Visible = false;
+            }
+
+            if (!Syntax.IsValidMobileNumber(PhoneNumberTextBox.Text))
+            {
+                errors++;
+                PhoneTooltip.Visible = true;
+            }
+            else
+            {
+                PhoneTooltip.Visible = false;
+            }
+
+            if (Syntax.IsValidEmail(EmailTextBox.Text))
+            {
+                AirtableClient airtableClient = new AirtableClient();
+                var records = await airtableClient.ListRecords(_userType);
+
+                if (Email.IsPresentInDatabase(EmailTextBox.Text, records))
+                {
+                    errors++;
+                    EmailTooltip.Text = "Email already registered";
+                    EmailTooltip.Visible = true;
+                }
+                else
+                {
+                    EmailTooltip.Visible = false;
+                }
+            }
+            else
+            {
+                errors++;
+                EmailTooltip.Visible = true;
+            }
+
+            if (PasswordTextBox.Text == string.Empty)
+            {
+                errors++;
+                PasswordTooltip.Visible = true;
+            }
+            else
+            {
+                PasswordTooltip.Visible = false;
+            }
+
+            if (!_isPasswordMatched)
+            {
+                errors++;
+                ConfirmPasswordTooltip.Visible = true;
+            }
+            else
+            {
+                ConfirmPasswordTooltip.Visible = false;
+            }
+
+            if (!AgreeCheckBox.Checked)
+            {
+                errors++;
+                TermsPrivacyLabel.ForeColor = Color.FromArgb(248, 43, 96);
+            }
+            else
+            {
+                TermsPrivacyLabel.ForeColor = Color.FromArgb(49, 63, 79);
+            }
+
+            return errors;
+        }
+
+
+
+
+        // ====================================================================================== //
+        //                                                                                        //
+        //                                        UI METHODS                                      //
+        //                                                                                        //
+        // ====================================================================================== //
         private void LoginSignupForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
@@ -36,7 +201,7 @@ namespace Faculti
         {
             if (ParentRadioButton.Checked)
             {
-                userType = "Parent";
+                _userType = "Parent";
                 TeacherRadioButton.Checked = false;
 
                 SetDefaultBorder(ParentCheckPanel);
@@ -48,7 +213,7 @@ namespace Faculti
         {
             if (TeacherRadioButton.Checked)
             {
-                userType = "Teacher";
+                _userType = "Teacher";
                 ParentRadioButton.Checked = false;
 
                 SetDefaultBorder(ParentCheckPanel);
@@ -71,7 +236,6 @@ namespace Faculti
             if (Syntax.IsValidMobileNumber(PhoneNumberTextBox.Text))
             {
                 PhoneTooltip.Visible = false;
-                phoneNumber = PhoneNumberTextBox.Text;
             }
             else
             {
@@ -108,13 +272,45 @@ namespace Faculti
         {
             if (ConfirmPasswordTextBox.Text != PasswordTextBox.Text || !Syntax.IsValidPassword(PasswordTextBox.Text))
             {
-                isPasswordMatched = false;
+                _isPasswordMatched = false;
                 ConfirmPasswordTooltip.Visible = true;
             }
             else if (ConfirmPasswordTextBox.Text == PasswordTextBox.Text && Syntax.IsValidPassword(PasswordTextBox.Text))
             {
-                isPasswordMatched = true;
+                _isPasswordMatched = true;
                 ConfirmPasswordTooltip.Visible = false;
+            }
+        }
+
+        private void PasswordRevealButton_Click(object sender, EventArgs e)
+        {
+            if (_isPassword1Revealed)
+            {
+                _isPassword1Revealed = false;
+                PasswordTextBox.PasswordChar = '•';
+                PasswordRevealButton.Image = Faculti.Properties.Resources.password_hidden;
+            }
+            else
+            {
+                _isPassword1Revealed = true;
+                PasswordTextBox.PasswordChar = '\0';
+                PasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
+            }
+        }
+
+        private void ConfirmPasswordRevealButton_Click(object sender, EventArgs e)
+        {
+            if (_isPassword2Revealed)
+            {
+                _isPassword2Revealed = false;
+                ConfirmPasswordTextBox.PasswordChar = '•';
+                ConfirmPasswordRevealButton.Image = Faculti.Properties.Resources.password_hidden;
+            }
+            else
+            {
+                _isPassword2Revealed = true;
+                ConfirmPasswordTextBox.PasswordChar = '\0';
+                ConfirmPasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
             }
         }
 
@@ -123,218 +319,30 @@ namespace Faculti
             TermsPrivacyLabel.ForeColor = Color.DimGray;
         }
 
-        private void LogInButton_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            this.Close();
-        }
-
-        private void PasswordRevelButton_Click(object sender, EventArgs e)
-        {
-            if (isPassword1Revealed)
-            {
-                isPassword1Revealed = false;
-                PasswordTextBox.PasswordChar = '•';
-                PasswordRevealButton.Image = Faculti.Properties.Resources.password_hidden;
-            }
-            else
-            {
-                isPassword1Revealed = true;
-                PasswordTextBox.PasswordChar = '\0';
-                PasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
-            }
-        }
-
-        private void ConfirmPasswordRevealButton_Click(object sender, EventArgs e)
-        {
-            if (isPassword2Revealed)
-            {
-                isPassword2Revealed = false;
-                ConfirmPasswordTextBox.PasswordChar = '•';
-                ConfirmPasswordRevealButton.Image = Faculti.Properties.Resources.password_hidden;
-            }
-            else
-            {
-                isPassword2Revealed = true;
-                ConfirmPasswordTextBox.PasswordChar = '\0';
-                ConfirmPasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
-            }
-        }
-
-        private async void CreateAccountButton_Click(object sender, EventArgs e)
-        {
-            var errorCounter = 0;
-
-            firstName = FirstNameTextBox.Text;
-            lastName = LastNameTextBox.Text;
-            email = EmailTextBox.Text;
-            password = ConfirmPasswordTextBox.Text;
-
-            if (userType == null)
-            {
-                errorCounter++;
-                SetBorderError(ParentCheckPanel);
-                SetBorderError(TeacherCheckPanel);
-            }
-            else
-            {
-                SetDefaultBorder(ParentCheckPanel);
-                SetDefaultBorder(TeacherCheckPanel);
-            }
-
-            if (firstName == "")
-            {
-                errorCounter++;
-                FirstNameTooltip.Visible = true;
-            }
-            else
-            {
-                FirstNameTooltip.Visible = false;
-            }
-
-            if (lastName == "")
-            {
-                errorCounter++;
-                LastNameTooltip.Visible = true;
-            }
-            else
-            {
-                LastNameTooltip.Visible = false;
-            }
-
-            if (!Syntax.IsValidMobileNumber(PhoneNumberTextBox.Text))
-            {
-                errorCounter++;
-                PhoneTooltip.Visible = true;
-            }
-            else
-            {
-                PhoneTooltip.Visible = false;
-            }
-
-            if (!Syntax.IsValidEmail(email))
-            {
-                errorCounter++;
-                EmailTooltip.Visible = true;
-            }
-            else if (Syntax.IsValidEmail(email))
-            {
-                bool emailPresent = false;
-
-                AirtableClient airtableClient = new AirtableClient();
-                var recordsArr = await airtableClient.ListRecords(userType);
-
-                for (int recordNum = 0; recordNum < recordsArr.Length; recordNum++)
-                {
-                    foreach (KeyValuePair<string, object> kvp in recordsArr[recordNum].Fields)
-                    {
-                        if (kvp.Key == "Email" && kvp.Value.ToString() == email)
-                        {
-                            emailPresent = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (emailPresent)
-                {
-                    errorCounter++;
-                    EmailTooltip.Text = "Email already registered";
-                    EmailTooltip.Visible = true;
-                }
-                else
-                {
-                    EmailTooltip.Visible = false;
-                }
-            }
-
-            if (password == "")
-            {
-                errorCounter++;
-                PasswordTooltip.Visible = true;
-            }
-            else
-            {
-                PasswordTooltip.Visible = false;
-            }
-
-            if (!isPasswordMatched)
-            {
-                errorCounter++;
-                ConfirmPasswordTooltip.Visible = true;
-            }
-            else
-            {
-                ConfirmPasswordTooltip.Visible = false;
-            }
-
-            if (!AgreeCheckBox.Checked)
-            {
-                errorCounter++;
-                TermsPrivacyLabel.ForeColor = Color.FromArgb(255, 127, 127);
-            }
-            else
-            {
-                TermsPrivacyLabel.ForeColor = Color.FromArgb(49, 63, 79);
-            }
-
-            // if there are no other errors, proceed to account creation
-            if (errorCounter == 0)
-            {
-                Cursor = Cursors.AppStarting;
-                Fields fields = new Fields();
-                fields.AddField("Email", email);
-                fields.AddField("Password", Password.Encrypt(password));
-                fields.AddField("First Name", firstName);
-                fields.AddField("Last Name", lastName);
-                fields.AddField("Phone Number", phoneNumber);
-
-                AirtableClient helper = new AirtableClient();
-                helper.CreateRecord(userType, fields);
-
-                // generate a random code for verification
-                Random rnd = new Random();
-                int verificationCode = rnd.Next(1000, 9999);
-
-                Email.SendVerificationCode(email, verificationCode);
-
-                VerificationForm verificationForm = new VerificationForm();
-                verificationForm.FormClosed += new FormClosedEventHandler(VerificationForm_FormClosed);
-                verificationForm.CopyEmailAndCode(email, verificationCode);
-                verificationForm.ShowDialog();
-                Cursor = Cursors.Default;
-            }
-        }
-
         private void LogInButton_MouseLeave(object sender, EventArgs e)
         {
             LogInButton.ForeColor = Color.FromArgb(255, 209, 24);
         }
 
-        private void VerificationForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
-
         private void SetBorderError(BunifuPanel panel)
         {
-            if (panel != null) panel.BorderColor = Color.FromArgb(255, 127, 127);
+            panel.BorderColor = Color.FromArgb(248, 43, 96);
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            FormAnimation.FadeOut(this);
+            Application.Exit();
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void SetDefaultBorder(BunifuPanel panel)
         {
             if (panel != null) panel.BorderColor = Color.FromArgb(224, 224, 224);
-        }
-
-        private void LogInButton_MouseHover(object sender, EventArgs e)
-        {
-            ActiveTextHover(LogInButton);
-        }
-
-        private void ActiveTextHover(Label label)
-        {
-            label.ForeColor = Color.FromArgb(255, 237, 64);
         }
     }
 }

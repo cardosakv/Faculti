@@ -1,5 +1,7 @@
 ﻿using AirtableApiClient;
 using Faculti.Helpers;
+using Faculti.Services.Airtable;
+using System.Threading.Tasks;
 
 namespace Faculti
 {
@@ -18,6 +20,7 @@ namespace Faculti
         private string _recordId;
         private bool   _verified;
 
+
         // Default constructor - without parameters
         public User() { }
 
@@ -27,6 +30,7 @@ namespace Faculti
             _type = type;
             _email = email;
             _passwordInHash = passwordInHash;
+
         }
 
 
@@ -77,9 +81,54 @@ namespace Faculti
             set { _verified = value; }
         }
 
+
+        /// <summary>
+        ///     Checks if the user exists in the database.
+        /// </summary> 
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
             return Password.IsCorrect(_email, _passwordInHash, records);
-        } //master
+        } 
+
+        /// <summary>
+        ///     Updates the user's password in the database.
+        /// </summary>
+        public void UpdatePassword(string email, string newPassword, AirtableRecord[] records, string userType)
+        {
+            // looping through the records
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == email)
+                {
+                    var recordId = records[recordNum].Fields["Record Id"].ToString();
+
+                    var newRecord = new Fields();
+                    newRecord.AddField("Password", newPassword);
+
+                    AirtableClient airtableClient = new AirtableClient();
+                    airtableClient.UpdateRecord(userType, newRecord, recordId);
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Returns the user's record id from the database.
+        /// </summary>
+        public async Task<string> GetRecordId()
+        {
+            AirtableClient airtableClient = new AirtableClient();
+            var records = await airtableClient.ListRecords(_type);
+
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == _email)
+                {
+                    _recordId = records[recordNum].Fields["Record Id"].ToString();
+                    return _recordId;
+                }
+            }
+
+            return null;
+        }
     }
 }

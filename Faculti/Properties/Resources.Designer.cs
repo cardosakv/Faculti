@@ -63,9 +63,9 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _3af309b1d9a9905447917b528d5f2467 {
+        public static System.Drawing.Bitmap Asset_13 {
             get {
-                object obj = ResourceManager.GetObject("3af309b1d9a9905447917b528d5f2467", resourceCulture);
+                object obj = ResourceManager.GetObject("Asset 13", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _6ac47bf13994a07cdaf1a2345985543fcat_cries_with_gun_to_head {
+        public static System.Drawing.Bitmap Asset_131 {
             get {
-                object obj = ResourceManager.GetObject("6ac47bf13994a07cdaf1a2345985543fcat-cries-with-gun-to-head", resourceCulture);
+                object obj = ResourceManager.GetObject("Asset 131", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _6b92835acb70da7f8c86b86b981eedf8 {
+        public static System.Drawing.Bitmap Ball_0_4s_54px {
             get {
-                object obj = ResourceManager.GetObject("6b92835acb70da7f8c86b86b981eedf8", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap _889f071a5ea4d14e457ccb4efb455c2c {
-            get {
-                object obj = ResourceManager.GetObject("889f071a5ea4d14e457ccb4efb455c2c", resourceCulture);
+                object obj = ResourceManager.GetObject("Ball-0.4s-54px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,16 +123,6 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap black_cat_holding_two_guns_and_shouting_meme {
-            get {
-                object obj = ResourceManager.GetObject("black-cat-holding-two-guns-and-shouting-meme", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap calendar_hover {
             get {
                 object obj = ResourceManager.GetObject("calendar-hover", resourceCulture);
@@ -156,16 +136,6 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap calendar_idle {
             get {
                 object obj = ResourceManager.GetObject("calendar-idle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap calendar_pressed {
-            get {
-                object obj = ResourceManager.GetObject("calendar-pressed", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -221,31 +191,41 @@ namespace Faculti.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] CircularSpotifyTxT_Black {
+            get {
+                object obj = ResourceManager.GetObject("CircularSpotifyTxT_Black", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap classes_today {
+            get {
+                object obj = ResourceManager.GetObject("classes-today", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap classes_today1 {
+            get {
+                object obj = ResourceManager.GetObject("classes-today1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap close_button {
             get {
                 object obj = ResourceManager.GetObject("close-button", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap crying {
-            get {
-                object obj = ResourceManager.GetObject("crying", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap D5_sl6eW4AEl8Js {
-            get {
-                object obj = ResourceManager.GetObject("D5_sl6eW4AEl8Js", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -311,22 +291,182 @@ namespace Faculti.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static System.Drawing.Bitmap EttVYZcVkAM273f {
+        public static byte[] Faculti_Regular {
             get {
-                object obj = ResourceManager.GetObject("EttVYZcVkAM273f", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Faculti_Regular", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        public static System.Drawing.Bitmap fe51aa42bdf087e53902be15b4afac05 {
+        public static byte[] Gotham_Black {
             get {
-                object obj = ResourceManager.GetObject("fe51aa42bdf087e53902be15b4afac05", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("Gotham_Black", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_Bold {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_BookItalic {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_BookItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_Light {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_Light", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_Thin {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_Thin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_ThinItalic {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_ThinItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_UltraItalic {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_UltraItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_XLight {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_XLight", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] Gotham_XLightItalic {
+            get {
+                object obj = ResourceManager.GetObject("Gotham_XLightItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamBold {
+            get {
+                object obj = ResourceManager.GetObject("GothamBold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamBoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("GothamBoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamBook {
+            get {
+                object obj = ResourceManager.GetObject("GothamBook", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamBookItalic {
+            get {
+                object obj = ResourceManager.GetObject("GothamBookItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamLight {
+            get {
+                object obj = ResourceManager.GetObject("GothamLight", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamLightItalic {
+            get {
+                object obj = ResourceManager.GetObject("GothamLightItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamMedium {
+            get {
+                object obj = ResourceManager.GetObject("GothamMedium", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        public static byte[] GothamMedium_1 {
+            get {
+                object obj = ResourceManager.GetObject("GothamMedium_1", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -356,16 +496,6 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap grade_pressed {
             get {
                 object obj = ResourceManager.GetObject("grade-pressed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap himaly {
-            get {
-                object obj = ResourceManager.GetObject("himaly", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -413,26 +543,6 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap images {
-            get {
-                object obj = ResourceManager.GetObject("images", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap jinwoo {
-            get {
-                object obj = ResourceManager.GetObject("jinwoo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap lockup_black {
             get {
                 object obj = ResourceManager.GetObject("lockup-black", resourceCulture);
@@ -456,16 +566,6 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap lockup_yellow {
             get {
                 object obj = ResourceManager.GetObject("lockup-yellow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap login_backdrop {
-            get {
-                object obj = ResourceManager.GetObject("login-backdrop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -593,6 +693,46 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap notif_hover {
+            get {
+                object obj = ResourceManager.GetObject("notif-hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap notif_idle {
+            get {
+                object obj = ResourceManager.GetObject("notif-idle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap notif_newnotif {
+            get {
+                object obj = ResourceManager.GetObject("notif-newnotif", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap notif_newnotif_hover {
+            get {
+                object obj = ResourceManager.GetObject("notif-newnotif-hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap notification {
             get {
                 object obj = ResourceManager.GetObject("notification", resourceCulture);
@@ -643,6 +783,16 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap search1 {
+            get {
+                object obj = ResourceManager.GetObject("search1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap settings_hover {
             get {
                 object obj = ResourceManager.GetObject("settings_hover", resourceCulture);
@@ -663,16 +813,6 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap settings_keydown {
-            get {
-                object obj = ResourceManager.GetObject("settings_keydown", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         public static System.Drawing.Bitmap settings_yellow {
             get {
                 object obj = ResourceManager.GetObject("settings-yellow", resourceCulture);
@@ -683,9 +823,19 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap splash_pattern {
+        public static System.Drawing.Bitmap splashscreen_bg1 {
             get {
-                object obj = ResourceManager.GetObject("splash-pattern", resourceCulture);
+                object obj = ResourceManager.GetObject("splashscreen-bg1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap tips {
+            get {
+                object obj = ResourceManager.GetObject("tips", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

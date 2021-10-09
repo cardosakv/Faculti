@@ -1,4 +1,6 @@
 ﻿
+using Faculti.UI;
+
 namespace Faculti
 {
     partial class LoginForm
@@ -116,8 +118,10 @@ namespace Faculti
             this.IncorrectPasswordTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.IncorrectPasswordTooltip.AutoSize = true;
             this.IncorrectPasswordTooltip.Cursor = System.Windows.Forms.Cursors.Default;
-            this.IncorrectPasswordTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectPasswordTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+          
+            this.IncorrectPasswordTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrectPasswordTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+
             this.IncorrectPasswordTooltip.Location = new System.Drawing.Point(69, 291);
             this.IncorrectPasswordTooltip.Name = "IncorrectPasswordTooltip";
             this.IncorrectPasswordTooltip.Size = new System.Drawing.Size(147, 12);
@@ -130,8 +134,10 @@ namespace Faculti
             this.IncorrectEmailTooltip.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
             this.IncorrectEmailTooltip.AutoSize = true;
             this.IncorrectEmailTooltip.Cursor = System.Windows.Forms.Cursors.Default;
-            this.IncorrectEmailTooltip.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectEmailTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+
+            this.IncorrectEmailTooltip.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IncorrectEmailTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+
             this.IncorrectEmailTooltip.Location = new System.Drawing.Point(69, 210);
             this.IncorrectEmailTooltip.Name = "IncorrectEmailTooltip";
             this.IncorrectEmailTooltip.Size = new System.Drawing.Size(95, 12);
@@ -155,8 +161,10 @@ namespace Faculti
             // 
             this.ForgotPasswordLinkLabel.AutoSize = true;
             this.ForgotPasswordLinkLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ForgotPasswordLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForgotPasswordLinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+
+            this.ForgotPasswordLinkLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPasswordLinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+
             this.ForgotPasswordLinkLabel.Location = new System.Drawing.Point(167, 401);
             this.ForgotPasswordLinkLabel.Name = "ForgotPasswordLinkLabel";
             this.ForgotPasswordLinkLabel.Size = new System.Drawing.Size(101, 13);
@@ -179,8 +187,10 @@ namespace Faculti
             // 
             this.SignupLinkLabel.AutoSize = true;
             this.SignupLinkLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SignupLinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignupLinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+
+            this.SignupLinkLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignupLinkLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+
             this.SignupLinkLabel.Location = new System.Drawing.Point(195, 367);
             this.SignupLinkLabel.Name = "SignupLinkLabel";
             this.SignupLinkLabel.Size = new System.Drawing.Size(58, 15);
@@ -199,7 +209,7 @@ namespace Faculti
             this.LogInButton.AutoSizeLeftIcon = true;
             this.LogInButton.AutoSizeRightIcon = true;
             this.LogInButton.BackColor = System.Drawing.Color.Transparent;
-            this.LogInButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LogInButton.BackgroundImage")));
             this.LogInButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.LogInButton.ButtonText = "Log In";
@@ -228,10 +238,10 @@ namespace Faculti
             this.LogInButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.LogInButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.LogInButton.IconSize = 25;
-            this.LogInButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.IdleBorderRadius = 10;
             this.LogInButton.IdleBorderThickness = 1;
-            this.LogInButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.IdleIconLeftImage = null;
             this.LogInButton.IdleIconRightImage = null;
             this.LogInButton.IndicateFocus = false;
@@ -245,27 +255,27 @@ namespace Faculti
             this.LogInButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.LogInButton.OnDisabledState.IconLeftImage = null;
             this.LogInButton.OnDisabledState.IconRightImage = null;
-            this.LogInButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.LogInButton.onHoverState.BorderColor = System.Drawing.Color.Empty;
             this.LogInButton.onHoverState.BorderRadius = 10;
             this.LogInButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.LogInButton.onHoverState.BorderThickness = 1;
-            this.LogInButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.LogInButton.onHoverState.FillColor = System.Drawing.Color.Empty;
             this.LogInButton.onHoverState.ForeColor = System.Drawing.Color.White;
             this.LogInButton.onHoverState.IconLeftImage = null;
             this.LogInButton.onHoverState.IconRightImage = null;
-            this.LogInButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.OnIdleState.BorderRadius = 10;
             this.LogInButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.LogInButton.OnIdleState.BorderThickness = 1;
-            this.LogInButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.LogInButton.OnIdleState.IconLeftImage = null;
             this.LogInButton.OnIdleState.IconRightImage = null;
-            this.LogInButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.OnPressedState.BorderRadius = 10;
             this.LogInButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.LogInButton.OnPressedState.BorderThickness = 1;
-            this.LogInButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.LogInButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.LogInButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.LogInButton.OnPressedState.IconLeftImage = null;
             this.LogInButton.OnPressedState.IconRightImage = null;
@@ -299,7 +309,7 @@ namespace Faculti
             this.PasswordTextBox.AutoSizeHeight = true;
             this.PasswordTextBox.BackColor = System.Drawing.Color.Transparent;
             this.PasswordTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PasswordTextBox.BackgroundImage")));
-            this.PasswordTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.PasswordTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.PasswordTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.PasswordTextBox.BorderColorHover = System.Drawing.Color.DarkGray;
             this.PasswordTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -324,7 +334,7 @@ namespace Faculti
             this.PasswordTextBox.Modified = false;
             this.PasswordTextBox.Multiline = false;
             this.PasswordTextBox.Name = "PasswordTextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -387,7 +397,7 @@ namespace Faculti
             this.EmailTextBox.AutoSizeHeight = true;
             this.EmailTextBox.BackColor = System.Drawing.Color.Transparent;
             this.EmailTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EmailTextBox.BackgroundImage")));
-            this.EmailTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.EmailTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.EmailTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.EmailTextBox.BorderColorHover = System.Drawing.Color.DarkGray;
             this.EmailTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -412,7 +422,7 @@ namespace Faculti
             this.EmailTextBox.Modified = false;
             this.EmailTextBox.Multiline = false;
             this.EmailTextBox.Name = "EmailTextBox";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             stateProperties5.FillColor = System.Drawing.Color.Empty;
             stateProperties5.ForeColor = System.Drawing.Color.Empty;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -495,11 +505,11 @@ namespace Faculti
             this.TeacherRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TeacherRadioButton.Location = new System.Drawing.Point(8, 8);
             this.TeacherRadioButton.Name = "TeacherRadioButton";
-            this.TeacherRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.TeacherRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.TeacherRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.TeacherRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.TeacherRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.TeacherRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.TeacherRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.TeacherRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.TeacherRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.TeacherRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.TeacherRadioButton.Size = new System.Drawing.Size(21, 21);
             this.TeacherRadioButton.TabIndex = 2;
             this.TeacherRadioButton.Text = null;
@@ -546,11 +556,11 @@ namespace Faculti
             this.ParentRadioButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ParentRadioButton.Location = new System.Drawing.Point(8, 8);
             this.ParentRadioButton.Name = "ParentRadioButton";
-            this.ParentRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.ParentRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.ParentRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.ParentRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.ParentRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ParentRadioButton.OutlineColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ParentRadioButton.OutlineColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ParentRadioButton.OutlineColorUnchecked = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ParentRadioButton.RadioColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.ParentRadioButton.RadioColorTabFocused = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ParentRadioButton.Size = new System.Drawing.Size(21, 21);
             this.ParentRadioButton.TabIndex = 2;
             this.ParentRadioButton.Text = null;
@@ -570,7 +580,7 @@ namespace Faculti
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Faculti.Properties.Resources.lockup_white;
+            this.pictureBox1.Image = global::Faculti.Properties.Resources.Asset_13;
             this.pictureBox1.Location = new System.Drawing.Point(30, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 50);
@@ -586,7 +596,7 @@ namespace Faculti
             this.CloseButton.AllowToggling = false;
             this.CloseButton.AllowZooming = false;
             this.CloseButton.AllowZoomingOnFocus = false;
-            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(8)))));
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CloseButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.ErrorImage")));
@@ -622,7 +632,7 @@ namespace Faculti
             this.MinimizeButton.AllowToggling = false;
             this.MinimizeButton.AllowZooming = false;
             this.MinimizeButton.AllowZoomingOnFocus = false;
-            this.MinimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(11)))), ((int)(((byte)(8)))));
+            this.MinimizeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(231)))), ((int)(((byte)(238)))));
             this.MinimizeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MinimizeButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.MinimizeButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("MinimizeButton.ErrorImage")));
@@ -654,13 +664,14 @@ namespace Faculti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Faculti.Properties.Resources.splashscreen_bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(890, 633);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bunifuShadowPanel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";

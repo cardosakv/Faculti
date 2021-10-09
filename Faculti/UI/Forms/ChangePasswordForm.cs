@@ -34,13 +34,13 @@ namespace Faculti.UI.Forms
             {
                 _passwordRevealed = false;
                 PasswordTextBox.PasswordChar = '•';
-                PasswordRevealButton.Image = Faculti.Properties.Resources.password_hidden;
+                PasswordRevealButton.Image = Properties.Resources.password_hidden;
             }
             else
             {
                 _passwordRevealed = true;
                 PasswordTextBox.PasswordChar = '\0';
-                PasswordRevealButton.Image = Faculti.Properties.Resources.password_revealed;
+                PasswordRevealButton.Image = Properties.Resources.password_revealed;
             }
         }
 

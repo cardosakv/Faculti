@@ -103,6 +103,36 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Asset_13 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Asset_131 {
+            get {
+                object obj = ResourceManager.GetObject("Asset 131", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Ball_0_4s_54px {
+            get {
+                object obj = ResourceManager.GetObject("Ball-0.4s-54px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap bell_hover {
             get {
                 object obj = ResourceManager.GetObject("bell_hover", resourceCulture);
@@ -686,6 +716,26 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap splash_pattern {
             get {
                 object obj = ResourceManager.GetObject("splash-pattern", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap splashscreen_bg {
+            get {
+                object obj = ResourceManager.GetObject("splashscreen-bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap splashscreen_bg1 {
+            get {
+                object obj = ResourceManager.GetObject("splashscreen-bg1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

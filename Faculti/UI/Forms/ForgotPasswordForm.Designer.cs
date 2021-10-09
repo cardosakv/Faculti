@@ -99,7 +99,7 @@ namespace Faculti
             this.FindAccountButton.AutoSizeLeftIcon = true;
             this.FindAccountButton.AutoSizeRightIcon = true;
             this.FindAccountButton.BackColor = System.Drawing.Color.Transparent;
-            this.FindAccountButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
             this.FindAccountButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FindAccountButton.BackgroundImage")));
             this.FindAccountButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.FindAccountButton.ButtonText = "Find Account";
@@ -128,10 +128,10 @@ namespace Faculti
             this.FindAccountButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.FindAccountButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.FindAccountButton.IconSize = 25;
-            this.FindAccountButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
             this.FindAccountButton.IdleBorderRadius = 10;
             this.FindAccountButton.IdleBorderThickness = 1;
-            this.FindAccountButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
             this.FindAccountButton.IdleIconLeftImage = null;
             this.FindAccountButton.IdleIconRightImage = null;
             this.FindAccountButton.IndicateFocus = false;
@@ -153,11 +153,11 @@ namespace Faculti
             this.FindAccountButton.onHoverState.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.onHoverState.IconLeftImage = null;
             this.FindAccountButton.onHoverState.IconRightImage = null;
-            this.FindAccountButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
             this.FindAccountButton.OnIdleState.BorderRadius = 10;
             this.FindAccountButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.FindAccountButton.OnIdleState.BorderThickness = 1;
-            this.FindAccountButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
             this.FindAccountButton.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.OnIdleState.IconLeftImage = null;
             this.FindAccountButton.OnIdleState.IconRightImage = null;

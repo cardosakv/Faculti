@@ -20,6 +20,7 @@ namespace Faculti
         private string _recordId;
         private bool   _verified;
 
+
         // Default constructor - without parameters
         public User() { }
 
@@ -29,6 +30,7 @@ namespace Faculti
             _type = type;
             _email = email;
             _passwordInHash = passwordInHash;
+
         }
 
 
@@ -79,13 +81,17 @@ namespace Faculti
             set { _verified = value; }
         }
 
+
+        /// <summary>
+        ///     Checks if the user exists in the database.
+        /// </summary> 
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
             return Password.IsCorrect(_email, _passwordInHash, records);
         } 
 
         /// <summary>
-        ///     Updates the user password in the database.
+        ///     Updates the user's password in the database.
         /// </summary>
         public void UpdatePassword(string email, string newPassword, AirtableRecord[] records, string userType)
         {
@@ -96,16 +102,20 @@ namespace Faculti
                 {
                     var recordId = records[recordNum].Fields["Record Id"].ToString();
 
-                    var newRecordField = new Fields();
-                    newRecordField.AddField("Password", newPassword);
+                    var newRecord = new Fields();
+                    newRecord.AddField("Password", newPassword);
 
                     AirtableClient airtableClient = new AirtableClient();
-                    airtableClient.UpdateRecord(userType, newRecordField, recordId);
+                    airtableClient.UpdateRecord(userType, newRecord, recordId);
                 }
             }
         }
 
-        public async Task<string> GetRecordId(string type, string email)
+        /// <summary>
+        ///     Returns the user's record id from the database.
+        /// </summary>
+        public async Task<string> GetRecordId()
+
         {
             AirtableClient airtableClient = new AirtableClient();
             var records = await airtableClient.ListRecords(type);
@@ -114,7 +124,8 @@ namespace Faculti
             {
                 if (records[recordNum].Fields["Email"].ToString() == email)
                 {
-                    return records[recordNum].Fields["Record Id"].ToString();
+                    _recordId = records[recordNum].Fields["Record Id"].ToString();
+                    return _recordId;
                 }
             }
 

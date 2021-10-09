@@ -48,6 +48,7 @@ namespace Faculti
             this.ParentHomeFormEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@ namespace Faculti
             this.GradesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.NewsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.HomeButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.SettingsButton = new System.Windows.Forms.PictureBox();
@@ -71,45 +71,70 @@ namespace Faculti
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.HomePage = new System.Windows.Forms.TabPage();
             this.bunifuPanel10 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.Home_8thSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_8thSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel9 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.Home_7thSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_7thSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel8 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.Home_6thSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_6thSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel7 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
+            this.Home_5thSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_5thSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel6 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.Home_4thSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_4thSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.Home_3rdSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_3rdSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel4 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.Home_2ndSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_2ndSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.Home_1stSubjectTime_Label = new System.Windows.Forms.Label();
+            this.Home_1stSubject_Label = new System.Windows.Forms.Label();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.Home_ChildName_Label = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.Home_AssignmentsDue_Label = new System.Windows.Forms.Label();
             this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.Home_UpcomingExams_Label = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.Home_ClassesToday_Label = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NewsPage = new System.Windows.Forms.TabPage();
             this.GradesPage = new System.Windows.Forms.TabPage();
@@ -141,6 +166,10 @@ namespace Faculti
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuShadowPanel4.SuspendLayout();
+            this.bunifuShadowPanel7.SuspendLayout();
+            this.bunifuShadowPanel6.SuspendLayout();
+            this.bunifuShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.bunifuShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
@@ -182,19 +211,29 @@ namespace Faculti
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label16.Location = new System.Drawing.Point(13, 357);
+            this.label16.Location = new System.Drawing.Point(13, 366);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(25, 23);
             this.label16.TabIndex = 23;
             this.label16.Text = "•";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // LogoPictureBox
+            // 
+            this.LogoPictureBox.Image = global::Faculti.Properties.Resources.Asset_13;
+            this.LogoPictureBox.Location = new System.Drawing.Point(34, 22);
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.Size = new System.Drawing.Size(106, 37);
+            this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LogoPictureBox.TabIndex = 0;
+            this.LogoPictureBox.TabStop = false;
+            // 
             // label15
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label15.Location = new System.Drawing.Point(13, 297);
+            this.label15.Location = new System.Drawing.Point(13, 306);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 23);
             this.label15.TabIndex = 22;
@@ -206,7 +245,7 @@ namespace Faculti
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label14.Location = new System.Drawing.Point(13, 238);
+            this.label14.Location = new System.Drawing.Point(13, 247);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(25, 23);
             this.label14.TabIndex = 21;
@@ -218,7 +257,7 @@ namespace Faculti
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label13.Location = new System.Drawing.Point(13, 178);
+            this.label13.Location = new System.Drawing.Point(13, 187);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(25, 23);
             this.label13.TabIndex = 20;
@@ -867,16 +906,6 @@ namespace Faculti
             this.HomeButton.MouseLeave += new System.EventHandler(this.HomeButton_MouseLeave);
             this.HomeButton.MouseHover += new System.EventHandler(this.HomeButton_MouseHover);
             // 
-            // LogoPictureBox
-            // 
-            this.LogoPictureBox.Image = global::Faculti.Properties.Resources.Asset_13;
-            this.LogoPictureBox.Location = new System.Drawing.Point(34, 17);
-            this.LogoPictureBox.Name = "LogoPictureBox";
-            this.LogoPictureBox.Size = new System.Drawing.Size(106, 37);
-            this.LogoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.LogoPictureBox.TabIndex = 0;
-            this.LogoPictureBox.TabStop = false;
-            // 
             // DateTimeTimer
             // 
             this.DateTimeTimer.Enabled = true;
@@ -1142,37 +1171,37 @@ namespace Faculti
             this.bunifuPanel10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel10.BorderRadius = 15;
             this.bunifuPanel10.BorderThickness = 3;
-            this.bunifuPanel10.Controls.Add(this.label6);
-            this.bunifuPanel10.Controls.Add(this.label32);
+            this.bunifuPanel10.Controls.Add(this.Home_8thSubjectTime_Label);
+            this.bunifuPanel10.Controls.Add(this.Home_8thSubject_Label);
             this.bunifuPanel10.Location = new System.Drawing.Point(24, 562);
             this.bunifuPanel10.Name = "bunifuPanel10";
             this.bunifuPanel10.ShowBorders = true;
             this.bunifuPanel10.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel10.TabIndex = 28;
             // 
-            // label6
+            // Home_8thSubjectTime_Label
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label6.Location = new System.Drawing.Point(163, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 17);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "5:00 PM";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_8thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_8thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_8thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_8thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
+            this.Home_8thSubjectTime_Label.Name = "Home_8thSubjectTime_Label";
+            this.Home_8thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
+            this.Home_8thSubjectTime_Label.TabIndex = 4;
+            this.Home_8thSubjectTime_Label.Text = "5:00 PM";
+            this.Home_8thSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label32
+            // Home_8thSubject_Label
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label32.Location = new System.Drawing.Point(10, 11);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(54, 17);
-            this.label32.TabIndex = 3;
-            this.label32.Text = "Sibika";
+            this.Home_8thSubject_Label.AutoSize = true;
+            this.Home_8thSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_8thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_8thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_8thSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_8thSubject_Label.Name = "Home_8thSubject_Label";
+            this.Home_8thSubject_Label.Size = new System.Drawing.Size(54, 17);
+            this.Home_8thSubject_Label.TabIndex = 3;
+            this.Home_8thSubject_Label.Text = "Sibika";
             // 
             // bunifuPanel9
             // 
@@ -1182,37 +1211,37 @@ namespace Faculti
             this.bunifuPanel9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel9.BorderRadius = 15;
             this.bunifuPanel9.BorderThickness = 3;
-            this.bunifuPanel9.Controls.Add(this.label30);
-            this.bunifuPanel9.Controls.Add(this.label31);
+            this.bunifuPanel9.Controls.Add(this.Home_7thSubjectTime_Label);
+            this.bunifuPanel9.Controls.Add(this.Home_7thSubject_Label);
             this.bunifuPanel9.Location = new System.Drawing.Point(24, 517);
             this.bunifuPanel9.Name = "bunifuPanel9";
             this.bunifuPanel9.ShowBorders = true;
             this.bunifuPanel9.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel9.TabIndex = 27;
             // 
-            // label30
+            // Home_7thSubjectTime_Label
             // 
-            this.label30.BackColor = System.Drawing.Color.Transparent;
-            this.label30.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label30.Location = new System.Drawing.Point(163, 11);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(74, 17);
-            this.label30.TabIndex = 4;
-            this.label30.Text = "4:00 PM";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_7thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_7thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_7thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_7thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
+            this.Home_7thSubjectTime_Label.Name = "Home_7thSubjectTime_Label";
+            this.Home_7thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
+            this.Home_7thSubjectTime_Label.TabIndex = 4;
+            this.Home_7thSubjectTime_Label.Text = "4:00 PM";
+            this.Home_7thSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label31
+            // Home_7thSubject_Label
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Transparent;
-            this.label31.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label31.Location = new System.Drawing.Point(10, 11);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(63, 17);
-            this.label31.TabIndex = 3;
-            this.label31.Text = "Filipino";
+            this.Home_7thSubject_Label.AutoSize = true;
+            this.Home_7thSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_7thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_7thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_7thSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_7thSubject_Label.Name = "Home_7thSubject_Label";
+            this.Home_7thSubject_Label.Size = new System.Drawing.Size(63, 17);
+            this.Home_7thSubject_Label.TabIndex = 3;
+            this.Home_7thSubject_Label.Text = "Filipino";
             // 
             // bunifuPanel8
             // 
@@ -1222,77 +1251,77 @@ namespace Faculti
             this.bunifuPanel8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel8.BorderRadius = 15;
             this.bunifuPanel8.BorderThickness = 3;
-            this.bunifuPanel8.Controls.Add(this.label28);
-            this.bunifuPanel8.Controls.Add(this.label29);
+            this.bunifuPanel8.Controls.Add(this.Home_6thSubjectTime_Label);
+            this.bunifuPanel8.Controls.Add(this.Home_6thSubject_Label);
             this.bunifuPanel8.Location = new System.Drawing.Point(24, 473);
             this.bunifuPanel8.Name = "bunifuPanel8";
             this.bunifuPanel8.ShowBorders = true;
             this.bunifuPanel8.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel8.TabIndex = 26;
             // 
-            // label28
+            // Home_6thSubjectTime_Label
             // 
-            this.label28.BackColor = System.Drawing.Color.Transparent;
-            this.label28.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label28.Location = new System.Drawing.Point(163, 11);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(74, 17);
-            this.label28.TabIndex = 4;
-            this.label28.Text = "3:00 PM";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_6thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_6thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_6thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_6thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
+            this.Home_6thSubjectTime_Label.Name = "Home_6thSubjectTime_Label";
+            this.Home_6thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
+            this.Home_6thSubjectTime_Label.TabIndex = 4;
+            this.Home_6thSubjectTime_Label.Text = "3:00 PM";
+            this.Home_6thSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label29
+            // Home_6thSubject_Label
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Transparent;
-            this.label29.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label29.Location = new System.Drawing.Point(10, 11);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(64, 17);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "MAPEH";
+            this.Home_6thSubject_Label.AutoSize = true;
+            this.Home_6thSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_6thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_6thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_6thSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_6thSubject_Label.Name = "Home_6thSubject_Label";
+            this.Home_6thSubject_Label.Size = new System.Drawing.Size(64, 17);
+            this.Home_6thSubject_Label.TabIndex = 3;
+            this.Home_6thSubject_Label.Text = "MAPEH";
             // 
             // bunifuPanel7
             // 
             this.bunifuPanel7.BackgroundColor = System.Drawing.Color.White;
             this.bunifuPanel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel7.BackgroundImage")));
             this.bunifuPanel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.bunifuPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bunifuPanel7.BorderRadius = 15;
             this.bunifuPanel7.BorderThickness = 3;
-            this.bunifuPanel7.Controls.Add(this.label26);
-            this.bunifuPanel7.Controls.Add(this.label27);
+            this.bunifuPanel7.Controls.Add(this.Home_5thSubjectTime_Label);
+            this.bunifuPanel7.Controls.Add(this.Home_5thSubject_Label);
             this.bunifuPanel7.Location = new System.Drawing.Point(24, 428);
             this.bunifuPanel7.Name = "bunifuPanel7";
             this.bunifuPanel7.ShowBorders = true;
             this.bunifuPanel7.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel7.TabIndex = 25;
             // 
-            // label26
+            // Home_5thSubjectTime_Label
             // 
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label26.Location = new System.Drawing.Point(163, 11);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(74, 17);
-            this.label26.TabIndex = 4;
-            this.label26.Text = "2:00 PM";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_5thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_5thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_5thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Home_5thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
+            this.Home_5thSubjectTime_Label.Name = "Home_5thSubjectTime_Label";
+            this.Home_5thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
+            this.Home_5thSubjectTime_Label.TabIndex = 4;
+            this.Home_5thSubjectTime_Label.Text = "2:00 PM";
+            this.Home_5thSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label27
+            // Home_5thSubject_Label
             // 
-            this.label27.AutoSize = true;
-            this.label27.BackColor = System.Drawing.Color.Transparent;
-            this.label27.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label27.Location = new System.Drawing.Point(10, 11);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(71, 17);
-            this.label27.TabIndex = 3;
-            this.label27.Text = "Aral Pan";
+            this.Home_5thSubject_Label.AutoSize = true;
+            this.Home_5thSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_5thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_5thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Home_5thSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_5thSubject_Label.Name = "Home_5thSubject_Label";
+            this.Home_5thSubject_Label.Size = new System.Drawing.Size(71, 17);
+            this.Home_5thSubject_Label.TabIndex = 3;
+            this.Home_5thSubject_Label.Text = "Aral Pan";
             // 
             // bunifuPanel6
             // 
@@ -1302,37 +1331,37 @@ namespace Faculti
             this.bunifuPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel6.BorderRadius = 15;
             this.bunifuPanel6.BorderThickness = 3;
-            this.bunifuPanel6.Controls.Add(this.label24);
-            this.bunifuPanel6.Controls.Add(this.label25);
+            this.bunifuPanel6.Controls.Add(this.Home_4thSubjectTime_Label);
+            this.bunifuPanel6.Controls.Add(this.Home_4thSubject_Label);
             this.bunifuPanel6.Location = new System.Drawing.Point(24, 383);
             this.bunifuPanel6.Name = "bunifuPanel6";
             this.bunifuPanel6.ShowBorders = true;
             this.bunifuPanel6.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel6.TabIndex = 24;
             // 
-            // label24
+            // Home_4thSubjectTime_Label
             // 
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label24.Location = new System.Drawing.Point(163, 11);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(74, 17);
-            this.label24.TabIndex = 4;
-            this.label24.Text = "1:00 PM";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_4thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_4thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_4thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_4thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
+            this.Home_4thSubjectTime_Label.Name = "Home_4thSubjectTime_Label";
+            this.Home_4thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
+            this.Home_4thSubjectTime_Label.TabIndex = 4;
+            this.Home_4thSubjectTime_Label.Text = "1:00 PM";
+            this.Home_4thSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label25
+            // Home_4thSubject_Label
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.Transparent;
-            this.label25.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label25.Location = new System.Drawing.Point(10, 11);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(38, 17);
-            this.label25.TabIndex = 3;
-            this.label25.Text = "ESP";
+            this.Home_4thSubject_Label.AutoSize = true;
+            this.Home_4thSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_4thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_4thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_4thSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_4thSubject_Label.Name = "Home_4thSubject_Label";
+            this.Home_4thSubject_Label.Size = new System.Drawing.Size(38, 17);
+            this.Home_4thSubject_Label.TabIndex = 3;
+            this.Home_4thSubject_Label.Text = "ESP";
             // 
             // bunifuPanel5
             // 
@@ -1342,37 +1371,37 @@ namespace Faculti
             this.bunifuPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel5.BorderRadius = 15;
             this.bunifuPanel5.BorderThickness = 3;
-            this.bunifuPanel5.Controls.Add(this.label22);
-            this.bunifuPanel5.Controls.Add(this.label23);
+            this.bunifuPanel5.Controls.Add(this.Home_3rdSubjectTime_Label);
+            this.bunifuPanel5.Controls.Add(this.Home_3rdSubject_Label);
             this.bunifuPanel5.Location = new System.Drawing.Point(24, 338);
             this.bunifuPanel5.Name = "bunifuPanel5";
             this.bunifuPanel5.ShowBorders = true;
             this.bunifuPanel5.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel5.TabIndex = 23;
             // 
-            // label22
+            // Home_3rdSubjectTime_Label
             // 
-            this.label22.BackColor = System.Drawing.Color.Transparent;
-            this.label22.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label22.Location = new System.Drawing.Point(159, 11);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(78, 17);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "11:00 AM";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_3rdSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_3rdSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_3rdSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_3rdSubjectTime_Label.Location = new System.Drawing.Point(159, 11);
+            this.Home_3rdSubjectTime_Label.Name = "Home_3rdSubjectTime_Label";
+            this.Home_3rdSubjectTime_Label.Size = new System.Drawing.Size(78, 17);
+            this.Home_3rdSubjectTime_Label.TabIndex = 4;
+            this.Home_3rdSubjectTime_Label.Text = "11:00 AM";
+            this.Home_3rdSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label23
+            // Home_3rdSubject_Label
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label23.Location = new System.Drawing.Point(10, 11);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(67, 17);
-            this.label23.TabIndex = 3;
-            this.label23.Text = "Science";
+            this.Home_3rdSubject_Label.AutoSize = true;
+            this.Home_3rdSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_3rdSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_3rdSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_3rdSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_3rdSubject_Label.Name = "Home_3rdSubject_Label";
+            this.Home_3rdSubject_Label.Size = new System.Drawing.Size(67, 17);
+            this.Home_3rdSubject_Label.TabIndex = 3;
+            this.Home_3rdSubject_Label.Text = "Science";
             // 
             // bunifuPanel4
             // 
@@ -1382,37 +1411,37 @@ namespace Faculti
             this.bunifuPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel4.BorderRadius = 15;
             this.bunifuPanel4.BorderThickness = 3;
-            this.bunifuPanel4.Controls.Add(this.label20);
-            this.bunifuPanel4.Controls.Add(this.label21);
+            this.bunifuPanel4.Controls.Add(this.Home_2ndSubjectTime_Label);
+            this.bunifuPanel4.Controls.Add(this.Home_2ndSubject_Label);
             this.bunifuPanel4.Location = new System.Drawing.Point(24, 293);
             this.bunifuPanel4.Name = "bunifuPanel4";
             this.bunifuPanel4.ShowBorders = true;
             this.bunifuPanel4.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel4.TabIndex = 22;
             // 
-            // label20
+            // Home_2ndSubjectTime_Label
             // 
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label20.Location = new System.Drawing.Point(162, 11);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(75, 17);
-            this.label20.TabIndex = 4;
-            this.label20.Text = "10:00 AM";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_2ndSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_2ndSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_2ndSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_2ndSubjectTime_Label.Location = new System.Drawing.Point(162, 11);
+            this.Home_2ndSubjectTime_Label.Name = "Home_2ndSubjectTime_Label";
+            this.Home_2ndSubjectTime_Label.Size = new System.Drawing.Size(75, 17);
+            this.Home_2ndSubjectTime_Label.TabIndex = 4;
+            this.Home_2ndSubjectTime_Label.Text = "10:00 AM";
+            this.Home_2ndSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label21
+            // Home_2ndSubject_Label
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label21.Location = new System.Drawing.Point(10, 11);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(45, 17);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "Math";
+            this.Home_2ndSubject_Label.AutoSize = true;
+            this.Home_2ndSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_2ndSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_2ndSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_2ndSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_2ndSubject_Label.Name = "Home_2ndSubject_Label";
+            this.Home_2ndSubject_Label.Size = new System.Drawing.Size(45, 17);
+            this.Home_2ndSubject_Label.TabIndex = 3;
+            this.Home_2ndSubject_Label.Text = "Math";
             // 
             // bunifuPanel3
             // 
@@ -1422,37 +1451,37 @@ namespace Faculti
             this.bunifuPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
             this.bunifuPanel3.BorderRadius = 15;
             this.bunifuPanel3.BorderThickness = 3;
-            this.bunifuPanel3.Controls.Add(this.label19);
-            this.bunifuPanel3.Controls.Add(this.label18);
+            this.bunifuPanel3.Controls.Add(this.Home_1stSubjectTime_Label);
+            this.bunifuPanel3.Controls.Add(this.Home_1stSubject_Label);
             this.bunifuPanel3.Location = new System.Drawing.Point(24, 248);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(248, 39);
             this.bunifuPanel3.TabIndex = 21;
             // 
-            // label19
+            // Home_1stSubjectTime_Label
             // 
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label19.Location = new System.Drawing.Point(162, 11);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(75, 17);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "9:00 AM";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_1stSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_1stSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_1stSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_1stSubjectTime_Label.Location = new System.Drawing.Point(162, 11);
+            this.Home_1stSubjectTime_Label.Name = "Home_1stSubjectTime_Label";
+            this.Home_1stSubjectTime_Label.Size = new System.Drawing.Size(75, 17);
+            this.Home_1stSubjectTime_Label.TabIndex = 4;
+            this.Home_1stSubjectTime_Label.Text = "9:00 AM";
+            this.Home_1stSubjectTime_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label18
+            // Home_1stSubject_Label
             // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label18.Location = new System.Drawing.Point(10, 11);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 17);
-            this.label18.TabIndex = 3;
-            this.label18.Text = "English";
+            this.Home_1stSubject_Label.AutoSize = true;
+            this.Home_1stSubject_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_1stSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_1stSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_1stSubject_Label.Location = new System.Drawing.Point(10, 11);
+            this.Home_1stSubject_Label.Name = "Home_1stSubject_Label";
+            this.Home_1stSubject_Label.Size = new System.Drawing.Size(61, 17);
+            this.Home_1stSubject_Label.TabIndex = 3;
+            this.Home_1stSubject_Label.Text = "English";
             // 
             // bunifuPanel2
             // 
@@ -1487,6 +1516,22 @@ namespace Faculti
             this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel4.BorderRadius = 15;
             this.bunifuShadowPanel4.BorderThickness = 1;
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel7);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel6);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel5);
+            this.bunifuShadowPanel4.Controls.Add(this.label43);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuSeparator1);
+            this.bunifuShadowPanel4.Controls.Add(this.label42);
+            this.bunifuShadowPanel4.Controls.Add(this.label41);
+            this.bunifuShadowPanel4.Controls.Add(this.label40);
+            this.bunifuShadowPanel4.Controls.Add(this.label39);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildName_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.label37);
+            this.bunifuShadowPanel4.Controls.Add(this.pictureBox4);
+            this.bunifuShadowPanel4.Controls.Add(this.label36);
+            this.bunifuShadowPanel4.Controls.Add(this.label35);
+            this.bunifuShadowPanel4.Controls.Add(this.label34);
+            this.bunifuShadowPanel4.Controls.Add(this.label33);
             this.bunifuShadowPanel4.Controls.Add(this.label12);
             this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -1503,16 +1548,353 @@ namespace Faculti
             this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel4.TabIndex = 19;
             // 
+            // bunifuShadowPanel7
+            // 
+            this.bunifuShadowPanel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.BorderRadius = 15;
+            this.bunifuShadowPanel7.BorderThickness = 1;
+            this.bunifuShadowPanel7.Controls.Add(this.label50);
+            this.bunifuShadowPanel7.Controls.Add(this.label51);
+            this.bunifuShadowPanel7.Controls.Add(this.label52);
+            this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel7.Location = new System.Drawing.Point(362, 222);
+            this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
+            this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel7.ShadowDept = 2;
+            this.bunifuShadowPanel7.ShadowDepth = 5;
+            this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel7.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel7.TabIndex = 22;
+            // 
+            // label50
+            // 
+            this.label50.BackColor = System.Drawing.Color.Transparent;
+            this.label50.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label50.Location = new System.Drawing.Point(7, 127);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(137, 17);
+            this.label50.TabIndex = 30;
+            this.label50.Text = "Last 83 Days";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label51.Location = new System.Drawing.Point(37, 22);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(77, 21);
+            this.label51.TabIndex = 28;
+            this.label51.Text = "Absences";
+            // 
+            // label52
+            // 
+            this.label52.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+            this.label52.Location = new System.Drawing.Point(17, 40);
+            this.label52.Margin = new System.Windows.Forms.Padding(0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(123, 83);
+            this.label52.TabIndex = 29;
+            this.label52.Text = "3";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel6
+            // 
+            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.BorderRadius = 15;
+            this.bunifuShadowPanel6.BorderThickness = 1;
+            this.bunifuShadowPanel6.Controls.Add(this.label47);
+            this.bunifuShadowPanel6.Controls.Add(this.label48);
+            this.bunifuShadowPanel6.Controls.Add(this.label49);
+            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel6.Location = new System.Drawing.Point(196, 222);
+            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
+            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel6.ShadowDept = 2;
+            this.bunifuShadowPanel6.ShadowDepth = 5;
+            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel6.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel6.TabIndex = 21;
+            // 
+            // label47
+            // 
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label47.Location = new System.Drawing.Point(16, 127);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(118, 17);
+            this.label47.TabIndex = 27;
+            this.label47.Text = "Out of 8";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label48.Location = new System.Drawing.Point(14, 22);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(122, 21);
+            this.label48.TabIndex = 25;
+            this.label48.Text = "Passed Subjects";
+            // 
+            // label49
+            // 
+            this.label49.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label49.Location = new System.Drawing.Point(17, 40);
+            this.label49.Margin = new System.Windows.Forms.Padding(0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(123, 83);
+            this.label49.TabIndex = 26;
+            this.label49.Text = "7";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel5
+            // 
+            this.bunifuShadowPanel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel5.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.BorderRadius = 15;
+            this.bunifuShadowPanel5.BorderThickness = 1;
+            this.bunifuShadowPanel5.Controls.Add(this.label46);
+            this.bunifuShadowPanel5.Controls.Add(this.label45);
+            this.bunifuShadowPanel5.Controls.Add(this.label44);
+            this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel5.Location = new System.Drawing.Point(30, 222);
+            this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
+            this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel5.ShadowDept = 2;
+            this.bunifuShadowPanel5.ShadowDepth = 5;
+            this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel5.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel5.TabIndex = 20;
+            // 
+            // label46
+            // 
+            this.label46.BackColor = System.Drawing.Color.Transparent;
+            this.label46.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label46.Location = new System.Drawing.Point(19, 127);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(113, 17);
+            this.label46.TabIndex = 24;
+            this.label46.Text = "2nd Grading";
+            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label45.Location = new System.Drawing.Point(18, 22);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(114, 21);
+            this.label45.TabIndex = 23;
+            this.label45.Text = "Latest Average";
+            this.label45.Click += new System.EventHandler(this.label45_Click);
+            // 
+            // label44
+            // 
+            this.label44.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(221)))), ((int)(((byte)(111)))));
+            this.label44.Location = new System.Drawing.Point(16, 40);
+            this.label44.Margin = new System.Windows.Forms.Padding(0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(123, 83);
+            this.label44.TabIndex = 23;
+            this.label44.Text = "89";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label43.Location = new System.Drawing.Point(192, 183);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(158, 23);
+            this.label43.TabIndex = 14;
+            this.label43.Text = "Summary Report";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Round;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 3;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(81, 189);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(380, 14);
+            this.bunifuSeparator1.TabIndex = 15;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.Transparent;
+            this.label42.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label42.Location = new System.Drawing.Point(213, 127);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(148, 17);
+            this.label42.TabIndex = 13;
+            this.label42.Text = "Bellatrix Lestrange";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.Transparent;
+            this.label41.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label41.Location = new System.Drawing.Point(469, 94);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(21, 17);
+            this.label41.TabIndex = 12;
+            this.label41.Text = "M";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.BackColor = System.Drawing.Color.Transparent;
+            this.label40.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label40.Location = new System.Drawing.Point(468, 65);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(22, 17);
+            this.label40.TabIndex = 11;
+            this.label40.Text = "13";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label39.Location = new System.Drawing.Point(265, 94);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(78, 17);
+            this.label39.TabIndex = 10;
+            this.label39.Text = "5 - Potter";
+            // 
+            // Home_ChildName_Label
+            // 
+            this.Home_ChildName_Label.AutoSize = true;
+            this.Home_ChildName_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildName_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildName_Label.Location = new System.Drawing.Point(200, 64);
+            this.Home_ChildName_Label.Name = "Home_ChildName_Label";
+            this.Home_ChildName_Label.Size = new System.Drawing.Size(204, 17);
+            this.Home_ChildName_Label.TabIndex = 5;
+            this.Home_ChildName_Label.Text = "Super Mario Lorepimpsum";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label37.Location = new System.Drawing.Point(139, 126);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(69, 21);
+            this.label37.TabIndex = 9;
+            this.label37.Text = "Teacher:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(30, 60);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label36.Location = new System.Drawing.Point(139, 93);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(118, 21);
+            this.label36.TabIndex = 8;
+            this.label36.Text = "Grade/Section:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label35.Location = new System.Drawing.Point(421, 93);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(39, 21);
+            this.label35.TabIndex = 7;
+            this.label35.Text = "Sex:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label34.Location = new System.Drawing.Point(421, 64);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(42, 21);
+            this.label34.TabIndex = 6;
+            this.label34.Text = "Age:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label33.Location = new System.Drawing.Point(139, 64);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(54, 21);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Name:";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.label12.Location = new System.Drawing.Point(24, 27);
+            this.label12.Location = new System.Drawing.Point(26, 27);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(140, 23);
+            this.label12.Size = new System.Drawing.Size(178, 23);
             this.label12.TabIndex = 0;
-            this.label12.Text = "Upcoming Exams";
+            this.label12.Text = "Your Child Information";
             // 
             // bunifuShadowPanel3
             // 
@@ -1522,7 +1904,7 @@ namespace Faculti
             this.bunifuShadowPanel3.BorderThickness = 1;
             this.bunifuShadowPanel3.Controls.Add(this.pictureBox3);
             this.bunifuShadowPanel3.Controls.Add(this.label10);
-            this.bunifuShadowPanel3.Controls.Add(this.label11);
+            this.bunifuShadowPanel3.Controls.Add(this.Home_AssignmentsDue_Label);
             this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel3.Location = new System.Drawing.Point(568, 44);
@@ -1559,16 +1941,16 @@ namespace Faculti
             this.label10.TabIndex = 0;
             this.label10.Text = "Assignments Due";
             // 
-            // label11
+            // Home_AssignmentsDue_Label
             // 
-            this.label11.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label11.Location = new System.Drawing.Point(161, 1);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(108, 120);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "0";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_AssignmentsDue_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_AssignmentsDue_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_AssignmentsDue_Label.Location = new System.Drawing.Point(164, 1);
+            this.Home_AssignmentsDue_Label.Name = "Home_AssignmentsDue_Label";
+            this.Home_AssignmentsDue_Label.Size = new System.Drawing.Size(108, 120);
+            this.Home_AssignmentsDue_Label.TabIndex = 1;
+            this.Home_AssignmentsDue_Label.Text = "0";
+            this.Home_AssignmentsDue_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // bunifuShadowPanel2
             // 
@@ -1578,7 +1960,7 @@ namespace Faculti
             this.bunifuShadowPanel2.BorderThickness = 1;
             this.bunifuShadowPanel2.Controls.Add(this.pictureBox2);
             this.bunifuShadowPanel2.Controls.Add(this.label8);
-            this.bunifuShadowPanel2.Controls.Add(this.label9);
+            this.bunifuShadowPanel2.Controls.Add(this.Home_UpcomingExams_Label);
             this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel2.Location = new System.Drawing.Point(290, 44);
@@ -1615,16 +1997,16 @@ namespace Faculti
             this.label8.TabIndex = 0;
             this.label8.Text = "Upcoming Exams";
             // 
-            // label9
+            // Home_UpcomingExams_Label
             // 
-            this.label9.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label9.Location = new System.Drawing.Point(161, 1);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 120);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "2";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_UpcomingExams_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_UpcomingExams_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_UpcomingExams_Label.Location = new System.Drawing.Point(164, 1);
+            this.Home_UpcomingExams_Label.Name = "Home_UpcomingExams_Label";
+            this.Home_UpcomingExams_Label.Size = new System.Drawing.Size(108, 120);
+            this.Home_UpcomingExams_Label.TabIndex = 1;
+            this.Home_UpcomingExams_Label.Text = "2";
+            this.Home_UpcomingExams_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // bunifuShadowPanel1
             // 
@@ -1634,7 +2016,7 @@ namespace Faculti
             this.bunifuShadowPanel1.BorderThickness = 1;
             this.bunifuShadowPanel1.Controls.Add(this.pictureBox1);
             this.bunifuShadowPanel1.Controls.Add(this.label2);
-            this.bunifuShadowPanel1.Controls.Add(this.label7);
+            this.bunifuShadowPanel1.Controls.Add(this.Home_ClassesToday_Label);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel1.Location = new System.Drawing.Point(16, 44);
@@ -1671,16 +2053,16 @@ namespace Faculti
             this.label2.TabIndex = 0;
             this.label2.Text = "Classes Today";
             // 
-            // label7
+            // Home_ClassesToday_Label
             // 
-            this.label7.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label7.Location = new System.Drawing.Point(161, 1);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 120);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "8";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Home_ClassesToday_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ClassesToday_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ClassesToday_Label.Location = new System.Drawing.Point(164, 1);
+            this.Home_ClassesToday_Label.Name = "Home_ClassesToday_Label";
+            this.Home_ClassesToday_Label.Size = new System.Drawing.Size(108, 120);
+            this.Home_ClassesToday_Label.TabIndex = 1;
+            this.Home_ClassesToday_Label.Text = "8";
+            this.Home_ClassesToday_Label.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -1894,6 +2276,13 @@ namespace Faculti
             this.bunifuPanel2.PerformLayout();
             this.bunifuShadowPanel4.ResumeLayout(false);
             this.bunifuShadowPanel4.PerformLayout();
+            this.bunifuShadowPanel7.ResumeLayout(false);
+            this.bunifuShadowPanel7.PerformLayout();
+            this.bunifuShadowPanel6.ResumeLayout(false);
+            this.bunifuShadowPanel6.PerformLayout();
+            this.bunifuShadowPanel5.ResumeLayout(false);
+            this.bunifuShadowPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.bunifuShadowPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1941,7 +2330,7 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Home_ClassesToday_Label;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage NewsPage;
         private System.Windows.Forms.TabPage GradesPage;
@@ -1954,11 +2343,11 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label Home_AssignmentsDue_Label;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Home_UpcomingExams_Label;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
@@ -1967,29 +2356,54 @@ namespace Faculti
         private System.Windows.Forms.Label label13;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label Home_1stSubject_Label;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label Home_1stSubjectTime_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel8;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label Home_6thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_6thSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel7;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label Home_5thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_5thSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel6;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label Home_4thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_4thSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label Home_3rdSubjectTime_Label;
+        private System.Windows.Forms.Label Home_3rdSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label Home_2ndSubjectTime_Label;
+        private System.Windows.Forms.Label Home_2ndSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel9;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label Home_7thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_7thSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label Home_8thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_8thSubject_Label;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label Home_ChildName_Label;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel7;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel6;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
     }
 }

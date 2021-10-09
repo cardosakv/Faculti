@@ -246,5 +246,10 @@ namespace Faculti
         {
             NotificationButton.Image = Faculti.Properties.Resources.notif_hover;
         }
+
+        private void label45_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

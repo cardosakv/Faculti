@@ -41,6 +41,7 @@ namespace Faculti
                     FindAccountButton.Text = "✔️ Account Found";
                     await Task.Delay(1000);
 
+
                     VerificationForm verificationForm = new VerificationForm
                     {
                         verificationType = "forgot",
@@ -95,6 +96,23 @@ namespace Faculti
             else
             {
                 IncorrectEmailForgotTooltip.Text = "Invalid email format";
+                IncorrectEmailForgotTooltip.Visible = true;
+            }
+        }
+
+        private void IncorrectEmailForgotTooltip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailForgotTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Syntax.IsValidEmail(EmailForgotTextBox.Text))
+            {
+                IncorrectEmailForgotTooltip.Visible = false;
+            }
+            else
+            {
                 IncorrectEmailForgotTooltip.Visible = true;
             }
         }

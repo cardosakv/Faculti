@@ -11,6 +11,10 @@ using AirtableApiClient;
 using Faculti.Helpers;
 using Faculti.Services.Airtable;
 using Faculti.UI.Forms;
+using Faculti.Helpers;
+using AirtableApiClient;
+using Faculti.Services.Airtable;
+
 
 namespace Faculti.UI.Forms
 {
@@ -133,6 +137,7 @@ namespace Faculti.UI.Forms
                 PasswordRevealButton.Image = Properties.Resources.password_revealed;
             }
         }
+
 
         private void ChangePasswordForm_Shown(object sender, EventArgs e)
         {

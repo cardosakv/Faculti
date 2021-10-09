@@ -67,7 +67,7 @@ namespace Faculti
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.label11.Location = new System.Drawing.Point(72, 148);
+            this.label11.Location = new System.Drawing.Point(72, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(275, 13);
             this.label11.TabIndex = 37;
@@ -79,8 +79,8 @@ namespace Faculti
             this.IncorrectEmailForgotTooltip.AutoSize = true;
             this.IncorrectEmailForgotTooltip.Cursor = System.Windows.Forms.Cursors.Default;
             this.IncorrectEmailForgotTooltip.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncorrectEmailForgotTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.IncorrectEmailForgotTooltip.Location = new System.Drawing.Point(139, 247);
+            this.IncorrectEmailForgotTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+            this.IncorrectEmailForgotTooltip.Location = new System.Drawing.Point(139, 237);
             this.IncorrectEmailForgotTooltip.Name = "IncorrectEmailForgotTooltip";
             this.IncorrectEmailForgotTooltip.Size = new System.Drawing.Size(140, 13);
             this.IncorrectEmailForgotTooltip.TabIndex = 40;
@@ -98,7 +98,7 @@ namespace Faculti
             this.FindAccountButton.AutoSizeLeftIcon = true;
             this.FindAccountButton.AutoSizeRightIcon = true;
             this.FindAccountButton.BackColor = System.Drawing.Color.Transparent;
-            this.FindAccountButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
+            this.FindAccountButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FindAccountButton.BackgroundImage")));
             this.FindAccountButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.FindAccountButton.ButtonText = "Find Account";
@@ -127,14 +127,14 @@ namespace Faculti
             this.FindAccountButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.FindAccountButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.FindAccountButton.IconSize = 25;
-            this.FindAccountButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
+            this.FindAccountButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.IdleBorderRadius = 10;
             this.FindAccountButton.IdleBorderThickness = 1;
-            this.FindAccountButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
+            this.FindAccountButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.IdleIconLeftImage = null;
             this.FindAccountButton.IdleIconRightImage = null;
             this.FindAccountButton.IndicateFocus = false;
-            this.FindAccountButton.Location = new System.Drawing.Point(55, 276);
+            this.FindAccountButton.Location = new System.Drawing.Point(55, 273);
             this.FindAccountButton.Name = "FindAccountButton";
             this.FindAccountButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.FindAccountButton.OnDisabledState.BorderRadius = 10;
@@ -152,19 +152,19 @@ namespace Faculti
             this.FindAccountButton.onHoverState.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.onHoverState.IconLeftImage = null;
             this.FindAccountButton.onHoverState.IconRightImage = null;
-            this.FindAccountButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
+            this.FindAccountButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.OnIdleState.BorderRadius = 10;
             this.FindAccountButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.FindAccountButton.OnIdleState.BorderThickness = 1;
-            this.FindAccountButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(169)))), ((int)(((byte)(210)))));
+            this.FindAccountButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.OnIdleState.IconLeftImage = null;
             this.FindAccountButton.OnIdleState.IconRightImage = null;
-            this.FindAccountButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.OnPressedState.BorderRadius = 10;
             this.FindAccountButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.FindAccountButton.OnPressedState.BorderThickness = 1;
-            this.FindAccountButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.FindAccountButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.FindAccountButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.OnPressedState.IconLeftImage = null;
             this.FindAccountButton.OnPressedState.IconRightImage = null;
@@ -187,7 +187,7 @@ namespace Faculti
             this.EmailForgotTextBox.AutoSizeHeight = true;
             this.EmailForgotTextBox.BackColor = System.Drawing.Color.Transparent;
             this.EmailForgotTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EmailForgotTextBox.BackgroundImage")));
-            this.EmailForgotTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.EmailForgotTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.EmailForgotTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.EmailForgotTextBox.BorderColorHover = System.Drawing.Color.DarkGray;
             this.EmailForgotTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -206,13 +206,13 @@ namespace Faculti
             this.EmailForgotTextBox.IconRight = null;
             this.EmailForgotTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.EmailForgotTextBox.Lines = new string[0];
-            this.EmailForgotTextBox.Location = new System.Drawing.Point(54, 205);
+            this.EmailForgotTextBox.Location = new System.Drawing.Point(54, 195);
             this.EmailForgotTextBox.MaxLength = 32767;
             this.EmailForgotTextBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.EmailForgotTextBox.Modified = false;
             this.EmailForgotTextBox.Multiline = false;
             this.EmailForgotTextBox.Name = "EmailForgotTextBox";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             stateProperties1.FillColor = System.Drawing.Color.Empty;
             stateProperties1.ForeColor = System.Drawing.Color.Empty;
             stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -252,6 +252,7 @@ namespace Faculti
             this.EmailForgotTextBox.TextPlaceholder = "juandelacruz@email.com";
             this.EmailForgotTextBox.UseSystemPasswordChar = false;
             this.EmailForgotTextBox.WordWrap = true;
+            this.EmailForgotTextBox.TextChanged += new System.EventHandler(this.EmailForgotTextBox_TextChanged);
             // 
             // BackButton
             // 
@@ -293,7 +294,7 @@ namespace Faculti
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.FirstNameLabel.Location = new System.Drawing.Point(53, 185);
+            this.FirstNameLabel.Location = new System.Drawing.Point(53, 175);
             this.FirstNameLabel.Name = "FirstNameLabel";
             this.FirstNameLabel.Size = new System.Drawing.Size(39, 17);
             this.FirstNameLabel.TabIndex = 41;
@@ -314,9 +315,11 @@ namespace Faculti
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ForgotPasswordForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculti -Forgot Password";
             this.Load += new System.EventHandler(this.ForgotPasswordForm_Load);
+            this.Shown += new System.EventHandler(this.ForgotPasswordForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

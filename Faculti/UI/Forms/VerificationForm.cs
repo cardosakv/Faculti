@@ -5,6 +5,9 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using Faculti.Helpers;
 using Faculti.UI;
+using AirtableApiClient;
+using Faculti.Services.Airtable;
+using Faculti.UI.Forms;
 
 namespace Faculti
 {
@@ -15,10 +18,13 @@ namespace Faculti
     {
         private int _verificationCode;
         private int _inputCode;
-        private string _inputEmail;
-        private string _verificationType;
         private int _resendTime = 0;
         private Timer ResendTimer;
+
+        public User signupUser;
+        public SignupForm signupForm;
+        public string emailToSendCode;
+        public string verificationType;
 
         public VerificationForm()
         {
@@ -32,19 +38,25 @@ namespace Faculti
             if (code == _verificationCode)
             {
                 IncorrectCodeLabel.Visible = false;
-                ConfirmButton.Text = "✔️ Account Verified";
-                await Task.Delay(1000);
 
-                if (_verificationType == "signup")
+                if (verificationType == "signup")
                 {
+                    signupUser.AddToDatabase();
+                    ConfirmButton.Text = "✔️ Account Created";
+                    await Task.Delay(1000);
+
                     LoginForm login = new LoginForm();
                     login.Show();
+                    signupForm.Hide();
                     this.Hide();
                 }
-                else if (_verificationType == "forgot")
-                { 
-                    ForgotPasswordForm forgot = new ForgotPasswordForm();
-                    forgot.Show();
+                else if (verificationType == "forgot")
+                {
+                    ConfirmButton.Text = "✔️ Account Verified";
+                    await Task.Delay(1000);
+                    ChangePasswordForm changePasswordForm = new ChangePasswordForm();
+                    changePasswordForm.email = emailToSendCode;
+                    changePasswordForm.ShowDialog();
                     this.Hide();
                 }
             }
@@ -80,13 +92,6 @@ namespace Faculti
              
         }
 
-        public void CopyEmailAndCode(string email, int code, string verType)
-        {
-            _verificationCode = code;
-            _inputEmail = email;
-            _verificationType = verType;
-        }
-
 
 
 
@@ -96,6 +101,7 @@ namespace Faculti
         //                                                                                        //
         // ====================================================================================== //
         private const int CS_DROPSHADOW = 0x20000;
+
         protected override CreateParams CreateParams
         {
             get
@@ -215,7 +221,7 @@ namespace Faculti
         {
             if (_resendTime >= 29  || _resendTime == 0)
             {
-                Email.SendVerificationCode(_inputEmail, _verificationCode);
+                Email.SendVerificationCode(emailToSendCode, _verificationCode);
 
                 SuccessfulResentLabel.Visible = true;
                 _resendTime = 0;
@@ -235,6 +241,10 @@ namespace Faculti
         private void VerificationForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
+
+            // Generate a random code for verification and send to email
+            _verificationCode = Randomizer.GenerateVerificationCode();
+            Email.SendVerificationCode(emailToSendCode, _verificationCode);
         }
 
         private void ResendTimer_Tick(object sender, EventArgs e)

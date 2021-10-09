@@ -669,6 +669,7 @@ namespace Faculti
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);
+            this.Shown += new System.EventHandler(this.LoginForm_Shown);
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordRevealButton)).EndInit();

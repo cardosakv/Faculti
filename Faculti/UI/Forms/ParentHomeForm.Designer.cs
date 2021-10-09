@@ -1114,10 +1114,10 @@ namespace Faculti
             this.Pages.Location = new System.Drawing.Point(3, 60);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.HomePage;
-            this.Pages.PageIndex = 0;
-            this.Pages.PageName = "HomePage";
-            this.Pages.PageTitle = "HomePage";
+            this.Pages.Page = this.NewsPage;
+            this.Pages.PageIndex = 1;
+            this.Pages.PageName = "NewsPage";
+            this.Pages.PageTitle = "NewsPage";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(856, 645);
             this.Pages.TabIndex = 4;
@@ -1183,7 +1183,7 @@ namespace Faculti
             // 
             this.Home_8thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_8thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_8thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_8thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_8thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
             this.Home_8thSubjectTime_Label.Name = "Home_8thSubjectTime_Label";
             this.Home_8thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
@@ -1196,7 +1196,7 @@ namespace Faculti
             this.Home_8thSubject_Label.AutoSize = true;
             this.Home_8thSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_8thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_8thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_8thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_8thSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_8thSubject_Label.Name = "Home_8thSubject_Label";
             this.Home_8thSubject_Label.Size = new System.Drawing.Size(54, 17);
@@ -1223,7 +1223,7 @@ namespace Faculti
             // 
             this.Home_7thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_7thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_7thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_7thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_7thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
             this.Home_7thSubjectTime_Label.Name = "Home_7thSubjectTime_Label";
             this.Home_7thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
@@ -1236,7 +1236,7 @@ namespace Faculti
             this.Home_7thSubject_Label.AutoSize = true;
             this.Home_7thSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_7thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_7thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_7thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_7thSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_7thSubject_Label.Name = "Home_7thSubject_Label";
             this.Home_7thSubject_Label.Size = new System.Drawing.Size(63, 17);
@@ -1263,7 +1263,7 @@ namespace Faculti
             // 
             this.Home_6thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_6thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_6thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_6thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_6thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
             this.Home_6thSubjectTime_Label.Name = "Home_6thSubjectTime_Label";
             this.Home_6thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
@@ -1276,7 +1276,7 @@ namespace Faculti
             this.Home_6thSubject_Label.AutoSize = true;
             this.Home_6thSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_6thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_6thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_6thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_6thSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_6thSubject_Label.Name = "Home_6thSubject_Label";
             this.Home_6thSubject_Label.Size = new System.Drawing.Size(64, 17);
@@ -1343,7 +1343,7 @@ namespace Faculti
             // 
             this.Home_4thSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_4thSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_4thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_4thSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_4thSubjectTime_Label.Location = new System.Drawing.Point(163, 11);
             this.Home_4thSubjectTime_Label.Name = "Home_4thSubjectTime_Label";
             this.Home_4thSubjectTime_Label.Size = new System.Drawing.Size(74, 17);
@@ -1356,7 +1356,7 @@ namespace Faculti
             this.Home_4thSubject_Label.AutoSize = true;
             this.Home_4thSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_4thSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_4thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_4thSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_4thSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_4thSubject_Label.Name = "Home_4thSubject_Label";
             this.Home_4thSubject_Label.Size = new System.Drawing.Size(38, 17);
@@ -1383,7 +1383,7 @@ namespace Faculti
             // 
             this.Home_3rdSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_3rdSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_3rdSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_3rdSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_3rdSubjectTime_Label.Location = new System.Drawing.Point(159, 11);
             this.Home_3rdSubjectTime_Label.Name = "Home_3rdSubjectTime_Label";
             this.Home_3rdSubjectTime_Label.Size = new System.Drawing.Size(78, 17);
@@ -1396,7 +1396,7 @@ namespace Faculti
             this.Home_3rdSubject_Label.AutoSize = true;
             this.Home_3rdSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_3rdSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_3rdSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_3rdSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_3rdSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_3rdSubject_Label.Name = "Home_3rdSubject_Label";
             this.Home_3rdSubject_Label.Size = new System.Drawing.Size(67, 17);
@@ -1423,7 +1423,7 @@ namespace Faculti
             // 
             this.Home_2ndSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_2ndSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_2ndSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_2ndSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_2ndSubjectTime_Label.Location = new System.Drawing.Point(162, 11);
             this.Home_2ndSubjectTime_Label.Name = "Home_2ndSubjectTime_Label";
             this.Home_2ndSubjectTime_Label.Size = new System.Drawing.Size(75, 17);
@@ -1436,7 +1436,7 @@ namespace Faculti
             this.Home_2ndSubject_Label.AutoSize = true;
             this.Home_2ndSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_2ndSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_2ndSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_2ndSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_2ndSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_2ndSubject_Label.Name = "Home_2ndSubject_Label";
             this.Home_2ndSubject_Label.Size = new System.Drawing.Size(45, 17);
@@ -1463,7 +1463,7 @@ namespace Faculti
             // 
             this.Home_1stSubjectTime_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_1stSubjectTime_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_1stSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_1stSubjectTime_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_1stSubjectTime_Label.Location = new System.Drawing.Point(162, 11);
             this.Home_1stSubjectTime_Label.Name = "Home_1stSubjectTime_Label";
             this.Home_1stSubjectTime_Label.Size = new System.Drawing.Size(75, 17);
@@ -1476,7 +1476,7 @@ namespace Faculti
             this.Home_1stSubject_Label.AutoSize = true;
             this.Home_1stSubject_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_1stSubject_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_1stSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_1stSubject_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_1stSubject_Label.Location = new System.Drawing.Point(10, 11);
             this.Home_1stSubject_Label.Name = "Home_1stSubject_Label";
             this.Home_1stSubject_Label.Size = new System.Drawing.Size(61, 17);
@@ -1576,7 +1576,7 @@ namespace Faculti
             // 
             this.Home_LastSchoolDays_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_LastSchoolDays_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_LastSchoolDays_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_LastSchoolDays_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_LastSchoolDays_Label.Location = new System.Drawing.Point(7, 127);
             this.Home_LastSchoolDays_Label.Name = "Home_LastSchoolDays_Label";
             this.Home_LastSchoolDays_Label.Size = new System.Drawing.Size(137, 17);
@@ -1589,7 +1589,7 @@ namespace Faculti
             this.label51.AutoSize = true;
             this.label51.BackColor = System.Drawing.Color.Transparent;
             this.label51.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label51.Location = new System.Drawing.Point(37, 22);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(77, 21);
@@ -1636,7 +1636,7 @@ namespace Faculti
             // 
             this.Home_PassedOutOfNo_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_PassedOutOfNo_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_PassedOutOfNo_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_PassedOutOfNo_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_PassedOutOfNo_Label.Location = new System.Drawing.Point(16, 127);
             this.Home_PassedOutOfNo_Label.Name = "Home_PassedOutOfNo_Label";
             this.Home_PassedOutOfNo_Label.Size = new System.Drawing.Size(118, 17);
@@ -1649,7 +1649,7 @@ namespace Faculti
             this.label48.AutoSize = true;
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label48.Location = new System.Drawing.Point(14, 22);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(122, 21);
@@ -1696,7 +1696,7 @@ namespace Faculti
             // 
             this.Home_LatestGrading_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_LatestGrading_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_LatestGrading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_LatestGrading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_LatestGrading_Label.Location = new System.Drawing.Point(19, 127);
             this.Home_LatestGrading_Label.Name = "Home_LatestGrading_Label";
             this.Home_LatestGrading_Label.Size = new System.Drawing.Size(113, 17);
@@ -1709,7 +1709,7 @@ namespace Faculti
             this.label45.AutoSize = true;
             this.label45.BackColor = System.Drawing.Color.Transparent;
             this.label45.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label45.Location = new System.Drawing.Point(18, 22);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(114, 21);
@@ -1759,7 +1759,7 @@ namespace Faculti
             this.Home_ChildTeacher_Label.AutoSize = true;
             this.Home_ChildTeacher_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_ChildTeacher_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildTeacher_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildTeacher_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ChildTeacher_Label.Location = new System.Drawing.Point(213, 127);
             this.Home_ChildTeacher_Label.Name = "Home_ChildTeacher_Label";
             this.Home_ChildTeacher_Label.Size = new System.Drawing.Size(148, 17);
@@ -1771,7 +1771,7 @@ namespace Faculti
             this.Home_ChildSex_Label.AutoSize = true;
             this.Home_ChildSex_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_ChildSex_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildSex_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildSex_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ChildSex_Label.Location = new System.Drawing.Point(469, 94);
             this.Home_ChildSex_Label.Name = "Home_ChildSex_Label";
             this.Home_ChildSex_Label.Size = new System.Drawing.Size(21, 17);
@@ -1783,7 +1783,7 @@ namespace Faculti
             this.Home_ChildAge_Label.AutoSize = true;
             this.Home_ChildAge_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_ChildAge_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildAge_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildAge_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ChildAge_Label.Location = new System.Drawing.Point(468, 65);
             this.Home_ChildAge_Label.Name = "Home_ChildAge_Label";
             this.Home_ChildAge_Label.Size = new System.Drawing.Size(22, 17);
@@ -1795,7 +1795,7 @@ namespace Faculti
             this.Home_ChildGradeSection_Label.AutoSize = true;
             this.Home_ChildGradeSection_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_ChildGradeSection_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildGradeSection_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildGradeSection_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ChildGradeSection_Label.Location = new System.Drawing.Point(265, 94);
             this.Home_ChildGradeSection_Label.Name = "Home_ChildGradeSection_Label";
             this.Home_ChildGradeSection_Label.Size = new System.Drawing.Size(78, 17);
@@ -1807,7 +1807,7 @@ namespace Faculti
             this.Home_ChildName_Label.AutoSize = true;
             this.Home_ChildName_Label.BackColor = System.Drawing.Color.Transparent;
             this.Home_ChildName_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ChildName_Label.Location = new System.Drawing.Point(200, 64);
             this.Home_ChildName_Label.Name = "Home_ChildName_Label";
             this.Home_ChildName_Label.Size = new System.Drawing.Size(204, 17);
@@ -1819,7 +1819,7 @@ namespace Faculti
             this.label37.AutoSize = true;
             this.label37.BackColor = System.Drawing.Color.Transparent;
             this.label37.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label37.Location = new System.Drawing.Point(139, 126);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(69, 21);
@@ -1841,7 +1841,7 @@ namespace Faculti
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label36.Location = new System.Drawing.Point(139, 93);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(118, 21);
@@ -1853,7 +1853,7 @@ namespace Faculti
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.Transparent;
             this.label35.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label35.Location = new System.Drawing.Point(421, 93);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(39, 21);
@@ -1865,7 +1865,7 @@ namespace Faculti
             this.label34.AutoSize = true;
             this.label34.BackColor = System.Drawing.Color.Transparent;
             this.label34.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label34.Location = new System.Drawing.Point(421, 64);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(42, 21);
@@ -1877,7 +1877,7 @@ namespace Faculti
             this.label33.AutoSize = true;
             this.label33.BackColor = System.Drawing.Color.Transparent;
             this.label33.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.label33.Location = new System.Drawing.Point(139, 64);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(54, 21);
@@ -1943,7 +1943,7 @@ namespace Faculti
             // Home_AssignmentsDue_Label
             // 
             this.Home_AssignmentsDue_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_AssignmentsDue_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_AssignmentsDue_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_AssignmentsDue_Label.Location = new System.Drawing.Point(164, 1);
             this.Home_AssignmentsDue_Label.Name = "Home_AssignmentsDue_Label";
             this.Home_AssignmentsDue_Label.Size = new System.Drawing.Size(108, 120);
@@ -1999,7 +1999,7 @@ namespace Faculti
             // Home_UpcomingExams_Label
             // 
             this.Home_UpcomingExams_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_UpcomingExams_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_UpcomingExams_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_UpcomingExams_Label.Location = new System.Drawing.Point(164, 1);
             this.Home_UpcomingExams_Label.Name = "Home_UpcomingExams_Label";
             this.Home_UpcomingExams_Label.Size = new System.Drawing.Size(108, 120);
@@ -2055,7 +2055,7 @@ namespace Faculti
             // Home_ClassesToday_Label
             // 
             this.Home_ClassesToday_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ClassesToday_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ClassesToday_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(157)))), ((int)(((byte)(181)))));
             this.Home_ClassesToday_Label.Location = new System.Drawing.Point(164, 1);
             this.Home_ClassesToday_Label.Name = "Home_ClassesToday_Label";
             this.Home_ClassesToday_Label.Size = new System.Drawing.Size(108, 120);
@@ -2076,7 +2076,7 @@ namespace Faculti
             // 
             // NewsPage
             // 
-            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(242)))), ((int)(((byte)(250)))));
+            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.NewsPage.Location = new System.Drawing.Point(4, 4);
             this.NewsPage.Name = "NewsPage";
             this.NewsPage.Padding = new System.Windows.Forms.Padding(3);

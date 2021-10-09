@@ -18,7 +18,53 @@ namespace Faculti
         public ForgotPasswordForm()
         {
             InitializeComponent();
+            ControlInteractives.SetButtonHoverEvent(FindAccountButton);
         }
+
+        private async void FindAccountButton_Click(object sender, EventArgs e)
+        {
+            string email = EmailForgotTextBox.Text;
+
+            if (Syntax.IsValidEmail(email))
+            {
+                AirtableClient airtableClientParent = new AirtableClient();
+                var parentRecords = await airtableClientParent.ListRecords("Parent");
+
+                AirtableClient airtableClientTeacher = new AirtableClient();
+                var teacherRecords = await airtableClientTeacher.ListRecords("Teacher");
+
+                bool isPresentInParentRecords = Email.IsPresentInDatabase(email, parentRecords);
+                bool isPresentInTeacherRecords = Email.IsPresentInDatabase(email, teacherRecords);
+
+                if (isPresentInParentRecords == true || isPresentInTeacherRecords == true)
+                {
+                    FindAccountButton.Text = "✔️ Account Found";
+                    await Task.Delay(1000);
+
+                    VerificationForm verificationForm = new VerificationForm
+                    {
+                        verificationType = "forgot",
+                        emailToSendCode = email
+                    };
+                    verificationForm.ShowDialog();
+                    this.Hide();
+                }
+                else
+                {
+                    IncorrectEmailForgotTooltip.Text = "Account does not exist";
+                    IncorrectEmailForgotTooltip.Visible = true;
+                }
+            }
+        }
+
+
+
+
+        // ====================================================================================== //
+        //                                                                                        //
+        //                                        UI METHODS                                      //
+        //                                                                                        //
+        // ====================================================================================== //
 
         private void ForgotPasswordForm_Load(object sender, EventArgs e)
         {
@@ -30,38 +76,26 @@ namespace Faculti
             this.Close();
         }
 
-        private async void FindAccountButton_Click(object sender, EventArgs e)
+        private void ForgotPasswordForm_Shown(object sender, EventArgs e)
         {
-            var email = EmailForgotTextBox.Text;
+            FormAnimation.FadeIn(this);
+        }
 
-            if (Syntax.IsValidEmail(email))
+        private void EmailForgotTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Syntax.IsValidEmail(EmailForgotTextBox.Text))
             {
-                AirtableClient airtableClientParent = new AirtableClient();
-                var parentRecords = await airtableClientParent.ListRecords("Parent");
-
-                AirtableClient airtableClientTeacher = new AirtableClient();
-                var teacherRecords = await airtableClientTeacher.ListRecords("Teacher");
-
-                var isPresentInParentRecords = Email.IsPresentInDatabase(email, parentRecords);
-                var isPresentInTeacherRecords = Email.IsPresentInDatabase(email, teacherRecords);
-
-                if (isPresentInParentRecords == true || isPresentInTeacherRecords == true)
-                {
-                    Random rnd = new Random();
-                    int verificationCode = rnd.Next(1000, 9999);
-
-                    Email.SendVerificationCode(email, verificationCode);
-
-                    VerificationForm verificationForm = new VerificationForm();
-                    verificationForm.CopyEmailAndCode(email, verificationCode, "forgot");
-                    verificationForm.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    IncorrectEmailForgotTooltip.Text = "Account does not exist";
-                    EmailForgotTextBox.Text = String.Empty;
-                }  
+                IncorrectEmailForgotTooltip.Visible = false;
+            }
+            else if (EmailForgotTextBox.Text == string.Empty)
+            {
+                IncorrectEmailForgotTooltip.Text = "Please enter email";
+                IncorrectEmailForgotTooltip.Visible = true;
+            }
+            else
+            {
+                IncorrectEmailForgotTooltip.Text = "Invalid email format";
+                IncorrectEmailForgotTooltip.Visible = true;
             }
         }
     }

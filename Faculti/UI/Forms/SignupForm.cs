@@ -17,6 +17,7 @@ namespace Faculti
     public partial class SignupForm : Form
     {
         private string _userType;
+        private User _signupUser;
         private bool _isPasswordMatched;
         private bool _isPassword1Revealed, _isPassword2Revealed;
 
@@ -37,36 +38,25 @@ namespace Faculti
             {
                 Cursor = Cursors.WaitCursor;
 
-                // Create a new user object
-                User signupUser = new User
+                // Create the new user object
+                _signupUser = new User
                 {
                     Type = _userType,
                     FirstName = FirstNameTextBox.Text,
                     LastName = LastNameTextBox.Text,
                     Email = EmailTextBox.Text,
                     PasswordInHash = Password.Encrypt(ConfirmPasswordTextBox.Text), // encrypt the password
-                    PhoneNumber = PhoneNumberTextBox.Text
+                    PhoneNumberInHash = PhoneNumberTextBox.Text // encrypt also the phone no.
                 };
 
-                // Create an Airtable Fields object and add the user details
-                Fields fields = new Fields();
-                fields.AddField("Email", signupUser.Email);
-                fields.AddField("Password", signupUser.PasswordInHash);
-                fields.AddField("First Name", signupUser.FirstName);
-                fields.AddField("Last Name", signupUser.LastName);
-                fields.AddField("Phone Number", signupUser.PhoneNumber);
-
-                // Add user to the database
-                AirtableClient airtableClient = new AirtableClient();
-                airtableClient.CreateRecord(signupUser.Type, fields);
-
-                // Generate a random code for verification and send to email
-                int verificationCode = Randomizer.GenerateVerificationCode();
-                Email.SendVerificationCode(signupUser.Email, verificationCode);
-
                 // Show the verification form for the user to input code
-                VerificationForm verificationForm = new VerificationForm();
-                verificationForm.CopyEmailAndCode(signupUser.Email, verificationCode, "signup");
+                VerificationForm verificationForm = new VerificationForm
+                {
+                    verificationType = "signup",
+                    signupUser = _signupUser,
+                    signupForm = this,
+                    emailToSendCode = _signupUser.Email
+                };
                 verificationForm.ShowDialog();
 
                 Cursor = Cursors.Default;

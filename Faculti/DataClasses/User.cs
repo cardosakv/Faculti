@@ -16,7 +16,7 @@ namespace Faculti
         private string _passwordInHash;
         private string _firstName;
         private string _lastName;
-        private string _phoneNumber;
+        private string _phoneNumberInHash;
         private string _recordId;
         private bool   _verified;
 
@@ -57,10 +57,10 @@ namespace Faculti
             get { return _lastName; }
             set { _lastName = value; }
         }
-        public string PhoneNumber
+        public string PhoneNumberInHash
         {
-            get { return _phoneNumber; }
-            set { _phoneNumber = value; }
+            get { return _phoneNumberInHash; }
+            set { _phoneNumberInHash = value; }
         }
 
         public string RecordId
@@ -81,6 +81,27 @@ namespace Faculti
             set { _verified = value; }
         }
 
+        /// <summary>
+        ///     Adds a user to the database;
+        /// </summary>
+        /// 
+        /// <param name="signupUser">
+        ///     The signup user User class object.
+        /// </param>
+        public void AddToDatabase()
+        {
+            // Create an Airtable Fields object and add the user details
+            Fields fields = new Fields();
+            fields.AddField("Email", _email);
+            fields.AddField("Password", _passwordInHash);
+            fields.AddField("First Name", _firstName);
+            fields.AddField("Last Name", _lastName);
+            fields.AddField("Phone Number", _phoneNumberInHash);
+
+            // Add user to the database
+            AirtableClient airtableClient = new AirtableClient();
+            airtableClient.CreateRecord(_type, fields);
+        }
 
         /// <summary>
         ///     Checks if the user exists in the database.

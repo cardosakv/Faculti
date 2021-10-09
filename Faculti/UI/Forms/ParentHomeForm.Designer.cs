@@ -98,23 +98,23 @@ namespace Faculti
             this.label17 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label50 = new System.Windows.Forms.Label();
+            this.Home_LastSchoolDays_Label = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
+            this.Home_Absences_Label = new System.Windows.Forms.Label();
             this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label47 = new System.Windows.Forms.Label();
+            this.Home_PassedOutOfNo_Label = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.Home_PassedSubjects_Label = new System.Windows.Forms.Label();
             this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label46 = new System.Windows.Forms.Label();
+            this.Home_LatestGrading_Label = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.Home_LatestAverage_Label = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
+            this.Home_ChildTeacher_Label = new System.Windows.Forms.Label();
+            this.Home_ChildSex_Label = new System.Windows.Forms.Label();
+            this.Home_ChildAge_Label = new System.Windows.Forms.Label();
+            this.Home_ChildGradeSection_Label = new System.Windows.Forms.Label();
             this.Home_ChildName_Label = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -1521,10 +1521,10 @@ namespace Faculti
             this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel5);
             this.bunifuShadowPanel4.Controls.Add(this.label43);
             this.bunifuShadowPanel4.Controls.Add(this.bunifuSeparator1);
-            this.bunifuShadowPanel4.Controls.Add(this.label42);
-            this.bunifuShadowPanel4.Controls.Add(this.label41);
-            this.bunifuShadowPanel4.Controls.Add(this.label40);
-            this.bunifuShadowPanel4.Controls.Add(this.label39);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildTeacher_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildSex_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildAge_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildGradeSection_Label);
             this.bunifuShadowPanel4.Controls.Add(this.Home_ChildName_Label);
             this.bunifuShadowPanel4.Controls.Add(this.label37);
             this.bunifuShadowPanel4.Controls.Add(this.pictureBox4);
@@ -1554,9 +1554,9 @@ namespace Faculti
             this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel7.BorderRadius = 15;
             this.bunifuShadowPanel7.BorderThickness = 1;
-            this.bunifuShadowPanel7.Controls.Add(this.label50);
+            this.bunifuShadowPanel7.Controls.Add(this.Home_LastSchoolDays_Label);
             this.bunifuShadowPanel7.Controls.Add(this.label51);
-            this.bunifuShadowPanel7.Controls.Add(this.label52);
+            this.bunifuShadowPanel7.Controls.Add(this.Home_Absences_Label);
             this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel7.Location = new System.Drawing.Point(362, 222);
@@ -1572,17 +1572,17 @@ namespace Faculti
             this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel7.TabIndex = 22;
             // 
-            // label50
+            // Home_LastSchoolDays_Label
             // 
-            this.label50.BackColor = System.Drawing.Color.Transparent;
-            this.label50.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label50.Location = new System.Drawing.Point(7, 127);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(137, 17);
-            this.label50.TabIndex = 30;
-            this.label50.Text = "Last 83 Days";
-            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_LastSchoolDays_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_LastSchoolDays_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LastSchoolDays_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_LastSchoolDays_Label.Location = new System.Drawing.Point(7, 127);
+            this.Home_LastSchoolDays_Label.Name = "Home_LastSchoolDays_Label";
+            this.Home_LastSchoolDays_Label.Size = new System.Drawing.Size(137, 17);
+            this.Home_LastSchoolDays_Label.TabIndex = 30;
+            this.Home_LastSchoolDays_Label.Text = "Last 83 Days";
+            this.Home_LastSchoolDays_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label51
             // 
@@ -1596,17 +1596,17 @@ namespace Faculti
             this.label51.TabIndex = 28;
             this.label51.Text = "Absences";
             // 
-            // label52
+            // Home_Absences_Label
             // 
-            this.label52.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label52.Location = new System.Drawing.Point(17, 40);
-            this.label52.Margin = new System.Windows.Forms.Padding(0);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(123, 83);
-            this.label52.TabIndex = 29;
-            this.label52.Text = "3";
-            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_Absences_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_Absences_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+            this.Home_Absences_Label.Location = new System.Drawing.Point(17, 40);
+            this.Home_Absences_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_Absences_Label.Name = "Home_Absences_Label";
+            this.Home_Absences_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_Absences_Label.TabIndex = 29;
+            this.Home_Absences_Label.Text = "3";
+            this.Home_Absences_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel6
             // 
@@ -1614,9 +1614,9 @@ namespace Faculti
             this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel6.BorderRadius = 15;
             this.bunifuShadowPanel6.BorderThickness = 1;
-            this.bunifuShadowPanel6.Controls.Add(this.label47);
+            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedOutOfNo_Label);
             this.bunifuShadowPanel6.Controls.Add(this.label48);
-            this.bunifuShadowPanel6.Controls.Add(this.label49);
+            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedSubjects_Label);
             this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel6.Location = new System.Drawing.Point(196, 222);
@@ -1632,17 +1632,17 @@ namespace Faculti
             this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel6.TabIndex = 21;
             // 
-            // label47
+            // Home_PassedOutOfNo_Label
             // 
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label47.Location = new System.Drawing.Point(16, 127);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(118, 17);
-            this.label47.TabIndex = 27;
-            this.label47.Text = "Out of 8";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_PassedOutOfNo_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_PassedOutOfNo_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_PassedOutOfNo_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_PassedOutOfNo_Label.Location = new System.Drawing.Point(16, 127);
+            this.Home_PassedOutOfNo_Label.Name = "Home_PassedOutOfNo_Label";
+            this.Home_PassedOutOfNo_Label.Size = new System.Drawing.Size(118, 17);
+            this.Home_PassedOutOfNo_Label.TabIndex = 27;
+            this.Home_PassedOutOfNo_Label.Text = "Out of 8";
+            this.Home_PassedOutOfNo_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label48
             // 
@@ -1656,17 +1656,17 @@ namespace Faculti
             this.label48.TabIndex = 25;
             this.label48.Text = "Passed Subjects";
             // 
-            // label49
+            // Home_PassedSubjects_Label
             // 
-            this.label49.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label49.Location = new System.Drawing.Point(17, 40);
-            this.label49.Margin = new System.Windows.Forms.Padding(0);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(123, 83);
-            this.label49.TabIndex = 26;
-            this.label49.Text = "7";
-            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_PassedSubjects_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_PassedSubjects_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Home_PassedSubjects_Label.Location = new System.Drawing.Point(17, 40);
+            this.Home_PassedSubjects_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_PassedSubjects_Label.Name = "Home_PassedSubjects_Label";
+            this.Home_PassedSubjects_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_PassedSubjects_Label.TabIndex = 26;
+            this.Home_PassedSubjects_Label.Text = "7";
+            this.Home_PassedSubjects_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel5
             // 
@@ -1674,9 +1674,9 @@ namespace Faculti
             this.bunifuShadowPanel5.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel5.BorderRadius = 15;
             this.bunifuShadowPanel5.BorderThickness = 1;
-            this.bunifuShadowPanel5.Controls.Add(this.label46);
+            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestGrading_Label);
             this.bunifuShadowPanel5.Controls.Add(this.label45);
-            this.bunifuShadowPanel5.Controls.Add(this.label44);
+            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestAverage_Label);
             this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
             this.bunifuShadowPanel5.Location = new System.Drawing.Point(30, 222);
@@ -1692,17 +1692,17 @@ namespace Faculti
             this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel5.TabIndex = 20;
             // 
-            // label46
+            // Home_LatestGrading_Label
             // 
-            this.label46.BackColor = System.Drawing.Color.Transparent;
-            this.label46.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label46.Location = new System.Drawing.Point(19, 127);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(113, 17);
-            this.label46.TabIndex = 24;
-            this.label46.Text = "2nd Grading";
-            this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_LatestGrading_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_LatestGrading_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LatestGrading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_LatestGrading_Label.Location = new System.Drawing.Point(19, 127);
+            this.Home_LatestGrading_Label.Name = "Home_LatestGrading_Label";
+            this.Home_LatestGrading_Label.Size = new System.Drawing.Size(113, 17);
+            this.Home_LatestGrading_Label.TabIndex = 24;
+            this.Home_LatestGrading_Label.Text = "2nd Grading";
+            this.Home_LatestGrading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label45
             // 
@@ -1715,19 +1715,18 @@ namespace Faculti
             this.label45.Size = new System.Drawing.Size(114, 21);
             this.label45.TabIndex = 23;
             this.label45.Text = "Latest Average";
-            this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
-            // label44
+            // Home_LatestAverage_Label
             // 
-            this.label44.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(221)))), ((int)(((byte)(111)))));
-            this.label44.Location = new System.Drawing.Point(16, 40);
-            this.label44.Margin = new System.Windows.Forms.Padding(0);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(123, 83);
-            this.label44.TabIndex = 23;
-            this.label44.Text = "89";
-            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Home_LatestAverage_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LatestAverage_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(221)))), ((int)(((byte)(111)))));
+            this.Home_LatestAverage_Label.Location = new System.Drawing.Point(16, 40);
+            this.Home_LatestAverage_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_LatestAverage_Label.Name = "Home_LatestAverage_Label";
+            this.Home_LatestAverage_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_LatestAverage_Label.TabIndex = 23;
+            this.Home_LatestAverage_Label.Text = "89";
+            this.Home_LatestAverage_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label43
             // 
@@ -1755,53 +1754,53 @@ namespace Faculti
             this.bunifuSeparator1.Size = new System.Drawing.Size(380, 14);
             this.bunifuSeparator1.TabIndex = 15;
             // 
-            // label42
+            // Home_ChildTeacher_Label
             // 
-            this.label42.AutoSize = true;
-            this.label42.BackColor = System.Drawing.Color.Transparent;
-            this.label42.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label42.Location = new System.Drawing.Point(213, 127);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(148, 17);
-            this.label42.TabIndex = 13;
-            this.label42.Text = "Bellatrix Lestrange";
+            this.Home_ChildTeacher_Label.AutoSize = true;
+            this.Home_ChildTeacher_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildTeacher_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildTeacher_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildTeacher_Label.Location = new System.Drawing.Point(213, 127);
+            this.Home_ChildTeacher_Label.Name = "Home_ChildTeacher_Label";
+            this.Home_ChildTeacher_Label.Size = new System.Drawing.Size(148, 17);
+            this.Home_ChildTeacher_Label.TabIndex = 13;
+            this.Home_ChildTeacher_Label.Text = "Bellatrix Lestrange";
             // 
-            // label41
+            // Home_ChildSex_Label
             // 
-            this.label41.AutoSize = true;
-            this.label41.BackColor = System.Drawing.Color.Transparent;
-            this.label41.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label41.Location = new System.Drawing.Point(469, 94);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(21, 17);
-            this.label41.TabIndex = 12;
-            this.label41.Text = "M";
+            this.Home_ChildSex_Label.AutoSize = true;
+            this.Home_ChildSex_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildSex_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildSex_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildSex_Label.Location = new System.Drawing.Point(469, 94);
+            this.Home_ChildSex_Label.Name = "Home_ChildSex_Label";
+            this.Home_ChildSex_Label.Size = new System.Drawing.Size(21, 17);
+            this.Home_ChildSex_Label.TabIndex = 12;
+            this.Home_ChildSex_Label.Text = "M";
             // 
-            // label40
+            // Home_ChildAge_Label
             // 
-            this.label40.AutoSize = true;
-            this.label40.BackColor = System.Drawing.Color.Transparent;
-            this.label40.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label40.Location = new System.Drawing.Point(468, 65);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(22, 17);
-            this.label40.TabIndex = 11;
-            this.label40.Text = "13";
+            this.Home_ChildAge_Label.AutoSize = true;
+            this.Home_ChildAge_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildAge_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildAge_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildAge_Label.Location = new System.Drawing.Point(468, 65);
+            this.Home_ChildAge_Label.Name = "Home_ChildAge_Label";
+            this.Home_ChildAge_Label.Size = new System.Drawing.Size(22, 17);
+            this.Home_ChildAge_Label.TabIndex = 11;
+            this.Home_ChildAge_Label.Text = "13";
             // 
-            // label39
+            // Home_ChildGradeSection_Label
             // 
-            this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
-            this.label39.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label39.Location = new System.Drawing.Point(265, 94);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(78, 17);
-            this.label39.TabIndex = 10;
-            this.label39.Text = "5 - Potter";
+            this.Home_ChildGradeSection_Label.AutoSize = true;
+            this.Home_ChildGradeSection_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildGradeSection_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildGradeSection_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.Home_ChildGradeSection_Label.Location = new System.Drawing.Point(265, 94);
+            this.Home_ChildGradeSection_Label.Name = "Home_ChildGradeSection_Label";
+            this.Home_ChildGradeSection_Label.Size = new System.Drawing.Size(78, 17);
+            this.Home_ChildGradeSection_Label.TabIndex = 10;
+            this.Home_ChildGradeSection_Label.Text = "5 - Potter";
             // 
             // Home_ChildName_Label
             // 
@@ -2324,41 +2323,19 @@ namespace Faculti
         private System.Windows.Forms.PictureBox SettingsButton;
         private System.Windows.Forms.Timer DateTimeTimer;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ContactsButton;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
-        private Bunifu.UI.WinForms.BunifuPages Pages;
-        private System.Windows.Forms.TabPage HomePage;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Home_ClassesToday_Label;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TabPage NewsPage;
-        private System.Windows.Forms.TabPage GradesPage;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage ChatPage;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage CalendarPage;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TabPage ContactsPage;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label Home_AssignmentsDue_Label;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label Home_UpcomingExams_Label;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private System.Windows.Forms.Label Home_1stSubject_Label;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label Home_1stSubjectTime_Label;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuPages Pages;
+        private System.Windows.Forms.TabPage HomePage;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel10;
+        private System.Windows.Forms.Label Home_8thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_8thSubject_Label;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel9;
+        private System.Windows.Forms.Label Home_7thSubjectTime_Label;
+        private System.Windows.Forms.Label Home_7thSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel8;
         private System.Windows.Forms.Label Home_6thSubjectTime_Label;
         private System.Windows.Forms.Label Home_6thSubject_Label;
@@ -2374,36 +2351,58 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel4;
         private System.Windows.Forms.Label Home_2ndSubjectTime_Label;
         private System.Windows.Forms.Label Home_2ndSubject_Label;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel9;
-        private System.Windows.Forms.Label Home_7thSubjectTime_Label;
-        private System.Windows.Forms.Label Home_7thSubject_Label;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel10;
-        private System.Windows.Forms.Label Home_8thSubjectTime_Label;
-        private System.Windows.Forms.Label Home_8thSubject_Label;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
+        private System.Windows.Forms.Label Home_1stSubjectTime_Label;
+        private System.Windows.Forms.Label Home_1stSubject_Label;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
+        private System.Windows.Forms.Label label17;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel7;
+        private System.Windows.Forms.Label Home_LastSchoolDays_Label;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label Home_Absences_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel6;
+        private System.Windows.Forms.Label Home_PassedOutOfNo_Label;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label Home_PassedSubjects_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
+        private System.Windows.Forms.Label Home_LatestGrading_Label;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label Home_LatestAverage_Label;
+        private System.Windows.Forms.Label label43;
+        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.Label Home_ChildTeacher_Label;
+        private System.Windows.Forms.Label Home_ChildSex_Label;
+        private System.Windows.Forms.Label Home_ChildAge_Label;
+        private System.Windows.Forms.Label Home_ChildGradeSection_Label;
+        private System.Windows.Forms.Label Home_ChildName_Label;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label Home_ChildName_Label;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel5;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel7;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel6;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label12;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Home_AssignmentsDue_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Home_UpcomingExams_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Home_ClassesToday_Label;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage NewsPage;
+        private System.Windows.Forms.TabPage GradesPage;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage ChatPage;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage CalendarPage;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TabPage ContactsPage;
     }
 }

@@ -46,8 +46,8 @@ namespace Faculti
             Utilities.BunifuPages.BunifuAnimatorNS.Animation animation1 = new Utilities.BunifuPages.BunifuAnimatorNS.Animation();
             this.ParentHomeFormEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ParentalLogoLabel = new System.Windows.Forms.Label();
             this.LogOutButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.ParentalLogoLabel = new System.Windows.Forms.Label();
             this.CalendarButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.ChatButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.GradesButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -62,23 +62,19 @@ namespace Faculti
             this.NotificationButton = new System.Windows.Forms.PictureBox();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.CalendarPage = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.ChatPage = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.GradesPage = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.NewsPage = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.HomePage = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Pages = new Bunifu.UI.WinForms.BunifuPages();
+            this.NewsPage = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.GradesPage = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ChatPage = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CalendarPage = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -87,17 +83,13 @@ namespace Faculti
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
-            this.CalendarPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.ChatPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.GradesPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.NewsPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Pages.SuspendLayout();
             this.HomePage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Pages.SuspendLayout();
+            this.NewsPage.SuspendLayout();
+            this.GradesPage.SuspendLayout();
+            this.ChatPage.SuspendLayout();
+            this.CalendarPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // ParentHomeFormEllipse
@@ -121,19 +113,6 @@ namespace Faculti
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(180, 694);
             this.panel1.TabIndex = 0;
-            // 
-            // ParentalLogoLabel
-            // 
-            this.ParentalLogoLabel.AutoSize = true;
-            this.ParentalLogoLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ParentalLogoLabel.Font = new System.Drawing.Font("Century Gothic", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParentalLogoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
-            this.ParentalLogoLabel.Location = new System.Drawing.Point(77, 51);
-            this.ParentalLogoLabel.Margin = new System.Windows.Forms.Padding(0);
-            this.ParentalLogoLabel.Name = "ParentalLogoLabel";
-            this.ParentalLogoLabel.Size = new System.Drawing.Size(39, 13);
-            this.ParentalLogoLabel.TabIndex = 10;
-            this.ParentalLogoLabel.Text = "Master";
             // 
             // LogOutButton
             // 
@@ -225,6 +204,19 @@ namespace Faculti
             this.LogOutButton.UseDefaultRadiusAndThickness = true;
             this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
+            // ParentalLogoLabel
+            // 
+            this.ParentalLogoLabel.AutoSize = true;
+            this.ParentalLogoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ParentalLogoLabel.Font = new System.Drawing.Font("Century Gothic", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParentalLogoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
+            this.ParentalLogoLabel.Location = new System.Drawing.Point(77, 51);
+            this.ParentalLogoLabel.Margin = new System.Windows.Forms.Padding(0);
+            this.ParentalLogoLabel.Name = "ParentalLogoLabel";
+            this.ParentalLogoLabel.Size = new System.Drawing.Size(39, 13);
+            this.ParentalLogoLabel.TabIndex = 10;
+            this.ParentalLogoLabel.Text = "Master";
+            // 
             // CalendarButton
             // 
             this.CalendarButton.AllowAnimations = false;
@@ -304,7 +296,6 @@ namespace Faculti
             this.CalendarButton.OnPressedState.BorderThickness = 1;
             this.CalendarButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(209)))), ((int)(((byte)(24)))));
             this.CalendarButton.OnPressedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.CalendarButton.OnPressedState.IconLeftImage = global::Faculti.Properties.Resources.calendar_pressed;
             this.CalendarButton.OnPressedState.IconRightImage = null;
             this.CalendarButton.Size = new System.Drawing.Size(126, 39);
             this.CalendarButton.TabIndex = 5;
@@ -873,6 +864,138 @@ namespace Faculti
             this.bunifuTextBox1.UseSystemPasswordChar = false;
             this.bunifuTextBox1.WordWrap = true;
             // 
+            // Pages
+            // 
+            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.Pages.AllowTransitions = false;
+            this.Pages.Controls.Add(this.HomePage);
+            this.Pages.Controls.Add(this.NewsPage);
+            this.Pages.Controls.Add(this.GradesPage);
+            this.Pages.Controls.Add(this.ChatPage);
+            this.Pages.Controls.Add(this.CalendarPage);
+            this.Pages.Location = new System.Drawing.Point(8, 58);
+            this.Pages.Multiline = true;
+            this.Pages.Name = "Pages";
+            this.Pages.Page = this.CalendarPage;
+            this.Pages.PageIndex = 4;
+            this.Pages.PageName = "CalendarPage";
+            this.Pages.PageTitle = "CalendarPage";
+            this.Pages.SelectedIndex = 0;
+            this.Pages.Size = new System.Drawing.Size(856, 639);
+            this.Pages.TabIndex = 4;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 1F;
+            this.Pages.Transition = animation1;
+            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
+            // 
+            // HomePage
+            // 
+            this.HomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
+            this.HomePage.Controls.Add(this.pictureBox1);
+            this.HomePage.Location = new System.Drawing.Point(4, 4);
+            this.HomePage.Name = "HomePage";
+            this.HomePage.Padding = new System.Windows.Forms.Padding(3);
+            this.HomePage.Size = new System.Drawing.Size(848, 613);
+            this.HomePage.TabIndex = 0;
+            this.HomePage.Text = "HomePage";
+            // 
+            // NewsPage
+            // 
+            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
+            this.NewsPage.Controls.Add(this.label2);
+            this.NewsPage.Location = new System.Drawing.Point(4, 4);
+            this.NewsPage.Name = "NewsPage";
+            this.NewsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.NewsPage.Size = new System.Drawing.Size(848, 613);
+            this.NewsPage.TabIndex = 1;
+            this.NewsPage.Text = "NewsPage";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(296, 272);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "News";
+            // 
+            // GradesPage
+            // 
+            this.GradesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
+            this.GradesPage.Controls.Add(this.label3);
+            this.GradesPage.Location = new System.Drawing.Point(4, 4);
+            this.GradesPage.Name = "GradesPage";
+            this.GradesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.GradesPage.Size = new System.Drawing.Size(848, 613);
+            this.GradesPage.TabIndex = 2;
+            this.GradesPage.Text = "GradesPage";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(381, 306);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 31);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Grades";
+            // 
+            // ChatPage
+            // 
+            this.ChatPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
+            this.ChatPage.Controls.Add(this.label4);
+            this.ChatPage.Location = new System.Drawing.Point(4, 4);
+            this.ChatPage.Name = "ChatPage";
+            this.ChatPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ChatPage.Size = new System.Drawing.Size(848, 613);
+            this.ChatPage.TabIndex = 3;
+            this.ChatPage.Text = "ChatPage";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(381, 306);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 31);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Chat";
+            // 
+            // CalendarPage
+            // 
+            this.CalendarPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
+            this.CalendarPage.Controls.Add(this.label5);
+            this.CalendarPage.Location = new System.Drawing.Point(4, 4);
+            this.CalendarPage.Name = "CalendarPage";
+            this.CalendarPage.Padding = new System.Windows.Forms.Padding(3);
+            this.CalendarPage.Size = new System.Drawing.Size(848, 613);
+            this.CalendarPage.TabIndex = 4;
+            this.CalendarPage.Text = "CalendarPage";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(381, 306);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 31);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Calendar";
+            // 
             // CloseButton
             // 
             this.CloseButton.ActiveImage = null;
@@ -945,192 +1068,6 @@ namespace Faculti
             this.MinimizeButton.ZoomSpeed = 10;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
-            // CalendarPage
-            // 
-            this.CalendarPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
-            this.CalendarPage.Controls.Add(this.pictureBox5);
-            this.CalendarPage.Controls.Add(this.label5);
-            this.CalendarPage.Location = new System.Drawing.Point(4, 4);
-            this.CalendarPage.Name = "CalendarPage";
-            this.CalendarPage.Padding = new System.Windows.Forms.Padding(3);
-            this.CalendarPage.Size = new System.Drawing.Size(848, 613);
-            this.CalendarPage.TabIndex = 4;
-            this.CalendarPage.Text = "CalendarPage";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(381, 306);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 31);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Calendar";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::Faculti.Properties.Resources.black_cat_holding_two_guns_and_shouting_meme;
-            this.pictureBox5.Location = new System.Drawing.Point(40, 50);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(699, 488);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
-            // ChatPage
-            // 
-            this.ChatPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
-            this.ChatPage.Controls.Add(this.pictureBox4);
-            this.ChatPage.Controls.Add(this.label4);
-            this.ChatPage.Location = new System.Drawing.Point(4, 4);
-            this.ChatPage.Name = "ChatPage";
-            this.ChatPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ChatPage.Size = new System.Drawing.Size(848, 613);
-            this.ChatPage.TabIndex = 3;
-            this.ChatPage.Text = "ChatPage";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(381, 306);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 31);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Chat";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Faculti.Properties.Resources.images;
-            this.pictureBox4.Location = new System.Drawing.Point(168, 171);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(586, 396);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // GradesPage
-            // 
-            this.GradesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
-            this.GradesPage.Controls.Add(this.pictureBox3);
-            this.GradesPage.Controls.Add(this.label3);
-            this.GradesPage.Location = new System.Drawing.Point(4, 4);
-            this.GradesPage.Name = "GradesPage";
-            this.GradesPage.Padding = new System.Windows.Forms.Padding(3);
-            this.GradesPage.Size = new System.Drawing.Size(848, 613);
-            this.GradesPage.TabIndex = 2;
-            this.GradesPage.Text = "GradesPage";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(381, 306);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Grades";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Faculti.Properties.Resources.EttVYZcVkAM273f;
-            this.pictureBox3.Location = new System.Drawing.Point(120, 50);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(578, 492);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // NewsPage
-            // 
-            this.NewsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
-            this.NewsPage.Controls.Add(this.pictureBox2);
-            this.NewsPage.Controls.Add(this.label2);
-            this.NewsPage.Location = new System.Drawing.Point(4, 4);
-            this.NewsPage.Name = "NewsPage";
-            this.NewsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.NewsPage.Size = new System.Drawing.Size(848, 613);
-            this.NewsPage.TabIndex = 1;
-            this.NewsPage.Text = "NewsPage";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(296, 272);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 31);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "News";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Faculti.Properties.Resources.himaly;
-            this.pictureBox2.Location = new System.Drawing.Point(132, 41);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(591, 435);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // HomePage
-            // 
-            this.HomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(32)))), ((int)(((byte)(33)))));
-            this.HomePage.Controls.Add(this.pictureBox1);
-            this.HomePage.Location = new System.Drawing.Point(4, 4);
-            this.HomePage.Name = "HomePage";
-            this.HomePage.Padding = new System.Windows.Forms.Padding(3);
-            this.HomePage.Size = new System.Drawing.Size(848, 613);
-            this.HomePage.TabIndex = 0;
-            this.HomePage.Text = "HomePage";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Faculti.Properties.Resources.fe51aa42bdf087e53902be15b4afac05;
-            this.pictureBox1.Location = new System.Drawing.Point(108, 70);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(646, 371);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Pages
-            // 
-            this.Pages.Alignment = System.Windows.Forms.TabAlignment.Bottom;
-            this.Pages.AllowTransitions = false;
-            this.Pages.Controls.Add(this.HomePage);
-            this.Pages.Controls.Add(this.NewsPage);
-            this.Pages.Controls.Add(this.GradesPage);
-            this.Pages.Controls.Add(this.ChatPage);
-            this.Pages.Controls.Add(this.CalendarPage);
-            this.Pages.Location = new System.Drawing.Point(8, 58);
-            this.Pages.Multiline = true;
-            this.Pages.Name = "Pages";
-            this.Pages.Page = this.CalendarPage;
-            this.Pages.PageIndex = 4;
-            this.Pages.PageName = "CalendarPage";
-            this.Pages.PageTitle = "CalendarPage";
-            this.Pages.SelectedIndex = 0;
-            this.Pages.Size = new System.Drawing.Size(856, 639);
-            this.Pages.TabIndex = 4;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 1F;
-            this.Pages.Transition = animation1;
-            this.Pages.TransitionType = Utilities.BunifuPages.BunifuAnimatorNS.AnimationType.Transparent;
-            // 
             // TeacherHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1155,21 +1092,17 @@ namespace Faculti
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
-            this.CalendarPage.ResumeLayout(false);
-            this.CalendarPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.ChatPage.ResumeLayout(false);
-            this.ChatPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.GradesPage.ResumeLayout(false);
-            this.GradesPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.NewsPage.ResumeLayout(false);
-            this.NewsPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Pages.ResumeLayout(false);
             this.HomePage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Pages.ResumeLayout(false);
+            this.NewsPage.ResumeLayout(false);
+            this.NewsPage.PerformLayout();
+            this.GradesPage.ResumeLayout(false);
+            this.GradesPage.PerformLayout();
+            this.ChatPage.ResumeLayout(false);
+            this.ChatPage.PerformLayout();
+            this.CalendarPage.ResumeLayout(false);
+            this.CalendarPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1200,16 +1133,12 @@ namespace Faculti
         private System.Windows.Forms.TabPage HomePage;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage NewsPage;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage GradesPage;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TabPage ChatPage;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage CalendarPage;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label5;
     }
 }

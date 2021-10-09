@@ -1,5 +1,7 @@
 ﻿using AirtableApiClient;
 using Faculti.Helpers;
+using Faculti.Services.Airtable;
+using System.Threading.Tasks;
 
 namespace Faculti
 {
@@ -14,9 +16,10 @@ namespace Faculti
         private string _passwordInHash;
         private string _firstName;
         private string _lastName;
-        private string _phoneNumber;
+        private string _phoneNumberInHash;
         private string _recordId;
         private bool   _verified;
+
 
         // Default constructor - without parameters
         public User() { }
@@ -27,6 +30,7 @@ namespace Faculti
             _type = type;
             _email = email;
             _passwordInHash = passwordInHash;
+
         }
 
 
@@ -53,10 +57,10 @@ namespace Faculti
             get { return _lastName; }
             set { _lastName = value; }
         }
-        public string PhoneNumber
+        public string PhoneNumberInHash
         {
-            get { return _phoneNumber; }
-            set { _phoneNumber = value; }
+            get { return _phoneNumberInHash; }
+            set { _phoneNumberInHash = value; }
         }
 
         public string RecordId
@@ -77,9 +81,76 @@ namespace Faculti
             set { _verified = value; }
         }
 
+        /// <summary>
+        ///     Adds a user to the database;
+        /// </summary>
+        /// 
+        /// <param name="signupUser">
+        ///     The signup user User class object.
+        /// </param>
+        public void AddToDatabase()
+        {
+            // Create an Airtable Fields object and add the user details
+            Fields fields = new Fields();
+            fields.AddField("Email", _email);
+            fields.AddField("Password", _passwordInHash);
+            fields.AddField("First Name", _firstName);
+            fields.AddField("Last Name", _lastName);
+            fields.AddField("Phone Number", _phoneNumberInHash);
+
+            // Add user to the database
+            AirtableClient airtableClient = new AirtableClient();
+            airtableClient.CreateRecord(_type, fields);
+        }
+
+        /// <summary>
+        ///     Checks if the user exists in the database.
+        /// </summary> 
         public bool DoesExistInDatabase(AirtableRecord[] records)
         {
             return Password.IsCorrect(_email, _passwordInHash, records);
-        } //master
+        } 
+
+        /// <summary>
+        ///     Updates the user's password in the database.
+        /// </summary>
+        public void UpdatePassword(string email, string newPassword, AirtableRecord[] records, string userType)
+        {
+            // looping through the records
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == email)
+                {
+                    var recordId = records[recordNum].Fields["Record Id"].ToString();
+
+                    var newRecord = new Fields();
+                    newRecord.AddField("Password", newPassword);
+
+                    AirtableClient airtableClient = new AirtableClient();
+                    airtableClient.UpdateRecord(userType, newRecord, recordId);
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Returns the user's record id from the database.
+        /// </summary>
+        public async Task<string> GetRecordId()
+
+        {
+            AirtableClient airtableClient = new AirtableClient();
+            var records = await airtableClient.ListRecords(type);
+
+            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            {
+                if (records[recordNum].Fields["Email"].ToString() == email)
+                {
+                    _recordId = records[recordNum].Fields["Record Id"].ToString();
+                    return _recordId;
+                }
+            }
+
+            return null;
+        }
     }
 }

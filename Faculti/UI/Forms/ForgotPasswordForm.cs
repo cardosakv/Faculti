@@ -54,14 +54,31 @@ namespace Faculti
 
                     VerificationForm verificationForm = new VerificationForm();
                     verificationForm.CopyEmailAndCode(email, verificationCode, "forgot");
-                    verificationForm.Show();
-                    this.Hide();
+                    verificationForm.ShowDialog();
+           
                 }
                 else
                 {
                     IncorrectEmailForgotTooltip.Text = "Account does not exist";
                     EmailForgotTextBox.Text = String.Empty;
                 }  
+            }
+        }
+
+        private void IncorrectEmailForgotTooltip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmailForgotTextBox_TextChanged(object sender, EventArgs e)
+        {
+            if (Syntax.IsValidEmail(EmailForgotTextBox.Text))
+            {
+                IncorrectEmailForgotTooltip.Visible = false;
+            }
+            else
+            {
+                IncorrectEmailForgotTooltip.Visible = true;
             }
         }
     }

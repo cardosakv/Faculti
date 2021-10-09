@@ -319,6 +319,11 @@ namespace Faculti
             TermsPrivacyLabel.ForeColor = Color.DimGray;
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void LogInButton_MouseLeave(object sender, EventArgs e)
         {
             LogInButton.ForeColor = Color.FromArgb(255, 209, 24);

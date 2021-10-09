@@ -230,5 +230,10 @@ namespace Faculti
                 this.Close();
             }
         }
+
+        private void bunifuShadowPanel1_ControlAdded(object sender, ControlEventArgs e)
+        {
+
+        }
     }
 }

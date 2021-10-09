@@ -56,36 +56,41 @@ namespace Faculti
             this.NewsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.HomeButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
+            this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.SettingsButton = new System.Windows.Forms.PictureBox();
             this.DateTimePanel = new System.Windows.Forms.Panel();
             this.DateTimeLabel = new System.Windows.Forms.Label();
             this.DateTimePictureBox = new System.Windows.Forms.PictureBox();
             this.NotificationButton = new System.Windows.Forms.PictureBox();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.TopProfilePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.Pages = new Bunifu.UI.WinForms.BunifuPages();
             this.HomePage = new System.Windows.Forms.TabPage();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel5 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.NewsPage = new System.Windows.Forms.TabPage();
             this.GradesPage = new System.Windows.Forms.TabPage();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ChatPage = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.CalendarPage = new System.Windows.Forms.TabPage();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.ContactsPage = new System.Windows.Forms.TabPage();
             this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
-            this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
-            this.ContactsPage = new System.Windows.Forms.TabPage();
+            this.bunifuShadowPanel2 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -93,15 +98,18 @@ namespace Faculti
             this.DateTimePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TopProfilePictureBox)).BeginInit();
             this.Pages.SuspendLayout();
             this.HomePage.SuspendLayout();
+            this.bunifuShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GradesPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.ChatPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.CalendarPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.bunifuShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.bunifuShadowPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // ParentHomeFormEllipse
@@ -791,6 +799,12 @@ namespace Faculti
             this.LogoPictureBox.TabIndex = 0;
             this.LogoPictureBox.TabStop = false;
             // 
+            // DateTimeTimer
+            // 
+            this.DateTimeTimer.Enabled = true;
+            this.DateTimeTimer.Interval = 1000;
+            this.DateTimeTimer.Tick += new System.EventHandler(this.DateTimeTimer_Tick);
+            // 
             // bunifuPanel1
             // 
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
@@ -802,7 +816,7 @@ namespace Faculti
             this.bunifuPanel1.Controls.Add(this.SettingsButton);
             this.bunifuPanel1.Controls.Add(this.DateTimePanel);
             this.bunifuPanel1.Controls.Add(this.NotificationButton);
-            this.bunifuPanel1.Controls.Add(this.bunifuPictureBox1);
+            this.bunifuPanel1.Controls.Add(this.TopProfilePictureBox);
             this.bunifuPanel1.Controls.Add(this.bunifuTextBox1);
             this.bunifuPanel1.Controls.Add(this.Pages);
             this.bunifuPanel1.Controls.Add(this.CloseButton);
@@ -817,10 +831,10 @@ namespace Faculti
             // 
             this.SettingsButton.BackColor = System.Drawing.Color.Transparent;
             this.SettingsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SettingsButton.Image = global::Faculti.Properties.Resources.settings_idle;
-            this.SettingsButton.Location = new System.Drawing.Point(690, 18);
+            this.SettingsButton.Image = ((System.Drawing.Image)(resources.GetObject("SettingsButton.Image")));
+            this.SettingsButton.Location = new System.Drawing.Point(688, 18);
             this.SettingsButton.Name = "SettingsButton";
-            this.SettingsButton.Size = new System.Drawing.Size(33, 30);
+            this.SettingsButton.Size = new System.Drawing.Size(34, 31);
             this.SettingsButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.SettingsButton.TabIndex = 9;
             this.SettingsButton.TabStop = false;
@@ -833,7 +847,7 @@ namespace Faculti
             this.DateTimePanel.Controls.Add(this.DateTimeLabel);
             this.DateTimePanel.Controls.Add(this.DateTimePictureBox);
             this.DateTimePanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DateTimePanel.Location = new System.Drawing.Point(336, 18);
+            this.DateTimePanel.Location = new System.Drawing.Point(369, 18);
             this.DateTimePanel.Name = "DateTimePanel";
             this.DateTimePanel.Size = new System.Drawing.Size(191, 31);
             this.DateTimePanel.TabIndex = 8;
@@ -859,7 +873,7 @@ namespace Faculti
             // 
             this.DateTimePictureBox.BackColor = System.Drawing.Color.Transparent;
             this.DateTimePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DateTimePictureBox.Image = global::Faculti.Properties.Resources.date_idle1;
+            this.DateTimePictureBox.Image = ((System.Drawing.Image)(resources.GetObject("DateTimePictureBox.Image")));
             this.DateTimePictureBox.Location = new System.Drawing.Point(5, 1);
             this.DateTimePictureBox.Name = "DateTimePictureBox";
             this.DateTimePictureBox.Size = new System.Drawing.Size(33, 30);
@@ -873,34 +887,36 @@ namespace Faculti
             // 
             this.NotificationButton.BackColor = System.Drawing.Color.Transparent;
             this.NotificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NotificationButton.Image = ((System.Drawing.Image)(resources.GetObject("NotificationButton.Image")));
-            this.NotificationButton.Location = new System.Drawing.Point(649, 18);
+            this.NotificationButton.Image = global::Faculti.Properties.Resources.notif_newnotif;
+            this.NotificationButton.Location = new System.Drawing.Point(646, 18);
             this.NotificationButton.Name = "NotificationButton";
             this.NotificationButton.Size = new System.Drawing.Size(33, 30);
             this.NotificationButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.NotificationButton.TabIndex = 7;
             this.NotificationButton.TabStop = false;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
             this.NotificationButton.MouseLeave += new System.EventHandler(this.NotificationButton_MouseLeave);
             this.NotificationButton.MouseHover += new System.EventHandler(this.NotificationButton_MouseHover);
             // 
-            // bunifuPictureBox1
+            // TopProfilePictureBox
             // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox1.AutoSizeHeight = false;
-            this.bunifuPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuPictureBox1.BorderRadius = 17;
-            this.bunifuPictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuPictureBox1.Image = global::Faculti.Properties.Resources.profile;
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(732, 15);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox1.TabIndex = 6;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            this.bunifuPictureBox1.MouseHover += new System.EventHandler(this.bunifuPictureBox1_MouseHover);
+            this.TopProfilePictureBox.AllowFocused = false;
+            this.TopProfilePictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TopProfilePictureBox.AutoSizeHeight = false;
+            this.TopProfilePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.TopProfilePictureBox.BorderRadius = 17;
+            this.TopProfilePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TopProfilePictureBox.Image = global::Faculti.Properties.Resources.profile;
+            this.TopProfilePictureBox.IsCircle = false;
+            this.TopProfilePictureBox.Location = new System.Drawing.Point(732, 15);
+            this.TopProfilePictureBox.Name = "TopProfilePictureBox";
+            this.TopProfilePictureBox.Size = new System.Drawing.Size(35, 35);
+            this.TopProfilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TopProfilePictureBox.TabIndex = 6;
+            this.TopProfilePictureBox.TabStop = false;
+            this.TopProfilePictureBox.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.TopProfilePictureBox.MouseLeave += new System.EventHandler(this.TopProfilePictureBox_MouseLeave);
+            this.TopProfilePictureBox.MouseHover += new System.EventHandler(this.TopProfilePictureBox_MouseHover);
             // 
             // bunifuTextBox1
             // 
@@ -928,7 +944,7 @@ namespace Faculti
             this.bunifuTextBox1.IconLeft = null;
             this.bunifuTextBox1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.IconPadding = 10;
-            this.bunifuTextBox1.IconRight = global::Faculti.Properties.Resources.search;
+            this.bunifuTextBox1.IconRight = global::Faculti.Properties.Resources.search1;
             this.bunifuTextBox1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.Lines = new string[0];
             this.bunifuTextBox1.Location = new System.Drawing.Point(22, 16);
@@ -959,7 +975,7 @@ namespace Faculti
             this.bunifuTextBox1.OnIdleState = stateProperties4;
             this.bunifuTextBox1.Padding = new System.Windows.Forms.Padding(3);
             this.bunifuTextBox1.PasswordChar = '\0';
-            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.LightGray;
+            this.bunifuTextBox1.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuTextBox1.PlaceholderText = "Search";
             this.bunifuTextBox1.ReadOnly = false;
             this.bunifuTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -991,10 +1007,10 @@ namespace Faculti
             this.Pages.Location = new System.Drawing.Point(3, 60);
             this.Pages.Multiline = true;
             this.Pages.Name = "Pages";
-            this.Pages.Page = this.ContactsPage;
-            this.Pages.PageIndex = 5;
-            this.Pages.PageName = "ContactsPage";
-            this.Pages.PageTitle = "ContactsPage";
+            this.Pages.Page = this.HomePage;
+            this.Pages.PageIndex = 0;
+            this.Pages.PageName = "HomePage";
+            this.Pages.PageTitle = "HomePage";
             this.Pages.SelectedIndex = 0;
             this.Pages.Size = new System.Drawing.Size(856, 645);
             this.Pages.TabIndex = 4;
@@ -1019,10 +1035,9 @@ namespace Faculti
             // HomePage
             // 
             this.HomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.HomePage.Controls.Add(this.bunifuShadowPanel3);
+            this.HomePage.Controls.Add(this.bunifuShadowPanel2);
             this.HomePage.Controls.Add(this.bunifuShadowPanel1);
-            this.HomePage.Controls.Add(this.bunifuPanel3);
-            this.HomePage.Controls.Add(this.bunifuPanel5);
-            this.HomePage.Controls.Add(this.bunifuPanel2);
             this.HomePage.Controls.Add(this.label6);
             this.HomePage.Controls.Add(this.label1);
             this.HomePage.Location = new System.Drawing.Point(4, 4);
@@ -1038,13 +1053,16 @@ namespace Faculti
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.BorderRadius = 15;
             this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.pictureBox1);
+            this.bunifuShadowPanel1.Controls.Add(this.label2);
+            this.bunifuShadowPanel1.Controls.Add(this.label7);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(19, 273);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(19, 87);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(241)))), ((int)(((byte)(249)))));
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowDepth = 10;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
@@ -1053,47 +1071,37 @@ namespace Faculti
             this.bunifuShadowPanel1.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.bunifuShadowPanel1.TabIndex = 17;
             // 
-            // bunifuPanel3
+            // pictureBox1
             // 
-            this.bunifuPanel3.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
-            this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel3.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel3.BorderRadius = 10;
-            this.bunifuPanel3.BorderThickness = 1;
-            this.bunifuPanel3.Location = new System.Drawing.Point(575, 87);
-            this.bunifuPanel3.Name = "bunifuPanel3";
-            this.bunifuPanel3.ShowBorders = false;
-            this.bunifuPanel3.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel3.TabIndex = 16;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(29, 59);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // bunifuPanel5
+            // label2
             // 
-            this.bunifuPanel5.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel5.BackgroundImage")));
-            this.bunifuPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel5.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel5.BorderRadius = 10;
-            this.bunifuPanel5.BorderThickness = 1;
-            this.bunifuPanel5.Location = new System.Drawing.Point(297, 87);
-            this.bunifuPanel5.Name = "bunifuPanel5";
-            this.bunifuPanel5.ShowBorders = false;
-            this.bunifuPanel5.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel5.TabIndex = 16;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label2.Location = new System.Drawing.Point(24, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Classes Today";
             // 
-            // bunifuPanel2
+            // label7
             // 
-            this.bunifuPanel2.BackgroundColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel2.BackgroundImage")));
-            this.bunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel2.BorderColor = System.Drawing.Color.White;
-            this.bunifuPanel2.BorderRadius = 10;
-            this.bunifuPanel2.BorderThickness = 1;
-            this.bunifuPanel2.Location = new System.Drawing.Point(19, 87);
-            this.bunifuPanel2.Name = "bunifuPanel2";
-            this.bunifuPanel2.ShowBorders = false;
-            this.bunifuPanel2.Size = new System.Drawing.Size(260, 138);
-            this.bunifuPanel2.TabIndex = 11;
+            this.label7.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label7.Location = new System.Drawing.Point(161, 1);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 120);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "8";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -1132,7 +1140,6 @@ namespace Faculti
             // GradesPage
             // 
             this.GradesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.GradesPage.Controls.Add(this.pictureBox2);
             this.GradesPage.Controls.Add(this.label3);
             this.GradesPage.Location = new System.Drawing.Point(4, 4);
             this.GradesPage.Name = "GradesPage";
@@ -1140,16 +1147,6 @@ namespace Faculti
             this.GradesPage.Size = new System.Drawing.Size(848, 619);
             this.GradesPage.TabIndex = 2;
             this.GradesPage.Text = "GradesPage";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Faculti.Properties.Resources._6ac47bf13994a07cdaf1a2345985543fcat_cries_with_gun_to_head;
-            this.pictureBox2.Location = new System.Drawing.Point(92, 49);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(709, 466);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
             // 
             // label3
             // 
@@ -1164,7 +1161,6 @@ namespace Faculti
             // ChatPage
             // 
             this.ChatPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.ChatPage.Controls.Add(this.pictureBox3);
             this.ChatPage.Controls.Add(this.label4);
             this.ChatPage.Location = new System.Drawing.Point(4, 4);
             this.ChatPage.Name = "ChatPage";
@@ -1172,16 +1168,6 @@ namespace Faculti
             this.ChatPage.Size = new System.Drawing.Size(848, 619);
             this.ChatPage.TabIndex = 3;
             this.ChatPage.Text = "ChatPage";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Faculti.Properties.Resources._889f071a5ea4d14e457ccb4efb455c2c;
-            this.pictureBox3.Location = new System.Drawing.Point(95, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(652, 539);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
             // 
             // label4
             // 
@@ -1196,7 +1182,6 @@ namespace Faculti
             // CalendarPage
             // 
             this.CalendarPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(245)))), ((int)(((byte)(251)))));
-            this.CalendarPage.Controls.Add(this.pictureBox4);
             this.CalendarPage.Controls.Add(this.label5);
             this.CalendarPage.Location = new System.Drawing.Point(4, 4);
             this.CalendarPage.Name = "CalendarPage";
@@ -1204,16 +1189,6 @@ namespace Faculti
             this.CalendarPage.Size = new System.Drawing.Size(848, 619);
             this.CalendarPage.TabIndex = 4;
             this.CalendarPage.Text = "CalendarPage";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Faculti.Properties.Resources.D5_sl6eW4AEl8Js;
-            this.pictureBox4.Location = new System.Drawing.Point(112, 24);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(648, 494);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
             // 
             // label5
             // 
@@ -1224,6 +1199,16 @@ namespace Faculti
             this.label5.Size = new System.Drawing.Size(132, 31);
             this.label5.TabIndex = 1;
             this.label5.Text = "Calendar";
+            // 
+            // ContactsPage
+            // 
+            this.ContactsPage.Location = new System.Drawing.Point(4, 4);
+            this.ContactsPage.Name = "ContactsPage";
+            this.ContactsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.ContactsPage.Size = new System.Drawing.Size(848, 619);
+            this.ContactsPage.TabIndex = 5;
+            this.ContactsPage.Text = "ContactsPage";
+            this.ContactsPage.UseVisualStyleBackColor = true;
             // 
             // CloseButton
             // 
@@ -1297,21 +1282,117 @@ namespace Faculti
             this.MinimizeButton.ZoomSpeed = 10;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
-            // DateTimeTimer
+            // bunifuShadowPanel2
             // 
-            this.DateTimeTimer.Enabled = true;
-            this.DateTimeTimer.Interval = 2000;
-            this.DateTimeTimer.Tick += new System.EventHandler(this.DateTimeTimer_Tick);
+            this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel2.BorderRadius = 15;
+            this.bunifuShadowPanel2.BorderThickness = 1;
+            this.bunifuShadowPanel2.Controls.Add(this.pictureBox2);
+            this.bunifuShadowPanel2.Controls.Add(this.label8);
+            this.bunifuShadowPanel2.Controls.Add(this.label9);
+            this.bunifuShadowPanel2.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel2.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel2.Location = new System.Drawing.Point(293, 87);
+            this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
+            this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel2.ShadowDept = 2;
+            this.bunifuShadowPanel2.ShadowDepth = 10;
+            this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel2.Size = new System.Drawing.Size(260, 138);
+            this.bunifuShadowPanel2.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel2.TabIndex = 18;
             // 
-            // ContactsPage
+            // pictureBox2
             // 
-            this.ContactsPage.Location = new System.Drawing.Point(4, 4);
-            this.ContactsPage.Name = "ContactsPage";
-            this.ContactsPage.Padding = new System.Windows.Forms.Padding(3);
-            this.ContactsPage.Size = new System.Drawing.Size(848, 619);
-            this.ContactsPage.TabIndex = 5;
-            this.ContactsPage.Text = "ContactsPage";
-            this.ContactsPage.UseVisualStyleBackColor = true;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(29, 59);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label8.Location = new System.Drawing.Point(24, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 23);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Upcoming Exams";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label9.Location = new System.Drawing.Point(161, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 120);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "2";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // bunifuShadowPanel3
+            // 
+            this.bunifuShadowPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel3.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel3.BorderRadius = 15;
+            this.bunifuShadowPanel3.BorderThickness = 1;
+            this.bunifuShadowPanel3.Controls.Add(this.pictureBox3);
+            this.bunifuShadowPanel3.Controls.Add(this.label10);
+            this.bunifuShadowPanel3.Controls.Add(this.label11);
+            this.bunifuShadowPanel3.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel3.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel3.Location = new System.Drawing.Point(571, 87);
+            this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
+            this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel3.ShadowDept = 2;
+            this.bunifuShadowPanel3.ShadowDepth = 10;
+            this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel3.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel3.Size = new System.Drawing.Size(260, 138);
+            this.bunifuShadowPanel3.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel3.TabIndex = 19;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(29, 59);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label10.Location = new System.Drawing.Point(24, 27);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(139, 23);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Assignments Due";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 77.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label11.Location = new System.Drawing.Point(161, 1);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(108, 120);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "5";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ParentHomeForm
             // 
@@ -1336,19 +1417,25 @@ namespace Faculti
             this.DateTimePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DateTimePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TopProfilePictureBox)).EndInit();
             this.Pages.ResumeLayout(false);
             this.HomePage.ResumeLayout(false);
             this.HomePage.PerformLayout();
+            this.bunifuShadowPanel1.ResumeLayout(false);
+            this.bunifuShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.GradesPage.ResumeLayout(false);
             this.GradesPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ChatPage.ResumeLayout(false);
             this.ChatPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.CalendarPage.ResumeLayout(false);
             this.CalendarPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.bunifuShadowPanel2.ResumeLayout(false);
+            this.bunifuShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.bunifuShadowPanel3.ResumeLayout(false);
+            this.bunifuShadowPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1362,9 +1449,8 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuImageButton CloseButton;
         private Bunifu.UI.WinForms.BunifuImageButton MinimizeButton;
         private System.Windows.Forms.Label ParentalLogoLabel;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private Bunifu.UI.WinForms.BunifuPictureBox TopProfilePictureBox;
         private System.Windows.Forms.PictureBox NotificationButton;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
         private System.Windows.Forms.PictureBox DateTimePictureBox;
         private System.Windows.Forms.Label DateTimeLabel;
         private System.Windows.Forms.Panel DateTimePanel;
@@ -1375,26 +1461,32 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 NewsButton;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 HomeButton;
         private System.Windows.Forms.PictureBox SettingsButton;
-        private Bunifu.UI.WinForms.BunifuPages Pages;
-        private System.Windows.Forms.TabPage HomePage;
-        private System.Windows.Forms.TabPage NewsPage;
-        private System.Windows.Forms.TabPage GradesPage;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TabPage ChatPage;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage CalendarPage;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label5;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label1;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel5;
         private System.Windows.Forms.Timer DateTimeTimer;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ContactsButton;
+        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
+        private Bunifu.UI.WinForms.BunifuPages Pages;
+        private System.Windows.Forms.TabPage HomePage;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage NewsPage;
+        private System.Windows.Forms.TabPage GradesPage;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage ChatPage;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage CalendarPage;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TabPage ContactsPage;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

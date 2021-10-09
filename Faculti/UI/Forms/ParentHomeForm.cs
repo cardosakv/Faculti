@@ -18,6 +18,7 @@ namespace Faculti
         public ParentHomeForm()
         {
             InitializeComponent();
+            DisplayTimeAndDate();
         }
 
         private void ParentHomeForm_Load(object sender, EventArgs e)
@@ -62,48 +63,43 @@ namespace Faculti
 
         private void NotificationButton_MouseHover(object sender, EventArgs e)
         {
-            NotificationButton.Image = Faculti.Properties.Resources.bell_hover;
+            NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif_hover;
         }
 
         private void NotificationButton_MouseLeave(object sender, EventArgs e)
         {
-            NotificationButton.Image = Faculti.Properties.Resources.bell_idle;
+            NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif;
         }
 
         private void DateTimeLabel_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
         }
 
         private void DateTimeLabel_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void DateTimePictureBox_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
+
         }
 
         private void DateTimePictureBox_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void DateTimePanel_MouseHover(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(33, 33, 33);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_hover1;
+            DateTime_Hover();
         }
 
         private void DateTimePanel_MouseLeave(object sender, EventArgs e)
         {
-            DateTimeLabel.ForeColor = Color.FromArgb(161, 166, 175);
-            DateTimePictureBox.Image = Faculti.Properties.Resources.date_idle1;
+            DateTime_Leave();
         }
 
         private void LogOutButton_Click(object sender, EventArgs e)
@@ -116,17 +112,12 @@ namespace Faculti
 
         private void SettingsButton_MouseHover(object sender, EventArgs e)
         {
-            SettingsButton.Image = Faculti.Properties.Resources.settings_keydown;
+            SettingsButton.Image = Faculti.Properties.Resources.settings_hover;
         }
 
         private void SettingsButton_MouseLeave(object sender, EventArgs e)
         {
             SettingsButton.Image = Faculti.Properties.Resources.settings_idle;
-        }
-
-        private void bunifuPictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            bunifuPictureBox1.Size = new Size(37, 37); 
         }
 
         private void DisplayTimeAndDate()
@@ -137,6 +128,38 @@ namespace Faculti
             string date = now.ToString("dd");
             string time = now.ToString("hh:mm tt");
             DateTimeLabel.Text = $"{day} • {month} {date} • {time}";
+        }
+
+        private void DisplayRandomTips()
+        {
+            string[] tips = { "  Eat your meal  🥣",
+                              "  Drink some water  🥛",
+                              "  Take a break  💤",
+                              "  Exercise daily  💪",
+                              "  Schedule your day  📝",
+                              "  Try to meditate  🧘",
+                              "  Travel someday  ⛰️",
+                              "  Read some books  📗",
+                              "  Sleep early  🛌",
+                              "  Check schedule  📌"};
+
+            Random rnd = new Random();
+            DateTimeLabel.Text = tips[rnd.Next(0, 9)];
+        }
+
+        private void DateTime_Hover()
+        {
+            DateTimeTimer.Stop();
+            DisplayRandomTips();
+            DateTimePictureBox.Image = Faculti.Properties.Resources.tips;
+        }
+
+        private void DateTime_Leave()
+        {
+            DisplayTimeAndDate();
+            DateTimeTimer.Start();
+            DateTimeLabel.ForeColor = Color.FromArgb(162, 177, 198);
+            DateTimePictureBox.Image = Faculti.Properties.Resources.calendar_idle;
         }
 
         private void DateTimeTimer_Tick(object sender, EventArgs e)
@@ -207,6 +230,21 @@ namespace Faculti
         private void ContactsButton_Click(object sender, EventArgs e)
         {
             Pages.SetPage(ContactsPage);
+        }
+
+        private void TopProfilePictureBox_MouseHover(object sender, EventArgs e)
+        {
+            TopProfilePictureBox.BorderRadius = 10;
+        }
+
+        private void TopProfilePictureBox_MouseLeave(object sender, EventArgs e)
+        {
+            TopProfilePictureBox.BorderRadius = 17;
+        }
+
+        private void NotificationButton_Click(object sender, EventArgs e)
+        {
+            NotificationButton.Image = Faculti.Properties.Resources.notif_hover;
         }
     }
 }

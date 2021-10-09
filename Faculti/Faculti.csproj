@@ -170,6 +170,11 @@
   <ItemGroup>
     <Compile Include="Helpers\PhoneNumber.cs" />
     <Compile Include="Helpers\Randomizer.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Services\Airtable\AirtableClient.cs" />
     <Compile Include="Services\Airtable\ResponseHandler.cs" />
     <Compile Include="UI\Forms\ChangePasswordForm.cs">
@@ -208,11 +213,6 @@
     <Compile Include="DataClasses\Parent.cs" />
     <Compile Include="DataClasses\User.cs" />
     <Compile Include="DataClasses\Teacher.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="UI\Forms\SignupForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -292,9 +292,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\CircularSpotifyTxT-Black.ttf" />
     <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Faculti-Regular.otf" />
+    <None Include="Resources\Gotham-Black.otf" />
+    <None Include="Resources\Gotham-Bold.otf" />
+    <None Include="Resources\Gotham-BookItalic.otf" />
+    <None Include="Resources\Gotham-Light.otf" />
+    <None Include="Resources\Gotham-Thin.otf" />
+    <None Include="Resources\Gotham-ThinItalic.otf" />
+    <None Include="Resources\Gotham-UltraItalic.otf" />
+    <None Include="Resources\Gotham-XLight.otf" />
+    <None Include="Resources\Gotham-XLightItalic.otf" />
+    <None Include="Resources\GothamBold.ttf" />
+    <None Include="Resources\GothamBoldItalic.ttf" />
+    <None Include="Resources\GothamBook.ttf" />
+    <None Include="Resources\GothamBookItalic.ttf" />
+    <None Include="Resources\GothamLight.ttf" />
+    <None Include="Resources\GothamLightItalic.ttf" />
+    <None Include="Resources\GothamMedium.ttf" />
+    <None Include="Resources\GothamMedium_1.ttf" />
     <None Include="Resources\minimize.png" />
   </ItemGroup>
   <ItemGroup>
@@ -396,6 +415,20 @@
     <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
     <Content Include="bin\Debug\testcentric.engine.metadata.dll" />
     <Content Include="faculti-icon.ico" />
+    <None Include="Resources\classes-today1.png" />
+    <None Include="Resources\classes-today.png" />
+    <None Include="Resources\search1.png" />
+    <None Include="Resources\tips.png" />
+    <None Include="Resources\calendar-hover1.png" />
+    <None Include="Resources\calendar-idle1.png" />
+    <None Include="Resources\settings_hover.png" />
+    <None Include="Resources\settings-hover1.jpg" />
+    <None Include="Resources\settings-hover.jpg" />
+    <None Include="Resources\settings-idle.png" />
+    <None Include="Resources\notif-newnotif-hover.png" />
+    <None Include="Resources\notif-newnotif.png" />
+    <None Include="Resources\notif-idle.png" />
+    <None Include="Resources\notif-hover.png" />
     <None Include="Resources\Ball-0.4s-54px.gif" />
     <None Include="Resources\Asset 131.png" />
     <None Include="Resources\Asset 13.png" />
@@ -419,8 +452,6 @@
     <None Include="Resources\calendar-yellow.png" />
     <None Include="Resources\jinwoo.jpg" />
     <None Include="Resources\settings-keydown.png" />
-    <None Include="Resources\settings-idle.png" />
-    <None Include="Resources\settings-hover.png" />
     <None Include="Resources\logout-idle.png" />
     <None Include="Resources\logout-pressed.png" />
     <None Include="Resources\logout-hover.png" />

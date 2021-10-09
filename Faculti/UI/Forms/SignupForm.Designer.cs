@@ -183,7 +183,7 @@ namespace Faculti
             this.CloseButton.ImageSize = new System.Drawing.Size(24, 24);
             this.CloseButton.ImageZoomSize = new System.Drawing.Size(24, 24);
             this.CloseButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.InitialImage")));
-            this.CloseButton.Location = new System.Drawing.Point(591, 13);
+            this.CloseButton.Location = new System.Drawing.Point(591, 10);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Rotation = 0;
             this.CloseButton.ShowActiveImage = true;
@@ -219,7 +219,7 @@ namespace Faculti
             this.MinimizeButton.ImageSize = new System.Drawing.Size(24, 24);
             this.MinimizeButton.ImageZoomSize = new System.Drawing.Size(24, 24);
             this.MinimizeButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("MinimizeButton.InitialImage")));
-            this.MinimizeButton.Location = new System.Drawing.Point(556, 13);
+            this.MinimizeButton.Location = new System.Drawing.Point(556, 10);
             this.MinimizeButton.Name = "MinimizeButton";
             this.MinimizeButton.Rotation = 0;
             this.MinimizeButton.ShowActiveImage = true;

@@ -102,7 +102,7 @@ namespace Faculti
         {
             SignupForm signupForm = new SignupForm();
             signupForm.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void ForgotPasswordLinkLabel_Click(object sender, EventArgs e)

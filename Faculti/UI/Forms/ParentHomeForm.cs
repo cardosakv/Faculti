@@ -9,46 +9,107 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
-using static Faculti.UI.FormAnimation;
+using Faculti.UI.Cards;
+using Faculti.UI;
 
 namespace Faculti
 {
     public partial class ParentHomeForm : Form
     {
+        HomePanel homePanel = new HomePanel();
+        FeedPanel feedPanel = new FeedPanel();
+        GradesPanel gradesPanel = new GradesPanel();
+        ChatPanel chatPanel = new ChatPanel();
+        CalendarPanel calendarPanel = new CalendarPanel();
+        ContactsPanel contactsPanel = new ContactsPanel();
+
         public ParentHomeForm()
         {
             InitializeComponent();
+            homePanel.Location = new Point(3, 55);
+            feedPanel.Location = new Point(3, 55);
+            gradesPanel.Location = new Point(3, 60);
+            chatPanel.Location = new Point(3, 60);
+            calendarPanel.Location = new Point(3, 60);
+            contactsPanel.Location = new Point(3, 60);
+            MainPanel.Controls.Add(homePanel);
+            MainPanel.Controls.Add(feedPanel);
+            MainPanel.Controls.Add(gradesPanel);
+            MainPanel.Controls.Add(chatPanel);
+            MainPanel.Controls.Add(calendarPanel);
+            MainPanel.Controls.Add(contactsPanel);
             DisplayTimeAndDate();
         }
 
         private void ParentHomeForm_Load(object sender, EventArgs e)
         {
-            FadeIn(this);
+            FormAnimation.FadeIn(this);
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
-            Pages.SetPage(HomePage);
+            PageLabel.Text = "Overview";
+            homePanel.Visible = true;
+            feedPanel.Visible = false;
+            gradesPanel.Visible = false;
+            chatPanel.Visible = false;
+            calendarPanel.Visible = false;
+            calendarPanel.Visible = false;
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
-            Pages.SetPage(NewsPage);
+            PageLabel.Text = "Feed";
+            homePanel.Visible = false;
+            feedPanel.Visible = true;
+            gradesPanel.Visible = false;
+            chatPanel.Visible = false;
+            calendarPanel.Visible = false;
+            calendarPanel.Visible = false;
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
         {
-            Pages.SetPage(GradesPage);
+            PageLabel.Text = "Grades";
+            homePanel.Visible = false;
+            feedPanel.Visible = false;
+            gradesPanel.Visible = true;
+            chatPanel.Visible = false;
+            calendarPanel.Visible = false;
+            calendarPanel.Visible = false;
         }
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
-            Pages.SetPage(ChatPage);
+            PageLabel.Text = "Chat";
+            homePanel.Visible = false;
+            feedPanel.Visible = false;
+            gradesPanel.Visible = false;
+            chatPanel.Visible = true;
+            calendarPanel.Visible = false;
+            calendarPanel.Visible = false;
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
-            Pages.SetPage(CalendarPage);
+            PageLabel.Text = "Calendar";
+            homePanel.Visible = false;
+            feedPanel.Visible = false;
+            gradesPanel.Visible = false;
+            chatPanel.Visible = false;
+            calendarPanel.Visible = true;
+            calendarPanel.Visible = false;
+        }
+
+        private void ContactsButton_Click(object sender, EventArgs e)
+        {
+            PageLabel.Text = "Contacts";
+            homePanel.Visible = false;
+            feedPanel.Visible = false;
+            gradesPanel.Visible = false;
+            chatPanel.Visible = false;
+            calendarPanel.Visible = false;
+            calendarPanel.Visible = true;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -106,7 +167,7 @@ namespace Faculti
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            FadeOut(this);
+            FormAnimation.FadeOut(this);
             this.Hide();
         }
 
@@ -225,11 +286,6 @@ namespace Faculti
         private void ContactsButton_MouseLeave(object sender, EventArgs e)
         {
             ContactsButton.Text = "  📞   Contacts";
-        }
-
-        private void ContactsButton_Click(object sender, EventArgs e)
-        {
-            Pages.SetPage(ContactsPage);
         }
 
         private void TopProfilePictureBox_MouseHover(object sender, EventArgs e)

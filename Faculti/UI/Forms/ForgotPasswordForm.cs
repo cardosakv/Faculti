@@ -55,6 +55,11 @@ namespace Faculti
                     IncorrectEmailForgotTooltip.Visible = true;
                 }
             }
+            else
+            {
+                IncorrectEmailForgotTooltip.Text = "Please enter email";
+                IncorrectEmailForgotTooltip.Visible = true;
+            }
         }
 
 

@@ -16,7 +16,7 @@ namespace Faculti
         private string _passwordInHash;
         private string _firstName;
         private string _lastName;
-        private string _phoneNumberInHash;
+        private string _phoneNumber;
         private string _recordId;
         private bool   _verified;
 
@@ -59,8 +59,8 @@ namespace Faculti
         }
         public string PhoneNumberInHash
         {
-            get { return _phoneNumberInHash; }
-            set { _phoneNumberInHash = value; }
+            get { return _phoneNumber; }
+            set { _phoneNumber = value; }
         }
 
         public string RecordId
@@ -96,7 +96,7 @@ namespace Faculti
             fields.AddField("Password", _passwordInHash);
             fields.AddField("First Name", _firstName);
             fields.AddField("Last Name", _lastName);
-            fields.AddField("Phone Number", _phoneNumberInHash);
+            fields.AddField("Phone Number", PhoneNumber.Encrypt(_phoneNumber));
 
             // Add user to the database
             AirtableClient airtableClient = new AirtableClient();

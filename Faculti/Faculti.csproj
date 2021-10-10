@@ -168,6 +168,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helpers\PhoneNumber.cs" />
     <Compile Include="Helpers\Randomizer.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -176,6 +177,54 @@
     </Compile>
     <Compile Include="Services\Airtable\AirtableClient.cs" />
     <Compile Include="Services\Airtable\ResponseHandler.cs" />
+    <Compile Include="UI\Cards\AnnouncementPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\AnnouncementPanel.Designer.cs">
+      <DependentUpon>AnnouncementPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\CalendarPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\CalendarPanel.Designer.cs">
+      <DependentUpon>CalendarPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\ChatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\ChatPanel.Designer.cs">
+      <DependentUpon>ChatPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\ContactsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\ContactsPanel.Designer.cs">
+      <DependentUpon>ContactsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\FeedPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\FeedPanel.Designer.cs">
+      <DependentUpon>FeedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\GradesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\GradesPanel.Designer.cs">
+      <DependentUpon>GradesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\HomePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\HomePanel.Designer.cs">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,6 +291,18 @@
     <Compile Include="UI\Forms\VerificationForm.Designer.cs">
       <DependentUpon>VerificationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\Cards\AnnouncementPanel.resx">
+      <DependentUpon>AnnouncementPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\FeedPanel.resx">
+      <DependentUpon>FeedPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\HomePanel.resx">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>

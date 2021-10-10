@@ -30,35 +30,6 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePanel));
-            this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.Home_LastSchoolDays_Label = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.Home_Absences_Label = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.Home_PassedOutOfNo_Label = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.Home_PassedSubjects_Label = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
-            this.Home_LatestGrading_Label = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.Home_LatestAverage_Label = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.Home_ChildTeacher_Label = new System.Windows.Forms.Label();
-            this.Home_ChildSex_Label = new System.Windows.Forms.Label();
-            this.Home_ChildAge_Label = new System.Windows.Forms.Label();
-            this.Home_ChildGradeSection_Label = new System.Windows.Forms.Label();
-            this.Home_ChildName_Label = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -100,11 +71,35 @@ namespace Faculti.UI.Cards
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuShadowPanel4.SuspendLayout();
-            this.bunifuShadowPanel7.SuspendLayout();
-            this.bunifuShadowPanel6.SuspendLayout();
-            this.bunifuShadowPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.bunifuShadowPanel4 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel7 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.Home_LastSchoolDays_Label = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.Home_Absences_Label = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel6 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.Home_PassedOutOfNo_Label = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.Home_PassedSubjects_Label = new System.Windows.Forms.Label();
+            this.bunifuShadowPanel5 = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.Home_LatestGrading_Label = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Home_LatestAverage_Label = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
+            this.Home_ChildTeacher_Label = new System.Windows.Forms.Label();
+            this.Home_ChildSex_Label = new System.Windows.Forms.Label();
+            this.Home_ChildAge_Label = new System.Windows.Forms.Label();
+            this.Home_ChildGradeSection_Label = new System.Windows.Forms.Label();
+            this.Home_ChildName_Label = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.bunifuShadowPanel2.SuspendLayout();
@@ -121,418 +116,12 @@ namespace Faculti.UI.Cards
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
+            this.bunifuShadowPanel4.SuspendLayout();
+            this.bunifuShadowPanel7.SuspendLayout();
+            this.bunifuShadowPanel6.SuspendLayout();
+            this.bunifuShadowPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuShadowPanel4
-            // 
-            this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel4.BorderRadius = 15;
-            this.bunifuShadowPanel4.BorderThickness = 1;
-            this.bunifuShadowPanel4.Controls.Add(this.label6);
-            this.bunifuShadowPanel4.Controls.Add(this.label7);
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel7);
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel6);
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel5);
-            this.bunifuShadowPanel4.Controls.Add(this.label43);
-            this.bunifuShadowPanel4.Controls.Add(this.bunifuSeparator1);
-            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildTeacher_Label);
-            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildSex_Label);
-            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildAge_Label);
-            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildGradeSection_Label);
-            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildName_Label);
-            this.bunifuShadowPanel4.Controls.Add(this.label37);
-            this.bunifuShadowPanel4.Controls.Add(this.pictureBox4);
-            this.bunifuShadowPanel4.Controls.Add(this.label36);
-            this.bunifuShadowPanel4.Controls.Add(this.label35);
-            this.bunifuShadowPanel4.Controls.Add(this.label34);
-            this.bunifuShadowPanel4.Controls.Add(this.label33);
-            this.bunifuShadowPanel4.Controls.Add(this.label12);
-            this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel4.Location = new System.Drawing.Point(290, 162);
-            this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
-            this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
-            this.bunifuShadowPanel4.ShadowDept = 2;
-            this.bunifuShadowPanel4.ShadowDepth = 3;
-            this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel4.Size = new System.Drawing.Size(543, 446);
-            this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel4.TabIndex = 32;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label6.Location = new System.Drawing.Point(199, 142);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 17);
-            this.label6.TabIndex = 24;
-            this.label6.Text = "10001";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label7.Location = new System.Drawing.Point(139, 141);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 21);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "ID No:";
-            // 
-            // bunifuShadowPanel7
-            // 
-            this.bunifuShadowPanel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.BorderRadius = 15;
-            this.bunifuShadowPanel7.BorderThickness = 1;
-            this.bunifuShadowPanel7.Controls.Add(this.Home_LastSchoolDays_Label);
-            this.bunifuShadowPanel7.Controls.Add(this.label51);
-            this.bunifuShadowPanel7.Controls.Add(this.Home_Absences_Label);
-            this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel7.Location = new System.Drawing.Point(362, 251);
-            this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
-            this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.bunifuShadowPanel7.ShadowDept = 2;
-            this.bunifuShadowPanel7.ShadowDepth = 5;
-            this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel7.Size = new System.Drawing.Size(150, 166);
-            this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel7.TabIndex = 22;
-            // 
-            // Home_LastSchoolDays_Label
-            // 
-            this.Home_LastSchoolDays_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_LastSchoolDays_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_LastSchoolDays_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_LastSchoolDays_Label.Location = new System.Drawing.Point(7, 127);
-            this.Home_LastSchoolDays_Label.Name = "Home_LastSchoolDays_Label";
-            this.Home_LastSchoolDays_Label.Size = new System.Drawing.Size(137, 17);
-            this.Home_LastSchoolDays_Label.TabIndex = 30;
-            this.Home_LastSchoolDays_Label.Text = "Last 83 Days";
-            this.Home_LastSchoolDays_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.BackColor = System.Drawing.Color.Transparent;
-            this.label51.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label51.Location = new System.Drawing.Point(37, 22);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 21);
-            this.label51.TabIndex = 28;
-            this.label51.Text = "Absences";
-            // 
-            // Home_Absences_Label
-            // 
-            this.Home_Absences_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_Absences_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.Home_Absences_Label.Location = new System.Drawing.Point(17, 40);
-            this.Home_Absences_Label.Margin = new System.Windows.Forms.Padding(0);
-            this.Home_Absences_Label.Name = "Home_Absences_Label";
-            this.Home_Absences_Label.Size = new System.Drawing.Size(123, 83);
-            this.Home_Absences_Label.TabIndex = 29;
-            this.Home_Absences_Label.Text = "3";
-            this.Home_Absences_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuShadowPanel6
-            // 
-            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.BorderRadius = 15;
-            this.bunifuShadowPanel6.BorderThickness = 1;
-            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedOutOfNo_Label);
-            this.bunifuShadowPanel6.Controls.Add(this.label48);
-            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedSubjects_Label);
-            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel6.Location = new System.Drawing.Point(196, 251);
-            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
-            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.bunifuShadowPanel6.ShadowDept = 2;
-            this.bunifuShadowPanel6.ShadowDepth = 5;
-            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel6.Size = new System.Drawing.Size(150, 166);
-            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel6.TabIndex = 21;
-            // 
-            // Home_PassedOutOfNo_Label
-            // 
-            this.Home_PassedOutOfNo_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_PassedOutOfNo_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_PassedOutOfNo_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_PassedOutOfNo_Label.Location = new System.Drawing.Point(16, 127);
-            this.Home_PassedOutOfNo_Label.Name = "Home_PassedOutOfNo_Label";
-            this.Home_PassedOutOfNo_Label.Size = new System.Drawing.Size(118, 17);
-            this.Home_PassedOutOfNo_Label.TabIndex = 27;
-            this.Home_PassedOutOfNo_Label.Text = "Out of 8";
-            this.Home_PassedOutOfNo_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.BackColor = System.Drawing.Color.Transparent;
-            this.label48.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label48.Location = new System.Drawing.Point(14, 22);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(122, 21);
-            this.label48.TabIndex = 25;
-            this.label48.Text = "Passed Subjects";
-            // 
-            // Home_PassedSubjects_Label
-            // 
-            this.Home_PassedSubjects_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_PassedSubjects_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Home_PassedSubjects_Label.Location = new System.Drawing.Point(17, 40);
-            this.Home_PassedSubjects_Label.Margin = new System.Windows.Forms.Padding(0);
-            this.Home_PassedSubjects_Label.Name = "Home_PassedSubjects_Label";
-            this.Home_PassedSubjects_Label.Size = new System.Drawing.Size(123, 83);
-            this.Home_PassedSubjects_Label.TabIndex = 26;
-            this.Home_PassedSubjects_Label.Text = "7";
-            this.Home_PassedSubjects_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuShadowPanel5
-            // 
-            this.bunifuShadowPanel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel5.BorderColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel5.BorderRadius = 15;
-            this.bunifuShadowPanel5.BorderThickness = 1;
-            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestGrading_Label);
-            this.bunifuShadowPanel5.Controls.Add(this.label45);
-            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestAverage_Label);
-            this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
-            this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel5.Location = new System.Drawing.Point(30, 251);
-            this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
-            this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.White;
-            this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.bunifuShadowPanel5.ShadowDept = 2;
-            this.bunifuShadowPanel5.ShadowDepth = 5;
-            this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
-            this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
-            this.bunifuShadowPanel5.Size = new System.Drawing.Size(150, 166);
-            this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
-            this.bunifuShadowPanel5.TabIndex = 20;
-            // 
-            // Home_LatestGrading_Label
-            // 
-            this.Home_LatestGrading_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_LatestGrading_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_LatestGrading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_LatestGrading_Label.Location = new System.Drawing.Point(19, 127);
-            this.Home_LatestGrading_Label.Name = "Home_LatestGrading_Label";
-            this.Home_LatestGrading_Label.Size = new System.Drawing.Size(113, 17);
-            this.Home_LatestGrading_Label.TabIndex = 24;
-            this.Home_LatestGrading_Label.Text = "2nd Grading";
-            this.Home_LatestGrading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.BackColor = System.Drawing.Color.Transparent;
-            this.label45.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label45.Location = new System.Drawing.Point(18, 22);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(114, 21);
-            this.label45.TabIndex = 23;
-            this.label45.Text = "Latest Average";
-            // 
-            // Home_LatestAverage_Label
-            // 
-            this.Home_LatestAverage_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_LatestAverage_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(221)))), ((int)(((byte)(111)))));
-            this.Home_LatestAverage_Label.Location = new System.Drawing.Point(16, 40);
-            this.Home_LatestAverage_Label.Margin = new System.Windows.Forms.Padding(0);
-            this.Home_LatestAverage_Label.Name = "Home_LatestAverage_Label";
-            this.Home_LatestAverage_Label.Size = new System.Drawing.Size(123, 83);
-            this.Home_LatestAverage_Label.TabIndex = 23;
-            this.Home_LatestAverage_Label.Text = "89";
-            this.Home_LatestAverage_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label43
-            // 
-            this.label43.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.label43.Location = new System.Drawing.Point(192, 212);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(158, 23);
-            this.label43.TabIndex = 14;
-            this.label43.Text = "Summary Report";
-            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
-            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Round;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
-            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator1.LineThickness = 3;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(81, 218);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator1.Size = new System.Drawing.Size(380, 14);
-            this.bunifuSeparator1.TabIndex = 15;
-            // 
-            // Home_ChildTeacher_Label
-            // 
-            this.Home_ChildTeacher_Label.AutoSize = true;
-            this.Home_ChildTeacher_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_ChildTeacher_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildTeacher_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildTeacher_Label.Location = new System.Drawing.Point(348, 141);
-            this.Home_ChildTeacher_Label.Name = "Home_ChildTeacher_Label";
-            this.Home_ChildTeacher_Label.Size = new System.Drawing.Size(148, 17);
-            this.Home_ChildTeacher_Label.TabIndex = 13;
-            this.Home_ChildTeacher_Label.Text = "Bellatrix Lestrange";
-            // 
-            // Home_ChildSex_Label
-            // 
-            this.Home_ChildSex_Label.AutoSize = true;
-            this.Home_ChildSex_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_ChildSex_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildSex_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildSex_Label.Location = new System.Drawing.Point(487, 106);
-            this.Home_ChildSex_Label.Name = "Home_ChildSex_Label";
-            this.Home_ChildSex_Label.Size = new System.Drawing.Size(21, 17);
-            this.Home_ChildSex_Label.TabIndex = 12;
-            this.Home_ChildSex_Label.Text = "M";
-            // 
-            // Home_ChildAge_Label
-            // 
-            this.Home_ChildAge_Label.AutoSize = true;
-            this.Home_ChildAge_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_ChildAge_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildAge_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildAge_Label.Location = new System.Drawing.Point(486, 77);
-            this.Home_ChildAge_Label.Name = "Home_ChildAge_Label";
-            this.Home_ChildAge_Label.Size = new System.Drawing.Size(22, 17);
-            this.Home_ChildAge_Label.TabIndex = 11;
-            this.Home_ChildAge_Label.Text = "13";
-            // 
-            // Home_ChildGradeSection_Label
-            // 
-            this.Home_ChildGradeSection_Label.AutoSize = true;
-            this.Home_ChildGradeSection_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_ChildGradeSection_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildGradeSection_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildGradeSection_Label.Location = new System.Drawing.Point(265, 106);
-            this.Home_ChildGradeSection_Label.Name = "Home_ChildGradeSection_Label";
-            this.Home_ChildGradeSection_Label.Size = new System.Drawing.Size(78, 17);
-            this.Home_ChildGradeSection_Label.TabIndex = 10;
-            this.Home_ChildGradeSection_Label.Text = "5 - Potter";
-            // 
-            // Home_ChildName_Label
-            // 
-            this.Home_ChildName_Label.AutoSize = true;
-            this.Home_ChildName_Label.BackColor = System.Drawing.Color.Transparent;
-            this.Home_ChildName_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildName_Label.Location = new System.Drawing.Point(200, 76);
-            this.Home_ChildName_Label.Name = "Home_ChildName_Label";
-            this.Home_ChildName_Label.Size = new System.Drawing.Size(204, 17);
-            this.Home_ChildName_Label.TabIndex = 5;
-            this.Home_ChildName_Label.Text = "Super Mario Lorepimpsum";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
-            this.label37.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label37.Location = new System.Drawing.Point(272, 140);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(69, 21);
-            this.label37.TabIndex = 9;
-            this.label37.Text = "Teacher:";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(30, 72);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(90, 90);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label36.Location = new System.Drawing.Point(139, 105);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(118, 21);
-            this.label36.TabIndex = 8;
-            this.label36.Text = "Grade/Section:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
-            this.label35.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label35.Location = new System.Drawing.Point(439, 105);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(39, 21);
-            this.label35.TabIndex = 7;
-            this.label35.Text = "Sex:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
-            this.label34.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label34.Location = new System.Drawing.Point(439, 76);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(42, 21);
-            this.label34.TabIndex = 6;
-            this.label34.Text = "Age:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
-            this.label33.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label33.Location = new System.Drawing.Point(139, 76);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(54, 21);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Name:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.label12.Location = new System.Drawing.Point(26, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(178, 23);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Your Child Information";
             // 
             // bunifuShadowPanel3
             // 
@@ -1089,11 +678,423 @@ namespace Faculti.UI.Cards
             this.label3.TabIndex = 3;
             this.label3.Text = "EPP";
             // 
+            // bunifuShadowPanel4
+            // 
+            this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel4.BorderRadius = 15;
+            this.bunifuShadowPanel4.BorderThickness = 1;
+            this.bunifuShadowPanel4.Controls.Add(this.label6);
+            this.bunifuShadowPanel4.Controls.Add(this.label7);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel7);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel6);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuShadowPanel5);
+            this.bunifuShadowPanel4.Controls.Add(this.label43);
+            this.bunifuShadowPanel4.Controls.Add(this.bunifuSeparator1);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildTeacher_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildSex_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildAge_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildGradeSection_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.Home_ChildName_Label);
+            this.bunifuShadowPanel4.Controls.Add(this.label37);
+            this.bunifuShadowPanel4.Controls.Add(this.pictureBox4);
+            this.bunifuShadowPanel4.Controls.Add(this.label36);
+            this.bunifuShadowPanel4.Controls.Add(this.label35);
+            this.bunifuShadowPanel4.Controls.Add(this.label34);
+            this.bunifuShadowPanel4.Controls.Add(this.label33);
+            this.bunifuShadowPanel4.Controls.Add(this.label12);
+            this.bunifuShadowPanel4.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel4.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel4.Location = new System.Drawing.Point(290, 165);
+            this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
+            this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel4.ShadowDept = 2;
+            this.bunifuShadowPanel4.ShadowDepth = 3;
+            this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel4.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel4.Size = new System.Drawing.Size(543, 446);
+            this.bunifuShadowPanel4.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel4.TabIndex = 44;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label6.Location = new System.Drawing.Point(199, 142);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(51, 17);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "10001";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label7.Location = new System.Drawing.Point(139, 141);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 21);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "ID No:";
+            // 
+            // bunifuShadowPanel7
+            // 
+            this.bunifuShadowPanel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel7.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.BorderRadius = 15;
+            this.bunifuShadowPanel7.BorderThickness = 1;
+            this.bunifuShadowPanel7.Controls.Add(this.Home_LastSchoolDays_Label);
+            this.bunifuShadowPanel7.Controls.Add(this.label51);
+            this.bunifuShadowPanel7.Controls.Add(this.Home_Absences_Label);
+            this.bunifuShadowPanel7.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel7.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel7.Location = new System.Drawing.Point(362, 251);
+            this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
+            this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel7.ShadowDept = 2;
+            this.bunifuShadowPanel7.ShadowDepth = 5;
+            this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel7.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel7.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel7.TabIndex = 22;
+            // 
+            // Home_LastSchoolDays_Label
+            // 
+            this.Home_LastSchoolDays_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_LastSchoolDays_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LastSchoolDays_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_LastSchoolDays_Label.Location = new System.Drawing.Point(7, 127);
+            this.Home_LastSchoolDays_Label.Name = "Home_LastSchoolDays_Label";
+            this.Home_LastSchoolDays_Label.Size = new System.Drawing.Size(137, 17);
+            this.Home_LastSchoolDays_Label.TabIndex = 30;
+            this.Home_LastSchoolDays_Label.Text = "Last 83 Days";
+            this.Home_LastSchoolDays_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.BackColor = System.Drawing.Color.Transparent;
+            this.label51.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label51.Location = new System.Drawing.Point(37, 22);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(77, 21);
+            this.label51.TabIndex = 28;
+            this.label51.Text = "Absences";
+            // 
+            // Home_Absences_Label
+            // 
+            this.Home_Absences_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_Absences_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
+            this.Home_Absences_Label.Location = new System.Drawing.Point(17, 40);
+            this.Home_Absences_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_Absences_Label.Name = "Home_Absences_Label";
+            this.Home_Absences_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_Absences_Label.TabIndex = 29;
+            this.Home_Absences_Label.Text = "3";
+            this.Home_Absences_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel6
+            // 
+            this.bunifuShadowPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel6.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.BorderRadius = 15;
+            this.bunifuShadowPanel6.BorderThickness = 1;
+            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedOutOfNo_Label);
+            this.bunifuShadowPanel6.Controls.Add(this.label48);
+            this.bunifuShadowPanel6.Controls.Add(this.Home_PassedSubjects_Label);
+            this.bunifuShadowPanel6.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel6.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel6.Location = new System.Drawing.Point(196, 251);
+            this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
+            this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel6.ShadowDept = 2;
+            this.bunifuShadowPanel6.ShadowDepth = 5;
+            this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel6.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel6.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel6.TabIndex = 21;
+            // 
+            // Home_PassedOutOfNo_Label
+            // 
+            this.Home_PassedOutOfNo_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_PassedOutOfNo_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_PassedOutOfNo_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_PassedOutOfNo_Label.Location = new System.Drawing.Point(16, 127);
+            this.Home_PassedOutOfNo_Label.Name = "Home_PassedOutOfNo_Label";
+            this.Home_PassedOutOfNo_Label.Size = new System.Drawing.Size(118, 17);
+            this.Home_PassedOutOfNo_Label.TabIndex = 27;
+            this.Home_PassedOutOfNo_Label.Text = "Out of 8";
+            this.Home_PassedOutOfNo_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.Color.Transparent;
+            this.label48.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label48.Location = new System.Drawing.Point(14, 22);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(122, 21);
+            this.label48.TabIndex = 25;
+            this.label48.Text = "Passed Subjects";
+            // 
+            // Home_PassedSubjects_Label
+            // 
+            this.Home_PassedSubjects_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_PassedSubjects_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.Home_PassedSubjects_Label.Location = new System.Drawing.Point(17, 40);
+            this.Home_PassedSubjects_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_PassedSubjects_Label.Name = "Home_PassedSubjects_Label";
+            this.Home_PassedSubjects_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_PassedSubjects_Label.TabIndex = 26;
+            this.Home_PassedSubjects_Label.Text = "7";
+            this.Home_PassedSubjects_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuShadowPanel5
+            // 
+            this.bunifuShadowPanel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuShadowPanel5.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.BorderRadius = 15;
+            this.bunifuShadowPanel5.BorderThickness = 1;
+            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestGrading_Label);
+            this.bunifuShadowPanel5.Controls.Add(this.label45);
+            this.bunifuShadowPanel5.Controls.Add(this.Home_LatestAverage_Label);
+            this.bunifuShadowPanel5.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
+            this.bunifuShadowPanel5.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
+            this.bunifuShadowPanel5.Location = new System.Drawing.Point(30, 251);
+            this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
+            this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.White;
+            this.bunifuShadowPanel5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel5.ShadowDept = 2;
+            this.bunifuShadowPanel5.ShadowDepth = 5;
+            this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
+            this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
+            this.bunifuShadowPanel5.Size = new System.Drawing.Size(150, 166);
+            this.bunifuShadowPanel5.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
+            this.bunifuShadowPanel5.TabIndex = 20;
+            // 
+            // Home_LatestGrading_Label
+            // 
+            this.Home_LatestGrading_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_LatestGrading_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LatestGrading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_LatestGrading_Label.Location = new System.Drawing.Point(19, 127);
+            this.Home_LatestGrading_Label.Name = "Home_LatestGrading_Label";
+            this.Home_LatestGrading_Label.Size = new System.Drawing.Size(113, 17);
+            this.Home_LatestGrading_Label.TabIndex = 24;
+            this.Home_LatestGrading_Label.Text = "2nd Grading";
+            this.Home_LatestGrading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.BackColor = System.Drawing.Color.Transparent;
+            this.label45.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label45.Location = new System.Drawing.Point(18, 22);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(114, 21);
+            this.label45.TabIndex = 23;
+            this.label45.Text = "Latest Average";
+            // 
+            // Home_LatestAverage_Label
+            // 
+            this.Home_LatestAverage_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_LatestAverage_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(221)))), ((int)(((byte)(111)))));
+            this.Home_LatestAverage_Label.Location = new System.Drawing.Point(16, 40);
+            this.Home_LatestAverage_Label.Margin = new System.Windows.Forms.Padding(0);
+            this.Home_LatestAverage_Label.Name = "Home_LatestAverage_Label";
+            this.Home_LatestAverage_Label.Size = new System.Drawing.Size(123, 83);
+            this.Home_LatestAverage_Label.TabIndex = 23;
+            this.Home_LatestAverage_Label.Text = "89";
+            this.Home_LatestAverage_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label43.Location = new System.Drawing.Point(192, 212);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(158, 23);
+            this.label43.TabIndex = 14;
+            this.label43.Text = "Summary Report";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator1.BackgroundImage")));
+            this.bunifuSeparator1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuSeparator1.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Round;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(241)))), ((int)(((byte)(255)))));
+            this.bunifuSeparator1.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
+            this.bunifuSeparator1.LineThickness = 3;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(81, 218);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
+            this.bunifuSeparator1.Size = new System.Drawing.Size(380, 14);
+            this.bunifuSeparator1.TabIndex = 15;
+            // 
+            // Home_ChildTeacher_Label
+            // 
+            this.Home_ChildTeacher_Label.AutoSize = true;
+            this.Home_ChildTeacher_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildTeacher_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildTeacher_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_ChildTeacher_Label.Location = new System.Drawing.Point(348, 141);
+            this.Home_ChildTeacher_Label.Name = "Home_ChildTeacher_Label";
+            this.Home_ChildTeacher_Label.Size = new System.Drawing.Size(148, 17);
+            this.Home_ChildTeacher_Label.TabIndex = 13;
+            this.Home_ChildTeacher_Label.Text = "Bellatrix Lestrange";
+            // 
+            // Home_ChildSex_Label
+            // 
+            this.Home_ChildSex_Label.AutoSize = true;
+            this.Home_ChildSex_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildSex_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildSex_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_ChildSex_Label.Location = new System.Drawing.Point(487, 106);
+            this.Home_ChildSex_Label.Name = "Home_ChildSex_Label";
+            this.Home_ChildSex_Label.Size = new System.Drawing.Size(21, 17);
+            this.Home_ChildSex_Label.TabIndex = 12;
+            this.Home_ChildSex_Label.Text = "M";
+            // 
+            // Home_ChildAge_Label
+            // 
+            this.Home_ChildAge_Label.AutoSize = true;
+            this.Home_ChildAge_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildAge_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildAge_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_ChildAge_Label.Location = new System.Drawing.Point(486, 77);
+            this.Home_ChildAge_Label.Name = "Home_ChildAge_Label";
+            this.Home_ChildAge_Label.Size = new System.Drawing.Size(22, 17);
+            this.Home_ChildAge_Label.TabIndex = 11;
+            this.Home_ChildAge_Label.Text = "13";
+            // 
+            // Home_ChildGradeSection_Label
+            // 
+            this.Home_ChildGradeSection_Label.AutoSize = true;
+            this.Home_ChildGradeSection_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildGradeSection_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildGradeSection_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_ChildGradeSection_Label.Location = new System.Drawing.Point(265, 106);
+            this.Home_ChildGradeSection_Label.Name = "Home_ChildGradeSection_Label";
+            this.Home_ChildGradeSection_Label.Size = new System.Drawing.Size(78, 17);
+            this.Home_ChildGradeSection_Label.TabIndex = 10;
+            this.Home_ChildGradeSection_Label.Text = "5 - Potter";
+            // 
+            // Home_ChildName_Label
+            // 
+            this.Home_ChildName_Label.AutoSize = true;
+            this.Home_ChildName_Label.BackColor = System.Drawing.Color.Transparent;
+            this.Home_ChildName_Label.Font = new System.Drawing.Font("Gotham", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.Home_ChildName_Label.Location = new System.Drawing.Point(200, 76);
+            this.Home_ChildName_Label.Name = "Home_ChildName_Label";
+            this.Home_ChildName_Label.Size = new System.Drawing.Size(204, 17);
+            this.Home_ChildName_Label.TabIndex = 5;
+            this.Home_ChildName_Label.Text = "Super Mario Lorepimpsum";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label37.Location = new System.Drawing.Point(272, 140);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(69, 21);
+            this.label37.TabIndex = 9;
+            this.label37.Text = "Teacher:";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(30, 72);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label36.Location = new System.Drawing.Point(139, 105);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(118, 21);
+            this.label36.TabIndex = 8;
+            this.label36.Text = "Grade/Section:";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label35.Location = new System.Drawing.Point(439, 105);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(39, 21);
+            this.label35.TabIndex = 7;
+            this.label35.Text = "Sex:";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label34.Location = new System.Drawing.Point(439, 76);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(42, 21);
+            this.label34.TabIndex = 6;
+            this.label34.Text = "Age:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label33.Location = new System.Drawing.Point(139, 76);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(54, 21);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Name:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.label12.Location = new System.Drawing.Point(26, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(178, 23);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Your Child Information";
+            // 
             // HomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.bunifuShadowPanel4);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel10);
             this.Controls.Add(this.bunifuPanel9);
@@ -1104,21 +1105,11 @@ namespace Faculti.UI.Cards
             this.Controls.Add(this.bunifuPanel4);
             this.Controls.Add(this.bunifuPanel3);
             this.Controls.Add(this.bunifuPanel2);
-            this.Controls.Add(this.bunifuShadowPanel4);
             this.Controls.Add(this.bunifuShadowPanel3);
             this.Controls.Add(this.bunifuShadowPanel2);
             this.Controls.Add(this.bunifuShadowPanel1);
             this.Name = "HomePanel";
             this.Size = new System.Drawing.Size(848, 640);
-            this.bunifuShadowPanel4.ResumeLayout(false);
-            this.bunifuShadowPanel4.PerformLayout();
-            this.bunifuShadowPanel7.ResumeLayout(false);
-            this.bunifuShadowPanel7.PerformLayout();
-            this.bunifuShadowPanel6.ResumeLayout(false);
-            this.bunifuShadowPanel6.PerformLayout();
-            this.bunifuShadowPanel5.ResumeLayout(false);
-            this.bunifuShadowPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.bunifuShadowPanel3.ResumeLayout(false);
             this.bunifuShadowPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1148,6 +1139,15 @@ namespace Faculti.UI.Cards
             this.bunifuPanel2.PerformLayout();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
+            this.bunifuShadowPanel4.ResumeLayout(false);
+            this.bunifuShadowPanel4.PerformLayout();
+            this.bunifuShadowPanel7.ResumeLayout(false);
+            this.bunifuShadowPanel7.PerformLayout();
+            this.bunifuShadowPanel6.ResumeLayout(false);
+            this.bunifuShadowPanel6.PerformLayout();
+            this.bunifuShadowPanel5.ResumeLayout(false);
+            this.bunifuShadowPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1180,6 +1180,21 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.Label Home_1stSubject_Label;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private System.Windows.Forms.Label label17;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Home_AssignmentsDue_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label Home_UpcomingExams_Label;
+        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Home_ClassesToday_Label;
+        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -1209,20 +1224,5 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label12;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label Home_AssignmentsDue_Label;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label Home_UpcomingExams_Label;
-        private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Home_ClassesToday_Label;
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
     }
 }

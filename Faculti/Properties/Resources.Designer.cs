@@ -543,6 +543,26 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap like_active {
+            get {
+                object obj = ResourceManager.GetObject("like-active", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap like_inactive {
+            get {
+                object obj = ResourceManager.GetObject("like-inactive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap lockup_black {
             get {
                 object obj = ResourceManager.GetObject("lockup-black", resourceCulture);

@@ -302,5 +302,10 @@ namespace Faculti
         {
             NotificationButton.Image = Faculti.Properties.Resources.notif_hover;
         }
+
+        private void CloseButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -17,6 +17,17 @@ namespace Faculti.UI.Cards
             InitializeComponent();
             AnnouncementTitleLabel.Text = announcementTitle;
             AnnouncementMessageLabel.Text = announcementMessage;
+            AnnouncementBodyPanel.Height = AnnouncementMessageLabel.Height + 88;
+        }
+
+        private void AnnouncementBodyPanel_MouseHover(object sender, EventArgs e)
+        {
+            AnnouncementBodyPanel.BackgroundColor = Color.FromArgb(220, 231, 245);
+        }
+
+        private void AnnouncementBodyPanel_MouseLeave(object sender, EventArgs e)
+        {
+            AnnouncementBodyPanel.BackgroundColor = Color.FromArgb(243, 246, 250);
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Faculti.UI.Cards
 {
-    public partial class UserControl1 : UserControl
+    public partial class CommentCard : UserControl
     {
-        public UserControl1()
+        public CommentCard()
         {
             InitializeComponent();
         }

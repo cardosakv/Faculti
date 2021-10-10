@@ -32,14 +32,14 @@ namespace Faculti
         private void InitializeComponent()
         { 
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentHomeForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.ParentHomeFormEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -64,8 +64,8 @@ namespace Faculti
             this.DateTimePictureBox = new System.Windows.Forms.PictureBox();
             this.NotificationButton = new System.Windows.Forms.PictureBox();
             this.TopProfilePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.MainPanel.SuspendLayout();
@@ -179,11 +179,11 @@ namespace Faculti
             this.ContactsButton.ColorContrastOnClick = 45;
             this.ContactsButton.ColorContrastOnHover = 45;
             this.ContactsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ContactsButton.CustomizableEdges = borderEdges1;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.ContactsButton.CustomizableEdges = borderEdges8;
             this.ContactsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ContactsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ContactsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -271,11 +271,11 @@ namespace Faculti
             this.LogOutButton.ColorContrastOnClick = 45;
             this.LogOutButton.ColorContrastOnHover = 45;
             this.LogOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.LogOutButton.CustomizableEdges = borderEdges2;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.LogOutButton.CustomizableEdges = borderEdges9;
             this.LogOutButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LogOutButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LogOutButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -361,11 +361,11 @@ namespace Faculti
             this.CalendarButton.ColorContrastOnClick = 45;
             this.CalendarButton.ColorContrastOnHover = 45;
             this.CalendarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.CalendarButton.CustomizableEdges = borderEdges3;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.CalendarButton.CustomizableEdges = borderEdges10;
             this.CalendarButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalendarButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalendarButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -453,11 +453,11 @@ namespace Faculti
             this.ChatButton.ColorContrastOnClick = 45;
             this.ChatButton.ColorContrastOnHover = 45;
             this.ChatButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ChatButton.CustomizableEdges = borderEdges4;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.ChatButton.CustomizableEdges = borderEdges11;
             this.ChatButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ChatButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ChatButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -545,11 +545,11 @@ namespace Faculti
             this.GradesButton.ColorContrastOnClick = 45;
             this.GradesButton.ColorContrastOnHover = 45;
             this.GradesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.GradesButton.CustomizableEdges = borderEdges5;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.GradesButton.CustomizableEdges = borderEdges12;
             this.GradesButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.GradesButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.GradesButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -637,11 +637,11 @@ namespace Faculti
             this.NewsButton.ColorContrastOnClick = 45;
             this.NewsButton.ColorContrastOnHover = 45;
             this.NewsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.NewsButton.CustomizableEdges = borderEdges6;
+            borderEdges13.BottomLeft = true;
+            borderEdges13.BottomRight = true;
+            borderEdges13.TopLeft = true;
+            borderEdges13.TopRight = true;
+            this.NewsButton.CustomizableEdges = borderEdges13;
             this.NewsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.NewsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.NewsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -729,11 +729,11 @@ namespace Faculti
             this.HomeButton.ColorContrastOnClick = 0;
             this.HomeButton.ColorContrastOnHover = 0;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.HomeButton.CustomizableEdges = borderEdges7;
+            borderEdges14.BottomLeft = true;
+            borderEdges14.BottomRight = true;
+            borderEdges14.TopLeft = true;
+            borderEdges14.TopRight = true;
+            this.HomeButton.CustomizableEdges = borderEdges14;
             this.HomeButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.HomeButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.HomeButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -829,12 +829,12 @@ namespace Faculti
             this.bunifuShadowPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
             this.bunifuShadowPanel1.BorderRadius = 1;
             this.bunifuShadowPanel1.BorderThickness = 1;
+            this.bunifuShadowPanel1.Controls.Add(this.CloseButton);
             this.bunifuShadowPanel1.Controls.Add(this.PageLabel);
             this.bunifuShadowPanel1.Controls.Add(this.SettingsButton);
             this.bunifuShadowPanel1.Controls.Add(this.DateTimePanel);
             this.bunifuShadowPanel1.Controls.Add(this.NotificationButton);
             this.bunifuShadowPanel1.Controls.Add(this.TopProfilePictureBox);
-            this.bunifuShadowPanel1.Controls.Add(this.CloseButton);
             this.bunifuShadowPanel1.Controls.Add(this.MinimizeButton);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
@@ -954,42 +954,6 @@ namespace Faculti
             this.TopProfilePictureBox.MouseLeave += new System.EventHandler(this.TopProfilePictureBox_MouseLeave);
             this.TopProfilePictureBox.MouseHover += new System.EventHandler(this.TopProfilePictureBox_MouseHover);
             // 
-            // CloseButton
-            // 
-            this.CloseButton.ActiveImage = null;
-            this.CloseButton.AllowAnimations = true;
-            this.CloseButton.AllowBuffering = false;
-            this.CloseButton.AllowToggling = false;
-            this.CloseButton.AllowZooming = false;
-            this.CloseButton.AllowZoomingOnFocus = false;
-            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.CloseButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.ErrorImage")));
-            this.CloseButton.FadeWhenInactive = true;
-            this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
-            this.CloseButton.Image = global::Faculti.Properties.Resources.close_button;
-            this.CloseButton.ImageActive = null;
-            this.CloseButton.ImageLocation = null;
-            this.CloseButton.ImageMargin = 0;
-            this.CloseButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.CloseButton.ImageZoomSize = new System.Drawing.Size(20, 20);
-            this.CloseButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.InitialImage")));
-            this.CloseButton.Location = new System.Drawing.Point(841, 12);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Rotation = 0;
-            this.CloseButton.ShowActiveImage = true;
-            this.CloseButton.ShowCursorChanges = true;
-            this.CloseButton.ShowImageBorders = false;
-            this.CloseButton.ShowSizeMarkers = false;
-            this.CloseButton.Size = new System.Drawing.Size(20, 20);
-            this.CloseButton.TabIndex = 39;
-            this.CloseButton.ToolTipText = "";
-            this.CloseButton.WaitOnLoad = false;
-            this.CloseButton.Zoom = 0;
-            this.CloseButton.ZoomSpeed = 10;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // MinimizeButton
             // 
             this.MinimizeButton.ActiveImage = null;
@@ -1025,6 +989,42 @@ namespace Faculti
             this.MinimizeButton.Zoom = 0;
             this.MinimizeButton.ZoomSpeed = 10;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.ActiveImage = null;
+            this.CloseButton.AllowAnimations = true;
+            this.CloseButton.AllowBuffering = false;
+            this.CloseButton.AllowToggling = false;
+            this.CloseButton.AllowZooming = false;
+            this.CloseButton.AllowZoomingOnFocus = false;
+            this.CloseButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.CloseButton.ErrorImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.ErrorImage")));
+            this.CloseButton.FadeWhenInactive = true;
+            this.CloseButton.Flip = Bunifu.UI.WinForms.BunifuImageButton.FlipOrientation.Normal;
+            this.CloseButton.Image = global::Faculti.Properties.Resources.close_button;
+            this.CloseButton.ImageActive = null;
+            this.CloseButton.ImageLocation = null;
+            this.CloseButton.ImageMargin = 0;
+            this.CloseButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.CloseButton.ImageZoomSize = new System.Drawing.Size(20, 20);
+            this.CloseButton.InitialImage = ((System.Drawing.Image)(resources.GetObject("CloseButton.InitialImage")));
+            this.CloseButton.Location = new System.Drawing.Point(846, 12);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Rotation = 0;
+            this.CloseButton.ShowActiveImage = true;
+            this.CloseButton.ShowCursorChanges = true;
+            this.CloseButton.ShowImageBorders = false;
+            this.CloseButton.ShowSizeMarkers = false;
+            this.CloseButton.Size = new System.Drawing.Size(20, 20);
+            this.CloseButton.TabIndex = 45;
+            this.CloseButton.ToolTipText = "";
+            this.CloseButton.WaitOnLoad = false;
+            this.CloseButton.Zoom = 0;
+            this.CloseButton.ZoomSpeed = 10;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click_1);
             // 
             // ParentHomeForm
             // 
@@ -1081,7 +1081,7 @@ namespace Faculti
         private System.Windows.Forms.PictureBox DateTimePictureBox;
         private System.Windows.Forms.PictureBox NotificationButton;
         private Bunifu.UI.WinForms.BunifuPictureBox TopProfilePictureBox;
-        private Bunifu.UI.WinForms.BunifuImageButton CloseButton;
         private Bunifu.UI.WinForms.BunifuImageButton MinimizeButton;
+        private Bunifu.UI.WinForms.BunifuImageButton CloseButton;
     }
 }

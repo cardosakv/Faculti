@@ -33,6 +33,7 @@ namespace Faculti.UI.Cards
             this.AnnouncementBodyPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.AnnouncementMessageLabel = new System.Windows.Forms.Label();
             this.AnnouncementTitleLabel = new System.Windows.Forms.Label();
+            this.AnnouncementDateTimeLabel = new System.Windows.Forms.Label();
             this.AnnouncementBodyPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,13 +45,16 @@ namespace Faculti.UI.Cards
             this.AnnouncementBodyPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
             this.AnnouncementBodyPanel.BorderRadius = 15;
             this.AnnouncementBodyPanel.BorderThickness = 3;
+            this.AnnouncementBodyPanel.Controls.Add(this.AnnouncementDateTimeLabel);
             this.AnnouncementBodyPanel.Controls.Add(this.AnnouncementMessageLabel);
             this.AnnouncementBodyPanel.Controls.Add(this.AnnouncementTitleLabel);
             this.AnnouncementBodyPanel.Location = new System.Drawing.Point(-2, -2);
             this.AnnouncementBodyPanel.Name = "AnnouncementBodyPanel";
             this.AnnouncementBodyPanel.ShowBorders = true;
-            this.AnnouncementBodyPanel.Size = new System.Drawing.Size(312, 171);
+            this.AnnouncementBodyPanel.Size = new System.Drawing.Size(312, 193);
             this.AnnouncementBodyPanel.TabIndex = 46;
+            this.AnnouncementBodyPanel.MouseLeave += new System.EventHandler(this.AnnouncementBodyPanel_MouseLeave);
+            this.AnnouncementBodyPanel.MouseHover += new System.EventHandler(this.AnnouncementBodyPanel_MouseHover);
             // 
             // AnnouncementMessageLabel
             // 
@@ -58,7 +62,7 @@ namespace Faculti.UI.Cards
             this.AnnouncementMessageLabel.BackColor = System.Drawing.Color.Transparent;
             this.AnnouncementMessageLabel.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnnouncementMessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.AnnouncementMessageLabel.Location = new System.Drawing.Point(19, 46);
+            this.AnnouncementMessageLabel.Location = new System.Drawing.Point(19, 68);
             this.AnnouncementMessageLabel.MaximumSize = new System.Drawing.Size(265, 0);
             this.AnnouncementMessageLabel.Name = "AnnouncementMessageLabel";
             this.AnnouncementMessageLabel.Size = new System.Drawing.Size(247, 105);
@@ -66,6 +70,8 @@ namespace Faculti.UI.Cards
             this.AnnouncementMessageLabel.Text = "Following the announcement of the local city government, classes are suspended on" +
     " October 30 as a preemptive public safety measure in view of the upcoming typhoo" +
     "n.\r\n\r\nStay safe everyone!";
+            this.AnnouncementMessageLabel.MouseLeave += new System.EventHandler(this.AnnouncementBodyPanel_MouseLeave);
+            this.AnnouncementMessageLabel.MouseHover += new System.EventHandler(this.AnnouncementBodyPanel_MouseHover);
             // 
             // AnnouncementTitleLabel
             // 
@@ -79,6 +85,22 @@ namespace Faculti.UI.Cards
             this.AnnouncementTitleLabel.Size = new System.Drawing.Size(144, 23);
             this.AnnouncementTitleLabel.TabIndex = 4;
             this.AnnouncementTitleLabel.Text = "No Classes Today";
+            this.AnnouncementTitleLabel.MouseLeave += new System.EventHandler(this.AnnouncementBodyPanel_MouseLeave);
+            this.AnnouncementTitleLabel.MouseHover += new System.EventHandler(this.AnnouncementBodyPanel_MouseHover);
+            // 
+            // AnnouncementDateTimeLabel
+            // 
+            this.AnnouncementDateTimeLabel.AutoSize = true;
+            this.AnnouncementDateTimeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AnnouncementDateTimeLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnnouncementDateTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.AnnouncementDateTimeLabel.Location = new System.Drawing.Point(21, 41);
+            this.AnnouncementDateTimeLabel.Name = "AnnouncementDateTimeLabel";
+            this.AnnouncementDateTimeLabel.Size = new System.Drawing.Size(94, 12);
+            this.AnnouncementDateTimeLabel.TabIndex = 6;
+            this.AnnouncementDateTimeLabel.Text = "Oct 10 • 7:34 PM";
+            this.AnnouncementDateTimeLabel.MouseLeave += new System.EventHandler(this.AnnouncementBodyPanel_MouseLeave);
+            this.AnnouncementDateTimeLabel.MouseHover += new System.EventHandler(this.AnnouncementBodyPanel_MouseHover);
             // 
             // AnnouncementPanel
             // 
@@ -87,8 +109,9 @@ namespace Faculti.UI.Cards
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.AnnouncementBodyPanel);
+            this.MaximumSize = new System.Drawing.Size(313, 500);
             this.Name = "AnnouncementPanel";
-            this.Size = new System.Drawing.Size(313, 172);
+            this.Size = new System.Drawing.Size(313, 194);
             this.AnnouncementBodyPanel.ResumeLayout(false);
             this.AnnouncementBodyPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -100,5 +123,6 @@ namespace Faculti.UI.Cards
         private Bunifu.UI.WinForms.BunifuPanel AnnouncementBodyPanel;
         private System.Windows.Forms.Label AnnouncementMessageLabel;
         private System.Windows.Forms.Label AnnouncementTitleLabel;
+        private System.Windows.Forms.Label AnnouncementDateTimeLabel;
     }
 }

@@ -163,6 +163,9 @@
   <data name="logo-black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="classes-today1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classes-today1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="date-hover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +174,9 @@
   </data>
   <data name="Faculti_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Faculti-Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="GothamMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GothamMedium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Gotham_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gotham-Black.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -202,9 +208,6 @@
   <data name="news-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\news-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="classes-today" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\classes-today.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="bell-yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bell-yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,26 +223,23 @@
   <data name="grade-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grade-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="home_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\home-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="GothamBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GothamBold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="classes-today" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\classes-today.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lockup-yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lockup-yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="password-revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\password-revealed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="notif-newnotif" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notif-newnotif.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chat-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\chat-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gotham_XLightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gotham-XLightItalic.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="loginart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loginart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lockup-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lockup-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="chat-pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chat-pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,9 +274,6 @@
   <data name="logout-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logout-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lockup-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lockup-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="date-yellow1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -295,6 +292,9 @@
   <data name="GothamBook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GothamBook.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="home_idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="GothamMedium_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GothamMedium_1.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -307,17 +307,17 @@
   <data name="bell-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bell-idle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CircularSpotifyTxT_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CircularSpotifyTxT-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="GothamBold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GothamBold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="password-revealed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\password-revealed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GothamMedium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GothamMedium.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="loginart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loginart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chat-hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\chat-hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gotham_XLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gotham-XLight.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -325,11 +325,14 @@
   <data name="calendar-idle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\calendar-idle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GothamBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GothamBoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="date-yellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\date-yellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="GothamBoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\GothamBoldItalic.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="CircularSpotifyTxT_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CircularSpotifyTxT-Black.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="settings_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -349,7 +352,10 @@
   <data name="splashscreen-bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splashscreen-bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="classes-today1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\classes-today1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="like-active" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\like-active.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="like-inactive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\like-inactive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

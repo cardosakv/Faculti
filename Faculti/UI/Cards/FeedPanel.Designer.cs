@@ -102,7 +102,7 @@ namespace Faculti.UI.Cards
             // bunifuShadowPanel2
             // 
             this.bunifuShadowPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel2.BorderRadius = 15;
             this.bunifuShadowPanel2.BorderThickness = 1;
             this.bunifuShadowPanel2.Controls.Add(this.PostButton);
@@ -115,9 +115,9 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel2.ShadowDept = 2;
-            this.bunifuShadowPanel2.ShadowDepth = 1;
+            this.bunifuShadowPanel2.ShadowDepth = 3;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel2.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel2.Size = new System.Drawing.Size(480, 151);
@@ -241,7 +241,7 @@ namespace Faculti.UI.Cards
             this.WritePostTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("WritePostTextBox.BackgroundImage")));
             this.WritePostTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
             this.WritePostTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.WritePostTextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            this.WritePostTextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
             this.WritePostTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.WritePostTextBox.BorderRadius = 15;
             this.WritePostTextBox.BorderThickness = 1;
@@ -274,8 +274,8 @@ namespace Faculti.UI.Cards
             stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.WritePostTextBox.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(231)))), ((int)(((byte)(235)))));
             stateProperties3.ForeColor = System.Drawing.Color.Empty;
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.WritePostTextBox.OnHoverState = stateProperties3;
@@ -352,7 +352,7 @@ namespace Faculti.UI.Cards
             this.bunifuVScrollBar1.DurationBeforeShrink = 2000;
             this.bunifuVScrollBar1.LargeChange = 10;
             this.bunifuVScrollBar1.Location = new System.Drawing.Point(503, 18);
-            this.bunifuVScrollBar1.Maximum = 50;
+            this.bunifuVScrollBar1.Maximum = 100;
             this.bunifuVScrollBar1.Minimum = 0;
             this.bunifuVScrollBar1.MinimumThumbLength = 18;
             this.bunifuVScrollBar1.Name = "bunifuVScrollBar1";
@@ -366,7 +366,7 @@ namespace Faculti.UI.Cards
             this.bunifuVScrollBar1.SmallChange = 1;
             this.bunifuVScrollBar1.TabIndex = 47;
             this.bunifuVScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
-            this.bunifuVScrollBar1.ThumbLength = 116;
+            this.bunifuVScrollBar1.ThumbLength = 58;
             this.bunifuVScrollBar1.ThumbMargin = 1;
             this.bunifuVScrollBar1.ThumbStyle = Bunifu.UI.WinForms.BunifuVScrollBar.ThumbStyles.Inset;
             this.bunifuVScrollBar1.Value = 0;

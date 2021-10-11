@@ -503,6 +503,26 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap greatest {
+            get {
+                object obj = ResourceManager.GetObject("greatest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap highest {
+            get {
+                object obj = ResourceManager.GetObject("highest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap home_hover {
             get {
                 object obj = ResourceManager.GetObject("home_hover", resourceCulture);
@@ -536,6 +556,16 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap home_yellow {
             get {
                 object obj = ResourceManager.GetObject("home-yellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap least {
+            get {
+                object obj = ResourceManager.GetObject("least", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -666,6 +696,16 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap logout_pressed {
             get {
                 object obj = ResourceManager.GetObject("logout-pressed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap lowest {
+            get {
+                object obj = ResourceManager.GetObject("lowest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -856,6 +896,26 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap tips {
             get {
                 object obj = ResourceManager.GetObject("tips", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap update {
+            get {
+                object obj = ResourceManager.GetObject("update", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap update1 {
+            get {
+                object obj = ResourceManager.GetObject("update1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -22,8 +22,7 @@ namespace Faculti.UI.Cards
         PostCard post = new PostCard("34343", "The office of the dean will be accepting scholarship application from October 30 to November 30. Please look at your extensions on chrome.\nOkay? Hai? hai?", "dfdfd");
         PostCard post2 = new PostCard("34343", "Kinsay naay papel ninyo diha. Wa gyud ko kadala guys. Please ko bi.", "dfdfd");
         PostCard post3 = new PostCard("34343", "Hoy attention to the following students! Ngano man mo ing-ani man mo?\n\n1. Cardosa\n2. Mabia\n3. Alasagas\n\nI want you to come to my office right now! Grabe na kaayo ning inyong gipangbuhat ha. Wa mo mauwaw, nanguha mos akong mangga sa table? Para inyo diay to? Gidugo baya jud ko, bantay lang mo nako unya.", "dfdfd");
-        CommentCard comment = new CommentCard();
-        
+
         public FeedPanel()
         {
             InitializeComponent();
@@ -34,27 +33,14 @@ namespace Faculti.UI.Cards
             FeedLayoutPanel.Controls.Add(post);
             FeedLayoutPanel.Controls.Add(post2);
             FeedLayoutPanel.Controls.Add(post3);
-            FeedLayoutPanel.Controls.Add
-        }
-
-        private void AddComment(FlowLayoutPanel feedPanel, Control postCardIndex, Control commentCard)
-        {
-
-            int index = feedPanel.Controls.IndexOf(postCardIndex);
-
-            if (index == -1) return;
-
-            fl.Controls.Remove(Control2Replace);
-
-            foreach (Control c in Controls2Add)
-            {
-
-                fl.Controls.Add(c);
-
-                fl.SetChildIndex(c, index++);
-
-            }
-
+            post.AddComment("Please lang grabe naman mo oy");
+            post.AddComment(" HAHAHAHHA boang");
+            post.AddComment("Yes maam naa ta ana sa school pwede ra gyud kana atong gamiton\nmao man sad ako nahibaw-an");
+            post.AddComment("Okay ra ka ato maam?");
+            post.AddComment("oo okay ra\ncgecge miss update lang sa mga panghitabo diha");
+            post.AddComment("cgecge kato lang ato gamiton");
+            post2.AddComment("amawa boang o");
+            post2.AddComment("hahahhhahahah shhhh\n\nBhala na");
         }
     }
 }

@@ -117,21 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MessageLabel.Text" xml:space="preserve">
+    <value>Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto. Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto.
+</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CommentContainer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
+        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
         YII=
 </value>
   </data>

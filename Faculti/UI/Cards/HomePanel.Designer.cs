@@ -138,7 +138,7 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel3.Name = "bunifuShadowPanel3";
             this.bunifuShadowPanel3.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel3.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel3.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel3.ShadowDept = 2;
             this.bunifuShadowPanel3.ShadowDepth = 3;
             this.bunifuShadowPanel3.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
@@ -194,7 +194,7 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel2.Name = "bunifuShadowPanel2";
             this.bunifuShadowPanel2.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel2.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel2.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel2.ShadowDept = 2;
             this.bunifuShadowPanel2.ShadowDepth = 3;
             this.bunifuShadowPanel2.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
@@ -250,7 +250,7 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel1.ShadowDept = 2;
             this.bunifuShadowPanel1.ShadowDepth = 3;
             this.bunifuShadowPanel1.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
@@ -681,7 +681,7 @@ namespace Faculti.UI.Cards
             // bunifuShadowPanel4
             // 
             this.bunifuShadowPanel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuShadowPanel4.BorderColor = System.Drawing.Color.White;
+            this.bunifuShadowPanel4.BorderColor = System.Drawing.SystemColors.Window;
             this.bunifuShadowPanel4.BorderRadius = 15;
             this.bunifuShadowPanel4.BorderThickness = 1;
             this.bunifuShadowPanel4.Controls.Add(this.label6);
@@ -709,7 +709,7 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel4.Name = "bunifuShadowPanel4";
             this.bunifuShadowPanel4.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel4.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.bunifuShadowPanel4.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel4.ShadowDept = 2;
             this.bunifuShadowPanel4.ShadowDepth = 3;
             this.bunifuShadowPanel4.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
@@ -757,9 +757,9 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel7.Name = "bunifuShadowPanel7";
             this.bunifuShadowPanel7.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel7.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel7.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel7.ShadowDept = 2;
-            this.bunifuShadowPanel7.ShadowDepth = 5;
+            this.bunifuShadowPanel7.ShadowDepth = 3;
             this.bunifuShadowPanel7.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel7.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel7.Size = new System.Drawing.Size(150, 166);
@@ -817,9 +817,9 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel6.Name = "bunifuShadowPanel6";
             this.bunifuShadowPanel6.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel6.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel6.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel6.ShadowDept = 2;
-            this.bunifuShadowPanel6.ShadowDepth = 5;
+            this.bunifuShadowPanel6.ShadowDepth = 3;
             this.bunifuShadowPanel6.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel6.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel6.Size = new System.Drawing.Size(150, 166);
@@ -877,9 +877,9 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel5.Name = "bunifuShadowPanel5";
             this.bunifuShadowPanel5.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel5.PanelColor2 = System.Drawing.Color.White;
-            this.bunifuShadowPanel5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
+            this.bunifuShadowPanel5.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.bunifuShadowPanel5.ShadowDept = 2;
-            this.bunifuShadowPanel5.ShadowDepth = 5;
+            this.bunifuShadowPanel5.ShadowDepth = 3;
             this.bunifuShadowPanel5.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.bunifuShadowPanel5.ShadowTopLeftVisible = false;
             this.bunifuShadowPanel5.Size = new System.Drawing.Size(150, 166);

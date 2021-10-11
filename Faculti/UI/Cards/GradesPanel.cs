@@ -15,6 +15,19 @@ namespace Faculti.UI.Cards
         public GradesPanel()
         {
             InitializeComponent();
+            AddGradeRecord();
+            AddGradeRecord();
+            AddGradeRecord();
+            AddGradeRecord();
+            AddGradeRecord();
+            AddGradeRecord();
+            AddGradeRecord();
+        }
+
+        public void AddGradeRecord()
+        {
+            GradeRecord gradeRecord = new GradeRecord();
+            GradeRecordLayoutPanel.Controls.Add(gradeRecord);
         }
     }
 }

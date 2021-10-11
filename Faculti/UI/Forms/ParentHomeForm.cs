@@ -22,6 +22,7 @@ namespace Faculti
         ChatPanel chatPanel = new ChatPanel();
         CalendarPanel calendarPanel = new CalendarPanel();
         ContactsPanel contactsPanel = new ContactsPanel();
+        
 
         public ParentHomeForm()
         {

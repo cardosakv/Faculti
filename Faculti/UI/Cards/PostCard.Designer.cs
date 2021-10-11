@@ -30,11 +30,12 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PostCard));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.PostPanel = new Bunifu.UI.WinForms.BunifuShadowPanel();
+            this.LikeCountLabel = new System.Windows.Forms.Label();
             this.PostBodyLabel = new System.Windows.Forms.Label();
             this.CommentPostTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
             this.LikeButton = new System.Windows.Forms.PictureBox();
@@ -42,7 +43,6 @@ namespace Faculti.UI.Cards
             this.PostPictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.PostDateTimeLabel = new System.Windows.Forms.Label();
             this.PosterNameLabel = new System.Windows.Forms.Label();
-            this.LikeCountLabel = new System.Windows.Forms.Label();
             this.PostPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LikeButton)).BeginInit();
             this.panel1.SuspendLayout();
@@ -53,7 +53,7 @@ namespace Faculti.UI.Cards
             // 
             this.PostPanel.AutoSize = true;
             this.PostPanel.BackColor = System.Drawing.Color.Transparent;
-            this.PostPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.PostPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.PostPanel.BorderRadius = 15;
             this.PostPanel.BorderThickness = 1;
             this.PostPanel.Controls.Add(this.LikeCountLabel);
@@ -71,14 +71,27 @@ namespace Faculti.UI.Cards
             this.PostPanel.Padding = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.PostPanel.PanelColor = System.Drawing.Color.White;
             this.PostPanel.PanelColor2 = System.Drawing.Color.White;
-            this.PostPanel.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
+            this.PostPanel.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(216)))), ((int)(((byte)(230)))));
             this.PostPanel.ShadowDept = 2;
-            this.PostPanel.ShadowDepth = 1;
+            this.PostPanel.ShadowDepth = 3;
             this.PostPanel.ShadowStyle = Bunifu.UI.WinForms.BunifuShadowPanel.ShadowStyles.Surrounded;
             this.PostPanel.ShadowTopLeftVisible = false;
             this.PostPanel.Size = new System.Drawing.Size(480, 147);
             this.PostPanel.Style = Bunifu.UI.WinForms.BunifuShadowPanel.BevelStyles.Flat;
             this.PostPanel.TabIndex = 53;
+            // 
+            // LikeCountLabel
+            // 
+            this.LikeCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LikeCountLabel.AutoSize = true;
+            this.LikeCountLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LikeCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.LikeCountLabel.Location = new System.Drawing.Point(43, 113);
+            this.LikeCountLabel.Name = "LikeCountLabel";
+            this.LikeCountLabel.Size = new System.Drawing.Size(16, 12);
+            this.LikeCountLabel.TabIndex = 3;
+            this.LikeCountLabel.Text = "12";
             // 
             // PostBodyLabel
             // 
@@ -129,26 +142,26 @@ namespace Faculti.UI.Cards
             this.CommentPostTextBox.Modified = false;
             this.CommentPostTextBox.Multiline = false;
             this.CommentPostTextBox.Name = "CommentPostTextBox";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CommentPostTextBox.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.CommentPostTextBox.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CommentPostTextBox.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CommentPostTextBox.OnIdleState = stateProperties8;
+            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            stateProperties9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CommentPostTextBox.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.CommentPostTextBox.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            stateProperties11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(241)))), ((int)(((byte)(245)))));
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CommentPostTextBox.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            stateProperties12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            stateProperties12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.CommentPostTextBox.OnIdleState = stateProperties12;
             this.CommentPostTextBox.Padding = new System.Windows.Forms.Padding(3);
             this.CommentPostTextBox.PasswordChar = '\0';
             this.CommentPostTextBox.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(187)))), ((int)(((byte)(208)))));
@@ -231,19 +244,6 @@ namespace Faculti.UI.Cards
             this.PosterNameLabel.TabIndex = 1;
             this.PosterNameLabel.Text = "Bellatrix Lestrange";
             // 
-            // LikeCountLabel
-            // 
-            this.LikeCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.LikeCountLabel.AutoSize = true;
-            this.LikeCountLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LikeCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.LikeCountLabel.Location = new System.Drawing.Point(43, 113);
-            this.LikeCountLabel.Name = "LikeCountLabel";
-            this.LikeCountLabel.Size = new System.Drawing.Size(16, 12);
-            this.LikeCountLabel.TabIndex = 3;
-            this.LikeCountLabel.Text = "12";
-            // 
             // PostCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,10 +251,10 @@ namespace Faculti.UI.Cards
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.Controls.Add(this.PostPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
-            this.MaximumSize = new System.Drawing.Size(483, 480);
+            this.Margin = new System.Windows.Forms.Padding(3, 15, 3, 0);
+            this.MaximumSize = new System.Drawing.Size(483, 10000);
             this.Name = "PostCard";
-            this.Size = new System.Drawing.Size(483, 150);
+            this.Size = new System.Drawing.Size(483, 155);
             this.PostPanel.ResumeLayout(false);
             this.PostPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LikeButton)).EndInit();

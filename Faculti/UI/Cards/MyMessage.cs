@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Faculti.UI.Cards
 {
-    public partial class CommentCard : UserControl
+    public partial class MyMessage : UserControl
     {
-        public CommentCard(string commentBody)
+        public MyMessage()
         {
             InitializeComponent();
-            CommentBodyLabel.Text = commentBody;
-            CommentContainer.Height = CommentBodyLabel.Height + 40;
         }
     }
 }

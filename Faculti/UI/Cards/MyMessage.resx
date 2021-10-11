@@ -120,19 +120,26 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="CommentContainer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAZEAAAAzCAYAAABWgjUGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJnSURBVHhe7dqxbtNQFIBhjx0ZGRl5hD4CL4HEgsTICBsP
-        wIAY2Dt3ZmVk5Q0aMVRNYjuO7cRJ6iTGbi9DKSniwpbvk850rYz5dX2cAMB/NRp1J1dZ8WKal5/SvPw2
-        yeadMcaY45rh/3+aV2fjdP6qKIpHIREPG2flaR+P72W9rJfNuttctx0Ax2f4/29Wm66sm2UflOlkMn8W
-        UvF7fXneZrO6aLe78BMA0HW73b7Ly0WR5vMPIRl3DTeQISDheQC4p6iWs0laPg/puDXsQPqrytV25wYC
-        wGH7/b5L8yqbTBaPQ0L6W8i0eF0tmnV4BgAOGvblw4dXISFJks7K82a9CccAcNiwcB++3AoJSZK+KBdt
-        uw3HAHDY8Eprks2bkJCbr7LCEQD82dCNkBARAeDviAgA0UQEgGgiAkA0EQEgmogAEE1EAIgmIgBEExEA
-        ookIANFEBIBoIgJANBEBIJqIABBNRACIJiIARBMRAKKJCADRRASAaCICQDQRASCaiAAQTUQAiCYiAEQT
-        EQCiiQgA0UQEgGgiAkA0EQEgmogAEE1EAIgmIgBEuxORaT5Pt7tdOAKAw/b7m4i0ISFDRMov6811OAaA
-        w9p22/XduAgJSZKrdP6mXqzacA4ABzWrTR+R6iwkpI9IUTxJ86oYrigA8JBsVhfjrDwNCbk1zouXZb20
-        YQfgoHrR1NNs/j6k465hN1LVzcKNBIBfVYtmlc6qr6NRdxKycd8kL9/1D+XNenOzPAHgeLXbXbdaX9+8
-        wkrz6uODAfnpMq2eprPyfNi+D98CG2OMOc7pO3DZXyw+39uBAMC/SZIfjHvprPkPdj4AAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAAXIAAABhCAYAAADLESqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM8SURBVHhe7dq/ixxlHMfxKVNaaqWV2FilSbqUNv4DgpBG
+        YhUsLBQsrAQhQrAQ28PyasFKFOUSEPLLYO6y554/ctnZvdOZ2bvb5HK5jMx5iShTe/OB1xde3Xe3fPPw
+        zFP8dzY22lOT7er8L7Pms7tlc326XbcAnJyuxevlfKncqt+uquq541z3T7ndnFmdNr8u/by38+6PD9vX
+        fzhoX/imBeAEdS2+eGu//Xy02Fstm9l0Wr92nO1/z9qkfn/l3k519sph7x8BcPJe/f5J+9Vvu9WN+/Xl
+        43z/Pd1JvIt4348AGJ7ljb0/x9PmzaOId3fio7KZnF5xEgdI8fJ3T9o75Xx7Ot19vihn1TuX1xYP+xYB
+        GK7uW2b3MKUYzZrlCzf3e5cAGK7uI2j3oqUYTZvxuauPe5cAGK7ueuX3Wb0oujeKfQsADF/XcCEHCCbk
+        AOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADh
+        hBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQc
+        IJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCc
+        kAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJAD
+        hBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUC4o5CPZ/XW6ZXD3gUAhuvF
+        b9t2c6s+KNbK5us3rj3qXQJguM5dfdyOps24mGzV7328+uCgbwmA4bp4a79dL+dLxaSqXro9mVfdEb1v
+        EYBhWrm3U5XbzZmim/GseuuL8V7dtwjA8Hx0Z7Hz06S+dBTxp9PdlX+yuth1MgcYtg9uLx7cuD9f2dho
+        Tx0n/J8ZTZsPr03mf1y4uX90id73BwD8/85eOWzPX390dJ1yt5x/2hvxp7O5NX9lNGuWuy+h3ftEAE7e
+        etlsrpbzL5/diT+bovgLn0wXnfvYsZAAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="MessageLabel.Text" xml:space="preserve">
+    <value>Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto. Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto.
 </value>
   </data>
 </root>

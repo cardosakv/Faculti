@@ -222,6 +222,18 @@
     <Compile Include="UI\Cards\CalendarPanel.Designer.cs">
       <DependentUpon>CalendarPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cards\ChatHead.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\ChatHead.Designer.cs">
+      <DependentUpon>ChatHead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\MyMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\MyMessage.Designer.cs">
+      <DependentUpon>MyMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cards\ChatPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,6 +258,12 @@
     <Compile Include="UI\Cards\FeedPanel.Designer.cs">
       <DependentUpon>FeedPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cards\GradeRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\GradeRecord.Designer.cs">
+      <DependentUpon>GradeRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cards\GradesPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -263,6 +281,18 @@
     </Compile>
     <Compile Include="UI\Cards\PostCard.Designer.cs">
       <DependentUpon>PostCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\TeacherHomePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\TeacherHomePanel.Designer.cs">
+      <DependentUpon>TeacherHomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\TeacherMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\TeacherMessage.Designer.cs">
+      <DependentUpon>TeacherMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\ChangePasswordForm.cs">
       <SubType>Form</SubType>
@@ -334,17 +364,38 @@
     <EmbeddedResource Include="UI\Cards\AnnouncementPanel.resx">
       <DependentUpon>AnnouncementPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\ChatHead.resx">
+      <DependentUpon>ChatHead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\MyMessage.resx">
+      <DependentUpon>MyMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\ChatPanel.resx">
+      <DependentUpon>ChatPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\CommentCard.resx">
       <DependentUpon>CommentCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\FeedPanel.resx">
       <DependentUpon>FeedPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\GradeRecord.resx">
+      <DependentUpon>GradeRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\GradesPanel.resx">
+      <DependentUpon>GradesPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\HomePanel.resx">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\TeacherHomePanel.resx">
+      <DependentUpon>TeacherHomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\TeacherMessage.resx">
+      <DependentUpon>TeacherMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
@@ -381,6 +432,7 @@
     <None Include="bin\Debug\Faculti.exe.config" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -519,6 +571,12 @@
     <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
     <Content Include="bin\Debug\testcentric.engine.metadata.dll" />
     <Content Include="faculti-icon.ico" />
+    <None Include="Resources\lowest.png" />
+    <None Include="Resources\least.png" />
+    <None Include="Resources\highest.png" />
+    <None Include="Resources\greatest.png" />
+    <None Include="Resources\update1.png" />
+    <None Include="Resources\update.png" />
     <None Include="Resources\like-inactive.png" />
     <None Include="Resources\like-active.png" />
     <None Include="Resources\classes-today1.png" />

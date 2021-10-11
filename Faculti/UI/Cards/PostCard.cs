@@ -26,6 +26,13 @@ namespace Faculti.UI.Cards
             PostPanel.Height = PostBodyLabel.Height + 140;
         }
 
+        public void AddComment(string commentBody)
+        {
+            CommentCard comment = new CommentCard(commentBody);
+            comment.Location = new Point(0, this.Height);
+            this.Controls.Add(comment);
+        }
+
         private void LikeButton_Click(object sender, EventArgs e)
         {
             if (_likeClicked)

@@ -22,7 +22,7 @@ namespace Faculti
         ChatPanel chatPanel = new ChatPanel();
         CalendarPanel calendarPanel = new CalendarPanel();
         ContactsPanel contactsPanel = new ContactsPanel();
-        
+        Loader loader = new Loader();
 
         public ParentHomeForm()
         {
@@ -33,12 +33,14 @@ namespace Faculti
             chatPanel.Location = new Point(3, 60);
             calendarPanel.Location = new Point(3, 60);
             contactsPanel.Location = new Point(3, 60);
+            loader.Location = new Point(3, 60);
             MainPanel.Controls.Add(homePanel);
             MainPanel.Controls.Add(feedPanel);
             MainPanel.Controls.Add(gradesPanel);
             MainPanel.Controls.Add(chatPanel);
             MainPanel.Controls.Add(calendarPanel);
             MainPanel.Controls.Add(contactsPanel);
+            MainPanel.Controls.Add(loader);
             DisplayTimeAndDate();
         }
 
@@ -50,12 +52,12 @@ namespace Faculti
         private void HomeButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Overview";
-            homePanel.Visible = true;
+            homePanel.Visible = false;
             feedPanel.Visible = false;
             gradesPanel.Visible = false;
             chatPanel.Visible = false;
             calendarPanel.Visible = false;
-            calendarPanel.Visible = false;
+            contactsPanel.Visible = false;
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
@@ -66,7 +68,7 @@ namespace Faculti
             gradesPanel.Visible = false;
             chatPanel.Visible = false;
             calendarPanel.Visible = false;
-            calendarPanel.Visible = false;
+            contactsPanel.Visible = false;
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
@@ -77,7 +79,7 @@ namespace Faculti
             gradesPanel.Visible = true;
             chatPanel.Visible = false;
             calendarPanel.Visible = false;
-            calendarPanel.Visible = false;
+            contactsPanel.Visible = false;
         }
 
         private void ChatButton_Click(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace Faculti
             gradesPanel.Visible = false;
             chatPanel.Visible = true;
             calendarPanel.Visible = false;
-            calendarPanel.Visible = false;
+            contactsPanel.Visible = false;
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
@@ -99,7 +101,7 @@ namespace Faculti
             gradesPanel.Visible = false;
             chatPanel.Visible = false;
             calendarPanel.Visible = true;
-            calendarPanel.Visible = false;
+            contactsPanel.Visible = false;
         }
 
         private void ContactsButton_Click(object sender, EventArgs e)
@@ -110,7 +112,7 @@ namespace Faculti
             gradesPanel.Visible = false;
             chatPanel.Visible = false;
             calendarPanel.Visible = false;
-            calendarPanel.Visible = true;
+            contactsPanel.Visible = true;
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)

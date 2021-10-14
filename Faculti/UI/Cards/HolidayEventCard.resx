@@ -118,28 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CommentContainer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="AnnouncementBodyPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXIAAABjCAYAAACG2YuDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMbSURBVHhe7dq9jhtVHIdhlykpKSm5hFwCNxGJBomSEjou
-        gAKloE+dmpaSljvIiiLatcfj8YztWXv9xczmUKyCUrLzi55H+ldnNOWro3PODIDP0M3N9cXtsvl2Ube/
-        VXX713y5vhpjjPn/Z2zwou7e3FXr75um+aJk+tPulu3LIeB/t5vdZtfvr4eH4xWA5zE2uL8/XNtNvxui
-        vpjP19+UXP+3of4/LVeb5ng6l18AMBXn8+Vat9umqte/lmw/Ne7Ex4iX7wGYqKbbreZV+6rk+4PxTHzY
-        st+eznbiAFN3uVyuVd0t5/PtlyXjw2580fzQbft9+QaAiRvvMMcHKSXjs1m1at/2+0NZBmDqxkvQ8UVL
-        yfhsNlT93fF4KssATN14vDJfrvuS8cfXKmUJgBRju0vGhRwgkZADhBNygHBCDhBOyAHCCTlAOCEHCCfk
-        AOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADh
-        hBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQc
-        IJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCc
-        kAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJAD
-        hBNygHBCDhBOyAHCCTlAOCEHCCfkAOGehHxRr6vT+VyWAJi6y+Ux5MeS8THk7R/7w0NZBmDqjsfTdWj3
-        u5Lx2ey2Wv+42d4fyzoAE9ffH4aQd29KxoeQN81XVd0141YdgOlbrjbN3bJ9WTL+wV3dfNdudm49ASZu
-        s+03i+X6l5Lvp8az8m7Tb+3MAaap2/b31ar78+bm+qKk+2Pzuv15+Kju94fHw3QAntfxdL7e7x8ej1Oq
-        unv9yYj/633VfV2t2rfjjej4TtEYY8zzzdDi98MG+/ePzsQB+BzMZv8AtaQ4vMCGwk4AAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAAOgAAABjCAYAAACR3kxjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAO3SURBVHhe7dqhc9RoAIbxSuRJJBKJPIlEnkQiTyKR/Acn
+        kSeRyJPISmRhs52YblJUZ9jkVvbydb50dzvtAwf7rnp+M99MJ2+oeya7KSeSJOnQ2n7zZNkPr877f/9a
+        dsPpsh+vPR7PL59P593492K1fv3lYnhWc/t/FqvhTdMPm3t+ucfjOeApsbbt1W81PXbz1PRp6fEc9TTd
+        2Df9+nnN8H5te/1ouvnT3j+eYm368W3TDS/ar8Pjequkn1CelCXE8gl1+vr4Ybe1Eik2VkK8vXn6eFt+
+        SZ0kBSwv1i+n7q5uu7sc39dp3+fVt6e73znLF9g6SQoqT9S5u5tIV+MfddoqQd7e1I0f62VJR3DeD+/m
+        /srP9fJWeZM03+DTUzquvadoN5zWy1vTcPty6LtvkyQdVHl5tO1v2NTLW/NYzg//TUbSwey+A6qXtnYD
+        rZckHRE2iKOkOGwQR0lx2CCOkuKwQRwlxWGDOEqKwwZxlBSHDeIoKQ4bxFFSHDaIo6Q4bBBHSXHYII6S
+        4rBBHCXFYYM4SorDBnGUFIcN4igpDhvEUVIcNoijpDhsEEdJcdggjpLisEEcJcVhgzhKisMGcZQUhw3i
+        KCkOG8RRUhw2iKOkOGwQR0lx2CCOkuKwQRwlxWGDOEqKwwZxlBSHDeIoKQ4bxFFSHDaIo6Q4bBBHSXHY
+        II6S4rBBHCXFYYM4SorDBnGUFIcN4igpDhvEUVIcNoijpDhsEEdJcdggjpLisEEcJcVhgzhKisMGcZQU
+        hw3iKCkOG8RRUhw2iKOkOGwQR0lx2CCOkuKwQRwlxWGDOEqKwwZxlBSHDeIoKQ4bxFFSHDaIo6Q4bBBH
+        SXHYII6S4rBBHCXFYYM4SorDBnGUFIcN4igpDhvEUVIcNoijpDhsEEdJcdggjpLisEEcJcVhgzhKisMG
+        cZQUhw3iKCkOG8RRUhw2iKOkOGwQR0lx2CCOkuKwwaYb+3n8cjE8q5clHUHbXj9q+mHzYKDLfvgwj9PP
+        r+plSUdQHorb/sazenmr6ce38w3n/fCuXpZ0BIvV+vXcX3M5vq+Xt5pueDHfcHNTv35eJ0lB7dfh8fSA
+        vJrbK7HWad80/jPftOyG9vPq29M6SQoocU6tnd52N328Ld9H67zvbsnlS+tiNbzxpZF0WG2/ebLoxj93
+        eytncTn+Xm+53/Ji/XL3bZLH4znseaivBz/a3lU+2t557Ho8ntw5++6T8z7lEVz//HJ25xd6PJ5fODf/
+        76AbP5an5oPfOSVJ0k85OfkPyeeObD5kGp0AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="MessageLabel.Text" xml:space="preserve">
-    <value>Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto. Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto.
+  <data name="EventTimeTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFIAAAAcCAYAAADyfuiHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVGhD7dlBSsNAFMbxWXbpEVy69CSuPYIbzyJ4Bq/g
+        tluPUJukBCF5IxYpbd+koIs4CR9IzUQjT3ffgz+F5mXzY6DQcZx/mqLaXxai88KHdaxlR62jzUMm4Qpc
+        wynLzUm3FJe3X15mw0K0WpT+cAq+z+kRRVMvsdH0qSzbGQidW9bhOiLu0stsrEz0sHpubsGI05hYZN+X
+        d5+iNRidi180qUU2LTDGE5l4yKYHRkJaAyMhrYGRkNbASEhrYCSkNTAS0hoYCWkNjIS0BkZCWgMjIa2B
+        kZDWwEhIa2AkpDUwOpeLvqcW2LTAGE+k6CK1wH4uHsItGJ1beb3JZM9T+dtEu3/J78HY3SC2s8I3PrnM
+        xpOwGdwkLis9jw9fcq9vgxdYqte8ChfgO57+btuHO97hjNf/MIvOH+vdGdg4fzfOfQCGl+qYU2SMHwAA
+        AABJRU5ErkJggg==
 </value>
   </data>
 </root>

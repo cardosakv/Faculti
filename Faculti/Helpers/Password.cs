@@ -1,7 +1,10 @@
 ﻿using AirtableApiClient;
+using Faculti.Services.FacultiDB;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Faculti.Helpers
 {
@@ -31,17 +34,25 @@ namespace Faculti.Helpers
         /// <returns>
         ///     Boolean value if password matched that in the database or not.
         /// </returns>
-        public static bool IsCorrect(string email, string passwordInHash, AirtableRecord[] records)
+        public static bool IsCorrect(string userType, string email, string passwordInHash)
         {
-            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            DatabaseClient client = new DatabaseClient();
+            var cmdText = $@"select * from {userType} where email = '{email}' and password_in_hash = '{passwordInHash}'";
+
+            try
             {
-                if (records[recordNum].Fields["Email"].ToString() == email &&
-                    records[recordNum].Fields["Password"].ToString() == passwordInHash)
+                OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
+                if (cmd.ExecuteScalar() != null)
                 {
                     return true;
                 }
+                client.Conn.Close();
             }
-
+            catch (Exception)
+            {
+                MessageBox.Show("Error in Password.IsCorrect()");
+            }
+            
             return false;
         }
 

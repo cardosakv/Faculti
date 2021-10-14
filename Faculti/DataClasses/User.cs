@@ -1,7 +1,11 @@
 ﻿using AirtableApiClient;
 using Faculti.Helpers;
 using Faculti.Services.Airtable;
+using Faculti.Services.FacultiDB;
+using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Faculti
 {
@@ -16,7 +20,7 @@ namespace Faculti
         private string _passwordInHash;
         private string _firstName;
         private string _lastName;
-        private string _phoneNumber;
+        private string _phoneNumberInHash;
         private string _recordId;
         private bool   _verified;
 
@@ -33,7 +37,7 @@ namespace Faculti
 
         }
 
-
+        // Properties
         public string Email
         {
             get { return _email; }
@@ -59,8 +63,8 @@ namespace Faculti
         }
         public string PhoneNumberInHash
         {
-            get { return _phoneNumber; }
-            set { _phoneNumber = value; }
+            get { return _phoneNumberInHash; }
+            set { _phoneNumberInHash = value; }
         }
 
         public string RecordId
@@ -90,25 +94,18 @@ namespace Faculti
         /// </param>
         public void AddToDatabase()
         {
-            // Create an Airtable Fields object and add the user details
-            Fields fields = new Fields();
-            fields.AddField("Email", _email);
-            fields.AddField("Password", _passwordInHash);
-            fields.AddField("First Name", _firstName);
-            fields.AddField("Last Name", _lastName);
-            fields.AddField("Phone Number", PhoneNumber.Encrypt(_phoneNumber));
-
             // Add user to the database
-            AirtableClient airtableClient = new AirtableClient();
-            airtableClient.CreateRecord(_type, fields);
+            DatabaseClient client = new DatabaseClient();
+            string cmdText = $@"insert into {_type} (first_name, last_name, email, password_in_hash, phone_number_in_hash) values ('{_firstName}', '{_lastName}', '{_email}', '{_passwordInHash}', '{_phoneNumberInHash}')";
+            client.PerformNonQueryCommand(cmdText);
         }
 
         /// <summary>
         ///     Checks if the user exists in the database.
         /// </summary> 
-        public bool DoesExistInDatabase(AirtableRecord[] records)
+        public bool HaveCredentialsMatched()
         {
-            return Password.IsCorrect(_email, _passwordInHash, records);
+            return Password.IsCorrect(Type, Email, PasswordInHash);
         } 
 
         /// <summary>

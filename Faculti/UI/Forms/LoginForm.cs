@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using Faculti.UI;
 using Faculti.Helpers;
 using Faculti.Services.Airtable;
+using Faculti.Services.FacultiDB;
 
 namespace Faculti
 {
@@ -29,31 +30,16 @@ namespace Faculti
             ControlInteractives.SetLabelHoverEvent(ForgotPasswordLinkLabel);
         }
 
-        private async void LogInButton_Click(object sender, EventArgs e)
+        private void LogInButton_Click(object sender, EventArgs e)
         {
             IncorrectEmailTooltip.Visible = false;
             IncorrectPasswordTooltip.Visible = false;
-
-            // Checks if required inputs are entered by the user; shows error texts when needed.
-            if (String.IsNullOrEmpty(_userType)) SetUserSelectionError(true);
-
-            if (PasswordTextBox.Text == String.Empty)
-            {
-                IncorrectPasswordTooltip.Text = "Input password";
-                IncorrectPasswordTooltip.Visible = true;
-            }
-
-            if (EmailTextBox.Text == String.Empty)
-            {
-                IncorrectEmailTooltip.Text = "Input email";
-                IncorrectEmailTooltip.Visible = true;
-            }
-
+            CheckInputErrors();
+           
             // Textboxes' values saved into class if required inputs are entered and are valid.
             // Input password encrypted and credentials are checked if present in the database.
-            if (Syntax.IsValidPassword(PasswordTextBox.Text) &&
-                Syntax.IsValidEmail(EmailTextBox.Text) &&
-                _userType != String.Empty)
+            if (Syntax.IsValidPassword(PasswordTextBox.Text) && Syntax.IsValidEmail(EmailTextBox.Text) &&
+                _userType != string.Empty)
             {
                 Cursor = Cursors.WaitCursor;
 
@@ -64,21 +50,18 @@ namespace Faculti
                     PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
-                AirtableClient airtableClient = new AirtableClient();
-                var records = await airtableClient.ListRecords(_userType);
-
-                if (user.DoesExistInDatabase(records))
+                if (user.HaveCredentialsMatched())
                 {
                     // Log in is successful.
                     LogInButton.Text = "✔ Success";
                     Cursor = Cursors.Default;
 
-                    _timer = new Timer { Interval = 2000 };
+                    _timer = new Timer { Interval = 1000 };
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (!Password.IsCorrect(user.Email, user.PasswordInHash, records) &&
-                          Email.IsPresentInDatabase(user.Email, records))
+                else if (Email.IsPresentInDatabase(user.Email, user.Type) && 
+                         !Password.IsCorrect(user.Type, user.Email, user.PasswordInHash))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;
@@ -94,7 +77,7 @@ namespace Faculti
                 // Else clear password textbox.
                 PasswordTextBox.Text = String.Empty;
             }
-
+            
             Cursor = Cursors.Default;
         }
 
@@ -119,6 +102,24 @@ namespace Faculti
         //                                        UI METHODS                                      //
         //                                                                                        //
         // ====================================================================================== //
+        private void CheckInputErrors()
+        {
+            // Checks if required inputs are entered by the user; shows error texts when needed.
+            if (String.IsNullOrEmpty(_userType)) SetUserSelectionError(true);
+
+            if (PasswordTextBox.Text == String.Empty)
+            {
+                IncorrectPasswordTooltip.Text = "Input password";
+                IncorrectPasswordTooltip.Visible = true;
+            }
+
+            if (EmailTextBox.Text == String.Empty)
+            {
+                IncorrectEmailTooltip.Text = "Input email";
+                IncorrectEmailTooltip.Visible = true;
+            }
+        }
+
         private void LoginForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
@@ -133,7 +134,7 @@ namespace Faculti
         {
             if (ParentRadioButton.Checked)
             {
-                _userType = "Parent";
+                _userType = "parents";
                 TeacherRadioButton.Checked = false;
                 SetUserSelectionError(false);
             }
@@ -143,7 +144,7 @@ namespace Faculti
         {
             if (TeacherRadioButton.Checked)
             {
-                _userType = "Teacher";
+                _userType = "teachers";
                 ParentRadioButton.Checked = false;
                 SetUserSelectionError(false);
             }
@@ -230,14 +231,14 @@ namespace Faculti
                 TeacherHomeForm homeForm = new TeacherHomeForm();
                 homeForm.Show();
                 Cursor = Cursors.Default;
-                this.Close();
+                this.Hide();
             }
             else
             {
                 ParentHomeForm homeForm = new ParentHomeForm();
                 homeForm.Show();
                 Cursor = Cursors.Default;
-                this.Close();
+                this.Hide();
             }
         }
 

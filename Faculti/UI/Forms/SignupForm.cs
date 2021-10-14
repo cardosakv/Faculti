@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Faculti.UI.Forms;
+using Faculti.Services.FacultiDB;
 
 namespace Faculti
 {
@@ -28,38 +29,15 @@ namespace Faculti
             ControlInteractives.SetButtonHoverEvent(CreateAccountButton);
         }
 
-        private async void CreateAccountButton_Click(object sender, EventArgs e)
+        private void CreateAccountButton_Click(object sender, EventArgs e)
         {
             // Check for input errors in the textboxes
-            var errors = await CheckForInputErrors();
+            var errors = CheckForInputErrors();
 
             // If there are no errors, proceed to account creation
             if (errors == 0)
             {
-                Cursor = Cursors.WaitCursor;
-
-                // Create the new user object
-                _signupUser = new User
-                {
-                    Type = _userType,
-                    FirstName = FirstNameTextBox.Text,
-                    LastName = LastNameTextBox.Text,
-                    Email = EmailTextBox.Text,
-                    PasswordInHash = Password.Encrypt(ConfirmPasswordTextBox.Text), // encrypt the password
-                    PhoneNumberInHash = PhoneNumberTextBox.Text // encrypt also the phone no.
-                };
-
-                // Show the verification form for the user to input code
-                VerificationForm verificationForm = new VerificationForm
-                {
-                    verificationType = "signup",
-                    signupUser = _signupUser,
-                    signupForm = this,
-                    emailToSendCode = _signupUser.Email
-                };
-                verificationForm.ShowDialog();
-
-                Cursor = Cursors.Default;
+                AttemptSignup();
             }
         }
 
@@ -70,7 +48,34 @@ namespace Faculti
             this.Hide();
         }
 
-        private async Task<int> CheckForInputErrors()
+        private void AttemptSignup()
+        {
+            Cursor = Cursors.WaitCursor;
+
+            // Create the new user object
+            _signupUser = new User
+            {
+                Type = _userType,
+                FirstName = FirstNameTextBox.Text,
+                LastName = LastNameTextBox.Text,
+                Email = EmailTextBox.Text,
+                PasswordInHash = Password.Encrypt(ConfirmPasswordTextBox.Text), // encrypt the password
+                PhoneNumberInHash = PhoneNumber.Encrypt(PhoneNumberTextBox.Text) // encrypt also the phone no.
+            };
+
+            // Show the verification form for the user to input code
+            VerificationForm verificationForm = new VerificationForm
+            {
+                verificationType = "signup",
+                signupUser = _signupUser,
+                signupForm = this,
+                emailToSendCode = _signupUser.Email
+            };
+            verificationForm.ShowDialog();
+            Cursor = Cursors.Default;
+        }
+
+        private int CheckForInputErrors()
         {
             var errors = 0;
 
@@ -118,10 +123,7 @@ namespace Faculti
 
             if (Syntax.IsValidEmail(EmailTextBox.Text))
             {
-                AirtableClient airtableClient = new AirtableClient();
-                var records = await airtableClient.ListRecords(_userType);
-
-                if (Email.IsPresentInDatabase(EmailTextBox.Text, records))
+                if (Email.IsPresentInDatabase(EmailTextBox.Text, _userType))
                 {
                     errors++;
                     EmailTooltip.Text = "Email already registered";
@@ -191,7 +193,7 @@ namespace Faculti
         {
             if (ParentRadioButton.Checked)
             {
-                _userType = "Parent";
+                _userType = "parents";
                 TeacherRadioButton.Checked = false;
 
                 SetDefaultBorder(ParentCheckPanel);
@@ -203,7 +205,7 @@ namespace Faculti
         {
             if (TeacherRadioButton.Checked)
             {
-                _userType = "Teacher";
+                _userType = "teachers";
                 ParentRadioButton.Checked = false;
 
                 SetDefaultBorder(ParentCheckPanel);

@@ -13,10 +13,10 @@ namespace Faculti.UI.Cards
 {
     public partial class FeedPanel : UserControl
     {
-        AnnouncementPanel announcement = new AnnouncementPanel("Re: Scholarship for Freshman", 
+        Announcement announcement = new Announcement("Re: Scholarship for Freshman", 
             "The office of the dean will be accepting scholarship application from October 30 " +
             "to November 30 from 9:00 AM to 4:00 PM.");
-        AnnouncementPanel announcement2 = new AnnouncementPanel("No Classes Today",
+        Announcement announcement2 = new Announcement("No Classes Today",
             "There will be no classes because of the incoming supertyphoon Yolanda. " +
             "Everyone is advised to evacuate to a safe relocation site.\n\nThank you and stay safe everyone.");
         PostCard post = new PostCard("34343", "The office of the dean will be accepting scholarship application from October 30 to November 30. Please look at your extensions on chrome.\nOkay? Hai? hai?", "dfdfd");

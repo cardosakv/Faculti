@@ -17,8 +17,8 @@ namespace Faculti.UI.Cards
             InitializeComponent();
             ChatHead c = new ChatHead();
             ChatHeadFlowLayoutPanel.Controls.Add(c);
-            TeacherMessage op = new TeacherMessage();
-            MyMessage a = new MyMessage();
+            TeacherMessage op = new TeacherMessage("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+            MyMessage a = new MyMessage("Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
             ChatMessagesFlowLayoutPanel.Controls.Add(op);
             ChatMessagesFlowLayoutPanel.Controls.Add(a);
         }

@@ -38,9 +38,9 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.ChatMessagesFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
             this.bunifuVScrollBar1 = new Bunifu.UI.WinForms.BunifuVScrollBar();
             this.CommentPostTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1.SuspendLayout();
             this.ChatMessagesFlowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
@@ -99,6 +99,19 @@ namespace Faculti.UI.Cards
             this.ChatMessagesFlowLayoutPanel.Size = new System.Drawing.Size(646, 495);
             this.ChatMessagesFlowLayoutPanel.TabIndex = 56;
             this.ChatMessagesFlowLayoutPanel.WrapContents = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(221)))), ((int)(((byte)(235)))));
+            this.label12.Location = new System.Drawing.Point(3, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(538, 15);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "---------------------------------------------  Beginning  -----------------------" +
+    "----------------------";
             // 
             // bunifuVScrollBar1
             // 
@@ -216,19 +229,6 @@ namespace Faculti.UI.Cards
             this.CommentPostTextBox.UseSystemPasswordChar = false;
             this.CommentPostTextBox.WordWrap = true;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(221)))), ((int)(((byte)(235)))));
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(538, 15);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "---------------------------------------------  Beginning  -----------------------" +
-    "----------------------";
-            // 
             // ChatPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,9 +250,9 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.FlowLayoutPanel ChatHeadFlowLayoutPanel;
         private Bunifu.UI.WinForms.BunifuShadowPanel bunifuShadowPanel1;
         private System.Windows.Forms.Label label11;
-        private Bunifu.UI.WinForms.BunifuTextBox CommentPostTextBox;
         private System.Windows.Forms.FlowLayoutPanel ChatMessagesFlowLayoutPanel;
         private Bunifu.UI.WinForms.BunifuVScrollBar bunifuVScrollBar1;
         private System.Windows.Forms.Label label12;
+        private Bunifu.UI.WinForms.BunifuTextBox CommentPostTextBox;
     }
 }

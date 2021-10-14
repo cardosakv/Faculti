@@ -1,5 +1,7 @@
 ﻿using AirtableApiClient;
+using Faculti.Services.FacultiDB;
 using System;
+using System.Data;
 using System.Net.Mail;
 
 namespace Faculti.Helpers
@@ -59,14 +61,15 @@ namespace Faculti.Helpers
         /// <returns>
         ///     Boolean value if email is present or not.
         /// </returns>
-        public static bool IsPresentInDatabase(string email, AirtableRecord[] records)
+        public static bool IsPresentInDatabase(string email, string userType)
         {
-            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            DatabaseClient client = new DatabaseClient();
+            var records = client.ListColumn(userType, "email");
+
+            foreach (DataRow row in records.Rows)
             {
-                if (records[recordNum].Fields["Email"].ToString() == email)
-                {
+                if (row["email"].ToString() == email)
                     return true;
-                }
             }
 
             return false;

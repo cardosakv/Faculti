@@ -22,7 +22,7 @@ namespace Faculti
         }
 
         private async void FindAccountButton_Click(object sender, EventArgs e)
-        {
+        {/*
             string email = EmailForgotTextBox.Text;
 
             if (Syntax.IsValidEmail(email))
@@ -59,7 +59,7 @@ namespace Faculti
             {
                 IncorrectEmailForgotTooltip.Text = "Please enter email";
                 IncorrectEmailForgotTooltip.Visible = true;
-            }
+            }*/
         }
 
 

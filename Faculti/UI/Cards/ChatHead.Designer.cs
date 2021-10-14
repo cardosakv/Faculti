@@ -31,10 +31,10 @@ namespace Faculti.UI.Cards
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatHead));
             this.ChatPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.ChatLastActiveLabel = new System.Windows.Forms.Label();
             this.ChatNameLabel = new System.Windows.Forms.Label();
             this.IsActivePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.ChatPictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.ChatLastActiveLabel = new System.Windows.Forms.Label();
             this.ChatPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IsActivePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPictureBox)).BeginInit();
@@ -57,9 +57,25 @@ namespace Faculti.UI.Cards
             this.ChatPanel.ShowBorders = true;
             this.ChatPanel.Size = new System.Drawing.Size(352, 70);
             this.ChatPanel.TabIndex = 35;
+            this.ChatPanel.Click += new System.EventHandler(this.ChatHead_Click);
             this.ChatPanel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
             this.ChatPanel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
             this.ChatPanel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
+            // 
+            // ChatLastActiveLabel
+            // 
+            this.ChatLastActiveLabel.AutoSize = true;
+            this.ChatLastActiveLabel.BackColor = System.Drawing.Color.Transparent;
+            this.ChatLastActiveLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChatLastActiveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.ChatLastActiveLabel.Location = new System.Drawing.Point(66, 39);
+            this.ChatLastActiveLabel.Name = "ChatLastActiveLabel";
+            this.ChatLastActiveLabel.Size = new System.Drawing.Size(99, 12);
+            this.ChatLastActiveLabel.TabIndex = 6;
+            this.ChatLastActiveLabel.Text = "Online 1 hour ago";
+            this.ChatLastActiveLabel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
+            this.ChatLastActiveLabel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
+            this.ChatLastActiveLabel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             // 
             // ChatNameLabel
             // 
@@ -119,21 +135,6 @@ namespace Faculti.UI.Cards
             this.ChatPictureBox.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
             this.ChatPictureBox.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
             this.ChatPictureBox.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
-            // 
-            // ChatLastActiveLabel
-            // 
-            this.ChatLastActiveLabel.AutoSize = true;
-            this.ChatLastActiveLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ChatLastActiveLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChatLastActiveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.ChatLastActiveLabel.Location = new System.Drawing.Point(66, 39);
-            this.ChatLastActiveLabel.Name = "ChatLastActiveLabel";
-            this.ChatLastActiveLabel.Size = new System.Drawing.Size(99, 12);
-            this.ChatLastActiveLabel.TabIndex = 6;
-            this.ChatLastActiveLabel.Text = "Online 1 hour ago";
-            this.ChatLastActiveLabel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
-            this.ChatLastActiveLabel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
-            this.ChatLastActiveLabel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             // 
             // ChatHead
             // 

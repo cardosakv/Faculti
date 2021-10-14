@@ -30,37 +30,36 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherMessage));
-            this.MessageLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.MessagePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.CommentContainer = new Bunifu.UI.WinForms.BunifuPanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.MessageLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MessagePictureBox)).BeginInit();
             this.CommentContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MessageLabel
+            // label1
             // 
-            this.MessageLabel.AutoSize = true;
-            this.MessageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.MessageLabel.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.MessageLabel.Location = new System.Drawing.Point(11, 11);
-            this.MessageLabel.MaximumSize = new System.Drawing.Size(350, 500);
-            this.MessageLabel.MinimumSize = new System.Drawing.Size(350, 5);
-            this.MessageLabel.Name = "MessageLabel";
-            this.MessageLabel.Size = new System.Drawing.Size(350, 75);
-            this.MessageLabel.TabIndex = 2;
-            this.MessageLabel.Text = resources.GetString("MessageLabel.Text");
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label1.Location = new System.Drawing.Point(423, 94);
+            this.label1.MaximumSize = new System.Drawing.Size(350, 500);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "12:00 PM ";
             // 
             // MessagePictureBox
             // 
             this.MessagePictureBox.AllowFocused = false;
-            this.MessagePictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MessagePictureBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MessagePictureBox.AutoSizeHeight = false;
             this.MessagePictureBox.BorderRadius = 20;
             this.MessagePictureBox.Image = global::Faculti.Properties.Resources.profile;
             this.MessagePictureBox.IsCircle = false;
-            this.MessagePictureBox.Location = new System.Drawing.Point(2, 13);
+            this.MessagePictureBox.Location = new System.Drawing.Point(2, 10);
             this.MessagePictureBox.Name = "MessagePictureBox";
             this.MessagePictureBox.Size = new System.Drawing.Size(40, 40);
             this.MessagePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,17 +85,19 @@ namespace Faculti.UI.Cards
             this.CommentContainer.Size = new System.Drawing.Size(370, 99);
             this.CommentContainer.TabIndex = 14;
             // 
-            // label1
+            // MessageLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label1.Location = new System.Drawing.Point(423, 81);
-            this.label1.MaximumSize = new System.Drawing.Size(350, 500);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "12:00 PM ";
+            this.MessageLabel.AutoSize = true;
+            this.MessageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MessageLabel.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MessageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.MessageLabel.Location = new System.Drawing.Point(11, 11);
+            this.MessageLabel.MaximumSize = new System.Drawing.Size(350, 500);
+            this.MessageLabel.MinimumSize = new System.Drawing.Size(350, 20);
+            this.MessageLabel.Name = "MessageLabel";
+            this.MessageLabel.Size = new System.Drawing.Size(350, 75);
+            this.MessageLabel.TabIndex = 2;
+            this.MessageLabel.Text = resources.GetString("MessageLabel.Text");
             // 
             // TeacherMessage
             // 

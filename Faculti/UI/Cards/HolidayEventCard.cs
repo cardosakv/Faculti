@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Faculti.UI.Cards
 {
-    public partial class TeacherMessage : UserControl
+    public partial class HolidayEventCard : UserControl
     {
-        public TeacherMessage(string message)
+        public HolidayEventCard()
         {
             InitializeComponent();
-            MessageLabel.Text = message;
-            this.Height = MessageLabel.Height + 35;
         }
     }
 }

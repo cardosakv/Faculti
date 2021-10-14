@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Faculti.UI.Cards
 {
-    public partial class AnnouncementPanel : UserControl
+    public partial class Announcement : UserControl
     {
-        public AnnouncementPanel(string announcementTitle, string announcementMessage)
+        public Announcement(string announcementTitle, string announcementMessage)
         {
             InitializeComponent();
             AnnouncementTitleLabel.Text = announcementTitle;

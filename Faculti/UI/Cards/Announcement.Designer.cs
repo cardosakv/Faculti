@@ -1,7 +1,7 @@
 ﻿
 namespace Faculti.UI.Cards
 {
-    partial class AnnouncementPanel
+    partial class Announcement
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Faculti.UI.Cards
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnnouncementPanel));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Announcement));
             this.AnnouncementBodyPanel = new Bunifu.UI.WinForms.BunifuPanel();
             this.AnnouncementMessageLabel = new System.Windows.Forms.Label();
             this.AnnouncementTitleLabel = new System.Windows.Forms.Label();

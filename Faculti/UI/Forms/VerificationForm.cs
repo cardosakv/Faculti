@@ -54,8 +54,8 @@ namespace Faculti
                 {
                     ConfirmButton.Text = "✔️ Account Verified";
                     await Task.Delay(1000);
-                    ChangePasswordForm changePasswordForm = new ChangePasswordForm();
-                    changePasswordForm.email = emailToSendCode;
+
+                    ChangePasswordForm changePasswordForm = new ChangePasswordForm { email = emailToSendCode };
                     changePasswordForm.ShowDialog();
                     this.Hide();
                 }

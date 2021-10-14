@@ -12,9 +12,11 @@ namespace Faculti.UI.Cards
 {
     public partial class MyMessage : UserControl
     {
-        public MyMessage()
+        public MyMessage(string message)
         {
             InitializeComponent();
+            MessageLabel.Text = message;
+            this.Height = MessageLabel.Height + 35;
         }
     }
 }

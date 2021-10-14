@@ -24,9 +24,9 @@ namespace Faculti.UI.Forms
             InitializeComponent();
             ControlInteractives.SetButtonHoverEvent(ConfirmChangePasswordButton);
         }
-
+        
         private async void ConfirmChangeButton_Click(object sender, EventArgs e)
-        {
+        {/*
             if (PasswordTextBox.Text == string.Empty)
             {
                 IncorrecPasswordFormatTooltip.Text = "Input password";
@@ -57,7 +57,7 @@ namespace Faculti.UI.Forms
                 {
                     userType = "Teacher";
                 }
-
+              
                 User userToSearch = new User
                 {
                     Email = email,
@@ -83,7 +83,7 @@ namespace Faculti.UI.Forms
             {
                 PasswordTextBox.Text = string.Empty;
                 ReEnterPasswordTextbox.Text = string.Empty;
-            }
+            }*/
         }
 
 

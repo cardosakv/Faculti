@@ -30,11 +30,25 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyMessage));
+            this.label1 = new System.Windows.Forms.Label();
             this.CommentContainer = new Bunifu.UI.WinForms.BunifuPanel();
             this.MessageLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.CommentContainer.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.label1.Location = new System.Drawing.Point(47, 88);
+            this.label1.MaximumSize = new System.Drawing.Size(350, 500);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "12:00 PM ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CommentContainer
             // 
@@ -67,19 +81,6 @@ namespace Faculti.UI.Cards
             this.MessageLabel.Size = new System.Drawing.Size(350, 75);
             this.MessageLabel.TabIndex = 2;
             this.MessageLabel.Text = resources.GetString("MessageLabel.Text");
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label1.Location = new System.Drawing.Point(47, 77);
-            this.label1.MaximumSize = new System.Drawing.Size(350, 500);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "12:00 PM ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // MyMessage
             // 

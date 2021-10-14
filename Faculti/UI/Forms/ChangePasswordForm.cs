@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using AirtableApiClient;
 using Faculti.Helpers;
 using Faculti.Services.Airtable;
+using Faculti.Services.FacultiDB;
 using Faculti.UI.Forms;
 
 namespace Faculti.UI.Forms
@@ -26,7 +27,7 @@ namespace Faculti.UI.Forms
         }
         
         private async void ConfirmChangeButton_Click(object sender, EventArgs e)
-        {/*
+        {
             if (PasswordTextBox.Text == string.Empty)
             {
                 IncorrecPasswordFormatTooltip.Text = "Input password";
@@ -36,26 +37,19 @@ namespace Faculti.UI.Forms
             if (IncorrecPasswordFormatTooltip.Visible == false &&
                 PasswordNotMatchToolTip.Visible == false)
             {
-                // List Records - return array of AirtableRecords
-                AirtableClient airtableClientParent = new AirtableClient();
-                var parentRecords = await airtableClientParent.ListRecords("Parent");
-
-                AirtableClient airtableClientTeacher = new AirtableClient();
-                var teacherRecords = await airtableClientTeacher.ListRecords("Teacher");
-
                 // to check user type
-                var isPresentInParentRecords = Email.IsPresentInDatabase(email, parentRecords);
-                var isPresentInTeacherRecords = Email.IsPresentInDatabase(email, teacherRecords);
+                var isPresentInParentRecords = Email.IsPresentInDatabase(email, "parents");
+                var isPresentInTeacherRecords = Email.IsPresentInDatabase(email, "teachers");
 
                 string userType = string.Empty;
 
                 if (isPresentInParentRecords)
                 {
-                    userType = "Parent";
+                    userType = "parents";
                 }
                 else if (isPresentInTeacherRecords)
                 {
-                    userType = "Teacher";
+                    userType = "teachers";
                 }
               
                 User userToSearch = new User
@@ -64,26 +58,21 @@ namespace Faculti.UI.Forms
                     PasswordInHash = Password.Encrypt(PasswordTextBox.Text),
                     Type = userType
                 };
-                // Get record id - User.GetRecordId();
-                var recordId = await userToSearch.GetRecordId();
 
-                Fields fields = new Fields();
-                fields.AddField("Password", userToSearch.PasswordInHash);
-
-                // Update password using AirtableClient.UpdateRecord();
-                AirtableClient airtableClient = new AirtableClient();
-                airtableClient.UpdateRecord(userType, fields, recordId);
+                DatabaseClient client = new DatabaseClient();
+                var cmdText = $"update {userType} set password_in_hash = '{userToSearch.PasswordInHash}' where email = '{userToSearch.Email}'";
+                client.PerformNonQueryCommand(cmdText);
 
                 ConfirmChangePasswordButton.Text = "✔️ Change Successful";
                 await Task.Delay(1000);
                 FormAnimation.FadeOut(this);
-                this.Hide();
+                this.Close();
             }
             else
             {
                 PasswordTextBox.Text = string.Empty;
                 ReEnterPasswordTextbox.Text = string.Empty;
-            }*/
+            }
         }
 
 

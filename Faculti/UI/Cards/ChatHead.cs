@@ -38,7 +38,7 @@ namespace Faculti.UI.Cards
             conn.ConnectionString = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_high";
             conn.Open();
 
-            OracleCommand cmd = new OracleCommand("select * from parent", conn);
+            OracleCommand cmd = new OracleCommand("select * from parents", conn);
             OracleDataReader rdr = cmd.ExecuteReader();
 
             while (rdr.Read()) { MessageBox.Show(rdr.GetString(0) + rdr.GetString(1) + rdr.GetString(2) + rdr.GetString(3)); }

@@ -19,6 +19,7 @@ namespace Faculti
         private string _userType;
         private bool _passwordRevealed;
         private Timer _timer;
+        private User _user;
 
         public LoginForm()
         {
@@ -43,25 +44,24 @@ namespace Faculti
             {
                 Cursor = Cursors.WaitCursor;
 
-                User user = new User
+                _user = new User
                 {
                     Type = _userType,
                     Email = EmailTextBox.Text,
                     PasswordInHash = Password.Encrypt(PasswordTextBox.Text)
                 };
 
-                if (user.HaveCredentialsMatched())
+                if (_user.HaveCredentialsMatched())
                 {
                     // Log in is successful.
                     LogInButton.Text = "✔ Success";
-                    Cursor = Cursors.Default;
 
                     _timer = new Timer { Interval = 1000 };
                     _timer.Start();
                     _timer.Tick += Timer_Tick;
                 }
-                else if (Email.IsPresentInDatabase(user.Email, user.Type) && 
-                         !Password.IsCorrect(user.Type, user.Email, user.PasswordInHash))
+                else if (Email.IsPresentInDatabase(_user.Email, _user.Type) && 
+                         !Password.IsCorrect(_user.Type, _user.Email, _user.PasswordInHash))
                 {
                     IncorrectPasswordTooltip.Text = "Password is incorrect";
                     IncorrectPasswordTooltip.Visible = true;
@@ -226,16 +226,16 @@ namespace Faculti
         {
             _timer.Stop();
 
-            if (_userType == "Teacher")
+            if (_userType == "teachers")
             {
-                TeacherHomeForm homeForm = new TeacherHomeForm();
+                TeacherHomeForm homeForm = new TeacherHomeForm(_user);
                 homeForm.Show();
                 Cursor = Cursors.Default;
                 this.Hide();
             }
             else
             {
-                ParentHomeForm homeForm = new ParentHomeForm();
+                ParentHomeForm homeForm = new ParentHomeForm(_user);
                 homeForm.Show();
                 Cursor = Cursors.Default;
                 this.Hide();

@@ -16,7 +16,7 @@ namespace Faculti
     {
         private BunifuButton2 lastButtonClicked;
 
-        public TeacherHomeForm()
+        public TeacherHomeForm(User teacherUser)
         {
             InitializeComponent();
             lastButtonClicked = HomeButton;

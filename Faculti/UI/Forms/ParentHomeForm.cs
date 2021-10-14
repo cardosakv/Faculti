@@ -24,7 +24,7 @@ namespace Faculti
         ContactsPanel contactsPanel = new ContactsPanel();
         Loader loader = new Loader();
 
-        public ParentHomeForm()
+        public ParentHomeForm(User parentUser)
         {
             InitializeComponent();
             homePanel.Location = new Point(3, 55);
@@ -134,28 +134,6 @@ namespace Faculti
         {
             NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif;
         }
-
-        private void DateTimeLabel_MouseHover(object sender, EventArgs e)
-        {
-            DateTime_Hover();
-        }
-
-        private void DateTimeLabel_MouseLeave(object sender, EventArgs e)
-        {
-            DateTime_Leave();
-        }
-
-        private void DateTimePictureBox_MouseHover(object sender, EventArgs e)
-        {
-            DateTime_Hover();
-
-        }
-
-        private void DateTimePictureBox_MouseLeave(object sender, EventArgs e)
-        {
-            DateTime_Leave();
-        }
-
         private void DateTimePanel_MouseHover(object sender, EventArgs e)
         {
             DateTime_Hover();

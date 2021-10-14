@@ -22,23 +22,19 @@ namespace Faculti
         }
 
         private async void FindAccountButton_Click(object sender, EventArgs e)
-        {/*
-            string email = EmailForgotTextBox.Text;
+        {
+            Cursor = Cursors.WaitCursor;
 
+            string email = EmailForgotTextBox.Text;
             if (Syntax.IsValidEmail(email))
             {
-                AirtableClient airtableClientParent = new AirtableClient();
-                var parentRecords = await airtableClientParent.ListRecords("Parent");
-
-                AirtableClient airtableClientTeacher = new AirtableClient();
-                var teacherRecords = await airtableClientTeacher.ListRecords("Teacher");
-
-                bool isPresentInParentRecords = Email.IsPresentInDatabase(email, parentRecords);
-                bool isPresentInTeacherRecords = Email.IsPresentInDatabase(email, teacherRecords);
+                bool isPresentInParentRecords = Email.IsPresentInDatabase(email, "parents");
+                bool isPresentInTeacherRecords = Email.IsPresentInDatabase(email, "teachers");
 
                 if (isPresentInParentRecords == true || isPresentInTeacherRecords == true)
                 {
                     FindAccountButton.Text = "✔️ Account Found";
+                    CodeEmailedLabel.Visible = true;
                     await Task.Delay(1000);
 
                     VerificationForm verificationForm = new VerificationForm
@@ -47,6 +43,7 @@ namespace Faculti
                         emailToSendCode = email
                     };
                     verificationForm.ShowDialog();
+                    Cursor = Cursors.Default;
                     this.Hide();
                 }
                 else
@@ -59,7 +56,9 @@ namespace Faculti
             {
                 IncorrectEmailForgotTooltip.Text = "Please enter email";
                 IncorrectEmailForgotTooltip.Visible = true;
-            }*/
+            }
+
+            Cursor = Cursors.Default;
         }
 
 

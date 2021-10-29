@@ -179,6 +179,7 @@ namespace Faculti.DataClasses
             client.Conn.Close();
         }
 
+
         public bool IsFirstTime()
         {
             DatabaseClient client = new DatabaseClient();

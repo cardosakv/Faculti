@@ -55,22 +55,22 @@ namespace Faculti
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label1.Location = new System.Drawing.Point(122, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 27);
+            this.label1.Size = new System.Drawing.Size(178, 24);
             this.label1.TabIndex = 27;
             this.label1.Text = "Forgot Password?";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.label11.Location = new System.Drawing.Point(72, 112);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(275, 13);
+            this.label11.Size = new System.Drawing.Size(247, 15);
             this.label11.TabIndex = 37;
             this.label11.Text = "Please enter your email to find your account.";
             // 
@@ -83,10 +83,11 @@ namespace Faculti
             this.IncorrectEmailForgotTooltip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
             this.IncorrectEmailForgotTooltip.Location = new System.Drawing.Point(139, 237);
             this.IncorrectEmailForgotTooltip.Name = "IncorrectEmailForgotTooltip";
-            this.IncorrectEmailForgotTooltip.Size = new System.Drawing.Size(140, 13);
+            this.IncorrectEmailForgotTooltip.Size = new System.Drawing.Size(126, 15);
             this.IncorrectEmailForgotTooltip.TabIndex = 40;
             this.IncorrectEmailForgotTooltip.Text = "Incorrect email format";
             this.IncorrectEmailForgotTooltip.Visible = false;
+            this.IncorrectEmailForgotTooltip.Click += new System.EventHandler(this.IncorrectEmailForgotTooltip_Click);
             // 
             // FindAccountButton
             // 
@@ -117,7 +118,7 @@ namespace Faculti
             this.FindAccountButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.FindAccountButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.FindAccountButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.FindAccountButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FindAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FindAccountButton.ForeColor = System.Drawing.Color.White;
             this.FindAccountButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.FindAccountButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
@@ -196,7 +197,7 @@ namespace Faculti
             this.EmailForgotTextBox.BorderThickness = 1;
             this.EmailForgotTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.EmailForgotTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.EmailForgotTextBox.DefaultFont = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailForgotTextBox.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailForgotTextBox.DefaultText = "";
             this.EmailForgotTextBox.FillColor = System.Drawing.Color.White;
             this.EmailForgotTextBox.ForeColor = System.Drawing.Color.Gray;
@@ -293,11 +294,11 @@ namespace Faculti
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.FirstNameLabel.Location = new System.Drawing.Point(53, 175);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(39, 17);
+            this.FirstNameLabel.Size = new System.Drawing.Size(44, 15);
             this.FirstNameLabel.TabIndex = 41;
             this.FirstNameLabel.Text = "Email";
             // 

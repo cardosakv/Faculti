@@ -12,15 +12,38 @@ namespace Faculti.Services.FacultiDB
     internal class DatabaseClient
     {
         #region Secret
-        private readonly string _cred = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_high";
+        private readonly string _cred = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_high; Connection Timeout = 60;";
         #endregion
 
         public readonly OracleConnection Conn;
 
         public DatabaseClient()
         {
-            Conn = new OracleConnection { ConnectionString = _cred };
-            Conn.Open();
+            try
+            {
+                Conn = new OracleConnection { ConnectionString = _cred };
+                Conn.Open();
+            }
+            catch (Exception)
+            {
+
+            }
+
+        }
+
+        public void PerformNonQueryCommand(string commandText)
+        {
+            try
+            {
+                OracleCommand cmd = new OracleCommand(commandText, Conn);
+                cmd.ExecuteNonQuery();
+                Conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         public DataTable ListColumn(string tableName, string colName)
@@ -47,11 +70,34 @@ namespace Faculti.Services.FacultiDB
             return records;
         }
 
-        public void PerformNonQueryCommand(string commandText)
+        /*
+        public DataTable JoinTables(string table1Name, string table2Name, string colName)
         {
-            OracleCommand cmd = new OracleCommand(commandText, Conn);
-            cmd.ExecuteNonQuery();
-            Conn.Close();
-        }
+            DataTable table1 = new DataTable(table1Name);
+            DataTable table2 = new DataTable(table2Name); 
+
+            var cmdText = $"select * from "
+            try
+            {
+                var cmdText = $"select count(*) from all_tab_columns where table_name = '{table1Name.ToUpper()}'";
+                OracleCommand cmd = new OracleCommand();
+                cmd.CommandText = cmdText;
+                OracleDataReader rdr = cmd.ExecuteReader();
+                int numOfCol = rdr.GetInt32(0);
+
+                cmdText = $"select column_name, data_type from all_tab_columns where table_name = '{table1Name.ToUpper()}'";
+                cmd.CommandText = cmdText;
+                rdr = cmd.ExecuteReader();
+                while (numOfCol-- != 0)
+                {
+                    table1.Columns.Add(rdr.GetString(0));
+                }
+                Conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error in JoinTable()!");
+            }
+        }*/
     }
 }

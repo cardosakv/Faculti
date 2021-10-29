@@ -12,11 +12,12 @@ namespace Faculti.UI.Cards
 {
     public partial class Announcement : UserControl
     {
-        public Announcement(string announcementTitle, string announcementMessage)
+        public Announcement(string title, string message, DateTime postTime)
         {
             InitializeComponent();
-            AnnouncementTitleLabel.Text = announcementTitle;
-            AnnouncementMessageLabel.Text = announcementMessage;
+            AnnouncementTitleLabel.Text = title;
+            AnnouncementDateTimeLabel.Text = postTime.ToString("MMM dd • hh:mm tt");
+            AnnouncementMessageLabel.Text = message;
             AnnouncementBodyPanel.Height = AnnouncementMessageLabel.Height + 88;
         }
 

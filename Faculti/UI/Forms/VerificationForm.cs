@@ -5,9 +5,8 @@ using System.Windows.Forms;
 using System.Threading.Tasks;
 using Faculti.Helpers;
 using Faculti.UI;
-using AirtableApiClient;
-using Faculti.Services.Airtable;
 using Faculti.UI.Forms;
+using Faculti.DataClasses;
 
 namespace Faculti
 {
@@ -29,6 +28,8 @@ namespace Faculti
         public VerificationForm()
         {
             InitializeComponent();
+            ControlInteractives.SetButtonHoverEvent(ConfirmButton);
+            ControlInteractives.SetLabelHoverEvent(ResendCodeButton);
         }
 
         private async void ConfirmButton_Click(object sender, EventArgs e)
@@ -47,8 +48,8 @@ namespace Faculti
 
                     LoginForm login = new LoginForm();
                     login.Show();
-                    signupForm.Hide();
-                    this.Hide();
+                    this.Dispose();
+                    this.Close();
                 }
                 else if (verificationType == "forgot")
                 {
@@ -57,7 +58,8 @@ namespace Faculti
 
                     ChangePasswordForm changePasswordForm = new ChangePasswordForm { email = emailToSendCode };
                     changePasswordForm.ShowDialog();
-                    this.Hide();
+                    this.Dispose();
+                    this.Close();
                 }
             }
             else if (code == 0)
@@ -219,18 +221,7 @@ namespace Faculti
 
         private void ResendCodeButton_Click(object sender, EventArgs e)
         {
-            if (_resendTime >= 29  || _resendTime == 0)
-            {
-                Email.SendVerificationCode(emailToSendCode, _verificationCode);
-
-                SuccessfulResentLabel.Visible = true;
-                _resendTime = 0;
-                ResendTimer = new Timer { Interval = 1000 };
-                ResendTimer.Tick += ResendTimer_Tick;
-                ResendTimer.Start();
-
-                Cursor = Cursors.Default;
-            }   
+            SendCodeWorker.RunWorkerAsync();
         }
 
         private void ConfirmationBackButton_Click(object sender, EventArgs e)
@@ -254,10 +245,34 @@ namespace Faculti
                 ResendTimer.Stop();
                 ResendCodeButton.Enabled = true;
                 ResendCodeButton.Text = "RESEND";
+                SuccessfulResentLabel.Visible = false;
+
             }
             else
             {
                 ResendCodeButton.Text = $"{30 - ++_resendTime} S";
+            }
+        }
+
+        private void SendCodeWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            if (_resendTime >= 29 || _resendTime == 0)
+            {
+                Email.SendVerificationCode(emailToSendCode, _verificationCode);
+            }
+        }
+
+        private void SendCodeWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
+        {
+            if (_resendTime >= 29 || _resendTime == 0)
+            {
+                SuccessfulResentLabel.Visible = true;
+                _resendTime = 0;
+                ResendTimer = new Timer { Interval = 1000 };
+                ResendTimer.Tick += ResendTimer_Tick;
+                ResendTimer.Start();
+
+                Cursor = Cursors.Default;
             }
         }
     }

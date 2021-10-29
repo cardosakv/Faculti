@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AirtableApiClient;
+using Faculti.DataClasses;
 using Faculti.Helpers;
-using Faculti.Services.Airtable;
 using Faculti.Services.FacultiDB;
 using Faculti.UI.Forms;
 
@@ -66,6 +65,7 @@ namespace Faculti.UI.Forms
                 ConfirmChangePasswordButton.Text = "✔️ Change Successful";
                 await Task.Delay(1000);
                 FormAnimation.FadeOut(this);
+                this.Dispose();
                 this.Close();
             }
             else

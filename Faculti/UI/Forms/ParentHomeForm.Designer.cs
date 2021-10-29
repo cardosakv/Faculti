@@ -32,14 +32,13 @@ namespace Faculti
         private void InitializeComponent()
         { 
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentHomeForm));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges8 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges9 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges10 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges11 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges12 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentHomeForm));
             this.ParentHomeFormEllipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -47,7 +46,6 @@ namespace Faculti
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ContactsButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.LogOutButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.CalendarButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.ChatButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -56,6 +54,9 @@ namespace Faculti
             this.HomeButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.DateTimeTimer = new System.Windows.Forms.Timer(this.components);
             this.MainPanel = new Bunifu.UI.WinForms.BunifuPanel();
+            this.Loader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.CloseButton = new Bunifu.UI.WinForms.BunifuImageButton();
             this.PageLabel = new System.Windows.Forms.Label();
@@ -66,9 +67,14 @@ namespace Faculti
             this.NotificationButton = new System.Windows.Forms.PictureBox();
             this.TopProfilePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.MinimizeButton = new Bunifu.UI.WinForms.BunifuImageButton();
+            this.FirstTimeCheckWorker = new System.ComponentModel.BackgroundWorker();
+            this.HomeWorker = new System.ComponentModel.BackgroundWorker();
+            this.ParentHomeDrag = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             this.MainPanel.SuspendLayout();
+            this.Loader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).BeginInit();
             this.DateTimePanel.SuspendLayout();
@@ -89,7 +95,6 @@ namespace Faculti
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.ContactsButton);
             this.panel1.Controls.Add(this.LogOutButton);
             this.panel1.Controls.Add(this.CalendarButton);
             this.panel1.Controls.Add(this.ChatButton);
@@ -160,98 +165,6 @@ namespace Faculti
             this.label13.Text = "•";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ContactsButton
-            // 
-            this.ContactsButton.AllowAnimations = false;
-            this.ContactsButton.AllowMouseEffects = true;
-            this.ContactsButton.AllowToggling = true;
-            this.ContactsButton.AnimationSpeed = 200;
-            this.ContactsButton.AutoGenerateColors = false;
-            this.ContactsButton.AutoRoundBorders = false;
-            this.ContactsButton.AutoSizeLeftIcon = true;
-            this.ContactsButton.AutoSizeRightIcon = true;
-            this.ContactsButton.BackColor = System.Drawing.Color.Transparent;
-            this.ContactsButton.BackColor1 = System.Drawing.Color.White;
-            this.ContactsButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ContactsButton.BackgroundImage")));
-            this.ContactsButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ContactsButton.ButtonText = "  📞   Contacts";
-            this.ContactsButton.ButtonTextMarginLeft = 0;
-            this.ContactsButton.ColorContrastOnClick = 45;
-            this.ContactsButton.ColorContrastOnHover = 45;
-            this.ContactsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.ContactsButton.CustomizableEdges = borderEdges1;
-            this.ContactsButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.ContactsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ContactsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ContactsButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ContactsButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.ContactsButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.ContactsButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ContactsButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.ContactsButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.ContactsButton.IconMarginLeft = 11;
-            this.ContactsButton.IconPadding = 10;
-            this.ContactsButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ContactsButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.ContactsButton.IconRightPadding = new System.Windows.Forms.Padding(0);
-            this.ContactsButton.IconSize = 40;
-            this.ContactsButton.IdleBorderColor = System.Drawing.Color.White;
-            this.ContactsButton.IdleBorderRadius = 10;
-            this.ContactsButton.IdleBorderThickness = 1;
-            this.ContactsButton.IdleFillColor = System.Drawing.Color.White;
-            this.ContactsButton.IdleIconLeftImage = null;
-            this.ContactsButton.IdleIconRightImage = null;
-            this.ContactsButton.IndicateFocus = false;
-            this.ContactsButton.Location = new System.Drawing.Point(24, 420);
-            this.ContactsButton.Name = "ContactsButton";
-            this.ContactsButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.ContactsButton.OnDisabledState.BorderRadius = 10;
-            this.ContactsButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ContactsButton.OnDisabledState.BorderThickness = 1;
-            this.ContactsButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.ContactsButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.ContactsButton.OnDisabledState.IconLeftImage = null;
-            this.ContactsButton.OnDisabledState.IconRightImage = null;
-            this.ContactsButton.onHoverState.BorderColor = System.Drawing.Color.White;
-            this.ContactsButton.onHoverState.BorderRadius = 10;
-            this.ContactsButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ContactsButton.onHoverState.BorderThickness = 1;
-            this.ContactsButton.onHoverState.FillColor = System.Drawing.Color.White;
-            this.ContactsButton.onHoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ContactsButton.onHoverState.IconLeftImage = null;
-            this.ContactsButton.onHoverState.IconRightImage = null;
-            this.ContactsButton.OnIdleState.BorderColor = System.Drawing.Color.White;
-            this.ContactsButton.OnIdleState.BorderRadius = 10;
-            this.ContactsButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ContactsButton.OnIdleState.BorderThickness = 1;
-            this.ContactsButton.OnIdleState.FillColor = System.Drawing.Color.White;
-            this.ContactsButton.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.ContactsButton.OnIdleState.IconLeftImage = null;
-            this.ContactsButton.OnIdleState.IconRightImage = null;
-            this.ContactsButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ContactsButton.OnPressedState.BorderRadius = 10;
-            this.ContactsButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ContactsButton.OnPressedState.BorderThickness = 1;
-            this.ContactsButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ContactsButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.ContactsButton.OnPressedState.IconLeftImage = null;
-            this.ContactsButton.OnPressedState.IconRightImage = null;
-            this.ContactsButton.Size = new System.Drawing.Size(126, 39);
-            this.ContactsButton.TabIndex = 12;
-            this.ContactsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ContactsButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ContactsButton.TextMarginLeft = 0;
-            this.ContactsButton.TextPadding = new System.Windows.Forms.Padding(0);
-            this.ContactsButton.UseDefaultRadiusAndThickness = true;
-            this.ContactsButton.Click += new System.EventHandler(this.ContactsButton_Click);
-            this.ContactsButton.MouseLeave += new System.EventHandler(this.ContactsButton_MouseLeave);
-            this.ContactsButton.MouseHover += new System.EventHandler(this.ContactsButton_MouseHover);
-            // 
             // LogOutButton
             // 
             this.LogOutButton.AllowAnimations = false;
@@ -271,11 +184,11 @@ namespace Faculti
             this.LogOutButton.ColorContrastOnClick = 45;
             this.LogOutButton.ColorContrastOnHover = 45;
             this.LogOutButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.LogOutButton.CustomizableEdges = borderEdges2;
+            borderEdges7.BottomLeft = true;
+            borderEdges7.BottomRight = true;
+            borderEdges7.TopLeft = true;
+            borderEdges7.TopRight = true;
+            this.LogOutButton.CustomizableEdges = borderEdges7;
             this.LogOutButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.LogOutButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LogOutButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -361,11 +274,11 @@ namespace Faculti
             this.CalendarButton.ColorContrastOnClick = 45;
             this.CalendarButton.ColorContrastOnHover = 45;
             this.CalendarButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.CalendarButton.CustomizableEdges = borderEdges3;
+            borderEdges8.BottomLeft = true;
+            borderEdges8.BottomRight = true;
+            borderEdges8.TopLeft = true;
+            borderEdges8.TopRight = true;
+            this.CalendarButton.CustomizableEdges = borderEdges8;
             this.CalendarButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.CalendarButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.CalendarButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -453,11 +366,11 @@ namespace Faculti
             this.ChatButton.ColorContrastOnClick = 45;
             this.ChatButton.ColorContrastOnHover = 45;
             this.ChatButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.ChatButton.CustomizableEdges = borderEdges4;
+            borderEdges9.BottomLeft = true;
+            borderEdges9.BottomRight = true;
+            borderEdges9.TopLeft = true;
+            borderEdges9.TopRight = true;
+            this.ChatButton.CustomizableEdges = borderEdges9;
             this.ChatButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.ChatButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ChatButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -545,11 +458,11 @@ namespace Faculti
             this.GradesButton.ColorContrastOnClick = 45;
             this.GradesButton.ColorContrastOnHover = 45;
             this.GradesButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges5.BottomLeft = true;
-            borderEdges5.BottomRight = true;
-            borderEdges5.TopLeft = true;
-            borderEdges5.TopRight = true;
-            this.GradesButton.CustomizableEdges = borderEdges5;
+            borderEdges10.BottomLeft = true;
+            borderEdges10.BottomRight = true;
+            borderEdges10.TopLeft = true;
+            borderEdges10.TopRight = true;
+            this.GradesButton.CustomizableEdges = borderEdges10;
             this.GradesButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.GradesButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.GradesButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -637,11 +550,11 @@ namespace Faculti
             this.NewsButton.ColorContrastOnClick = 45;
             this.NewsButton.ColorContrastOnHover = 45;
             this.NewsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges6.BottomLeft = true;
-            borderEdges6.BottomRight = true;
-            borderEdges6.TopLeft = true;
-            borderEdges6.TopRight = true;
-            this.NewsButton.CustomizableEdges = borderEdges6;
+            borderEdges11.BottomLeft = true;
+            borderEdges11.BottomRight = true;
+            borderEdges11.TopLeft = true;
+            borderEdges11.TopRight = true;
+            this.NewsButton.CustomizableEdges = borderEdges11;
             this.NewsButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.NewsButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.NewsButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -729,11 +642,11 @@ namespace Faculti
             this.HomeButton.ColorContrastOnClick = 0;
             this.HomeButton.ColorContrastOnHover = 0;
             this.HomeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges7.BottomLeft = true;
-            borderEdges7.BottomRight = true;
-            borderEdges7.TopLeft = true;
-            borderEdges7.TopRight = true;
-            this.HomeButton.CustomizableEdges = borderEdges7;
+            borderEdges12.BottomLeft = true;
+            borderEdges12.BottomRight = true;
+            borderEdges12.TopLeft = true;
+            borderEdges12.TopRight = true;
+            this.HomeButton.CustomizableEdges = borderEdges12;
             this.HomeButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.HomeButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.HomeButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -816,12 +729,46 @@ namespace Faculti
             this.MainPanel.BorderColor = System.Drawing.Color.Transparent;
             this.MainPanel.BorderRadius = 3;
             this.MainPanel.BorderThickness = 1;
+            this.MainPanel.Controls.Add(this.Loader);
             this.MainPanel.Controls.Add(this.bunifuShadowPanel1);
             this.MainPanel.Location = new System.Drawing.Point(175, -2);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.ShowBorders = true;
             this.MainPanel.Size = new System.Drawing.Size(862, 696);
             this.MainPanel.TabIndex = 1;
+            // 
+            // Loader
+            // 
+            this.Loader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.Loader.Controls.Add(this.pictureBox1);
+            this.Loader.Controls.Add(this.label39);
+            this.Loader.Location = new System.Drawing.Point(6, 64);
+            this.Loader.Name = "Loader";
+            this.Loader.Size = new System.Drawing.Size(853, 629);
+            this.Loader.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(376, 277);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.label39.Location = new System.Drawing.Point(386, 336);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(80, 15);
+            this.label39.TabIndex = 61;
+            this.label39.Text = "Please wait";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuShadowPanel1
             // 
@@ -895,9 +842,9 @@ namespace Faculti
             this.PageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.PageLabel.Location = new System.Drawing.Point(43, 8);
             this.PageLabel.Name = "PageLabel";
-            this.PageLabel.Size = new System.Drawing.Size(168, 30);
+            this.PageLabel.Size = new System.Drawing.Size(72, 30);
             this.PageLabel.TabIndex = 44;
-            this.PageLabel.Text = "Child Overview";
+            this.PageLabel.Text = "Home";
             // 
             // SettingsButton
             // 
@@ -1026,6 +973,23 @@ namespace Faculti
             this.MinimizeButton.ZoomSpeed = 10;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
+            // FirstTimeCheckWorker
+            // 
+            this.FirstTimeCheckWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FirstTimeCheckWorker_DoWork);
+            this.FirstTimeCheckWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FirstTimeCheckWorker_RunWorkerCompleted);
+            // 
+            // HomeWorker
+            // 
+            this.HomeWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.HomeWorker_DoWork);
+            this.HomeWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.HomeWorker_RunWorkerCompleted);
+            // 
+            // ParentHomeDrag
+            // 
+            this.ParentHomeDrag.Fixed = true;
+            this.ParentHomeDrag.Horizontal = true;
+            this.ParentHomeDrag.TargetControl = this;
+            this.ParentHomeDrag.Vertical = true;
+            // 
             // ParentHomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1043,6 +1007,9 @@ namespace Faculti
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             this.MainPanel.ResumeLayout(false);
+            this.Loader.ResumeLayout(false);
+            this.Loader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuShadowPanel1.ResumeLayout(false);
             this.bunifuShadowPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SettingsButton)).EndInit();
@@ -1068,7 +1035,6 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 NewsButton;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 HomeButton;
         private System.Windows.Forms.Timer DateTimeTimer;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ContactsButton;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
@@ -1083,5 +1049,11 @@ namespace Faculti
         private Bunifu.UI.WinForms.BunifuPictureBox TopProfilePictureBox;
         private Bunifu.UI.WinForms.BunifuImageButton MinimizeButton;
         private Bunifu.UI.WinForms.BunifuImageButton CloseButton;
+        private System.ComponentModel.BackgroundWorker FirstTimeCheckWorker;
+        private System.ComponentModel.BackgroundWorker HomeWorker;
+        private System.Windows.Forms.Panel Loader;
+        private Bunifu.Framework.UI.BunifuDragControl ParentHomeDrag;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label39;
     }
 }

@@ -1,5 +1,4 @@
-﻿using AirtableApiClient;
-using Faculti.Services.FacultiDB;
+﻿using Faculti.Services.FacultiDB;
 using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Security.Cryptography;

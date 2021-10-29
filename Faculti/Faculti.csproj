@@ -44,9 +44,6 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AirtableApiClient, Version=1.1.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Airtable.1.1.5\lib\netstandard2.0\AirtableApiClient.dll</HintPath>
-    </Reference>
     <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.2.3\lib\net40\Bunifu.Licensing.dll</HintPath>
     </Reference>
@@ -185,16 +182,11 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=3.13.2.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>packages\NUnit.3.13.2\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.21.3.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -233,6 +225,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataClasses\Student.cs" />
     <Compile Include="Helpers\UIEventHandler.cs" />
     <Compile Include="Helpers\PhoneNumber.cs" />
     <Compile Include="Helpers\Randomizer.cs" />
@@ -241,8 +234,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Services\Airtable\AirtableClient.cs" />
-    <Compile Include="Services\Airtable\ResponseHandler.cs" />
     <Compile Include="Services\FacultiDB\DatabaseClient.cs" />
     <Compile Include="UI\Cards\Announcement.cs">
       <SubType>UserControl</SubType>
@@ -268,17 +259,47 @@
     <Compile Include="UI\Cards\EventCard.Designer.cs">
       <DependentUpon>EventCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cards\GetStartedTeacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\GetStartedTeacher.Designer.cs">
+      <DependentUpon>GetStartedTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\GetStartedParent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\GetStartedParent.Designer.cs">
+      <DependentUpon>GetStartedParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\SecurityCheckPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\SecurityCheckPanel.Designer.cs">
+      <DependentUpon>SecurityCheckPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\TheirImageMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\TheirImageMessage.Designer.cs">
+      <DependentUpon>TheirImageMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\MyImageMessage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\MyImageMessage.Designer.cs">
+      <DependentUpon>MyImageMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\GradesTeacherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\GradesTeacherPanel.Designer.cs">
+      <DependentUpon>GradesTeacherPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cards\HolidayEventCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Cards\HolidayEventCard.Designer.cs">
       <DependentUpon>HolidayEventCard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Cards\Loader.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Cards\Loader.Designer.cs">
-      <DependentUpon>Loader.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Cards\MyMessage.cs">
       <SubType>UserControl</SubType>
@@ -316,17 +337,17 @@
     <Compile Include="UI\Cards\GradeRecord.Designer.cs">
       <DependentUpon>GradeRecord.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Cards\GradesPanel.cs">
+    <Compile Include="UI\Cards\GradesParentPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Cards\GradesPanel.Designer.cs">
-      <DependentUpon>GradesPanel.cs</DependentUpon>
+    <Compile Include="UI\Cards\GradesParentPanel.Designer.cs">
+      <DependentUpon>GradesParentPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Cards\HomePanel.cs">
+    <Compile Include="UI\Cards\ParentHomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Cards\HomePanel.Designer.cs">
-      <DependentUpon>HomePanel.cs</DependentUpon>
+    <Compile Include="UI\Cards\ParentHomePanel.Designer.cs">
+      <DependentUpon>ParentHomePanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Cards\PostCard.cs">
       <SubType>UserControl</SubType>
@@ -334,17 +355,29 @@
     <Compile Include="UI\Cards\PostCard.Designer.cs">
       <DependentUpon>PostCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cards\Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\Schedule.Designer.cs">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cards\TeacherHomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UI\Cards\TeacherHomePanel.Designer.cs">
       <DependentUpon>TeacherHomePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Cards\TeacherMessage.cs">
+    <Compile Include="UI\Cards\TheirMessage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Cards\TeacherMessage.Designer.cs">
-      <DependentUpon>TeacherMessage.cs</DependentUpon>
+    <Compile Include="UI\Cards\TheirMessage.Designer.cs">
+      <DependentUpon>TheirMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\AddEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\AddEventForm.Designer.cs">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\ChangePasswordForm.cs">
       <SubType>Form</SubType>
@@ -352,18 +385,65 @@
     <Compile Include="UI\Forms\ChangePasswordForm.Designer.cs">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\ChangeStudentConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ChangeStudentConfirmForm.Designer.cs">
+      <DependentUpon>ChangeStudentConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\ConfirmExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ConfirmExitForm.Designer.cs">
+      <DependentUpon>ConfirmExitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\DialogBGForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\DialogBGForm.Designer.cs">
+      <DependentUpon>DialogBGForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\ErrorGradeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ErrorGradeForm.Designer.cs">
+      <DependentUpon>ErrorGradeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\ForgotPasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Forms\ForgotPasswordForm.Designer.cs">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataClasses\SessionUser.cs" />
+    <Compile Include="UI\Forms\ConfirmLogoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ConfirmLogoutForm.Designer.cs">
+      <DependentUpon>ConfirmLogoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\ScheduleConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ScheduleConfirmForm.Designer.cs">
+      <DependentUpon>ScheduleConfirmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\SubmitGradeConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\SubmitGradeConfirmForm.Designer.cs">
+      <DependentUpon>SubmitGradeConfirmForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\TeacherHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Forms\TeacherHomeForm.Designer.cs">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Forms\StudentConfirmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\StudentConfirmForm.Designer.cs">
+      <DependentUpon>StudentConfirmForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\ParentHomeForm.cs">
       <SubType>Form</SubType>
@@ -425,11 +505,26 @@
     <EmbeddedResource Include="UI\Cards\EventCard.resx">
       <DependentUpon>EventCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\GetStartedTeacher.resx">
+      <DependentUpon>GetStartedTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\GetStartedParent.resx">
+      <DependentUpon>GetStartedParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\SecurityCheckPanel.resx">
+      <DependentUpon>SecurityCheckPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\TheirImageMessage.resx">
+      <DependentUpon>TheirImageMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\MyImageMessage.resx">
+      <DependentUpon>MyImageMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\GradesTeacherPanel.resx">
+      <DependentUpon>GradesTeacherPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\HolidayEventCard.resx">
       <DependentUpon>HolidayEventCard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cards\Loader.resx">
-      <DependentUpon>Loader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\MyMessage.resx">
       <DependentUpon>MyMessage.cs</DependentUpon>
@@ -446,29 +541,59 @@
     <EmbeddedResource Include="UI\Cards\GradeRecord.resx">
       <DependentUpon>GradeRecord.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cards\GradesPanel.resx">
-      <DependentUpon>GradesPanel.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Cards\GradesParentPanel.resx">
+      <DependentUpon>GradesParentPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cards\HomePanel.resx">
-      <DependentUpon>HomePanel.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Cards\ParentHomePanel.resx">
+      <DependentUpon>ParentHomePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\PostCard.resx">
       <DependentUpon>PostCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\Schedule.resx">
+      <DependentUpon>Schedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\TeacherHomePanel.resx">
       <DependentUpon>TeacherHomePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Cards\TeacherMessage.resx">
-      <DependentUpon>TeacherMessage.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Cards\TheirMessage.resx">
+      <DependentUpon>TheirMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\AddEventForm.resx">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ChangeStudentConfirmForm.resx">
+      <DependentUpon>ChangeStudentConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ConfirmExitForm.resx">
+      <DependentUpon>ConfirmExitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\DialogBGForm.resx">
+      <DependentUpon>DialogBGForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ErrorGradeForm.resx">
+      <DependentUpon>ErrorGradeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ForgotPasswordForm.resx">
       <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ConfirmLogoutForm.resx">
+      <DependentUpon>ConfirmLogoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ScheduleConfirmForm.resx">
+      <DependentUpon>ScheduleConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\SubmitGradeConfirmForm.resx">
+      <DependentUpon>SubmitGradeConfirmForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\TeacherHomeForm.resx">
       <DependentUpon>TeacherHomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\StudentConfirmForm.resx">
+      <DependentUpon>StudentConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ParentHomeForm.resx">
       <DependentUpon>ParentHomeForm.cs</DependentUpon>
@@ -544,7 +669,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="DataRepository\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lockup-white.png" />
@@ -638,6 +762,11 @@
     <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
     <Content Include="bin\Debug\testcentric.engine.metadata.dll" />
     <Content Include="faculti-icon.ico" />
+    <None Include="Resources\log out-1.1s-200px %281%29.png" />
+    <None Include="Resources\close-1.1s-200px %284%29.png" />
+    <None Include="Resources\default_profile.jpg" />
+    <None Include="Resources\child.png" />
+    <None Include="Resources\key.png" />
     <None Include="Resources\lowest.png" />
     <None Include="Resources\least.png" />
     <None Include="Resources\highest.png" />

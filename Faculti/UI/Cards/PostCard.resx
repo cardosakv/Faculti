@@ -118,6 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="IsTeacherLabel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAC8AAAASCAYAAADLw4ffAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD6SURBVEhL7ZY/CsJQDIff2NGtfxYdHT2Js0dw8SyCZ/AK
+        jjZv8wjODiIoIhVUUMzz1xIRaWZNxcA3Na98TcNL3E9FRjxIifPE8y71IXyb0gMsEuKhKNajTaFVJXku
+        tJd8G3idMs/LmEJHlF9RimuHrAHPFQodibZzaJNR6vmoJVsjye8XfMBE1JtT9Sfo/7WoQ574rCVZRtTR
+        NspD64j6X/7jiHrD5XHb3LQEy4g6VgJMLi3BLMSFqFeVH+Pyb0z1Y+KZqFd7TYQJu9ESrYFCH2r7TUah
+        h9+xxcC6aocsAPF9Nue+KL+HbJZTaxO3ulCwpqcUuqLa9HDuATjcxE82QlhRAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="CommentPostTextBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZEAAAAcCAYAAACgeILlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -132,4 +142,16 @@
         3MKQPq+7j7cXzkCMMcaYf5um+QUW4rcS8DhnJAAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="PostTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>187, 17</value>
+  </metadata>
+  <metadata name="GetCommentsWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="PostInfoWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>293, 17</value>
+  </metadata>
+  <metadata name="PostCommentWorker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>429, 17</value>
+  </metadata>
 </root>

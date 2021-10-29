@@ -1,5 +1,4 @@
-﻿using AirtableApiClient;
-using Faculti.Services.FacultiDB;
+﻿using Faculti.Services.FacultiDB;
 using System;
 using System.Data;
 using System.Net.Mail;

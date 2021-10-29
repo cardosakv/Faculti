@@ -8,8 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Faculti.UI;
-using Faculti.Services.Airtable;
 using Faculti.Helpers;
+using Faculti.UI.Forms;
 
 namespace Faculti
 {
@@ -42,6 +42,7 @@ namespace Faculti
                         verificationType = "forgot",
                         emailToSendCode = email
                     };
+
                     verificationForm.ShowDialog();
                     Cursor = Cursors.Default;
                     this.Hide();

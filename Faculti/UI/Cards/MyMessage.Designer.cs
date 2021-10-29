@@ -30,68 +30,70 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyMessage));
-            this.label1 = new System.Windows.Forms.Label();
-            this.CommentContainer = new Bunifu.UI.WinForms.BunifuPanel();
+            this.TimeLabel = new System.Windows.Forms.Label();
+            this.MessageContainer = new Bunifu.UI.WinForms.BunifuPanel();
             this.MessageLabel = new System.Windows.Forms.Label();
-            this.CommentContainer.SuspendLayout();
+            this.MessageContainer.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // TimeLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label1.Location = new System.Drawing.Point(47, 88);
-            this.label1.MaximumSize = new System.Drawing.Size(350, 500);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "12:00 PM ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TimeLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.TimeLabel.BackColor = System.Drawing.Color.White;
+            this.TimeLabel.Font = new System.Drawing.Font("Gotham", 6.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.TimeLabel.Location = new System.Drawing.Point(453, 88);
+            this.TimeLabel.MaximumSize = new System.Drawing.Size(350, 500);
+            this.TimeLabel.Name = "TimeLabel";
+            this.TimeLabel.Size = new System.Drawing.Size(83, 25);
+            this.TimeLabel.TabIndex = 9;
+            this.TimeLabel.Text = "12:00 PM ";
+            this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // CommentContainer
+            // MessageContainer
             // 
-            this.CommentContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.CommentContainer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CommentContainer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CommentContainer.BackgroundImage")));
-            this.CommentContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CommentContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
-            this.CommentContainer.BorderRadius = 15;
-            this.CommentContainer.BorderThickness = 0;
-            this.CommentContainer.Controls.Add(this.MessageLabel);
-            this.CommentContainer.Location = new System.Drawing.Point(163, 10);
-            this.CommentContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.CommentContainer.MaximumSize = new System.Drawing.Size(370, 500);
-            this.CommentContainer.Name = "CommentContainer";
-            this.CommentContainer.ShowBorders = true;
-            this.CommentContainer.Size = new System.Drawing.Size(370, 97);
-            this.CommentContainer.TabIndex = 8;
+            this.MessageContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.MessageContainer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.MessageContainer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MessageContainer.BackgroundImage")));
+            this.MessageContainer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MessageContainer.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.MessageContainer.BorderRadius = 15;
+            this.MessageContainer.BorderThickness = 0;
+            this.MessageContainer.Controls.Add(this.MessageLabel);
+            this.MessageContainer.Location = new System.Drawing.Point(158, 1);
+            this.MessageContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.MessageContainer.MaximumSize = new System.Drawing.Size(370, 500);
+            this.MessageContainer.Name = "MessageContainer";
+            this.MessageContainer.ShowBorders = true;
+            this.MessageContainer.Size = new System.Drawing.Size(370, 91);
+            this.MessageContainer.TabIndex = 8;
+            this.MessageContainer.Click += new System.EventHandler(this.MessageContainer_Click);
             // 
             // MessageLabel
             // 
             this.MessageLabel.AutoSize = true;
-            this.MessageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.MessageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.MessageLabel.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MessageLabel.ForeColor = System.Drawing.Color.White;
             this.MessageLabel.Location = new System.Drawing.Point(11, 11);
-            this.MessageLabel.MaximumSize = new System.Drawing.Size(350, 500);
-            this.MessageLabel.MinimumSize = new System.Drawing.Size(350, 5);
+            this.MessageLabel.MaximumSize = new System.Drawing.Size(350, 450);
             this.MessageLabel.Name = "MessageLabel";
-            this.MessageLabel.Size = new System.Drawing.Size(350, 75);
+            this.MessageLabel.Size = new System.Drawing.Size(85, 15);
             this.MessageLabel.TabIndex = 2;
-            this.MessageLabel.Text = resources.GetString("MessageLabel.Text");
+            this.MessageLabel.Text = "sample chat";
             // 
             // MyMessage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CommentContainer);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.MessageContainer);
+            this.Controls.Add(this.TimeLabel);
+            this.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.Name = "MyMessage";
-            this.Size = new System.Drawing.Size(535, 107);
-            this.CommentContainer.ResumeLayout(false);
-            this.CommentContainer.PerformLayout();
+            this.Size = new System.Drawing.Size(535, 105);
+            this.MessageContainer.ResumeLayout(false);
+            this.MessageContainer.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -99,7 +101,7 @@ namespace Faculti.UI.Cards
         #endregion
 
         private System.Windows.Forms.Label MessageLabel;
-        private Bunifu.UI.WinForms.BunifuPanel CommentContainer;
-        private System.Windows.Forms.Label label1;
+        private Bunifu.UI.WinForms.BunifuPanel MessageContainer;
+        private System.Windows.Forms.Label TimeLabel;
     }
 }

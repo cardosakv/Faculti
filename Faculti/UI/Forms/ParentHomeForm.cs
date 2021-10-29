@@ -11,108 +11,160 @@ using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
 using Faculti.UI.Cards;
 using Faculti.UI;
+using Faculti.DataClasses;
+using Faculti.UI.Forms;
 
 namespace Faculti
 {
+    public delegate void NotifyParentHomeForm();
+
     public partial class ParentHomeForm : Form
     {
-        HomePanel homePanel = new HomePanel();
-        FeedPanel feedPanel = new FeedPanel();
-        GradesPanel gradesPanel = new GradesPanel();
-        ChatPanel chatPanel = new ChatPanel();
-        CalendarPanel calendarPanel = new CalendarPanel();
-        ContactsPanel contactsPanel = new ContactsPanel();
-        Loader loader = new Loader();
+        private readonly Parent _parentUser;
+        private GetStartedParent _getStarted;
+        private ParentHomePanel _homePage;
+        private FeedPanel _feedPage;
+        private GradesParentPanel _gradesPage;
+        private ChatPanel _chatPage;
+        private CalendarPanel _calendarPage;
+        private SecurityCheckPanel _securityCheckPanel;
+        private ContactsPanel _contactsPage;
+        private Point pageLoc = new Point(3, 55);
 
-        public ParentHomeForm(User parentUser)
+        public ParentHomeForm(Parent parentUser)
         {
             InitializeComponent();
-            homePanel.Location = new Point(3, 55);
-            feedPanel.Location = new Point(3, 55);
-            gradesPanel.Location = new Point(3, 60);
-            chatPanel.Location = new Point(3, 60);
-            calendarPanel.Location = new Point(3, 60);
-            contactsPanel.Location = new Point(3, 60);
-            loader.Location = new Point(3, 60);
-            MainPanel.Controls.Add(homePanel);
-            MainPanel.Controls.Add(feedPanel);
-            MainPanel.Controls.Add(gradesPanel);
-            MainPanel.Controls.Add(chatPanel);
-            MainPanel.Controls.Add(calendarPanel);
-            MainPanel.Controls.Add(contactsPanel);
-            MainPanel.Controls.Add(loader);
-            DisplayTimeAndDate();
+            _parentUser = parentUser;
+            FirstTimeCheckWorker.RunWorkerAsync();
         }
 
-        private void ParentHomeForm_Load(object sender, EventArgs e)
+        private void FirstTimeCheckWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            FormAnimation.FadeIn(this);
+            e.Result = _parentUser.IsFirstTime();
         }
 
+        private void FirstTimeCheckWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if ((bool)e.Result == true)
+            {
+                Loader.Visible = false;
+                InitializeGetStarted();
+            }
+            else
+            {
+                HomeWorker.RunWorkerAsync();
+            }
+        }
+
+        private void InitializeGetStarted()
+        {
+            _getStarted = new GetStartedParent(_parentUser);
+            _getStarted.GetStartedFinished += new NotifyParentHomeForm(InitializeAfterGetStarted);
+            _getStarted.Location = pageLoc;
+            MainPanel.Controls.Add(_getStarted);
+        }
+
+        private void InitializeAfterGetStarted()
+        {
+            Loader.Visible = true;
+            HomeWorker.RunWorkerAsync();
+        }
+
+        private void HomeWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            _parentUser.GetGeneralInfo();
+            Student student = new Student();
+            student.GetInfo(_parentUser.Id);
+            _parentUser.AssignedStudent = student;
+            _parentUser.SetStatus("Y");
+        }
+
+        private void HomeWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            InitializeTabs();
+            AddTabs();
+            Loader.Visible = false;
+        }
+
+        private void InitializeTabs()
+        {
+            _homePage = new ParentHomePanel(_parentUser);
+            _feedPage = new FeedPanel(_parentUser);
+            _gradesPage = new GradesParentPanel(_parentUser);
+            _calendarPage = new CalendarPanel(_parentUser);
+            _chatPage = new ChatPanel(_parentUser);
+            _securityCheckPanel = new SecurityCheckPanel(_parentUser);
+            /*
+             _contactsPage = new ContactsPanel(teacherUser);*/
+
+            _homePage.Location = pageLoc;
+            _feedPage.Location = pageLoc;
+            _calendarPage.Location = pageLoc;
+            _gradesPage.Location = pageLoc;
+            _chatPage.Location = pageLoc;
+            _securityCheckPanel.Location = pageLoc;
+        }
+
+        private void AddTabs()
+        {
+            MainPanel.Controls.Add(_homePage);
+            MainPanel.Controls.Add(_feedPage);
+            MainPanel.Controls.Add(_gradesPage);
+            MainPanel.Controls.Add(_calendarPage);
+            MainPanel.Controls.Add(_chatPage);
+            MainPanel.Controls.Add(_securityCheckPanel);
+        }
+
+
+
+
+        // ====================================================================================== //
+        //                                                                                        //
+        //                                        UI METHODS                                      //
+        //                                                                                        //
+        // ====================================================================================== //
         private void HomeButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Overview";
-            homePanel.Visible = false;
-            feedPanel.Visible = false;
-            gradesPanel.Visible = false;
-            chatPanel.Visible = false;
-            calendarPanel.Visible = false;
-            contactsPanel.Visible = false;
+            _homePage.BringToFront();
         }
 
         private void NewsButton_Click(object sender, EventArgs e)
         {
+            //FeedNotif.Visible = false;
             PageLabel.Text = "Feed";
-            homePanel.Visible = false;
-            feedPanel.Visible = true;
-            gradesPanel.Visible = false;
-            chatPanel.Visible = false;
-            calendarPanel.Visible = false;
-            contactsPanel.Visible = false;
+            _feedPage.BringToFront();
         }
 
         private void GradesButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Grades";
-            homePanel.Visible = false;
-            feedPanel.Visible = false;
-            gradesPanel.Visible = true;
-            chatPanel.Visible = false;
-            calendarPanel.Visible = false;
-            contactsPanel.Visible = false;
+            _gradesPage.BringToFront();
+            _securityCheckPanel.BringToFront();
+            _securityCheckPanel.Visible = true;
         }
 
         private void ChatButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Chat";
-            homePanel.Visible = false;
-            feedPanel.Visible = false;
-            gradesPanel.Visible = false;
-            chatPanel.Visible = true;
-            calendarPanel.Visible = false;
-            contactsPanel.Visible = false;
+            _chatPage.BringToFront();
         }
 
         private void CalendarButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Calendar";
-            homePanel.Visible = false;
-            feedPanel.Visible = false;
-            gradesPanel.Visible = false;
-            chatPanel.Visible = false;
-            calendarPanel.Visible = true;
-            contactsPanel.Visible = false;
+            _calendarPage.BringToFront();
         }
 
         private void ContactsButton_Click(object sender, EventArgs e)
         {
             PageLabel.Text = "Contacts";
-            homePanel.Visible = false;
-            feedPanel.Visible = false;
-            gradesPanel.Visible = false;
-            chatPanel.Visible = false;
-            calendarPanel.Visible = false;
-            contactsPanel.Visible = true;
+            //_contactsPage.BringToFront();
+        }
+
+        private void ParentHomeForm_Load(object sender, EventArgs e)
+        {
+            FormAnimation.FadeIn(this);
         }
 
         private void MinimizeButton_Click(object sender, EventArgs e)
@@ -134,6 +186,7 @@ namespace Faculti
         {
             NotificationButton.Image = Faculti.Properties.Resources.notif_newnotif;
         }
+
         private void DateTimePanel_MouseHover(object sender, EventArgs e)
         {
             DateTime_Hover();
@@ -146,10 +199,23 @@ namespace Faculti
 
         private void LogOutButton_Click(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
-            loginForm.Show();
-            FormAnimation.FadeOut(this);
-            this.Hide();
+            DialogBGForm bgForm = new DialogBGForm();
+            using (ConfirmLogoutForm confirm = new ConfirmLogoutForm())
+            {
+                bgForm.Show();
+                confirm.Owner = bgForm;
+
+                if (confirm.ShowDialog() == DialogResult.OK)
+                {
+                    _parentUser.SetStatus("N");
+                    LoginForm loginForm = new LoginForm();
+                    loginForm.Show();
+                    FormAnimation.FadeOut(this);
+                    this.Close();
+                }
+
+                bgForm.Dispose();
+            }
         }
 
         private void SettingsButton_MouseHover(object sender, EventArgs e)
@@ -259,15 +325,15 @@ namespace Faculti
             CalendarButton.Text = "  📆   Calendar";
         }
 
-        private void ContactsButton_MouseHover(object sender, EventArgs e)
-        {
-            ContactsButton.Text = "  ☎️   Contacts";
-        }
+        //private void ContactsButton_MouseHover(object sender, EventArgs e)
+        //{
+        //    ContactsButton.Text = "  ☎️   Contacts";
+        //}
 
-        private void ContactsButton_MouseLeave(object sender, EventArgs e)
-        {
-            ContactsButton.Text = "  📞   Contacts";
-        }
+        //private void ContactsButton_MouseLeave(object sender, EventArgs e)
+        //{
+        //    ContactsButton.Text = "  📞   Contacts";
+        //}
 
         private void TopProfilePictureBox_MouseHover(object sender, EventArgs e)
         {
@@ -286,7 +352,21 @@ namespace Faculti
 
         private void CloseButton_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogBGForm bgForm = new DialogBGForm();
+            using (ConfirmExitForm confirm = new ConfirmExitForm())
+            {
+                bgForm.Show();
+                confirm.Owner = bgForm;
+
+                if (confirm.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Exit();
+                }
+
+                bgForm.Dispose();
+            }
         }
+
+
     }
 }

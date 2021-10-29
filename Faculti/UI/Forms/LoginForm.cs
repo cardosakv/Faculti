@@ -6,8 +6,8 @@ using System.Linq;
 using System.Windows.Forms;
 using Faculti.UI;
 using Faculti.Helpers;
-using Faculti.Services.Airtable;
 using Faculti.Services.FacultiDB;
+using Faculti.DataClasses;
 
 namespace Faculti
 {
@@ -85,7 +85,8 @@ namespace Faculti
         {
             SignupForm signupForm = new SignupForm();
             signupForm.Show();
-            this.Hide();
+            this.Dispose();
+            this.Close();
         }
 
         private void ForgotPasswordLinkLabel_Click(object sender, EventArgs e)
@@ -228,17 +229,19 @@ namespace Faculti
 
             if (_userType == "teachers")
             {
-                TeacherHomeForm homeForm = new TeacherHomeForm(_user);
+                TeacherHomeForm homeForm = new TeacherHomeForm(_user.As<Teacher>());
                 homeForm.Show();
                 Cursor = Cursors.Default;
-                this.Hide();
+                this.Dispose();
+                this.Close();
             }
             else
             {
-                ParentHomeForm homeForm = new ParentHomeForm(_user);
+                ParentHomeForm homeForm = new ParentHomeForm(_user.As<Parent>());
                 homeForm.Show();
                 Cursor = Cursors.Default;
-                this.Hide();
+                this.Dispose();
+                this.Close();
             }
         }
 

@@ -30,6 +30,7 @@ namespace Faculti.UI.Cards
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalendarPanel));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.EventsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.CalendarLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -127,9 +128,14 @@ namespace Faculti.UI.Cards
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
+            this.WeekAndDayLabel = new System.Windows.Forms.Label();
+            this.HolidayWorker = new System.ComponentModel.BackgroundWorker();
+            this.LocalWorker = new System.ComponentModel.BackgroundWorker();
+            this.ExamWorker = new System.ComponentModel.BackgroundWorker();
+            this.AssWorker = new System.ComponentModel.BackgroundWorker();
+            this.AddEventButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.label17 = new System.Windows.Forms.Label();
-            this.WeekAndDayLabel = new System.Windows.Forms.Label();
             this.bunifuShadowPanel1.SuspendLayout();
             this.CalendarLayoutPanel.SuspendLayout();
             this.bunifuPanel42.SuspendLayout();
@@ -181,9 +187,9 @@ namespace Faculti.UI.Cards
             // 
             this.EventsFlowLayoutPanel.AutoScroll = true;
             this.EventsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.EventsFlowLayoutPanel.Location = new System.Drawing.Point(597, 79);
+            this.EventsFlowLayoutPanel.Location = new System.Drawing.Point(597, 85);
             this.EventsFlowLayoutPanel.Name = "EventsFlowLayoutPanel";
-            this.EventsFlowLayoutPanel.Size = new System.Drawing.Size(466, 529);
+            this.EventsFlowLayoutPanel.Size = new System.Drawing.Size(466, 484);
             this.EventsFlowLayoutPanel.TabIndex = 46;
             this.EventsFlowLayoutPanel.WrapContents = false;
             // 
@@ -206,7 +212,7 @@ namespace Faculti.UI.Cards
             this.bunifuShadowPanel1.Controls.Add(this.label33);
             this.bunifuShadowPanel1.FillStyle = Bunifu.UI.WinForms.BunifuShadowPanel.FillStyles.Solid;
             this.bunifuShadowPanel1.GradientMode = Bunifu.UI.WinForms.BunifuShadowPanel.GradientModes.Vertical;
-            this.bunifuShadowPanel1.Location = new System.Drawing.Point(16, 10);
+            this.bunifuShadowPanel1.Location = new System.Drawing.Point(16, 16);
             this.bunifuShadowPanel1.Name = "bunifuShadowPanel1";
             this.bunifuShadowPanel1.PanelColor = System.Drawing.Color.White;
             this.bunifuShadowPanel1.PanelColor2 = System.Drawing.Color.White;
@@ -224,6 +230,7 @@ namespace Faculti.UI.Cards
             this.CalendarLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CalendarLayoutPanel.BackColor = System.Drawing.Color.White;
             this.CalendarLayoutPanel.ColumnCount = 7;
             this.CalendarLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.CalendarLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
@@ -309,7 +316,7 @@ namespace Faculti.UI.Cards
             this.label49.BackColor = System.Drawing.Color.Transparent;
             this.label49.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label49.Location = new System.Drawing.Point(3, 10);
+            this.label49.Location = new System.Drawing.Point(3, 4);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(62, 50);
             this.label49.TabIndex = 2;
@@ -337,7 +344,7 @@ namespace Faculti.UI.Cards
             this.label48.BackColor = System.Drawing.Color.Transparent;
             this.label48.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label48.Location = new System.Drawing.Point(3, 10);
+            this.label48.Location = new System.Drawing.Point(3, 4);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(62, 50);
             this.label48.TabIndex = 2;
@@ -365,7 +372,7 @@ namespace Faculti.UI.Cards
             this.label47.BackColor = System.Drawing.Color.Transparent;
             this.label47.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label47.Location = new System.Drawing.Point(3, 10);
+            this.label47.Location = new System.Drawing.Point(3, 4);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(62, 50);
             this.label47.TabIndex = 2;
@@ -393,12 +400,13 @@ namespace Faculti.UI.Cards
             this.label46.BackColor = System.Drawing.Color.Transparent;
             this.label46.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label46.Location = new System.Drawing.Point(3, 10);
+            this.label46.Location = new System.Drawing.Point(3, 4);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(62, 50);
             this.label46.TabIndex = 2;
             this.label46.Text = "22";
             this.label46.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label46.Click += new System.EventHandler(this.label46_Click);
             // 
             // bunifuPanel38
             // 
@@ -421,12 +429,13 @@ namespace Faculti.UI.Cards
             this.label45.BackColor = System.Drawing.Color.Transparent;
             this.label45.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label45.Location = new System.Drawing.Point(3, 10);
+            this.label45.Location = new System.Drawing.Point(3, 4);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(62, 50);
             this.label45.TabIndex = 2;
             this.label45.Text = "22";
             this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label45.Click += new System.EventHandler(this.label45_Click);
             // 
             // bunifuPanel37
             // 
@@ -449,12 +458,13 @@ namespace Faculti.UI.Cards
             this.label44.BackColor = System.Drawing.Color.Transparent;
             this.label44.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label44.Location = new System.Drawing.Point(3, 10);
+            this.label44.Location = new System.Drawing.Point(3, 4);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(62, 50);
             this.label44.TabIndex = 2;
             this.label44.Text = "22";
             this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label44.Click += new System.EventHandler(this.label44_Click);
             // 
             // bunifuPanel36
             // 
@@ -477,12 +487,13 @@ namespace Faculti.UI.Cards
             this.label43.BackColor = System.Drawing.Color.Transparent;
             this.label43.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label43.Location = new System.Drawing.Point(3, 10);
+            this.label43.Location = new System.Drawing.Point(3, 4);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(62, 50);
             this.label43.TabIndex = 2;
             this.label43.Text = "22";
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label43.Click += new System.EventHandler(this.label43_Click);
             // 
             // bunifuPanel35
             // 
@@ -505,12 +516,13 @@ namespace Faculti.UI.Cards
             this.label42.BackColor = System.Drawing.Color.Transparent;
             this.label42.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label42.Location = new System.Drawing.Point(3, 10);
+            this.label42.Location = new System.Drawing.Point(3, 4);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(62, 50);
             this.label42.TabIndex = 2;
             this.label42.Text = "22";
             this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label42.Click += new System.EventHandler(this.label42_Click);
             // 
             // bunifuPanel34
             // 
@@ -533,12 +545,13 @@ namespace Faculti.UI.Cards
             this.label41.BackColor = System.Drawing.Color.Transparent;
             this.label41.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label41.Location = new System.Drawing.Point(3, 10);
+            this.label41.Location = new System.Drawing.Point(3, 4);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(62, 50);
             this.label41.TabIndex = 2;
             this.label41.Text = "22";
             this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // bunifuPanel33
             // 
@@ -561,12 +574,13 @@ namespace Faculti.UI.Cards
             this.label40.BackColor = System.Drawing.Color.Transparent;
             this.label40.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label40.Location = new System.Drawing.Point(3, 10);
+            this.label40.Location = new System.Drawing.Point(3, 4);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(62, 50);
             this.label40.TabIndex = 2;
             this.label40.Text = "22";
             this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label40.Click += new System.EventHandler(this.label40_Click);
             // 
             // bunifuPanel32
             // 
@@ -589,12 +603,13 @@ namespace Faculti.UI.Cards
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label32.Location = new System.Drawing.Point(3, 10);
+            this.label32.Location = new System.Drawing.Point(3, 4);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(62, 50);
             this.label32.TabIndex = 2;
             this.label32.Text = "22";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // bunifuPanel31
             // 
@@ -617,12 +632,13 @@ namespace Faculti.UI.Cards
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label31.Location = new System.Drawing.Point(3, 10);
+            this.label31.Location = new System.Drawing.Point(3, 4);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(62, 50);
             this.label31.TabIndex = 2;
             this.label31.Text = "22";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label31.Click += new System.EventHandler(this.label31_Click);
             // 
             // bunifuPanel30
             // 
@@ -645,12 +661,13 @@ namespace Faculti.UI.Cards
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label30.Location = new System.Drawing.Point(3, 10);
+            this.label30.Location = new System.Drawing.Point(3, 4);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(62, 50);
             this.label30.TabIndex = 2;
             this.label30.Text = "22";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label30.Click += new System.EventHandler(this.label30_Click);
             // 
             // bunifuPanel29
             // 
@@ -673,12 +690,13 @@ namespace Faculti.UI.Cards
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label29.Location = new System.Drawing.Point(3, 10);
+            this.label29.Location = new System.Drawing.Point(3, 4);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(62, 50);
             this.label29.TabIndex = 2;
             this.label29.Text = "22";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // bunifuPanel28
             // 
@@ -701,12 +719,13 @@ namespace Faculti.UI.Cards
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label28.Location = new System.Drawing.Point(3, 10);
+            this.label28.Location = new System.Drawing.Point(3, 4);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 50);
             this.label28.TabIndex = 2;
             this.label28.Text = "22";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // bunifuPanel27
             // 
@@ -729,12 +748,13 @@ namespace Faculti.UI.Cards
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label27.Location = new System.Drawing.Point(3, 10);
+            this.label27.Location = new System.Drawing.Point(3, 4);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(62, 50);
             this.label27.TabIndex = 2;
             this.label27.Text = "22";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label27.Click += new System.EventHandler(this.label27_Click);
             // 
             // bunifuPanel26
             // 
@@ -757,12 +777,13 @@ namespace Faculti.UI.Cards
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label26.Location = new System.Drawing.Point(3, 10);
+            this.label26.Location = new System.Drawing.Point(3, 4);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(62, 50);
             this.label26.TabIndex = 2;
             this.label26.Text = "22";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
             // bunifuPanel25
             // 
@@ -785,12 +806,13 @@ namespace Faculti.UI.Cards
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label25.Location = new System.Drawing.Point(3, 10);
+            this.label25.Location = new System.Drawing.Point(3, 4);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(62, 50);
             this.label25.TabIndex = 2;
             this.label25.Text = "22";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label25.Click += new System.EventHandler(this.label25_Click);
             // 
             // bunifuPanel24
             // 
@@ -813,12 +835,13 @@ namespace Faculti.UI.Cards
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label24.Location = new System.Drawing.Point(3, 10);
+            this.label24.Location = new System.Drawing.Point(3, 4);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(62, 50);
             this.label24.TabIndex = 2;
             this.label24.Text = "22";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label24.Click += new System.EventHandler(this.label24_Click);
             // 
             // bunifuPanel23
             // 
@@ -841,12 +864,13 @@ namespace Faculti.UI.Cards
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label23.Location = new System.Drawing.Point(3, 10);
+            this.label23.Location = new System.Drawing.Point(3, 4);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(62, 50);
             this.label23.TabIndex = 2;
             this.label23.Text = "22";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // bunifuPanel22
             // 
@@ -869,12 +893,13 @@ namespace Faculti.UI.Cards
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label22.Location = new System.Drawing.Point(3, 10);
+            this.label22.Location = new System.Drawing.Point(3, 4);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(62, 50);
             this.label22.TabIndex = 2;
             this.label22.Text = "22";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // bunifuPanel21
             // 
@@ -897,7 +922,7 @@ namespace Faculti.UI.Cards
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label21.Location = new System.Drawing.Point(3, 10);
+            this.label21.Location = new System.Drawing.Point(3, 4);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(62, 50);
             this.label21.TabIndex = 2;
@@ -925,7 +950,7 @@ namespace Faculti.UI.Cards
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label20.Location = new System.Drawing.Point(3, 10);
+            this.label20.Location = new System.Drawing.Point(3, 4);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(62, 50);
             this.label20.TabIndex = 2;
@@ -954,7 +979,7 @@ namespace Faculti.UI.Cards
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label19.Location = new System.Drawing.Point(3, 10);
+            this.label19.Location = new System.Drawing.Point(3, 4);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 50);
             this.label19.TabIndex = 2;
@@ -982,7 +1007,7 @@ namespace Faculti.UI.Cards
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label18.Location = new System.Drawing.Point(3, 10);
+            this.label18.Location = new System.Drawing.Point(3, 4);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(62, 50);
             this.label18.TabIndex = 2;
@@ -1010,7 +1035,7 @@ namespace Faculti.UI.Cards
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label16.Location = new System.Drawing.Point(3, 10);
+            this.label16.Location = new System.Drawing.Point(3, 4);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(62, 50);
             this.label16.TabIndex = 2;
@@ -1038,7 +1063,7 @@ namespace Faculti.UI.Cards
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label15.Location = new System.Drawing.Point(3, 10);
+            this.label15.Location = new System.Drawing.Point(3, 4);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(62, 50);
             this.label15.TabIndex = 2;
@@ -1066,7 +1091,7 @@ namespace Faculti.UI.Cards
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label14.Location = new System.Drawing.Point(3, 10);
+            this.label14.Location = new System.Drawing.Point(3, 4);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 50);
             this.label14.TabIndex = 2;
@@ -1094,7 +1119,7 @@ namespace Faculti.UI.Cards
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label13.Location = new System.Drawing.Point(3, 10);
+            this.label13.Location = new System.Drawing.Point(3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 50);
             this.label13.TabIndex = 2;
@@ -1122,7 +1147,7 @@ namespace Faculti.UI.Cards
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label12.Location = new System.Drawing.Point(3, 10);
+            this.label12.Location = new System.Drawing.Point(3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 50);
             this.label12.TabIndex = 2;
@@ -1151,7 +1176,7 @@ namespace Faculti.UI.Cards
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label11.Location = new System.Drawing.Point(3, 10);
+            this.label11.Location = new System.Drawing.Point(3, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 50);
             this.label11.TabIndex = 2;
@@ -1179,7 +1204,7 @@ namespace Faculti.UI.Cards
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label10.Location = new System.Drawing.Point(3, 10);
+            this.label10.Location = new System.Drawing.Point(3, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 50);
             this.label10.TabIndex = 2;
@@ -1207,7 +1232,7 @@ namespace Faculti.UI.Cards
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label9.Location = new System.Drawing.Point(3, 10);
+            this.label9.Location = new System.Drawing.Point(3, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 50);
             this.label9.TabIndex = 2;
@@ -1235,7 +1260,7 @@ namespace Faculti.UI.Cards
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label8.Location = new System.Drawing.Point(3, 10);
+            this.label8.Location = new System.Drawing.Point(3, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 50);
             this.label8.TabIndex = 2;
@@ -1263,7 +1288,7 @@ namespace Faculti.UI.Cards
             this.DayLabel.BackColor = System.Drawing.Color.Transparent;
             this.DayLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.DayLabel.Location = new System.Drawing.Point(3, 10);
+            this.DayLabel.Location = new System.Drawing.Point(3, 4);
             this.DayLabel.Name = "DayLabel";
             this.DayLabel.Size = new System.Drawing.Size(62, 50);
             this.DayLabel.TabIndex = 2;
@@ -1291,7 +1316,7 @@ namespace Faculti.UI.Cards
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label2.Location = new System.Drawing.Point(3, 10);
+            this.label2.Location = new System.Drawing.Point(3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 50);
             this.label2.TabIndex = 2;
@@ -1319,7 +1344,7 @@ namespace Faculti.UI.Cards
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label1.Location = new System.Drawing.Point(3, 10);
+            this.label1.Location = new System.Drawing.Point(3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 50);
             this.label1.TabIndex = 2;
@@ -1347,7 +1372,7 @@ namespace Faculti.UI.Cards
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label7.Location = new System.Drawing.Point(3, 10);
+            this.label7.Location = new System.Drawing.Point(3, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 50);
             this.label7.TabIndex = 2;
@@ -1375,7 +1400,7 @@ namespace Faculti.UI.Cards
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label6.Location = new System.Drawing.Point(3, 10);
+            this.label6.Location = new System.Drawing.Point(3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(62, 50);
             this.label6.TabIndex = 2;
@@ -1403,7 +1428,7 @@ namespace Faculti.UI.Cards
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label5.Location = new System.Drawing.Point(3, 10);
+            this.label5.Location = new System.Drawing.Point(3, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 50);
             this.label5.TabIndex = 2;
@@ -1431,7 +1456,7 @@ namespace Faculti.UI.Cards
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label3.Location = new System.Drawing.Point(3, 10);
+            this.label3.Location = new System.Drawing.Point(3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 50);
             this.label3.TabIndex = 2;
@@ -1459,7 +1484,7 @@ namespace Faculti.UI.Cards
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.label4.Location = new System.Drawing.Point(3, 10);
+            this.label4.Location = new System.Drawing.Point(3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 50);
             this.label4.TabIndex = 2;
@@ -1540,7 +1565,7 @@ namespace Faculti.UI.Cards
             // 
             // MonthYear
             // 
-            this.MonthYear.BackColor = System.Drawing.Color.Transparent;
+            this.MonthYear.BackColor = System.Drawing.Color.White;
             this.MonthYear.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MonthYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.MonthYear.Location = new System.Drawing.Point(212, 23);
@@ -1553,7 +1578,7 @@ namespace Faculti.UI.Cards
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.BackColor = System.Drawing.Color.White;
             this.label38.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label38.Location = new System.Drawing.Point(487, 69);
@@ -1566,7 +1591,7 @@ namespace Faculti.UI.Cards
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.BackColor = System.Drawing.Color.White;
             this.label39.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label39.Location = new System.Drawing.Point(416, 69);
@@ -1579,7 +1604,7 @@ namespace Faculti.UI.Cards
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.BackColor = System.Drawing.Color.White;
             this.label37.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label37.Location = new System.Drawing.Point(44, 69);
@@ -1592,7 +1617,7 @@ namespace Faculti.UI.Cards
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.BackColor = System.Drawing.Color.White;
             this.label36.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label36.Location = new System.Drawing.Point(339, 69);
@@ -1605,7 +1630,7 @@ namespace Faculti.UI.Cards
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.BackColor = System.Drawing.Color.White;
             this.label35.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label35.Location = new System.Drawing.Point(263, 69);
@@ -1618,7 +1643,7 @@ namespace Faculti.UI.Cards
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.BackColor = System.Drawing.Color.White;
             this.label34.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label34.Location = new System.Drawing.Point(193, 69);
@@ -1631,7 +1656,7 @@ namespace Faculti.UI.Cards
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.BackColor = System.Drawing.Color.White;
             this.label33.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
             this.label33.Location = new System.Drawing.Point(114, 69);
@@ -1640,6 +1665,128 @@ namespace Faculti.UI.Cards
             this.label33.TabIndex = 4;
             this.label33.Text = "Mon";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // WeekAndDayLabel
+            // 
+            this.WeekAndDayLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.WeekAndDayLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeekAndDayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
+            this.WeekAndDayLabel.Location = new System.Drawing.Point(606, 59);
+            this.WeekAndDayLabel.Name = "WeekAndDayLabel";
+            this.WeekAndDayLabel.Size = new System.Drawing.Size(218, 23);
+            this.WeekAndDayLabel.TabIndex = 41;
+            this.WeekAndDayLabel.Text = "Thursday 26";
+            this.WeekAndDayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // HolidayWorker
+            // 
+            this.HolidayWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.HolidayWorker_DoWork);
+            this.HolidayWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.HolidayWorker_RunWorkerCompleted);
+            // 
+            // LocalWorker
+            // 
+            this.LocalWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.LocalWorker_DoWork);
+            this.LocalWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.LocalWorker_RunWorkerCompleted);
+            // 
+            // ExamWorker
+            // 
+            this.ExamWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ExamWorker_DoWork);
+            this.ExamWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ExamWorker_RunWorkerCompleted);
+            // 
+            // AssWorker
+            // 
+            this.AssWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.AssWorker_DoWork);
+            this.AssWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.AssWorker_RunWorkerCompleted);
+            // 
+            // AddEventButton
+            // 
+            this.AddEventButton.AllowAnimations = true;
+            this.AddEventButton.AllowMouseEffects = true;
+            this.AddEventButton.AllowToggling = false;
+            this.AddEventButton.AnimationSpeed = 200;
+            this.AddEventButton.AutoGenerateColors = false;
+            this.AddEventButton.AutoRoundBorders = false;
+            this.AddEventButton.AutoSizeLeftIcon = true;
+            this.AddEventButton.AutoSizeRightIcon = true;
+            this.AddEventButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddEventButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AddEventButton.BackgroundImage")));
+            this.AddEventButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.AddEventButton.ButtonText = "Add Event";
+            this.AddEventButton.ButtonTextMarginLeft = 0;
+            this.AddEventButton.ColorContrastOnClick = 45;
+            this.AddEventButton.ColorContrastOnHover = 45;
+            this.AddEventButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.AddEventButton.CustomizableEdges = borderEdges1;
+            this.AddEventButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.AddEventButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AddEventButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.AddEventButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.AddEventButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.AddEventButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddEventButton.ForeColor = System.Drawing.Color.White;
+            this.AddEventButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddEventButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.AddEventButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.AddEventButton.IconMarginLeft = 11;
+            this.AddEventButton.IconPadding = 10;
+            this.AddEventButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddEventButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.AddEventButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.AddEventButton.IconSize = 25;
+            this.AddEventButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.IdleBorderRadius = 15;
+            this.AddEventButton.IdleBorderThickness = 1;
+            this.AddEventButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.IdleIconLeftImage = null;
+            this.AddEventButton.IdleIconRightImage = null;
+            this.AddEventButton.IndicateFocus = false;
+            this.AddEventButton.Location = new System.Drawing.Point(598, 580);
+            this.AddEventButton.Name = "AddEventButton";
+            this.AddEventButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.AddEventButton.OnDisabledState.BorderRadius = 15;
+            this.AddEventButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.AddEventButton.OnDisabledState.BorderThickness = 1;
+            this.AddEventButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.AddEventButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.AddEventButton.OnDisabledState.IconLeftImage = null;
+            this.AddEventButton.OnDisabledState.IconRightImage = null;
+            this.AddEventButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.AddEventButton.onHoverState.BorderRadius = 15;
+            this.AddEventButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.AddEventButton.onHoverState.BorderThickness = 1;
+            this.AddEventButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(237)))), ((int)(((byte)(64)))));
+            this.AddEventButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.AddEventButton.onHoverState.IconLeftImage = null;
+            this.AddEventButton.onHoverState.IconRightImage = null;
+            this.AddEventButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.OnIdleState.BorderRadius = 15;
+            this.AddEventButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.AddEventButton.OnIdleState.BorderThickness = 1;
+            this.AddEventButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.AddEventButton.OnIdleState.IconLeftImage = null;
+            this.AddEventButton.OnIdleState.IconRightImage = null;
+            this.AddEventButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.OnPressedState.BorderRadius = 15;
+            this.AddEventButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.AddEventButton.OnPressedState.BorderThickness = 1;
+            this.AddEventButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.AddEventButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.AddEventButton.OnPressedState.IconLeftImage = null;
+            this.AddEventButton.OnPressedState.IconRightImage = null;
+            this.AddEventButton.Size = new System.Drawing.Size(232, 30);
+            this.AddEventButton.TabIndex = 55;
+            this.AddEventButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AddEventButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddEventButton.TextMarginLeft = 0;
+            this.AddEventButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.AddEventButton.UseDefaultRadiusAndThickness = true;
+            this.AddEventButton.Click += new System.EventHandler(this.AddEventButton_Click);
             // 
             // bunifuPanel2
             // 
@@ -1650,7 +1797,7 @@ namespace Faculti.UI.Cards
             this.bunifuPanel2.BorderRadius = 15;
             this.bunifuPanel2.BorderThickness = 3;
             this.bunifuPanel2.Controls.Add(this.label17);
-            this.bunifuPanel2.Location = new System.Drawing.Point(599, 13);
+            this.bunifuPanel2.Location = new System.Drawing.Point(599, 19);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(232, 39);
@@ -1659,7 +1806,7 @@ namespace Faculti.UI.Cards
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
             this.label17.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label17.Location = new System.Drawing.Point(73, 7);
@@ -1668,23 +1815,12 @@ namespace Faculti.UI.Cards
             this.label17.TabIndex = 3;
             this.label17.Text = "📌 Events";
             // 
-            // WeekAndDayLabel
-            // 
-            this.WeekAndDayLabel.BackColor = System.Drawing.Color.Transparent;
-            this.WeekAndDayLabel.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WeekAndDayLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(177)))), ((int)(((byte)(198)))));
-            this.WeekAndDayLabel.Location = new System.Drawing.Point(606, 53);
-            this.WeekAndDayLabel.Name = "WeekAndDayLabel";
-            this.WeekAndDayLabel.Size = new System.Drawing.Size(218, 23);
-            this.WeekAndDayLabel.TabIndex = 41;
-            this.WeekAndDayLabel.Text = "Thursday 26";
-            this.WeekAndDayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // CalendarPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.Controls.Add(this.AddEventButton);
             this.Controls.Add(this.WeekAndDayLabel);
             this.Controls.Add(this.EventsFlowLayoutPanel);
             this.Controls.Add(this.bunifuPanel2);
@@ -1844,5 +1980,10 @@ namespace Faculti.UI.Cards
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label WeekAndDayLabel;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 AddEventButton;
+        private System.ComponentModel.BackgroundWorker HolidayWorker;
+        private System.ComponentModel.BackgroundWorker LocalWorker;
+        private System.ComponentModel.BackgroundWorker ExamWorker;
+        private System.ComponentModel.BackgroundWorker AssWorker;
     }
 }

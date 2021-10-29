@@ -1231,7 +1231,7 @@ namespace Faculti
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignupForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LoginSignupForm";
+            this.Text = "Faculti - Sign Up";
             this.Load += new System.EventHandler(this.LoginSignupForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

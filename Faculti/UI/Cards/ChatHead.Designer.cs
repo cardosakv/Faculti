@@ -29,12 +29,18 @@ namespace Faculti.UI.Cards
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChatHead));
             this.ChatPanel = new Bunifu.UI.WinForms.BunifuPanel();
-            this.ChatLastActiveLabel = new System.Windows.Forms.Label();
+            this.LastUpdateLabel = new System.Windows.Forms.Label();
+            this.LastMesageLabel = new System.Windows.Forms.Label();
             this.ChatNameLabel = new System.Windows.Forms.Label();
             this.IsActivePictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.ChatPictureBox = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.GetChatInfoWorker = new System.ComponentModel.BackgroundWorker();
+            this.CreateInboxWorker = new System.ComponentModel.BackgroundWorker();
+            this.InboxUpdateWorker = new System.ComponentModel.BackgroundWorker();
+            this.InboxUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.ChatPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IsActivePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPictureBox)).BeginInit();
@@ -42,13 +48,14 @@ namespace Faculti.UI.Cards
             // 
             // ChatPanel
             // 
-            this.ChatPanel.BackgroundColor = System.Drawing.Color.White;
+            this.ChatPanel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ChatPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ChatPanel.BackgroundImage")));
             this.ChatPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ChatPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
             this.ChatPanel.BorderRadius = 60;
             this.ChatPanel.BorderThickness = 1;
-            this.ChatPanel.Controls.Add(this.ChatLastActiveLabel);
+            this.ChatPanel.Controls.Add(this.LastUpdateLabel);
+            this.ChatPanel.Controls.Add(this.LastMesageLabel);
             this.ChatPanel.Controls.Add(this.ChatNameLabel);
             this.ChatPanel.Controls.Add(this.IsActivePictureBox);
             this.ChatPanel.Controls.Add(this.ChatPictureBox);
@@ -57,29 +64,41 @@ namespace Faculti.UI.Cards
             this.ChatPanel.ShowBorders = true;
             this.ChatPanel.Size = new System.Drawing.Size(352, 70);
             this.ChatPanel.TabIndex = 35;
-            this.ChatPanel.Click += new System.EventHandler(this.ChatHead_Click);
             this.ChatPanel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
             this.ChatPanel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
             this.ChatPanel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             // 
-            // ChatLastActiveLabel
+            // LastUpdateLabel
             // 
-            this.ChatLastActiveLabel.AutoSize = true;
-            this.ChatLastActiveLabel.BackColor = System.Drawing.Color.Transparent;
-            this.ChatLastActiveLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChatLastActiveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.ChatLastActiveLabel.Location = new System.Drawing.Point(66, 39);
-            this.ChatLastActiveLabel.Name = "ChatLastActiveLabel";
-            this.ChatLastActiveLabel.Size = new System.Drawing.Size(99, 12);
-            this.ChatLastActiveLabel.TabIndex = 6;
-            this.ChatLastActiveLabel.Text = "Online 1 hour ago";
-            this.ChatLastActiveLabel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
-            this.ChatLastActiveLabel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
-            this.ChatLastActiveLabel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
+            this.LastUpdateLabel.AutoEllipsis = true;
+            this.LastUpdateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LastUpdateLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastUpdateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
+            this.LastUpdateLabel.Location = new System.Drawing.Point(191, 18);
+            this.LastUpdateLabel.Name = "LastUpdateLabel";
+            this.LastUpdateLabel.Size = new System.Drawing.Size(34, 12);
+            this.LastUpdateLabel.TabIndex = 7;
+            this.LastUpdateLabel.Text = "1h";
+            this.LastUpdateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // LastMesageLabel
+            // 
+            this.LastMesageLabel.AutoEllipsis = true;
+            this.LastMesageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LastMesageLabel.Font = new System.Drawing.Font("Gotham", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastMesageLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
+            this.LastMesageLabel.Location = new System.Drawing.Point(66, 39);
+            this.LastMesageLabel.Name = "LastMesageLabel";
+            this.LastMesageLabel.Size = new System.Drawing.Size(148, 12);
+            this.LastMesageLabel.TabIndex = 6;
+            this.LastMesageLabel.Text = "Di man gud hahahah grabe...";
+            this.LastMesageLabel.MouseEnter += new System.EventHandler(this.ChatHead_MouseHover);
+            this.LastMesageLabel.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
+            this.LastMesageLabel.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             // 
             // ChatNameLabel
             // 
-            this.ChatNameLabel.AutoSize = true;
+            this.ChatNameLabel.AutoEllipsis = true;
             this.ChatNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.ChatNameLabel.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChatNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
@@ -136,6 +155,27 @@ namespace Faculti.UI.Cards
             this.ChatPictureBox.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
             this.ChatPictureBox.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             // 
+            // GetChatInfoWorker
+            // 
+            this.GetChatInfoWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetChatInfoWorker_DoWork);
+            this.GetChatInfoWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetChatInfoWorker_RunWorkerCompleted);
+            // 
+            // CreateInboxWorker
+            // 
+            this.CreateInboxWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.CreateInboxWorker_DoWork);
+            this.CreateInboxWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.CreateInboxWorker_RunWorkerCompleted);
+            // 
+            // InboxUpdateWorker
+            // 
+            this.InboxUpdateWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InboxUpdateWorker_DoWork);
+            this.InboxUpdateWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InboxUpdateWorker_RunWorkerCompleted);
+            // 
+            // InboxUpdateTimer
+            // 
+            this.InboxUpdateTimer.Enabled = true;
+            this.InboxUpdateTimer.Interval = 2000;
+            this.InboxUpdateTimer.Tick += new System.EventHandler(this.InboxUpdateTimer_Tick);
+            // 
             // ChatHead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,7 +189,6 @@ namespace Faculti.UI.Cards
             this.MouseLeave += new System.EventHandler(this.ChatHead_MouseLeave);
             this.MouseHover += new System.EventHandler(this.ChatHead_MouseHover);
             this.ChatPanel.ResumeLayout(false);
-            this.ChatPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.IsActivePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChatPictureBox)).EndInit();
             this.ResumeLayout(false);
@@ -162,6 +201,11 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.Label ChatNameLabel;
         private Bunifu.UI.WinForms.BunifuPictureBox IsActivePictureBox;
         private Bunifu.UI.WinForms.BunifuPictureBox ChatPictureBox;
-        private System.Windows.Forms.Label ChatLastActiveLabel;
+        private System.Windows.Forms.Label LastMesageLabel;
+        private System.Windows.Forms.Label LastUpdateLabel;
+        private System.ComponentModel.BackgroundWorker GetChatInfoWorker;
+        private System.ComponentModel.BackgroundWorker CreateInboxWorker;
+        private System.ComponentModel.BackgroundWorker InboxUpdateWorker;
+        private System.Windows.Forms.Timer InboxUpdateTimer;
     }
 }

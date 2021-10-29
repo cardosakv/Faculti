@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms.BunifuButton;
 
@@ -56,5 +57,15 @@ namespace Faculti.UI
 
             return Color.FromArgb(r, g, b);
         }
+
+        #region .. Double Buffered function ..
+        public static void SetDoubleBuffered(Control c)
+        {
+            if (SystemInformation.TerminalServerSession)
+                return;
+            PropertyInfo aProp = typeof(Control).GetProperty("DoubleBuffered", BindingFlags.NonPublic | BindingFlags.Instance);
+            aProp.SetValue(c, true, null);
+        }
+        #endregion
     }
 }

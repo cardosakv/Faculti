@@ -7,40 +7,231 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Faculti.DataClasses;
+using Faculti.Services.FacultiDB;
 using Faculti.UI.Cards;
+using Oracle.ManagedDataAccess.Client;
+using Bunifu.UI.WinForms;
+using System.Reflection;
+using System.Drawing.Drawing2D;
 
 namespace Faculti.UI.Cards
 {
     public partial class FeedPanel : UserControl
     {
-        Announcement announcement = new Announcement("Re: Scholarship for Freshman", 
-            "The office of the dean will be accepting scholarship application from October 30 " +
-            "to November 30 from 9:00 AM to 4:00 PM.");
-        Announcement announcement2 = new Announcement("No Classes Today",
-            "There will be no classes because of the incoming supertyphoon Yolanda. " +
-            "Everyone is advised to evacuate to a safe relocation site.\n\nThank you and stay safe everyone.");
-        PostCard post = new PostCard("34343", "The office of the dean will be accepting scholarship application from October 30 to November 30. Please look at your extensions on chrome.\nOkay? Hai? hai?", "dfdfd");
-        PostCard post2 = new PostCard("34343", "Kinsay naay papel ninyo diha. Wa gyud ko kadala guys. Please ko bi.", "dfdfd");
-        PostCard post3 = new PostCard("34343", "Hoy attention to the following students! Ngano man mo ing-ani man mo?\n\n1. Cardosa\n2. Mabia\n3. Alasagas\n\nI want you to come to my office right now! Grabe na kaayo ning inyong gipangbuhat ha. Wa mo mauwaw, nanguha mos akong mangga sa table? Para inyo diay to? Gidugo baya jud ko, bantay lang mo nako unya.", "dfdfd");
+        private readonly User _user;
+        private readonly List<int> postIds = new List<int>();
+        private DatabaseClient _displayPostClient;
+        private DatabaseClient _displayAnnounceClient;
+        private DatabaseClient _insertPostClient;
+        private OracleDataReader _displayPostRdr;
+        private OracleDataReader _announceRdr;
+        private bool _firstTime = true;
+        private bool _isTimedOut = false;
+        private int _retries = 0;
 
-        public FeedPanel()
+        public FeedPanel(User user)
         {
+            _user = user;
             InitializeComponent();
+            DoubleBuffered = true;
+            ControlInteractives.SetDoubleBuffered(FeedLayoutPanel);
             ControlInteractives.SetButtonHoverEvent(PostButton);
 
-            AnnouncementsFlowLayoutPanel.Controls.Add(announcement);
-            AnnouncementsFlowLayoutPanel.Controls.Add(announcement2);
-            FeedLayoutPanel.Controls.Add(post);
-            FeedLayoutPanel.Controls.Add(post2);
-            FeedLayoutPanel.Controls.Add(post3);
-            post.AddComment("Please lang grabe naman mo oy");
-            post.AddComment(" HAHAHAHHA boang");
-            post.AddComment("Yes maam naa ta ana sa school pwede ra gyud kana atong gamiton\nmao man sad ako nahibaw-an");
-            post.AddComment("Okay ra ka ato maam?");
-            post.AddComment("oo okay ra\ncgecge miss update lang sa mga panghitabo diha");
-            post.AddComment("cgecge kato lang ato gamiton");
-            post2.AddComment("amawa boang o");
-            post2.AddComment("hahahhhahahah shhhh\n\nBhala na");
+            UpdateData();
+        }
+
+        public void UpdateData()
+        {
+            if (!DisplayPostWorker.IsBusy) DisplayPostWorker.RunWorkerAsync();
+            if (!AnnounceWorker.IsBusy) AnnounceWorker.RunWorkerAsync();
+        }
+
+        private void DisplayPostWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                _displayPostClient = new DatabaseClient();
+                string cmdText = $"select post_id from posts where section_name = '{_user.SectionName}' order by post_time asc";
+                OracleCommand cmd = new OracleCommand(cmdText, _displayPostClient.Conn);
+                _displayPostRdr = cmd.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void DisplayPostWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled)
+            {
+                if (_retries >= 30)
+                {
+                    FeedLoader.Visible = false;
+                    FeedError.Visible = true;
+                    FeedLayoutPanel.AutoScroll = false;
+                    _isTimedOut = true;
+                }
+                else
+                {
+                    _retries++;
+                    DisplayPostWorker.RunWorkerAsync();
+                }
+            }
+            else
+            {
+                DisplayPosts();
+                _retries = 0;
+                _isTimedOut = false;
+                FeedLoader.Visible = false;
+                FeedError.Visible = false;
+                FeedLayoutPanel.AutoScroll = true;
+            }
+        }
+
+        public void DisplayPosts()
+        {
+            while (_displayPostRdr.Read())
+            {
+                var currPostId = _displayPostRdr.GetInt32(0);
+
+                if (_firstTime)
+                {
+                    PostCard post = new PostCard(currPostId, _user);
+
+                    FeedLayoutPanel.SuspendLayout();
+                    FeedLayoutPanel.Controls.Add(post);
+                    FeedLayoutPanel.Controls.SetChildIndex(post, 3);
+                    FeedLayoutPanel.ResumeLayout();
+
+                    postIds.Add(currPostId);
+                    _firstTime = false;
+                }
+                else if (currPostId > postIds[postIds.Count - 1])
+                {
+                    PostCard post = new PostCard(currPostId, _user);
+
+                    FeedLayoutPanel.SuspendLayout();
+                    FeedLayoutPanel.Controls.Add(post);
+                    FeedLayoutPanel.Controls.SetChildIndex(post, 3);
+                    FeedLayoutPanel.ResumeLayout();
+
+                    postIds.Add(currPostId);
+                }
+            }
+
+            _displayPostClient.Conn.Close();
+        }
+
+        private void AnnounceWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                _displayAnnounceClient = new DatabaseClient();
+                var cmdText = $"select title, text, post_time from announces order by post_time desc";
+                OracleCommand cmd = new OracleCommand(cmdText, _displayAnnounceClient.Conn);
+                _announceRdr = cmd.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void AnnounceWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!e.Cancelled)
+            {
+                DisplayAnnounces();
+            }
+            else
+            {
+                _displayAnnounceClient.Conn.Close();
+                AnnounceWorker.RunWorkerAsync();
+            }
+        }
+
+        public void DisplayAnnounces()
+        {
+            while (_announceRdr.Read())
+            {
+                Announcement announce = new Announcement(_announceRdr.GetString(0), _announceRdr.GetString(1), _announceRdr.GetOracleDate(2).Value);
+                AnnouncementsFlowLayoutPanel.Controls.Add(announce);
+            }
+
+            _displayAnnounceClient.Conn.Close();
+        }
+
+        private void InsertPostWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                _insertPostClient = new DatabaseClient();
+                var cmdText = $"insert into posts (text, user_id, post_time, section_name) values (q'[{WritePostTextBox.Text}]', {_user.Id}, to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), '{_user.SectionName}')";
+                OracleCommand cmd = new OracleCommand(cmdText, _insertPostClient.Conn);
+                cmd.ExecuteNonQuery();
+                _insertPostClient.Conn.Close();
+            }
+            catch (Exception)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void InsertPostWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!e.Cancelled)
+            {
+                WritePostTextBox.Text = string.Empty;
+                if (!DisplayPostWorker.IsBusy) DisplayPostWorker.RunWorkerAsync();
+            }
+            else
+            {
+                InsertPostWorker.RunWorkerAsync();
+            }
+        }
+
+        
+
+
+
+
+        // ====================================================================================== //
+        //                                                                                        //
+        //                                        UI METHODS                                      //
+        //                                                                                        //
+        // ====================================================================================== //
+        private void PostButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(WritePostTextBox.Text))
+            {
+                if (!InsertPostWorker.IsBusy) InsertPostWorker.RunWorkerAsync();
+            }
+        }
+
+        private void RetryFeedButton_Click(object sender, EventArgs e)
+        {
+            FeedLoader.Visible = true;
+            FeedError.Visible = false;
+
+            _displayPostClient.Conn.Close();
+            if (!DisplayPostWorker.IsBusy) DisplayPostWorker.RunWorkerAsync();
+        }
+
+        private void AnnounceTimer_Tick(object sender, EventArgs e)
+        {
+            foreach (Control announe in AnnouncementsFlowLayoutPanel.Controls)
+            {
+                AnnouncementsFlowLayoutPanel.Controls.Remove(announe);
+            }
+
+            if (!AnnounceWorker.IsBusy) AnnounceWorker.RunWorkerAsync();
+        }
+
+        private void NewPostUpdateTimer_Tick(object sender, EventArgs e)
+        {
+            if (!DisplayPostWorker.IsBusy && !_isTimedOut) DisplayPostWorker.RunWorkerAsync();
         }
     }
 }

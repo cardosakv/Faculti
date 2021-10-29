@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Faculti.DataClasses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Faculti.UI.Cards
 {
     public partial class ContactsPanel : UserControl
     {
-        public ContactsPanel()
+        public ContactsPanel(User user)
         {
             InitializeComponent();
         }

@@ -1,7 +1,5 @@
-﻿using AirtableApiClient;
-using Bunifu.UI.WinForms;
+﻿using Bunifu.UI.WinForms;
 using Faculti.Helpers;
-using Faculti.Services.Airtable;
 using Faculti.UI;
 using System;
 using System.Drawing;
@@ -9,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Faculti.UI.Forms;
 using Faculti.Services.FacultiDB;
+using Faculti.DataClasses;
 
 namespace Faculti
 {
@@ -45,7 +44,8 @@ namespace Faculti
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Hide();
+            this.Dispose();
+            this.Close();
         }
 
         private void AttemptSignup()
@@ -72,6 +72,7 @@ namespace Faculti
                 emailToSendCode = _signupUser.Email
             };
             verificationForm.ShowDialog();
+
             Cursor = Cursors.Default;
         }
 

@@ -19,7 +19,7 @@ namespace Faculti.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -191,6 +191,16 @@ namespace Faculti.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap child {
+            get {
+                object obj = ResourceManager.GetObject("child", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         public static byte[] CircularSpotifyTxT_Black {
@@ -216,6 +226,16 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap classes_today1 {
             get {
                 object obj = ResourceManager.GetObject("classes-today1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap close_1_1s_200px__4_ {
+            get {
+                object obj = ResourceManager.GetObject("close-1.1s-200px (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,6 +306,16 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap date_yellow1 {
             get {
                 object obj = ResourceManager.GetObject("date-yellow1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap default_profile {
+            get {
+                object obj = ResourceManager.GetObject("default_profile", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -563,6 +593,16 @@ namespace Faculti.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap key {
+            get {
+                object obj = ResourceManager.GetObject("key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap least {
             get {
                 object obj = ResourceManager.GetObject("least", resourceCulture);
@@ -616,6 +656,16 @@ namespace Faculti.Properties {
         public static System.Drawing.Bitmap lockup_yellow {
             get {
                 object obj = ResourceManager.GetObject("lockup-yellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap log_out_1_1s_200px__1_ {
+            get {
+                object obj = ResourceManager.GetObject("log out-1.1s-200px (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

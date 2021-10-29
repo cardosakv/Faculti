@@ -1,13 +1,13 @@
-﻿using AirtableApiClient;
-using Faculti.Helpers;
-using Faculti.Services.Airtable;
+﻿using Faculti.Helpers;
 using Faculti.Services.FacultiDB;
 using Oracle.ManagedDataAccess.Client;
 using System;
+using System.Drawing;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Faculti
+namespace Faculti.DataClasses
 {
     /// <summary>
     ///     General and parent class for all user types.
@@ -15,14 +15,19 @@ namespace Faculti
     public class User
     {
         // Private fields
+        private int _id;
         private string _type;
         private string _email;
         private string _passwordInHash;
         private string _firstName;
         private string _lastName;
         private string _phoneNumberInHash;
-        private string _recordId;
-        private bool   _verified;
+        private string _sectionName;
+        private string _isVerified;
+        private string _hasRequested;
+        private string _isActive;
+        private Image _picture;
+        private DateTime _lastOnline;
 
 
         // Default constructor - without parameters
@@ -67,10 +72,10 @@ namespace Faculti
             set { _phoneNumberInHash = value; }
         }
 
-        public string RecordId
+        public int Id
         {
-            get { return _recordId; }
-            set { _recordId = value; }
+            get { return _id; }
+            set { _id = value; }
         }
 
         public string Type
@@ -79,10 +84,40 @@ namespace Faculti
             set { _type = value; }
         }
 
-        public bool Verified
+        public string SectionName
         {
-            get { return _verified; }
-            set { _verified = value; }
+            get { return _sectionName; }
+            set { _sectionName = value; }
+        }
+
+        public string IsVerified
+        {
+            get { return _isVerified; }
+            set { _isVerified = value; }
+        }
+
+        public string IsActive
+        {
+            get { return _isActive; }
+            set { _isActive = value; }
+        }
+
+        public string HasRequested
+        {
+            get { return _hasRequested; }
+            set { _hasRequested = value; }
+        }
+
+        public Image Picture
+        {
+            get { return _picture; }
+            set { _picture = value; }
+        }
+
+        public DateTime LastOnline
+        {
+            get { return _lastOnline; }
+            set { _lastOnline = value; }
         }
 
         /// <summary>
@@ -106,47 +141,82 @@ namespace Faculti
         public bool HaveCredentialsMatched()
         {
             return Password.IsCorrect(Type, Email, PasswordInHash);
-        } 
-
-        /// <summary>
-        ///     Updates the user's password in the database.
-        /// </summary>
-        public void UpdatePassword(string email, string newPassword, AirtableRecord[] records, string userType)
-        {
-            // looping through the records
-            for (int recordNum = 0; recordNum < records.Length; recordNum++)
-            {
-                if (records[recordNum].Fields["Email"].ToString() == email)
-                {
-                    var recordId = records[recordNum].Fields["Record Id"].ToString();
-
-                    var newRecord = new Fields();
-                    newRecord.AddField("Password", newPassword);
-
-                    AirtableClient airtableClient = new AirtableClient();
-                    airtableClient.UpdateRecord(userType, newRecord, recordId);
-                }
-            }
         }
 
-        /// <summary>
-        ///     Returns the user's record id from the database.
-        /// </summary>
-        public async Task<string> GetRecordId()
+        public void GetGeneralInfo()
         {
-            AirtableClient airtableClient = new AirtableClient();
-            var records = await airtableClient.ListRecords(_type);
+            DatabaseClient client = new DatabaseClient();
+            var cmdText = $"select {Type.Remove(Type.Length - 1, 1)}_id, first_name, last_name, phone_number_in_hash, section_name, picture, active_status, is_verified, has_requested, last_online from {Type} where email = '{Email}'";
+            OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
+            OracleDataReader rdr = cmd.ExecuteReader();
+            rdr.Read();
 
-            for (int recordNum = 0; recordNum < records.Length; recordNum++)
+            if (rdr.HasRows)
             {
-                if (records[recordNum].Fields["Email"].ToString() == _email)
+                Id = rdr.GetInt32(0);
+                FirstName = rdr.GetString(1);
+                LastName = rdr.GetString(2);
+                PhoneNumberInHash = rdr.GetString(3);
+                SectionName = rdr.IsDBNull(4) ? null : rdr.GetString(4);
+                byte[] image = rdr.IsDBNull(5) ? null : (byte[])rdr["picture"];
+                IsActive = rdr.IsDBNull(6) ? null : rdr.GetString(6);
+                IsVerified = rdr.IsDBNull(7) ? null : rdr.GetString(7);
+                HasRequested = rdr.IsDBNull(8) ? null : rdr.GetString(8);
+                LastOnline = rdr.IsDBNull(9) ? DateTime.MinValue : rdr.GetOracleDate(9).Value;
+
+                if (image != null)
                 {
-                    _recordId = records[recordNum].Fields["Record Id"].ToString();
-                    return _recordId;
+                    MemoryStream ms = new MemoryStream(image);
+                    Picture = Image.FromStream(ms);
+                }
+                else
+                {
+                    Picture = Faculti.Properties.Resources.default_profile;
                 }
             }
 
-            return null;
+            rdr.Close();
+            client.Conn.Close();
+        }
+
+        public bool IsFirstTime()
+        {
+            DatabaseClient client = new DatabaseClient();
+            var cmdText = $"select section_name from {Type} where email = '{Email}'";
+            OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
+            OracleDataReader rdr = cmd.ExecuteReader();
+            rdr.Read();
+
+            if (rdr.IsDBNull(0)) return true;
+
+            return false;
+        }
+
+        public void SetStatus(string status)
+        {
+            _isActive = status;
+
+            DatabaseClient client = new DatabaseClient();
+            var cmdText = $"update {Type} set active_status = '{status}' where email = '{Email}'";
+            client.PerformNonQueryCommand(cmdText);
+        }
+
+
+
+        public T As<T>()
+        {
+            var type = typeof(T);
+            var instance = Activator.CreateInstance(type);
+
+            if (type.BaseType != null)
+            {
+                var properties = type.BaseType.GetProperties();
+                foreach (var property in properties)
+                    if (property.CanWrite)
+                        property.SetValue(instance, property.GetValue(this, null), null);
+            }
+
+            return (T)instance;
         }
     }
 }

@@ -118,28 +118,21 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CommentContainer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="MessageContainer.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXIAAABhCAYAAADLESqIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM8SURBVHhe7dq/ixxlHMfxKVNaaqWV2FilSbqUNv4DgpBG
-        YhUsLBQsrAQhQrAQ28PyasFKFOUSEPLLYO6y554/ctnZvdOZ2bvb5HK5jMx5iShTe/OB1xde3Xe3fPPw
-        zFP8dzY22lOT7er8L7Pms7tlc326XbcAnJyuxevlfKncqt+uquq541z3T7ndnFmdNr8u/by38+6PD9vX
-        fzhoX/imBeAEdS2+eGu//Xy02Fstm9l0Wr92nO1/z9qkfn/l3k519sph7x8BcPJe/f5J+9Vvu9WN+/Xl
-        43z/Pd1JvIt4348AGJ7ljb0/x9PmzaOId3fio7KZnF5xEgdI8fJ3T9o75Xx7Ot19vihn1TuX1xYP+xYB
-        GK7uW2b3MKUYzZrlCzf3e5cAGK7uI2j3oqUYTZvxuauPe5cAGK7ueuX3Wb0oujeKfQsADF/XcCEHCCbk
-        AOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADh
-        hBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQc
-        IJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCc
-        kAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJAD
-        hBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUC4o5CPZ/XW6ZXD3gUAhuvF
-        b9t2c6s+KNbK5us3rj3qXQJguM5dfdyOps24mGzV7328+uCgbwmA4bp4a79dL+dLxaSqXro9mVfdEb1v
-        EYBhWrm3U5XbzZmim/GseuuL8V7dtwjA8Hx0Z7Hz06S+dBTxp9PdlX+yuth1MgcYtg9uLx7cuD9f2dho
-        Tx0n/J8ZTZsPr03mf1y4uX90id73BwD8/85eOWzPX390dJ1yt5x/2hvxp7O5NX9lNGuWuy+h3ftEAE7e
-        etlsrpbzL5/diT+bovgLn0wXnfvYsZAAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="MessageLabel.Text" xml:space="preserve">
-    <value>Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto. Basta guys inom kayo ng isang basong tubig and this is an example of a chat. Yes or yes. Kimi no toriku ni natte shimai yokitto.
+        iVBORw0KGgoAAAANSUhEUgAAAXIAAABbCAYAAABu8A5DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKKSURBVHhe7dm9alRBHMbhU6a0MTmLRSy9hFyCNyHYCJaW
+        2nkBFmKRPnVq28za2OYOAhYi+LVC/IKQOc7mS9SpzXnh+cOzsDszp/wxnB3+nu0ybWyV6f5iWXebw8Vy
+        mgC4Tq3Fpe6NpT5sjb5xkev+bJa6My7rm3bouP8wAK5L6/O3FvT3Leh3L7L957TFJy3gq95hAOakrlrM
+        n1/k+3zWN3ERB8jRbuefb5V67yzi63fiLeLvehsBmK8W8483yzSuX6k8al9+9jYBMHd1d2gf+/1FAOav
+        Hq5v5Ef9RQDmbiz1e7uR9xcByCDkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QT
+        coBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KA
+        cEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4QTsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBC
+        DhBOyAHCCTlAOCEHCCfkAOGEHCCckAOEE3KAcEIOEE7IAcIJOUA4IQcIJ+QA4YQcIJyQA4QTcoBwQg4Q
+        TsgBwgk5QDghBwgn5ADhhBwgnJADhBNygHBCDhBOyAHCCTlAOCEHCCfkAOGEHCDcMC7rh94CAPPXGn4y
+        LEo96C0CEKDUoxby6fH4qp50NwAwb6XuDVtlut2u5qvuBgBmrK42S90Z1tOK/qD9+OXfTQDMUz1u7X52
+        FvHLOX9Xfvq1fwCAuRgPTn+Mpb7eLtPGRcJ/z6JMT8dl/dQ7CMAc1FXr9ItuxC+nxfxO27i//ie0/xAA
+        /rd2A3+7VerLq3fiVzMMvwDL+hRqPRJdSQAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

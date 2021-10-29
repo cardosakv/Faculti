@@ -21,7 +21,7 @@ namespace Faculti.UI.Cards
         private readonly Teacher _teacherUser;
         private string _currStudentId;
         private string _currStudentName;
-        private int _currGrading;
+        private int _currGrading = 0;
         private readonly Dictionary<string, string> _studentList = new Dictionary<string, string>();
         private Dictionary<string, int> _currGradingGrades = new Dictionary<string, int>();
         private Dictionary<string, int> _gradeDiffs = new Dictionary<string, int>();
@@ -37,8 +37,8 @@ namespace Faculti.UI.Cards
             _teacherUser = teacherUser;
             InitializeComponent();
             ControlInteractives.SetButtonHoverEvent(SubmitButton);
-            if (!GetStudentsWorker.IsBusy) GetStudentsWorker.RunWorkerAsync();
-            if (!GradingWorker.IsBusy) GradingWorker.RunWorkerAsync();
+            GetStudentsWorker.RunWorkerAsync();
+            GradingWorker.RunWorkerAsync();
         }
 
         private void GetStudentsWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -197,7 +197,7 @@ namespace Faculti.UI.Cards
 
         private void StudentDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (_currGrading == 5)
+            if (_currGrading == 0)
             {
                 _currStudentId = _studentList[StudentDropDown.SelectedItem.ToString()];
                 _currStudentName = StudentDropDown.SelectedItem.ToString();
@@ -363,7 +363,7 @@ namespace Faculti.UI.Cards
             try
             {
                 DatabaseClient client = new DatabaseClient();
-                var cmdText = $"select last_grading from grades where grades_id = 7";
+                var cmdText = $"select last_grading from grades";
                 OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
                 _gradingRdr = cmd.ExecuteReader();
             }
@@ -377,37 +377,38 @@ namespace Faculti.UI.Cards
         {
             if (!e.Cancelled)
             {
-                _gradingRdr.Read();
+                if (_gradingRdr.Read())
+                {
+                    if (_gradingRdr.IsDBNull(0))
+                    {
+                        Grading_Label.Text = "1st";
+                        _currGrading = 1;
+                    }
+                    else if (_gradingRdr.GetString(0) == "1")
+                    {
+                        Grading_Label.Text = "2nd";
+                        _currGrading = 2;
+                    }
+                    else if (_gradingRdr.GetString(0) == "2")
+                    {
+                        Grading_Label.Text = "3rd";
+                        _currGrading = 3;
+                    }
+                    else if (_gradingRdr.GetString(0) == "3")
+                    {
+                        Grading_Label.Text = "4th";
+                        _currGrading = 4;
+                    }
+                    else if (_gradingRdr.GetString(0) == "4")
+                    {
+                        InputLabel.Text = "Grades";
+                        Grading_Label.Text = "Final";
+                        SubmitButton.Visible = false;
+                        _currGrading = 5;
+                    }
 
-                if (_gradingRdr.IsDBNull(0))
-                {
-                    Grading_Label.Text = "1st";
-                    _currGrading = 1;
+                    _gradingRdr.Close();
                 }
-                else if (_gradingRdr.GetString(0) == "1")
-                {
-                    Grading_Label.Text = "2nd";
-                    _currGrading = 2;
-                }
-                else if (_gradingRdr.GetString(0) == "2")
-                {
-                    Grading_Label.Text = "3rd";
-                    _currGrading = 3;
-                }
-                else if (_gradingRdr.GetString(0) == "3")
-                {
-                    Grading_Label.Text = "4th";
-                    _currGrading = 4;
-                }
-                else if (_gradingRdr.GetString(0) == "4")
-                {
-                    InputLabel.Text = "Grades";
-                    Grading_Label.Text = "Final";
-                    SubmitButton.Visible = false;
-                    _currGrading = 5;
-                }
-
-                _gradingRdr.Close();
             }
             else
             {

@@ -35,13 +35,34 @@ namespace Faculti.UI.Cards
             UpdateData();
         }
 
-        public void UpdateData()
+        public async void UpdateData()
         {
+            await GetNotes();
             if (!DashboardWorker.IsBusy) DashboardWorker.RunWorkerAsync();
             if (!ScheduleWorker.IsBusy) ScheduleWorker.RunWorkerAsync();
             if (!ClassInfoWorker.IsBusy) ClassInfoWorker.RunWorkerAsync();
-            if (!NotesWorker.IsBusy) NotesWorker.RunWorkerAsync();
         }
+
+        private async Task GetNotes()
+        {
+            try
+            {
+                DatabaseClient client = new DatabaseClient();
+                var cmdText = $"select text from notes where teacher_id = {_teacherUser.Id}";
+                OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
+                OracleDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    NotesTextBox.Text = rdr.IsDBNull(0) ? string.Empty : rdr.GetString(0);
+                }
+            }
+            catch (Exception)
+            {
+                await GetNotes();
+            }
+        }
+
 
         private void DashboardWorker_DoWork(object sender, DoWorkEventArgs e)
         {
@@ -58,7 +79,7 @@ namespace Faculti.UI.Cards
                 var assigns = cmd.ExecuteScalar();
                 _assignments = assigns.ToString();
 
-                _dashboardClient.Conn.Close();
+                _dashboardClient.Close();
             }
             catch (Exception)
             {
@@ -76,11 +97,7 @@ namespace Faculti.UI.Cards
                 ClassesLoader.Visible = false;
                 ExamsLoader.Visible = false;
                 AssignsLoader.Visible = false;
-            }
-            else
-            {
-                DashboardWorker.RunWorkerAsync();
-            }    
+            }  
         }
 
         private void ScheduleWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -114,12 +131,12 @@ namespace Faculti.UI.Cards
                     }
                 }
 
-                _scheduleClient.Conn.Close();
+                _scheduleClient.Close();
                 ScheduleLoader.Visible = false;
             }
             else
             {
-                _scheduleClient.Conn.Close();
+                _scheduleClient.Close();
                 ScheduleWorker.RunWorkerAsync();
             }
         }
@@ -133,7 +150,7 @@ namespace Faculti.UI.Cards
                 OracleCommand cmd = new OracleCommand(cmdText, _classInfoClient.Conn);
                 _classInfoRdr = cmd.ExecuteReader();
 
-                cmdText = $"select count(*) from students where teacher_id = '{_teacherUser.Id}'";
+                cmdText = $"select count(*) from students where section_name = '{_teacherUser.SectionName}'";
                 cmd = new OracleCommand(cmdText, _classInfoClient.Conn);
                 var students = cmd.ExecuteScalar();
                 _totalStudents = students.ToString();
@@ -148,17 +165,19 @@ namespace Faculti.UI.Cards
         {
             if (!e.Cancelled)
             {
-                _classInfoRdr.Read();
+                if (_classInfoRdr.Read())
+                {
+                    GradeSection_Label.Text = $"{_classInfoRdr.GetString(0)} - {_teacherUser.SectionName}";
+                    NumStudentsLabel.Text = $"{_totalStudents}";
 
-                GradeSection_Label.Text = $"{_classInfoRdr.GetString(0)} - {_teacherUser.SectionName}";
-                NumStudentsLabel.Text = $"{_totalStudents}";
+                    InfoAndNotesLoader.Visible = false;
+                }
 
                 _classInfoClient.Conn.Close();
-                InfoAndNotesLoader.Visible = false;
             }
             else
             {
-                _classInfoClient.Conn.Close();
+                if (_classInfoClient.Conn != null) _classInfoClient.Close();
                 ClassInfoWorker.RunWorkerAsync();
             }
         }
@@ -168,9 +187,8 @@ namespace Faculti.UI.Cards
             try
             {
                 _notesClient = new DatabaseClient();
-                var cmdText = $"select text from notes where teacher_id = '{_teacherUser.Id}'";
-                OracleCommand cmd = new OracleCommand(cmdText, _notesClient.Conn);
-                _notesRdr = cmd.ExecuteReader();
+                var cmdText = $"update notes set text = q'[{NotesTextBox.Text}]' where teacher_id = {_teacherUser.Id}";
+                _notesClient.PerformNonQueryCommand(cmdText);
             }
             catch (Exception)
             {
@@ -180,19 +198,7 @@ namespace Faculti.UI.Cards
 
         private void NotesWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (!e.Cancelled)
-            {
-                _notesRdr.Read();
-
-                NotesTextBox.Text = _notesRdr.IsDBNull(0) ? string.Empty : _notesRdr.GetString(0);
-                SavedLabel.Visible = true;
-                _notesClient.Conn.Close();
-            }
-            else
-            {
-                _notesClient.Conn.Close();
-                NotesWorker.RunWorkerAsync();
-            }
+            //
         }
 
         private void NotesTimer_Tick(object sender, EventArgs e)
@@ -208,6 +214,11 @@ namespace Faculti.UI.Cards
         private void ClassesLoader_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void DashboardTimer_Tick(object sender, EventArgs e)
+        {
+            if (!DashboardWorker.IsBusy) DashboardWorker.RunWorkerAsync();
         }
     }
 }

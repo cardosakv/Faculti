@@ -26,7 +26,7 @@ namespace Faculti.UI.Forms
             CancelButton.DialogResult = DialogResult.Cancel;
         }
 
-        private void ConfirmButton_Click(object sender, EventArgs e)
+        private async void ConfirmButton_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(EventTitleTextBox.Text) &&
                 !string.IsNullOrEmpty(EventDescTextBox.Text) &&
@@ -45,19 +45,19 @@ namespace Faculti.UI.Forms
                 }
                 
                 client.PerformNonQueryCommand(cmdText);
+
+                client.Conn.Open();
+                cmdText = $"insert into updates (update_type, text, created_time, sender_user_type, sender_id) values ('calendar', 'A new event has been added by the teacher.', to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), 'teachers', {_user.Id})";
+                client.PerformNonQueryCommand(cmdText);
+
+                await Task.Delay(1000);
                 this.Close();
-                this.Dispose();
             }
         }
 
         private void AddEventForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
-        }
-
-        private void AddEventForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Dispose();
         }
 
         private void EventTitleTextBox_TextChanged(object sender, EventArgs e)

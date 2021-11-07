@@ -60,8 +60,8 @@ namespace Faculti.UI.Cards
                 bgForm.Show();
                 addEvent.Owner = bgForm;
                 addEvent.ShowDialog();
+                bgForm.Dispose();
             }
-            bgForm.Dispose();
         }
 
         private void HolidayWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -83,7 +83,7 @@ namespace Faculti.UI.Cards
         {
             if (e.Cancelled)
             {
-                _holidayClient.Conn.Close();
+                _holidayClient.Close();
                 HolidayWorker.RunWorkerAsync();
             }
             else
@@ -94,7 +94,7 @@ namespace Faculti.UI.Cards
                     EventsFlowLayoutPanel.Controls.Add(holiday);
                 }
 
-                _holidayClient.Conn.Close();
+                _holidayClient.Close();
 
                 if (!LocalWorker.IsBusy) LocalWorker.RunWorkerAsync();
             }
@@ -119,7 +119,7 @@ namespace Faculti.UI.Cards
         {
             if (e.Cancelled)
             {
-                _localClient.Conn.Close();
+                _localClient.Close();
                 LocalWorker.RunWorkerAsync();
             }
             else
@@ -130,7 +130,7 @@ namespace Faculti.UI.Cards
                     EventsFlowLayoutPanel.Controls.Add(local);
                 }
 
-                _localClient.Conn.Close();
+                _localClient.Close();
 
                 if (!ExamWorker.IsBusy) ExamWorker.RunWorkerAsync();
             }
@@ -155,7 +155,7 @@ namespace Faculti.UI.Cards
         {
             if (e.Cancelled)
             {
-                _examClient.Conn.Close();
+                _examClient.Close();
                 ExamWorker.RunWorkerAsync();
             }
             else
@@ -166,7 +166,7 @@ namespace Faculti.UI.Cards
                     EventsFlowLayoutPanel.Controls.Add(exam);
                 }
 
-                _examClient.Conn.Close();
+                _examClient.Close();
                 if (!AssWorker.IsBusy) AssWorker.RunWorkerAsync();
             }
         }
@@ -190,7 +190,7 @@ namespace Faculti.UI.Cards
         {
             if (e.Cancelled)
             {
-                _assClient.Conn.Close();
+                _assClient.Close();
                 AssWorker.RunWorkerAsync();
             }
             else
@@ -201,7 +201,7 @@ namespace Faculti.UI.Cards
                     EventsFlowLayoutPanel.Controls.Add(ass);
                 }
 
-                _assClient.Conn.Close();
+                _assClient.Close();
             }
         }
 
@@ -378,7 +378,7 @@ namespace Faculti.UI.Cards
                             rdr = cmd.ExecuteReader();
                             if (rdr.Read()) isAssign = true;
 
-                            client.Conn.Close();
+                            client.Close();
                         }
                         catch (Exception)
                         {

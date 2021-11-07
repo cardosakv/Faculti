@@ -148,34 +148,36 @@ namespace Faculti.DataClasses
             DatabaseClient client = new DatabaseClient();
             var cmdText = $"select {Type.Remove(Type.Length - 1, 1)}_id, first_name, last_name, phone_number_in_hash, section_name, picture, active_status, is_verified, has_requested, last_online from {Type} where email = '{Email}'";
             OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
-            OracleDataReader rdr = cmd.ExecuteReader();
-            rdr.Read();
-
-            if (rdr.HasRows)
+            using (OracleDataReader rdr = cmd.ExecuteReader())
             {
-                Id = rdr.GetInt32(0);
-                FirstName = rdr.GetString(1);
-                LastName = rdr.GetString(2);
-                PhoneNumberInHash = rdr.GetString(3);
-                SectionName = rdr.IsDBNull(4) ? null : rdr.GetString(4);
-                byte[] image = rdr.IsDBNull(5) ? null : (byte[])rdr["picture"];
-                IsActive = rdr.IsDBNull(6) ? null : rdr.GetString(6);
-                IsVerified = rdr.IsDBNull(7) ? null : rdr.GetString(7);
-                HasRequested = rdr.IsDBNull(8) ? null : rdr.GetString(8);
-                LastOnline = rdr.IsDBNull(9) ? DateTime.MinValue : rdr.GetOracleDate(9).Value;
+                rdr.Read();
 
-                if (image != null)
+                if (rdr.HasRows)
                 {
-                    MemoryStream ms = new MemoryStream(image);
-                    Picture = Image.FromStream(ms);
-                }
-                else
-                {
-                    Picture = Faculti.Properties.Resources.default_profile;
+                    Id = rdr.GetInt32(0);
+                    FirstName = rdr.GetString(1);
+                    LastName = rdr.GetString(2);
+                    PhoneNumberInHash = rdr.GetString(3);
+                    SectionName = rdr.IsDBNull(4) ? null : rdr.GetString(4);
+                    byte[] image = rdr.IsDBNull(5) ? null : (byte[])rdr["picture"];
+                    IsActive = rdr.IsDBNull(6) ? null : rdr.GetString(6);
+                    IsVerified = rdr.IsDBNull(7) ? null : rdr.GetString(7);
+                    HasRequested = rdr.IsDBNull(8) ? null : rdr.GetString(8);
+                    LastOnline = rdr.IsDBNull(9) ? DateTime.MinValue : rdr.GetOracleDate(9).Value;
+
+                    if (image != null)
+                    {
+                        MemoryStream ms = new MemoryStream(image);
+                        Picture = Image.FromStream(ms);
+                    }
+                    else
+                    {
+                        Picture = Properties.Resources.default_profile;
+                    }
                 }
             }
+                
 
-            rdr.Close();
             client.Conn.Close();
         }
 
@@ -184,10 +186,13 @@ namespace Faculti.DataClasses
             DatabaseClient client = new DatabaseClient();
             var cmdText = $"select section_name from {Type} where email = '{Email}'";
             OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
-            OracleDataReader rdr = cmd.ExecuteReader();
-            rdr.Read();
+            using (OracleDataReader rdr = cmd.ExecuteReader())
+            {
+                rdr.Read();
 
-            if (rdr.IsDBNull(0)) return true;
+                if (rdr.IsDBNull(0)) return true;
+            }
+
 
             return false;
         }

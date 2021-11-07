@@ -1,6 +1,6 @@
 ﻿namespace Faculti.UI.Forms
 {
-    partial class ErrorGradeForm
+    partial class ErrorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,30 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorGradeForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorForm));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.label1 = new System.Windows.Forms.Label();
-            this.Ellipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.ConfirmButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.label2 = new System.Windows.Forms.Label();
+            this.Ellipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.CancelButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.label1.Location = new System.Drawing.Point(156, 29);
+            this.label1.Location = new System.Drawing.Point(156, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 43);
-            this.label1.TabIndex = 49;
+            this.label1.TabIndex = 56;
             this.label1.Text = "❌";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Ellipse
-            // 
-            this.Ellipse.ElipseRadius = 25;
-            this.Ellipse.TargetControl = this;
             // 
             // ConfirmButton
             // 
@@ -68,7 +64,7 @@
             this.ConfirmButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ConfirmButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ConfirmButton.BackgroundImage")));
             this.ConfirmButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.ConfirmButton.ButtonText = "Okay";
+            this.ConfirmButton.ButtonText = "Retry";
             this.ConfirmButton.ButtonTextMarginLeft = 0;
             this.ConfirmButton.ColorContrastOnClick = 45;
             this.ConfirmButton.ColorContrastOnHover = 45;
@@ -101,7 +97,7 @@
             this.ConfirmButton.IdleIconLeftImage = null;
             this.ConfirmButton.IdleIconRightImage = null;
             this.ConfirmButton.IndicateFocus = false;
-            this.ConfirmButton.Location = new System.Drawing.Point(27, 137);
+            this.ConfirmButton.Location = new System.Drawing.Point(30, 139);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.ConfirmButton.OnDisabledState.BorderRadius = 10;
@@ -135,64 +131,145 @@
             this.ConfirmButton.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.ConfirmButton.OnPressedState.IconLeftImage = null;
             this.ConfirmButton.OnPressedState.IconRightImage = null;
-            this.ConfirmButton.Size = new System.Drawing.Size(288, 39);
-            this.ConfirmButton.TabIndex = 50;
+            this.ConfirmButton.Size = new System.Drawing.Size(130, 39);
+            this.ConfirmButton.TabIndex = 57;
             this.ConfirmButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ConfirmButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.ConfirmButton.TextMarginLeft = 0;
             this.ConfirmButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.ConfirmButton.UseDefaultRadiusAndThickness = true;
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(152, 64);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(37, 37);
-            this.bunifuLabel1.TabIndex = 48;
-            this.bunifuLabel1.Text = "✔️";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label2.Location = new System.Drawing.Point(33, 76);
+            this.label2.Location = new System.Drawing.Point(33, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(277, 43);
-            this.label2.TabIndex = 51;
-            this.label2.Text = "One or more input grades are invalid.";
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Error connecting to the database.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ErrorGradeForm
+            // Ellipse
+            // 
+            this.Ellipse.ElipseRadius = 25;
+            this.Ellipse.TargetControl = this;
+            // 
+            // CancelButton
+            // 
+            this.CancelButton.AllowAnimations = true;
+            this.CancelButton.AllowMouseEffects = true;
+            this.CancelButton.AllowToggling = false;
+            this.CancelButton.AnimationSpeed = 200;
+            this.CancelButton.AutoGenerateColors = false;
+            this.CancelButton.AutoRoundBorders = false;
+            this.CancelButton.AutoSizeLeftIcon = true;
+            this.CancelButton.AutoSizeRightIcon = true;
+            this.CancelButton.BackColor = System.Drawing.Color.Transparent;
+            this.CancelButton.BackColor1 = System.Drawing.Color.Transparent;
+            this.CancelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CancelButton.BackgroundImage")));
+            this.CancelButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.CancelButton.ButtonText = "Exit";
+            this.CancelButton.ButtonTextMarginLeft = 0;
+            this.CancelButton.ColorContrastOnClick = 45;
+            this.CancelButton.ColorContrastOnHover = 45;
+            this.CancelButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.CancelButton.CustomizableEdges = borderEdges2;
+            this.CancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.CancelButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.CancelButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.CancelButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.CancelButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.CancelButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CancelButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.CancelButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.CancelButton.IconMarginLeft = 11;
+            this.CancelButton.IconPadding = 10;
+            this.CancelButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CancelButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.CancelButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.CancelButton.IconSize = 25;
+            this.CancelButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.IdleBorderRadius = 10;
+            this.CancelButton.IdleBorderThickness = 1;
+            this.CancelButton.IdleFillColor = System.Drawing.Color.Transparent;
+            this.CancelButton.IdleIconLeftImage = null;
+            this.CancelButton.IdleIconRightImage = null;
+            this.CancelButton.IndicateFocus = false;
+            this.CancelButton.Location = new System.Drawing.Point(182, 139);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.CancelButton.OnDisabledState.BorderRadius = 10;
+            this.CancelButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.CancelButton.OnDisabledState.BorderThickness = 1;
+            this.CancelButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.CancelButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.CancelButton.OnDisabledState.IconLeftImage = null;
+            this.CancelButton.OnDisabledState.IconRightImage = null;
+            this.CancelButton.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.onHoverState.BorderRadius = 10;
+            this.CancelButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.CancelButton.onHoverState.BorderThickness = 1;
+            this.CancelButton.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.onHoverState.IconLeftImage = null;
+            this.CancelButton.onHoverState.IconRightImage = null;
+            this.CancelButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.OnIdleState.BorderRadius = 10;
+            this.CancelButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.CancelButton.OnIdleState.BorderThickness = 1;
+            this.CancelButton.OnIdleState.FillColor = System.Drawing.Color.Transparent;
+            this.CancelButton.OnIdleState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.OnIdleState.IconLeftImage = null;
+            this.CancelButton.OnIdleState.IconRightImage = null;
+            this.CancelButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.OnPressedState.BorderRadius = 10;
+            this.CancelButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.CancelButton.OnPressedState.BorderThickness = 1;
+            this.CancelButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CancelButton.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.CancelButton.OnPressedState.IconLeftImage = null;
+            this.CancelButton.OnPressedState.IconRightImage = null;
+            this.CancelButton.Size = new System.Drawing.Size(130, 39);
+            this.CancelButton.TabIndex = 59;
+            this.CancelButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CancelButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CancelButton.TextMarginLeft = 0;
+            this.CancelButton.TextPadding = new System.Windows.Forms.Padding(0);
+            this.CancelButton.UseDefaultRadiusAndThickness = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
+            // 
+            // ErrorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(343, 205);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.ConfirmButton);
+            this.ClientSize = new System.Drawing.Size(343, 209);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.ConfirmButton);
+            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ErrorGradeForm";
-            this.ShowInTaskbar = false;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ErrorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ErrorGradeForm";
+            this.Text = "Error";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ConfirmButton;
+
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuElipse Ellipse;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 ConfirmButton;
         private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.Framework.UI.BunifuElipse Ellipse;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 CancelButton;
     }
 }

@@ -25,20 +25,27 @@ namespace Faculti.UI.Cards
         private readonly Dictionary<string, string> _studentList = new Dictionary<string, string>();
         private Dictionary<string, int> _currGradingGrades = new Dictionary<string, int>();
         private Dictionary<string, int> _gradeDiffs = new Dictionary<string, int>();
-        private DatabaseClient _getGradesClient;
+        private DatabaseClient _getGradesClient = new DatabaseClient();
         private OracleDataReader _getGradesRdr;
         private OracleDataReader _gradingRdr;
-        private DatabaseClient _getStudListClient;
+        private DatabaseClient _getStudListClient = new DatabaseClient();
         private OracleDataReader _getStudListRdr;
+        private SecurityCheckPanel _securityCheck;
         private bool _isReverted = false;
+        private OracleDataReader _gradingRdr2;
 
         public GradesTeacherPanel(Teacher teacherUser)
         {
-            _teacherUser = teacherUser;
             InitializeComponent();
+
+            _teacherUser = teacherUser;
+            _securityCheck = new SecurityCheckPanel(teacherUser);
+            _securityCheck.Location = new Point(0, 0);
+            this.Controls.Add(_securityCheck);
+            _securityCheck.BringToFront();
+
             ControlInteractives.SetButtonHoverEvent(SubmitButton);
             GetStudentsWorker.RunWorkerAsync();
-            GradingWorker.RunWorkerAsync();
         }
 
         private void GetStudentsWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -65,12 +72,12 @@ namespace Faculti.UI.Cards
                     _studentList.Add($"{_getStudListRdr.GetString(1)}, {_getStudListRdr.GetString(2)}", _getStudListRdr.GetString(0));
                 }
 
-                _getStudListClient.Conn.Close();
+                _getStudListClient.Close();
                 PopulateStudentDropDown();
             }
             else
             {
-                _getStudListClient.Conn.Close();
+                _getStudListClient.Close();
                 GetStudentsWorker.RunWorkerAsync();
             }
         }
@@ -81,8 +88,6 @@ namespace Faculti.UI.Cards
             {
                 StudentDropDown.Items.Add(student);
             }
-
-            StudentDropDown.SelectedIndex = 0;
         }
 
         public void CalculateGradeStats()
@@ -156,13 +161,14 @@ namespace Faculti.UI.Cards
             if (ValidateGrades() == true)
             {
                 DialogBGForm bgForm = new DialogBGForm();
-                using (SubmitGradeConfirmForm confirm = new SubmitGradeConfirmForm(_currGradingGrades, _currGrading, _currStudentId, AverageCircleProgress.Value))
+                using (SubmitGradeConfirmForm confirm = new SubmitGradeConfirmForm(_currGradingGrades, _currGrading, _currStudentId, AverageCircleProgress.Value, _teacherUser.Id))
                 {
                     bgForm.Show();
                     confirm.Owner = bgForm;
 
                     if (confirm.ShowDialog() == DialogResult.OK)
                     {
+                        bgForm.Dispose();
                         if (!RecordCheckWorker.IsBusy) RecordCheckWorker.RunWorkerAsync();
                     }
 
@@ -197,7 +203,9 @@ namespace Faculti.UI.Cards
 
         private void StudentDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (_currGrading == 0)
+            if (!GradingWorker.IsBusy) GradingWorker.RunWorkerAsync();
+
+            if (_currGrading == 0 || _currGrading == 5)
             {
                 _currStudentId = _studentList[StudentDropDown.SelectedItem.ToString()];
                 _currStudentName = StudentDropDown.SelectedItem.ToString();
@@ -300,11 +308,11 @@ namespace Faculti.UI.Cards
                     if (_currGrading == 5) CalculateGradeStats();
                 }
 
-                _getGradesClient.Conn.Close();
+                _getGradesClient.Close();
             }
             else
             {
-                _getGradesClient.Conn.Close();
+                _getGradesClient.Close();
                 GetGradesWorker.RunWorkerAsync();
             }
         }
@@ -334,11 +342,14 @@ namespace Faculti.UI.Cards
                         DatabaseClient quickClient = new DatabaseClient();
                         OracleCommand quickCmd = new OracleCommand(cmdText, quickClient.Conn);
                         quickCmd.ExecuteNonQuery();
-                        quickClient.Conn.Close();
+
+                        cmdText = $"insert into updates (update_type, text, created_time, sender_user_type, sender_id) values ('grades', 'The teacher has uploaded the latest grades.', to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), 'teachers', {_teacherUser.Id})";
+                        quickCmd = new OracleCommand(cmdText, quickClient.Conn);
+                        quickCmd.ExecuteNonQuery();
                     }
                 }
 
-                client.Conn.Close();
+                client.Close();
             }
             catch (Exception)
             {
@@ -350,7 +361,7 @@ namespace Faculti.UI.Cards
         {
             if (!e.Cancelled)
             {
-                if (!GetGradesWorker.IsBusy) GetGradesWorker.RunWorkerAsync();
+                if (!GetGradingWorker2.IsBusy) GetGradingWorker2.RunWorkerAsync();
             }
             else
             {
@@ -363,7 +374,7 @@ namespace Faculti.UI.Cards
             try
             {
                 DatabaseClient client = new DatabaseClient();
-                var cmdText = $"select last_grading from grades";
+                var cmdText = $"select last_grading from grades where student_id = {_currStudentId}";
                 OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
                 _gradingRdr = cmd.ExecuteReader();
             }
@@ -383,21 +394,29 @@ namespace Faculti.UI.Cards
                     {
                         Grading_Label.Text = "1st";
                         _currGrading = 1;
+                        SubmitButton.Visible = true;
+                        InputLabel.Text = "To Input";
                     }
                     else if (_gradingRdr.GetString(0) == "1")
                     {
                         Grading_Label.Text = "2nd";
                         _currGrading = 2;
+                        SubmitButton.Visible = true;
+                        InputLabel.Text = "To Input";
                     }
                     else if (_gradingRdr.GetString(0) == "2")
                     {
                         Grading_Label.Text = "3rd";
                         _currGrading = 3;
+                        SubmitButton.Visible = true;
+                        InputLabel.Text = "To Input";
                     }
                     else if (_gradingRdr.GetString(0) == "3")
                     {
                         Grading_Label.Text = "4th";
                         _currGrading = 4;
+                        SubmitButton.Visible = true;
+                        InputLabel.Text = "To Input";
                     }
                     else if (_gradingRdr.GetString(0) == "4")
                     {
@@ -407,17 +426,74 @@ namespace Faculti.UI.Cards
                         _currGrading = 5;
                     }
 
+
                     _gradingRdr.Close();
                 }
             }
             else
             {
-                _gradingRdr.Close();
                 GradingWorker.RunWorkerAsync();
             }
         }
 
+        private void GetGradingWorker2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                DatabaseClient client = new DatabaseClient();
+                var cmdText = $"select last_grading from grades where student_id = {_currStudentId}";
+                OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
+                _gradingRdr2 = cmd.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                e.Cancel = true;
+            }
+        }
 
+        private void GetGradingWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (!e.Cancelled)
+            {
+                if (_gradingRdr2.Read())
+                {
+                    if (_gradingRdr2.IsDBNull(0))
+                    {
+                        Grading_Label.Text = "1st";
+                        _currGrading = 1;
+                    }
+                    else if (_gradingRdr2.GetString(0) == "1")
+                    {
+                        Grading_Label.Text = "2nd";
+                        _currGrading = 2;
+                    }
+                    else if (_gradingRdr2.GetString(0) == "2")
+                    {
+                        Grading_Label.Text = "3rd";
+                        _currGrading = 3;
+                    }
+                    else if (_gradingRdr2.GetString(0) == "3")
+                    {
+                        Grading_Label.Text = "4th";
+                        _currGrading = 4;
+                    }
+                    else if (_gradingRdr2.GetString(0) == "4")
+                    {
+                        InputLabel.Text = "Grades";
+                        Grading_Label.Text = "Final";
+                        SubmitButton.Visible = false;
+                        _currGrading = 5;
+                    }
+
+                }
+
+                if (!GetGradesWorker.IsBusy) GetGradesWorker.RunWorkerAsync();
+            }
+            else
+            {
+                GradingWorker.RunWorkerAsync();
+            }
+        }
 
 
         // ====================================================================================== //
@@ -442,5 +518,7 @@ namespace Faculti.UI.Cards
         {
 
         }
+
+
     }
 }

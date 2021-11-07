@@ -14,6 +14,7 @@ using Oracle.ManagedDataAccess.Client;
 using Bunifu.UI.WinForms;
 using System.Reflection;
 using System.Drawing.Drawing2D;
+using Faculti.Helpers;
 
 namespace Faculti.UI.Cards
 {
@@ -34,10 +35,11 @@ namespace Faculti.UI.Cards
         {
             _user = user;
             InitializeComponent();
-            DoubleBuffered = true;
-            ControlInteractives.SetDoubleBuffered(FeedLayoutPanel);
             ControlInteractives.SetButtonHoverEvent(PostButton);
-
+            ControlInteractives.SetDoubleBuffered(FeedLayoutPanel);
+            PostPictureBox.Image = _user.Picture;
+            FeedLoader.BringToFront();
+            
             UpdateData();
         }
 
@@ -45,6 +47,11 @@ namespace Faculti.UI.Cards
         {
             if (!DisplayPostWorker.IsBusy) DisplayPostWorker.RunWorkerAsync();
             if (!AnnounceWorker.IsBusy) AnnounceWorker.RunWorkerAsync();
+        }
+
+        public void ChangePicture(Image picture)
+        {
+            PostPictureBox.Image = picture;
         }
 
         private void DisplayPostWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -121,22 +128,22 @@ namespace Faculti.UI.Cards
                 }
             }
 
-            _displayPostClient.Conn.Close();
+            _displayPostClient.Close();
         }
 
         private void AnnounceWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 _displayAnnounceClient = new DatabaseClient();
                 var cmdText = $"select title, text, post_time from announces order by post_time desc";
                 OracleCommand cmd = new OracleCommand(cmdText, _displayAnnounceClient.Conn);
                 _announceRdr = cmd.ExecuteReader();
-            }
-            catch (Exception)
-            {
-                e.Cancel = true;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    e.Cancel = true;
+            //}
         }
 
         private void AnnounceWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -144,11 +151,6 @@ namespace Faculti.UI.Cards
             if (!e.Cancelled)
             {
                 DisplayAnnounces();
-            }
-            else
-            {
-                _displayAnnounceClient.Conn.Close();
-                AnnounceWorker.RunWorkerAsync();
             }
         }
 
@@ -160,7 +162,7 @@ namespace Faculti.UI.Cards
                 AnnouncementsFlowLayoutPanel.Controls.Add(announce);
             }
 
-            _displayAnnounceClient.Conn.Close();
+            _displayAnnounceClient.Close();
         }
 
         private void InsertPostWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -171,7 +173,21 @@ namespace Faculti.UI.Cards
                 var cmdText = $"insert into posts (text, user_id, post_time, section_name) values (q'[{WritePostTextBox.Text}]', {_user.Id}, to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), '{_user.SectionName}')";
                 OracleCommand cmd = new OracleCommand(cmdText, _insertPostClient.Conn);
                 cmd.ExecuteNonQuery();
-                _insertPostClient.Conn.Close();
+
+                string postString = string.Empty;
+                if (_user.Type == "teachers")
+                {
+                    postString = "The teacher posted something in the feed channel.";
+                }
+                else
+                {
+                    postString = $"{_user.FirstName} {_user.LastName} posted something in the feed channel.";
+                }
+
+                cmdText = $"insert into updates (update_type, text, created_time, sender_id, sender_user_type) values ('feed', '{postString}', to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), {_user.Id}, '{_user.Type}')";
+                cmd = new OracleCommand(cmdText, _insertPostClient.Conn);
+                cmd.ExecuteNonQuery();
+                _insertPostClient.Close();
             }
             catch (Exception)
             {
@@ -185,10 +201,6 @@ namespace Faculti.UI.Cards
             {
                 WritePostTextBox.Text = string.Empty;
                 if (!DisplayPostWorker.IsBusy) DisplayPostWorker.RunWorkerAsync();
-            }
-            else
-            {
-                InsertPostWorker.RunWorkerAsync();
             }
         }
 

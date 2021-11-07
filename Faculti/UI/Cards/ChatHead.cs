@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,9 @@ namespace Faculti.UI.Cards
 {
     public partial class ChatHead : UserControl
     {
-        private User _user;
+        private readonly User _user;
+        public Image Picture = Properties.Resources.default_profile;
+        private string _picName;
         public int InboxId;
         public int ContactId;
         public string ContactName;
@@ -46,61 +49,100 @@ namespace Faculti.UI.Cards
         // =========================================================================================
         private void GetChatInfoWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            GetChatInfo();
-        }
+            try
+            {
+                _chatInfoClient = new DatabaseClient();
 
-        private void GetChatInfo()
-        {
-            _chatInfoClient = new DatabaseClient();
-            var cmdText = $"select inbox_id, last_message, last_update, last_user_id from inboxes where user_id1 = {_user.Id} and user_id2 = {ContactId} or user_id1 = {ContactId} and user_id2 = {_user.Id}";
-            OracleCommand cmd = new OracleCommand(cmdText, _chatInfoClient.Conn);
-            _chatInfoRdr = cmd.ExecuteReader();
+                var cmdText = $"select picture, pic_name from all_users where user_id = {ContactId}";
+                OracleCommand cmd = new OracleCommand(cmdText, _chatInfoClient.Conn);
+                using (OracleDataReader rdr = cmd.ExecuteReader())
+                {
+                    if (rdr.Read())
+                    {
+                        var picName = rdr.IsDBNull(1) ? null : rdr.GetString(1);
+
+                        if (picName != _picName)
+                        {
+                            byte[] image = rdr.IsDBNull(0) ? null : (byte[])rdr["picture"];
+                            if (image != null)
+                            {
+                                MemoryStream ms = new MemoryStream(image);
+                                Image pic = Image.FromStream(ms);
+                                Picture = pic;
+                            }
+
+                            _picName = picName;
+                        }
+                    }
+                }
+
+                cmdText = $"select active_status from all_users where user_id = {ContactId}";
+                cmd = new OracleCommand(cmdText, _chatInfoClient.Conn);
+                using (OracleDataReader rdr2 = cmd.ExecuteReader())
+                {
+                    if (rdr2.Read())
+                    {
+                        _contactStatus = rdr2.IsDBNull(0) ? null : rdr2.GetString(0);
+                    }
+                }
+
+                cmdText = $"select inbox_id, last_message, last_update, last_user_id from inboxes where user_id1 = {_user.Id} and user_id2 = {ContactId} or user_id1 = {ContactId} and user_id2 = {_user.Id}";
+                cmd = new OracleCommand(cmdText, _chatInfoClient.Conn);
+                _chatInfoRdr = cmd.ExecuteReader();
+            }
+            catch (Exception)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void GetChatInfoWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            _chatInfoRdr.Read();
-
-            if (_chatInfoRdr.HasRows)
+            if (!e.Cancelled)
             {
-                InboxId = _chatInfoRdr.IsDBNull(0) ? Convert.ToInt32(null) : _chatInfoRdr.GetInt32(0);
-                _lastMessage = _chatInfoRdr.IsDBNull(1) ? null : _chatInfoRdr.GetString(1);
-                _lastUpdate = _chatInfoRdr.IsDBNull(2) ? _dateDefault : _chatInfoRdr.GetOracleDate(2).Value;
-                _lastUserId = _chatInfoRdr.IsDBNull(3) ? Convert.ToInt32(null) : _chatInfoRdr.GetInt32(3);
+                if (_chatInfoRdr.Read())
+                {
+                    InboxId = _chatInfoRdr.IsDBNull(0) ? 0 : _chatInfoRdr.GetInt32(0);
+                    _lastMessage = _chatInfoRdr.IsDBNull(1) ? null : _chatInfoRdr.GetString(1);
+                    _lastUpdate = _chatInfoRdr.IsDBNull(2) ? _dateDefault : _chatInfoRdr.GetOracleDate(2).Value;
+                    _lastUserId = _chatInfoRdr.IsDBNull(3) ? 0 : _chatInfoRdr.GetInt32(3);
 
-                _chatInfoRdr.Close();
-                _chatInfoClient.Conn.Close();
-
-                DisplayChatHeadInfo();
-                InboxUpdateTimer.Start();
-            }
-            else
-            {
-                _chatInfoRdr.Close();
-                _chatInfoClient.Conn.Close();
-                CreateInboxWorker.RunWorkerAsync();
-            }
+                    _chatInfoClient.Close();
+                    DisplayChatHeadInfo();
+                    InboxUpdateTimer.Start();
+                }
+                else
+                {
+                    _chatInfoClient.Close();
+                    CreateInboxWorker.RunWorkerAsync();
+                }
+            }   
         }
 
         public void DisplayChatHeadInfo()
         {
             ChatNameLabel.Text = ContactName;
+            ChatPictureBox.Image = Picture;
 
-            if (_lastUserId != ContactId && _lastMessage == "Photo")
+            if (_lastUserId == _user.Id && _lastMessage == "Photo")
             {
                 LastMesageLabel.Text = "You sent a photo";
             }
-            else if (_lastUserId == ContactId && _lastMessage == "Photo")
-            {
-                LastMesageLabel.Text = "Sent a photo";
-            }
-            else if (_lastUserId != ContactId && _lastMessage != null)
+            else if (_lastUserId == _user.Id) 
             {
                 LastMesageLabel.Text = "You: " + _lastMessage;
             }
-            else
+            else if (_lastUserId != _user.Id && _lastMessage == "Photo")
+            {
+                LastMesageLabel.Text = "Sent a photo";
+            }
+            else if (_lastUserId != _user.Id)
             {
                 LastMesageLabel.Text = _lastMessage;
+            }
+            else
+            {
+                LastMesageLabel.Text = string.Empty;
             }
 
 
@@ -135,6 +177,15 @@ namespace Faculti.UI.Cards
 
                 LastUpdateLabel.Text = lastUpdateString;
             }
+
+            if (_contactStatus == "Y")
+            {
+                IsActivePictureBox.Image = Properties.Resources.online;
+            }
+            else
+            {
+                IsActivePictureBox.Image = Properties.Resources.offline;
+            }
         }
         // =========================================================================================
 
@@ -156,17 +207,17 @@ namespace Faculti.UI.Cards
 
         private void CreateInboxWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            GetChatInfoWorker.RunWorkerAsync();
+            if (!GetChatInfoWorker.IsBusy) GetChatInfoWorker.RunWorkerAsync();
         }
         // =========================================================================================
 
 
         // =========================================================================================
-        private void InboxUpdateWorker_DoWork(object sender, DoWorkEventArgs e)
+        /*private void InboxUpdateWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             try
             {
-                GetChatInfo();
+                if (!GetChatInfoWorker.IsBusy) GetChatInfoWorker.RunWorkerAsync();
             }
             catch (Exception)
             {
@@ -176,29 +227,10 @@ namespace Faculti.UI.Cards
 
         private void InboxUpdateWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            if (e.Cancelled)
-            {
-                _chatInfoRdr.Close();
-                _chatInfoClient.Conn.Close();
-                InboxUpdateWorker.RunWorkerAsync();
-            }
-            else
-            {
-                if (_chatInfoRdr.Read())
-                {
-                    InboxId = _chatInfoRdr.IsDBNull(0) ? Convert.ToInt32(null) : _chatInfoRdr.GetInt32(0);
-                    _lastMessage = _chatInfoRdr.IsDBNull(1) ? null : _chatInfoRdr.GetString(1);
-                    _lastUpdate = _chatInfoRdr.IsDBNull(2) ? _dateDefault : _chatInfoRdr.GetOracleDate(2).Value;
-
-                    _chatInfoRdr.Close();
-                    _chatInfoClient.Conn.Close();
-
-                    DisplayChatHeadInfo();
-                }
-            }
+            
         }
         // =========================================================================================
-
+        */
 
         // =========================================================================================
         private void WireAllControls(Control cont)
@@ -236,8 +268,7 @@ namespace Faculti.UI.Cards
 
         private void InboxUpdateTimer_Tick(object sender, EventArgs e)
         {
-            if (!InboxUpdateWorker.IsBusy && !GetChatInfoWorker.IsBusy && _chatInfoRdr.IsClosed) 
-                InboxUpdateWorker.RunWorkerAsync();
+            if (!GetChatInfoWorker.IsBusy) GetChatInfoWorker.RunWorkerAsync();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Faculti.UI.Cards
         public string Timestamp;
         private Image _image;
 
-        public TheirImageMessage(Image image, DateTime time)
+        public TheirImageMessage(Image image, DateTime time, Image picture)
         {
             InitializeComponent();
             _image = image;
@@ -27,6 +27,8 @@ namespace Faculti.UI.Cards
             ImageMessagePictureBox.BorderRadius = 10;
 
             TimeLabel.Text = time.ToString("hh:mm tt");
+
+            MessagePictureBox.Image = picture;
         }
 
         public void RemoveImageAndTime()

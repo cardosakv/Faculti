@@ -16,7 +16,7 @@ namespace Faculti.UI.Cards
 {
     public partial class GetStartedParent : UserControl
     {
-        public event NotifyParentHomeForm GetStartedFinished = delegate { };
+        public event NotifyHomeForm GetStartedFinished = delegate { };
 
         private readonly Parent _parentUser;
         private readonly Student _studentToQuery = new Student();
@@ -56,22 +56,36 @@ namespace Faculti.UI.Cards
 
         private void CodeWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            StudentConfirmForm form = new StudentConfirmForm(_studentToQuery);
-            if (form.ShowDialog() == DialogResult.OK)
+            if (!string.IsNullOrEmpty(_studentToQuery.FirstName))
             {
-                var cmdText = $"update parents set student_id = {_studentToQuery.Id}, student_code = '{_studentToQuery.Code}', section_name = '{_studentToQuery.SectionName}' where email = '{_parentUser.Email}'";
-                _client.PerformNonQueryCommand(cmdText);
+                StudentConfirmForm form = new StudentConfirmForm(_studentToQuery);
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    var cmdText = $"update parents set student_id = {_studentToQuery.Id}, student_code = '{_studentToQuery.Code}', section_name = '{_studentToQuery.SectionName}' where email = '{_parentUser.Email}'";
+                    _client.PerformNonQueryCommand(cmdText);
 
-                _client.Conn.Open();
-                cmdText = $"update students set parent_id = {_parentUser.Id} where student_code = '{_studentToQuery.Code}'";
-                _client.PerformNonQueryCommand(cmdText);
+                    _client.Conn.Open();
+                    cmdText = $"select parent_id from parents where email = '{_parentUser.Email}'";
+                    OracleCommand cmdt = new OracleCommand(cmdText, _client.Conn);
+                    OracleDataReader rdrt = cmdt.ExecuteReader();
+                    rdrt.Read();
 
+                    var parentId = rdrt.GetString(0);
 
-                _parentUser.AssignedStudent = _studentToQuery;
-                GetStartedFinished();
+                    cmdText = $"update students set parent_id = {parentId} where student_code = '{_studentToQuery.Code}'";
+                    _client.PerformNonQueryCommand(cmdText);
 
-                this.Hide();
-                this.Dispose();
+                    _parentUser.AssignedStudent = _studentToQuery;
+                    GetStartedFinished();
+
+                    this.Hide();
+                    this.Dispose();
+                }
+            }
+            else
+            {
+                InvalidCodeLabel.Text = "Incorrect code";
+                InvalidCodeLabel.Visible = true;
             }
         }
 

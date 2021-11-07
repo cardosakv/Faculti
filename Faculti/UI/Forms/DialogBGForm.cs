@@ -26,7 +26,7 @@ namespace Faculti.UI.Forms
             fadeInTimer.Start();
             fadeInTimer.Tick += (o, i) =>
             {
-                if (this.Opacity >= 0.6) fadeInTimer.Stop();
+                if (this.Opacity >= 0.4) fadeInTimer.Stop();
                 this.Opacity += 0.2;
             };
         }

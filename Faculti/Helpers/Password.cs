@@ -36,7 +36,7 @@ namespace Faculti.Helpers
         public static bool IsCorrect(string userType, string email, string passwordInHash)
         {
             DatabaseClient client = new DatabaseClient();
-            var cmdText = $@"select * from {userType} where email = '{email}' and password_in_hash = '{passwordInHash}'";
+            var cmdText = $"select * from {userType} where email = '{email}' and password_in_hash = '{passwordInHash}'";
 
             try
             {

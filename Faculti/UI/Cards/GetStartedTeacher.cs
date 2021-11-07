@@ -17,7 +17,7 @@ namespace Faculti.UI.Cards
 {
     public partial class GetStartedTeacher : UserControl
     {
-        public event NotifyTeacherHomeForm GetStartedFinished = delegate { };
+        public event NotifyHomeForm GetStartedFinished = delegate { };
 
         private readonly Teacher _teacherUser;
         private string _sectionToCheck;
@@ -39,7 +39,7 @@ namespace Faculti.UI.Cards
             if (InvalidCodeLabel.Text.Length != 0)
             {
                 _sectionToCheck = SectionTextBox.Text;
-                SectionCheckWorker.RunWorkerAsync();
+                if (!SectionCheckWorker.IsBusy) SectionCheckWorker.RunWorkerAsync();
             }
             else
             {
@@ -75,14 +75,30 @@ namespace Faculti.UI.Cards
                 {
                     var cmdText = $"update teachers set section_name = '{_sectionToCheck}' where email = '{_teacherUser.Email}'";
                     _client.PerformNonQueryCommand(cmdText);
+
+                    _client.Conn.Open();
+                    cmdText = $"select teacher_id from teachers where email = '{_teacherUser.Email}'";
+                    OracleCommand cmdt = new OracleCommand(cmdText, _client.Conn);
+                    OracleDataReader rdrt = cmdt.ExecuteReader();
+                    rdrt.Read();
+
+                    var teacherId = rdrt.GetString(0);
+
+                    cmdText = $"update students set teacher_id = {teacherId} where section_name = '{_sectionToCheck}'";
+                    _client.PerformNonQueryCommand(cmdText);
+
                     GetStartedFinished();
                     this.Hide();
                     this.Dispose();
                 }
             }
+            else
+            {
+                InvalidCodeLabel.Text = "Incorrect";
+                InvalidCodeLabel.Visible = true;
+            }
 
-            _rdr.Close();
-            _client.Conn.Close();
+            _client.Close();
         }
 
 

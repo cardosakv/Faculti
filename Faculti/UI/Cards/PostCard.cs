@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Bunifu.UI.WinForms;
 using Faculti.DataClasses;
+using System.IO;
 
 namespace Faculti.UI.Cards
 {
@@ -18,6 +19,7 @@ namespace Faculti.UI.Cards
     {
         private readonly User _user;
         public int PostId;
+        private Image _postImage = Faculti.Properties.Resources.default_profile;
         private int _authorId;
         private string _firstName;
         private string _lastName;   
@@ -29,6 +31,7 @@ namespace Faculti.UI.Cards
         private DatabaseClient _commentClient;
         private OracleDataReader _commentRdr;
         private bool _firstTime = true;
+        private string _picName;
 
         public PostCard(int postId, User user)
         {
@@ -67,8 +70,28 @@ namespace Faculti.UI.Cards
 
                 _firstName = rdr.GetString(0);
                 _lastName = rdr.GetString(1);
+                
+                cmdText = $"select picture, pic_name from all_users where user_id = {_authorId}";
+                cmd = new OracleCommand(cmdText, client.Conn);
+                rdr = cmd.ExecuteReader();
+                if (rdr.Read())
+                {
+                    var picName = rdr.IsDBNull(1) ? null : rdr.GetString(1);
+                    if (picName != _picName)
+                    {
+                        byte[] image = rdr.IsDBNull(0) ? null : (byte[])rdr["picture"];
+                        if (image != null)
+                        {
+                            MemoryStream ms = new MemoryStream(image);
+                            Image pic = Image.FromStream(ms);
+                            _postImage = pic;
+                        }
 
-                client.Conn.Close();
+                        _picName = picName;
+                    }
+                }
+
+                client.Close();
             }
             catch (Exception)
             {
@@ -83,14 +106,11 @@ namespace Faculti.UI.Cards
                 DisplayPostInfo();
                 if (!GetCommentsWorker.IsBusy) GetCommentsWorker.RunWorkerAsync();
             }
-            else
-            {
-                PostInfoWorker.RunWorkerAsync();
-            }
         }
 
         public void DisplayPostInfo()
         {
+            PostPictureBox.Image = _postImage;
             PosterNameLabel.Text = $"{_firstName} {_lastName}";
             PostDateTimeLabel.Text = _dateTime;
             PostBodyLabel.Text = _postBody;
@@ -125,11 +145,6 @@ namespace Faculti.UI.Cards
             {
                 DisplayComments();
             }
-            else
-            {
-                _commentClient.Conn.Close();
-                GetCommentsWorker.RunWorkerAsync();
-            }
         }
 
         public void DisplayComments()
@@ -155,7 +170,7 @@ namespace Faculti.UI.Cards
                 }
             }
 
-            _commentClient.Conn.Close();
+            _commentClient.Close();
         }
 
         private void PostCommentWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -164,8 +179,7 @@ namespace Faculti.UI.Cards
             {
                 DatabaseClient client = new DatabaseClient();
                 var cmdText = $"insert into comments (text, post_id, user_id, post_time) values (q'[{CommentPostTextBox.Text}]', {PostId}, {_user.Id}, to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'))";
-                OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
-                cmd.ExecuteNonQuery();
+                client.PerformNonQueryCommand(cmdText);
             }
             catch (Exception)
             {
@@ -178,11 +192,7 @@ namespace Faculti.UI.Cards
             if (!e.Cancelled)
             {
                 CommentPostTextBox.Text = string.Empty;
-                GetCommentsWorker.RunWorkerAsync();
-            }
-            else
-            {
-                PostInfoWorker.RunWorkerAsync();
+                if (!GetCommentsWorker.IsBusy) GetCommentsWorker.RunWorkerAsync();
             }
         }
 
@@ -231,8 +241,6 @@ namespace Faculti.UI.Cards
                     LikeButton.Image = Properties.Resources.like_inactive;
                     LikeCountLabel.Text = _likeNum.ToString();
                 }
-
-                
             }
             
         }
@@ -248,6 +256,11 @@ namespace Faculti.UI.Cards
         private void PostTimer_Tick(object sender, EventArgs e)
         {
             if (!PostInfoWorker.IsBusy) UpdateData();
+        }
+
+        private void PostPictureBox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

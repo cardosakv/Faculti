@@ -31,11 +31,6 @@ namespace Faculti.UI.Cards
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradesParentPanel));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.GradeCover = new System.Windows.Forms.FlowLayoutPanel();
             this.BiggestDropLabel = new System.Windows.Forms.Label();
@@ -72,13 +67,7 @@ namespace Faculti.UI.Cards
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.GetGradesWorker = new System.ComponentModel.BackgroundWorker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.InvalidCodeLabel = new System.Windows.Forms.Label();
-            this.AccessButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.CodeTextBox = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.Home_ChildName_Label = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -88,7 +77,6 @@ namespace Faculti.UI.Cards
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.NoGradeCover.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuShadowPanel1
@@ -136,7 +124,7 @@ namespace Faculti.UI.Cards
             // GradeCover
             // 
             this.GradeCover.BackColor = System.Drawing.Color.White;
-            this.GradeCover.Location = new System.Drawing.Point(159, 17);
+            this.GradeCover.Location = new System.Drawing.Point(159, 15);
             this.GradeCover.Name = "GradeCover";
             this.GradeCover.Size = new System.Drawing.Size(643, 117);
             this.GradeCover.TabIndex = 61;
@@ -292,7 +280,7 @@ namespace Faculti.UI.Cards
             this.PassedCircleProgress.LineProgressThickness = 5;
             this.PassedCircleProgress.LineThickness = 5;
             this.PassedCircleProgress.Location = new System.Drawing.Point(519, 28);
-            this.PassedCircleProgress.Maximum = 8;
+            this.PassedCircleProgress.Maximum = 9;
             this.PassedCircleProgress.Name = "PassedCircleProgress";
             this.PassedCircleProgress.ProgressAnimationSpeed = 300;
             this.PassedCircleProgress.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(231)))), ((int)(((byte)(245)))));
@@ -425,13 +413,13 @@ namespace Faculti.UI.Cards
             // 
             // Grading_Label
             // 
-            this.Grading_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
+            this.Grading_Label.BackColor = System.Drawing.Color.Transparent;
             this.Grading_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Grading_Label.Location = new System.Drawing.Point(7, 18);
+            this.Grading_Label.Location = new System.Drawing.Point(-14, 18);
             this.Grading_Label.Margin = new System.Windows.Forms.Padding(0);
             this.Grading_Label.Name = "Grading_Label";
-            this.Grading_Label.Size = new System.Drawing.Size(116, 88);
+            this.Grading_Label.Size = new System.Drawing.Size(158, 88);
             this.Grading_Label.TabIndex = 33;
             this.Grading_Label.Text = "—";
             this.Grading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -729,266 +717,17 @@ namespace Faculti.UI.Cards
             this.GetGradesWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetGradesWorker_DoWork);
             this.GetGradesWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetGradesWorker_RunWorkerCompleted);
             // 
-            // panel1
+            // Timer
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.panel1.Controls.Add(this.InvalidCodeLabel);
-            this.panel1.Controls.Add(this.AccessButton);
-            this.panel1.Controls.Add(this.CodeTextBox);
-            this.panel1.Controls.Add(this.Home_ChildName_Label);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Location = new System.Drawing.Point(4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(841, 631);
-            this.panel1.TabIndex = 66;
-            this.ToolTip.SetToolTip(this.panel1, "");
-            this.ToolTip.SetToolTipIcon(this.panel1, null);
-            this.ToolTip.SetToolTipTitle(this.panel1, "");
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.label11.Font = new System.Drawing.Font("Gotham", 54.74999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.label11.Location = new System.Drawing.Point(373, 123);
-            this.label11.MaximumSize = new System.Drawing.Size(442, 400);
-            this.label11.Name = "label11";
-            this.label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label11.Size = new System.Drawing.Size(108, 79);
-            this.label11.TabIndex = 59;
-            this.label11.Text = "🔐";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ToolTip.SetToolTip(this.label11, "");
-            this.ToolTip.SetToolTipIcon(this.label11, null);
-            this.ToolTip.SetToolTipTitle(this.label11, "");
-            // 
-            // InvalidCodeLabel
-            // 
-            this.InvalidCodeLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.CheckButton;
-            this.InvalidCodeLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.InvalidCodeLabel.Font = new System.Drawing.Font("Gotham", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InvalidCodeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(43)))), ((int)(((byte)(96)))));
-            this.InvalidCodeLabel.Location = new System.Drawing.Point(338, 378);
-            this.InvalidCodeLabel.Name = "InvalidCodeLabel";
-            this.InvalidCodeLabel.Size = new System.Drawing.Size(164, 13);
-            this.InvalidCodeLabel.TabIndex = 65;
-            this.InvalidCodeLabel.Text = " Incorrect password";
-            this.InvalidCodeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ToolTip.SetToolTip(this.InvalidCodeLabel, "");
-            this.ToolTip.SetToolTipIcon(this.InvalidCodeLabel, null);
-            this.ToolTip.SetToolTipTitle(this.InvalidCodeLabel, "");
-            this.InvalidCodeLabel.Visible = false;
-            // 
-            // AccessButton
-            // 
-            this.AccessButton.AllowAnimations = true;
-            this.AccessButton.AllowMouseEffects = true;
-            this.AccessButton.AllowToggling = false;
-            this.AccessButton.AnimationSpeed = 200;
-            this.AccessButton.AutoGenerateColors = false;
-            this.AccessButton.AutoRoundBorders = false;
-            this.AccessButton.AutoSizeLeftIcon = true;
-            this.AccessButton.AutoSizeRightIcon = true;
-            this.AccessButton.BackColor = System.Drawing.Color.Transparent;
-            this.AccessButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AccessButton.BackgroundImage")));
-            this.AccessButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.AccessButton.ButtonText = "Access";
-            this.AccessButton.ButtonTextMarginLeft = 0;
-            this.AccessButton.ColorContrastOnClick = 45;
-            this.AccessButton.ColorContrastOnHover = 45;
-            this.AccessButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.AccessButton.CustomizableEdges = borderEdges2;
-            this.AccessButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.AccessButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.AccessButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.AccessButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.AccessButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
-            this.AccessButton.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccessButton.ForeColor = System.Drawing.Color.White;
-            this.AccessButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AccessButton.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.AccessButton.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.AccessButton.IconMarginLeft = 11;
-            this.AccessButton.IconPadding = 10;
-            this.AccessButton.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.AccessButton.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.AccessButton.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.AccessButton.IconSize = 25;
-            this.AccessButton.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.IdleBorderRadius = 10;
-            this.AccessButton.IdleBorderThickness = 1;
-            this.AccessButton.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.IdleIconLeftImage = null;
-            this.AccessButton.IdleIconRightImage = null;
-            this.AccessButton.IndicateFocus = false;
-            this.AccessButton.Location = new System.Drawing.Point(274, 400);
-            this.AccessButton.Name = "AccessButton";
-            this.AccessButton.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.AccessButton.OnDisabledState.BorderRadius = 10;
-            this.AccessButton.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.AccessButton.OnDisabledState.BorderThickness = 1;
-            this.AccessButton.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.AccessButton.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.AccessButton.OnDisabledState.IconLeftImage = null;
-            this.AccessButton.OnDisabledState.IconRightImage = null;
-            this.AccessButton.onHoverState.BorderColor = System.Drawing.Color.Empty;
-            this.AccessButton.onHoverState.BorderRadius = 10;
-            this.AccessButton.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.AccessButton.onHoverState.BorderThickness = 1;
-            this.AccessButton.onHoverState.FillColor = System.Drawing.Color.Empty;
-            this.AccessButton.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.AccessButton.onHoverState.IconLeftImage = null;
-            this.AccessButton.onHoverState.IconRightImage = null;
-            this.AccessButton.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.OnIdleState.BorderRadius = 10;
-            this.AccessButton.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.AccessButton.OnIdleState.BorderThickness = 1;
-            this.AccessButton.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.AccessButton.OnIdleState.IconLeftImage = null;
-            this.AccessButton.OnIdleState.IconRightImage = null;
-            this.AccessButton.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.OnPressedState.BorderRadius = 10;
-            this.AccessButton.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.AccessButton.OnPressedState.BorderThickness = 1;
-            this.AccessButton.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.AccessButton.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.AccessButton.OnPressedState.IconLeftImage = null;
-            this.AccessButton.OnPressedState.IconRightImage = null;
-            this.AccessButton.Size = new System.Drawing.Size(296, 39);
-            this.AccessButton.TabIndex = 64;
-            this.AccessButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.AccessButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.AccessButton.TextMarginLeft = 0;
-            this.AccessButton.TextPadding = new System.Windows.Forms.Padding(0);
-            this.ToolTip.SetToolTip(this.AccessButton, "");
-            this.ToolTip.SetToolTipIcon(this.AccessButton, null);
-            this.ToolTip.SetToolTipTitle(this.AccessButton, "");
-            this.AccessButton.UseDefaultRadiusAndThickness = true;
-            // 
-            // CodeTextBox
-            // 
-            this.CodeTextBox.AcceptsReturn = false;
-            this.CodeTextBox.AcceptsTab = false;
-            this.CodeTextBox.AnimationSpeed = 200;
-            this.CodeTextBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.CodeTextBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.CodeTextBox.AutoSizeHeight = true;
-            this.CodeTextBox.BackColor = System.Drawing.Color.Transparent;
-            this.CodeTextBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CodeTextBox.BackgroundImage")));
-            this.CodeTextBox.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CodeTextBox.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CodeTextBox.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CodeTextBox.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.CodeTextBox.BorderRadius = 10;
-            this.CodeTextBox.BorderThickness = 1;
-            this.CodeTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.CodeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CodeTextBox.DefaultFont = new System.Drawing.Font("Circular Spotify Tx T Bold", 20.25F, System.Drawing.FontStyle.Bold);
-            this.CodeTextBox.DefaultText = "";
-            this.CodeTextBox.FillColor = System.Drawing.Color.White;
-            this.CodeTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            this.CodeTextBox.HideSelection = true;
-            this.CodeTextBox.IconLeft = null;
-            this.CodeTextBox.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.CodeTextBox.IconPadding = 10;
-            this.CodeTextBox.IconRight = null;
-            this.CodeTextBox.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.CodeTextBox.Lines = new string[0];
-            this.CodeTextBox.Location = new System.Drawing.Point(274, 327);
-            this.CodeTextBox.MaxLength = 123456;
-            this.CodeTextBox.MinimumSize = new System.Drawing.Size(1, 1);
-            this.CodeTextBox.Modified = false;
-            this.CodeTextBox.Multiline = false;
-            this.CodeTextBox.Name = "CodeTextBox";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CodeTextBox.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.CodeTextBox.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CodeTextBox.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.CodeTextBox.OnIdleState = stateProperties8;
-            this.CodeTextBox.Padding = new System.Windows.Forms.Padding(3);
-            this.CodeTextBox.PasswordChar = '\0';
-            this.CodeTextBox.PlaceholderForeColor = System.Drawing.Color.Gainsboro;
-            this.CodeTextBox.PlaceholderText = "-----";
-            this.CodeTextBox.ReadOnly = false;
-            this.CodeTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.CodeTextBox.SelectedText = "";
-            this.CodeTextBox.SelectionLength = 0;
-            this.CodeTextBox.SelectionStart = 0;
-            this.CodeTextBox.ShortcutsEnabled = true;
-            this.CodeTextBox.Size = new System.Drawing.Size(296, 49);
-            this.CodeTextBox.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.CodeTextBox.TabIndex = 63;
-            this.CodeTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.CodeTextBox.TextMarginBottom = 0;
-            this.CodeTextBox.TextMarginLeft = 3;
-            this.CodeTextBox.TextMarginTop = -2;
-            this.CodeTextBox.TextPlaceholder = "-----";
-            this.ToolTip.SetToolTip(this.CodeTextBox, "");
-            this.ToolTip.SetToolTipIcon(this.CodeTextBox, null);
-            this.ToolTip.SetToolTipTitle(this.CodeTextBox, "");
-            this.CodeTextBox.UseSystemPasswordChar = false;
-            this.CodeTextBox.WordWrap = true;
-            // 
-            // Home_ChildName_Label
-            // 
-            this.Home_ChildName_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.Home_ChildName_Label.Font = new System.Drawing.Font("Gotham", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Home_ChildName_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.Home_ChildName_Label.Location = new System.Drawing.Point(253, 252);
-            this.Home_ChildName_Label.Name = "Home_ChildName_Label";
-            this.Home_ChildName_Label.Size = new System.Drawing.Size(335, 49);
-            this.Home_ChildName_Label.TabIndex = 62;
-            this.Home_ChildName_Label.Text = "Please enter your password to view grades.";
-            this.Home_ChildName_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.ToolTip.SetToolTip(this.Home_ChildName_Label, "");
-            this.ToolTip.SetToolTipIcon(this.Home_ChildName_Label, null);
-            this.ToolTip.SetToolTipTitle(this.Home_ChildName_Label, "");
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.label14.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
-            this.label14.Location = new System.Drawing.Point(346, 220);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(148, 27);
-            this.label14.TabIndex = 61;
-            this.label14.Text = "Security Check";
-            this.ToolTip.SetToolTip(this.label14, "");
-            this.ToolTip.SetToolTipIcon(this.label14, null);
-            this.ToolTip.SetToolTipTitle(this.label14, "");
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 5000;
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // GradesParentPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.NoGradeCover);
             this.Controls.Add(this.GradeRecordLayoutPanel);
             this.Controls.Add(this.bunifuPanel2);
@@ -1008,8 +747,6 @@ namespace Faculti.UI.Cards
             this.bunifuPanel2.ResumeLayout(false);
             this.NoGradeCover.ResumeLayout(false);
             this.NoGradeCover.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1052,12 +789,6 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.FlowLayoutPanel GradeCover;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label InvalidCodeLabel;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 AccessButton;
-        private Bunifu.UI.WinForms.BunifuTextBox CodeTextBox;
-        private System.Windows.Forms.Label Home_ChildName_Label;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Timer Timer;
     }
 }

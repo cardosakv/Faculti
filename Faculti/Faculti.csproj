@@ -37,7 +37,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>faculti-icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\faculti-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>
@@ -183,7 +183,7 @@
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.122.21.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
-      <HintPath>..\packages\Oracle.ManagedDataAccess.21.3.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.21.4.0\lib\net462\Oracle.ManagedDataAccess.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -226,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataClasses\Student.cs" />
+    <Compile Include="Helpers\Picture.cs" />
     <Compile Include="Helpers\UIEventHandler.cs" />
     <Compile Include="Helpers\PhoneNumber.cs" />
     <Compile Include="Helpers\Randomizer.cs" />
@@ -270,6 +271,12 @@
     </Compile>
     <Compile Include="UI\Cards\GetStartedParent.Designer.cs">
       <DependentUpon>GetStartedParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cards\NotifCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cards\NotifCard.Designer.cs">
+      <DependentUpon>NotifCard.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Cards\SecurityCheckPanel.cs">
       <SubType>UserControl</SubType>
@@ -403,6 +410,12 @@
     <Compile Include="UI\Forms\DialogBGForm.Designer.cs">
       <DependentUpon>DialogBGForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Forms\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Forms\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Forms\ErrorGradeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,23 +446,17 @@
     <Compile Include="UI\Forms\SubmitGradeConfirmForm.Designer.cs">
       <DependentUpon>SubmitGradeConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Forms\TeacherHomeForm.cs">
+    <Compile Include="UI\Forms\HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Forms\TeacherHomeForm.Designer.cs">
-      <DependentUpon>TeacherHomeForm.cs</DependentUpon>
+    <Compile Include="UI\Forms\HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\StudentConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Forms\StudentConfirmForm.Designer.cs">
       <DependentUpon>StudentConfirmForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Forms\ParentHomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Forms\ParentHomeForm.Designer.cs">
-      <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -510,6 +517,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\GetStartedParent.resx">
       <DependentUpon>GetStartedParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cards\NotifCard.resx">
+      <DependentUpon>NotifCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cards\SecurityCheckPanel.resx">
       <DependentUpon>SecurityCheckPanel.cs</DependentUpon>
@@ -574,6 +584,9 @@
     <EmbeddedResource Include="UI\Forms\DialogBGForm.resx">
       <DependentUpon>DialogBGForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\ErrorGradeForm.resx">
       <DependentUpon>ErrorGradeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -589,14 +602,11 @@
     <EmbeddedResource Include="UI\Forms\SubmitGradeConfirmForm.resx">
       <DependentUpon>SubmitGradeConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\TeacherHomeForm.resx">
-      <DependentUpon>TeacherHomeForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Forms\HomeForm.resx">
+      <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\StudentConfirmForm.resx">
       <DependentUpon>StudentConfirmForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\Forms\ParentHomeForm.resx">
-      <DependentUpon>ParentHomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -762,6 +772,9 @@
     <Content Include="bin\Debug\NUnit3.TestAdapter.pdb" />
     <Content Include="bin\Debug\testcentric.engine.metadata.dll" />
     <Content Include="faculti-icon.ico" />
+    <None Include="Resources\online.png" />
+    <None Include="Resources\offline.png" />
+    <None Include="Resources\faculti-icon.ico" />
     <None Include="Resources\log out-1.1s-200px %281%29.png" />
     <None Include="Resources\close-1.1s-200px %284%29.png" />
     <None Include="Resources\default_profile.jpg" />

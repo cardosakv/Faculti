@@ -20,9 +20,11 @@ namespace Faculti.UI.Cards
     public partial class ChatPanel : UserControl
     {
         private readonly User _user;
+        private string _picName;
         private int _currInboxId;
         private int _currReceiverId;
-        private string _currImageName = String.Empty;
+        private Image _currReceiverPicture = Properties.Resources.default_profile;
+        private string _currImageName = string.Empty;
         private int _lastMessageUserId = 0;
         private UserControl _lastMessageCtrl = null;
         private DatabaseClient _contactsClient;
@@ -47,7 +49,7 @@ namespace Faculti.UI.Cards
 
             _contactIds.Add(0);
             _user = user;
-            if (!GetContactsWorker.IsBusy) GetContactsWorker.RunWorkerAsync();
+            GetContactsWorker.RunWorkerAsync();
         }
 
 
@@ -57,7 +59,7 @@ namespace Faculti.UI.Cards
             try
             {
                 _contactsClient = new DatabaseClient();
-                var cmdText = $"select user_id, first_name, last_name, active_status from all_users where section_name = '{_user.SectionName}'";
+                var cmdText = $"select user_id, first_name, last_name, active_status, picture, pic_name from all_users where section_name = '{_user.SectionName}'";
                 OracleCommand cmd = new OracleCommand(cmdText, _contactsClient.Conn);
                 _contactsRdr = cmd.ExecuteReader();
             }
@@ -73,11 +75,6 @@ namespace Faculti.UI.Cards
             {
                 DisplayContacts();
             }
-            else
-            {
-                _contactsClient.Conn.Close();
-                GetContactsWorker.RunWorkerAsync();
-            }
         }
 
         public void DisplayContacts()
@@ -86,11 +83,25 @@ namespace Faculti.UI.Cards
             {
                 var contactId = _contactsRdr.GetInt32(0);
 
-                if (contactId != _user.Id && Convert.ToInt32(contactId) > Convert.ToInt32(_contactIds[_contactIds.Count-1]))
+                if (contactId != _user.Id && contactId > _contactIds[_contactIds.Count-1])
                 {
                     var contactName = $"{_contactsRdr.GetString(1)} {_contactsRdr.GetString(2)}";
                     var contactStatus = _contactsRdr.IsDBNull(3) ? "N" : _contactsRdr.GetString(3);
+                    var picName = _contactsRdr.IsDBNull(5) ? null : _contactsRdr.GetString(5);
 
+                    if (picName != _picName)
+                    {
+                        byte[] image = _contactsRdr.IsDBNull(4) ? null : (byte[])_contactsRdr["picture"];
+                        if (image != null)
+                        {
+                            MemoryStream ms = new MemoryStream(image);
+                            Image pic = Image.FromStream(ms);
+                            _currReceiverPicture = pic;
+                        }
+
+                        _picName = picName;
+                    }
+                        
                     ChatHead chatHead = new ChatHead(_user, contactId, contactName, contactStatus);
                     ChatHeadFlowLayoutPanel.Controls.Add(chatHead);
                     chatHead.Click += (s, o) =>
@@ -105,6 +116,7 @@ namespace Faculti.UI.Cards
 
                             _currInboxId = chatHead.InboxId;
                             _currReceiverId = chatHead.ContactId;
+                            _currReceiverPicture = chatHead.Picture;
                             _messageIds.Clear();
                             _messageIds.Add(0);
                             _lastMessageUserId = 0;
@@ -125,7 +137,7 @@ namespace Faculti.UI.Cards
                 }
             }
 
-            _contactsClient.Conn.Close();
+            _contactsClient.Close();
         }
 // ========================================================================================
 
@@ -151,14 +163,14 @@ namespace Faculti.UI.Cards
             if (e.Cancelled)
             {
                 MessageError.Visible = true;
-                _getMessagesClient.Conn.Close();
-                GetMessagesWorker.RunWorkerAsync();
+                _getMessagesClient.Close();
+                //GetMessagesWorker.RunWorkerAsync();
             }
             else
             {
                 DisplayMessages(_getMessagesRdr);
 
-                _getMessagesClient.Conn.Close();
+                _getMessagesClient.Close();
                 MessageLoader.Visible = false;
                 ConstantUpdateTimer.Enabled = true;
                 ConstantUpdateTimer.Start();
@@ -189,7 +201,7 @@ namespace Faculti.UI.Cards
 
                 if (string.IsNullOrEmpty(text))
                 {
-                    image = (byte[])_getMessagesRdr["image"];
+                    image = (byte[])rdr["image"];
                     MemoryStream ms = new MemoryStream(image);
                     Image imageMessage = Image.FromStream(ms);
 
@@ -213,7 +225,7 @@ namespace Faculti.UI.Cards
                     }
                     else if (receiverId == _user.Id)
                     {
-                        TheirImageMessage theirImgMessageCtl = new TheirImageMessage(imageMessage, sendTime);
+                        TheirImageMessage theirImgMessageCtl = new TheirImageMessage(imageMessage, sendTime, _currReceiverPicture);
                         _currMessageUserId = receiverId;
 
                         if (lastCtrlType == typeof(TheirImageMessage) && _lastMessageUserId == _currMessageUserId && _lastMessageCtrl != null && ((TheirImageMessage)_lastMessageCtrl).Timestamp == theirImgMessageCtl.Timestamp)
@@ -252,7 +264,7 @@ namespace Faculti.UI.Cards
                     }
                     else if (receiverId == _user.Id)
                     {
-                        TheirMessage theirMessageCtl = new TheirMessage(text, sendTime);
+                        TheirMessage theirMessageCtl = new TheirMessage(text, sendTime, _currReceiverPicture);
                         _currMessageUserId = receiverId;
 
                         if (lastCtrlType == typeof(TheirMessage) && _lastMessageUserId == _currMessageUserId && _lastMessageCtrl != null && ((TheirMessage)_lastMessageCtrl).Timestamp == theirMessageCtl.Timestamp)
@@ -281,8 +293,6 @@ namespace Faculti.UI.Cards
             {
                 ChatMessagesFlowLayoutPanel.Controls.Remove(EmptyPanel);
             }
-
-            rdr.Dispose();
         }
 // =======================================================================================
 
@@ -301,6 +311,13 @@ namespace Faculti.UI.Cards
                     _sendMessagesClient.Conn.Open();
                     cmdText = $"update inboxes set last_user_id = {_user.Id}, last_message = q'[{MessageTextBox.Text}]',  last_update = to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS') where inbox_id = {_currInboxId}";
                     _sendMessagesClient.PerformNonQueryCommand(cmdText);
+
+                    if (_user.Type == "teachers")
+                    {
+                        _sendMessagesClient.Conn.Open();
+                        cmdText = $"insert into updates (update_type, text, created_time, sender_id, receiver_id) values ('chat', 'The teacher sent you a message.', to_date('{DateTime.Now:MM/dd/yyyy HH:mm:ss}', 'MM/DD/YYYY HH24:MI:SS'), {_user.Id}, {_currReceiverId})";
+                        _sendMessagesClient.PerformNonQueryCommand(cmdText);
+                    }
                 }
                 catch (Exception)
                 {
@@ -345,13 +362,13 @@ namespace Faculti.UI.Cards
             if (e.Cancelled)
             {
                 MessageError.Visible = true;
-                _getMessagesClient.Conn.Close();
+                _getMessagesUpdateClient.Close();
             }
             else
             {
                 DisplayMessages(_getMessagesUpdateRdr);
-                _getMessagesUpdateClient.Conn.Close();
-            };
+                _getMessagesUpdateClient.Close();
+            }
         }
 
         private void ConstantUpdateTimer_Tick(object sender, EventArgs e)

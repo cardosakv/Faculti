@@ -14,7 +14,7 @@ namespace Faculti.UI.Cards
     {
         public string Timestamp;
 
-        public TheirMessage(string message, DateTime time)
+        public TheirMessage(string message, DateTime time, Image picture)
         {
             InitializeComponent();
             Timestamp = $"{time.Hour}:{time.Minute}";
@@ -24,6 +24,8 @@ namespace Faculti.UI.Cards
 
             MessageContainer.Size = new Size(MessageLabel.Width + 25, MessageContainer.Size.Height);
             this.Height = MessageLabel.Height + 37;
+
+            MessagePictureBox.Image = picture;
         }
 
         public void RemoveImageAndTime()

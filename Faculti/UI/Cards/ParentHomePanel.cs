@@ -26,11 +26,13 @@ namespace Faculti.UI.Cards
 
         private string _upcomingExams;
         private string _assignments;
+        private string _firstName, _lastName;
 
         public ParentHomePanel(Parent parentUser)
         {
             InitializeComponent();
             _parentUser = parentUser;
+
             UpdateData();
         }
 
@@ -55,7 +57,7 @@ namespace Faculti.UI.Cards
                 cmd = new OracleCommand(cmdText, _dashboardClient.Conn);
                 _assignments = cmd.ExecuteScalar().ToString();
 
-                _dashboardClient.Conn.Close();
+                _dashboardClient.Close();
             }
             catch (Exception)
             {
@@ -74,10 +76,6 @@ namespace Faculti.UI.Cards
                 ExamsLoader.Visible = false;
                 AssignsLoader.Visible = false;
             }
-            else
-            {
-                DashboardWorker.RunWorkerAsync();
-            }
         }
 
         private void StudentInfoWorker_DoWork(object sender, DoWorkEventArgs e)
@@ -88,6 +86,14 @@ namespace Faculti.UI.Cards
                 var cmdText = $"select first_name, last_name from teachers where section_name = '{_parentUser.SectionName}'";
                 OracleCommand cmd = new OracleCommand(cmdText, _teacherInfoClient.Conn);
                 _teacherInfoRdr = cmd.ExecuteReader();
+
+                if (_teacherInfoRdr.Read())
+                {
+                    _firstName = _teacherInfoRdr.GetString(0);
+                    _lastName = _teacherInfoRdr.GetString(1);
+                }
+
+                _teacherInfoClient.Close();
             }
             catch (Exception)
             {
@@ -99,7 +105,6 @@ namespace Faculti.UI.Cards
         {
             if (!e.Cancelled)
             {
-                _teacherInfoRdr.Read();
                 Student student = _parentUser.AssignedStudent;
 
                 ChildName_Label.Text = $"{student.FirstName} {student.LastName}";
@@ -107,9 +112,8 @@ namespace Faculti.UI.Cards
                 ChildAge_Label.Text = $"{student.Age}";
                 ChildSex_Label.Text = $"{student.Sex}";
                 StudentIdLabel.Text = $"{student.Id}";
-                ChildTeacher_Label.Text = $"{_teacherInfoRdr.GetString(0)} {_teacherInfoRdr.GetString(1)}";
-                
-                _teacherInfoClient.Conn.Close();
+                ChildTeacher_Label.Text = $"{_firstName} {_lastName}";
+
                 ChildInfoLoader.Visible = false;
             }
             else
@@ -150,12 +154,12 @@ namespace Faculti.UI.Cards
                     }
                 }
 
-                _scheduleClient.Conn.Close();
+                _scheduleClient.Close();
                 ScheduleLoader.Visible = false;
             }
             else
             {
-                _scheduleClient.Conn.Close();
+                _scheduleClient.Close();
                 ScheduleWorker.RunWorkerAsync();
             }
         }
@@ -235,14 +239,14 @@ namespace Faculti.UI.Cards
                     PassedOutOfNo_Label.Text = $"Out of {totalSubjects}";
                 }
 
-                _summaryClient.Conn.Close();
+                _summaryClient.Close();
                 LatestAverageLoader.Visible = false;
                 PassedSubjectsLoader.Visible = false;
                 AbsencesLoader.Visible = false;
             }
             else
             {
-                _summaryClient.Conn.Close();
+                _summaryClient.Close();
                 SummaryReportWorker.RunWorkerAsync();
             }
         }
@@ -260,6 +264,11 @@ namespace Faculti.UI.Cards
         private void bunifuShadowPanel6_ControlAdded(object sender, ControlEventArgs e)
         {
 
+        }
+
+        private void DashboardTimer_Tick(object sender, EventArgs e)
+        {
+            if (!DashboardWorker.IsBusy) DashboardWorker.RunWorkerAsync();
         }
 
 

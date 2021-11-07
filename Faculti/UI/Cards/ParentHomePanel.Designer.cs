@@ -29,6 +29,7 @@ namespace Faculti.UI.Cards
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ParentHomePanel));
             this.bunifuShadowPanel3 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.AssignsLoader = new System.Windows.Forms.Panel();
@@ -94,6 +95,7 @@ namespace Faculti.UI.Cards
             this.StudentInfoWorker = new System.ComponentModel.BackgroundWorker();
             this.ScheduleLoader = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.DashboardTimer = new System.Windows.Forms.Timer(this.components);
             this.bunifuShadowPanel3.SuspendLayout();
             this.AssignsLoader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -265,9 +267,9 @@ namespace Faculti.UI.Cards
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.label8.Location = new System.Drawing.Point(24, 27);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 23);
+            this.label8.Size = new System.Drawing.Size(140, 23);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Exams To Do";
+            this.label8.Text = "Upcoming Exams";
             // 
             // UpcomingExams_Label
             // 
@@ -932,6 +934,12 @@ namespace Faculti.UI.Cards
             this.pictureBox8.TabIndex = 61;
             this.pictureBox8.TabStop = false;
             // 
+            // DashboardTimer
+            // 
+            this.DashboardTimer.Enabled = true;
+            this.DashboardTimer.Interval = 5000;
+            this.DashboardTimer.Tick += new System.EventHandler(this.DashboardTimer_Tick);
+            // 
             // ParentHomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1051,5 +1059,6 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Panel LatestAverageLoader;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Timer DashboardTimer;
     }
 }

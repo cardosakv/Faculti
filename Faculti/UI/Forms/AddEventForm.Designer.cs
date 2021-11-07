@@ -531,11 +531,10 @@
             this.Controls.Add(this.Label);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddEventForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "AddEventForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddEventForm_FormClosed);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Event";
             this.Load += new System.EventHandler(this.AddEventForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

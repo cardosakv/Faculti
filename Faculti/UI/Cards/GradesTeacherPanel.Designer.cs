@@ -31,9 +31,9 @@ namespace Faculti.UI.Cards
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GradesTeacherPanel));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuShadowPanel1 = new Bunifu.UI.WinForms.BunifuShadowPanel();
             this.NextButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.PrevButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
@@ -68,6 +68,7 @@ namespace Faculti.UI.Cards
             this.GradingWorker = new System.ComponentModel.BackgroundWorker();
             this.SubmitGradeWorker = new System.ComponentModel.BackgroundWorker();
             this.GetStudentsWorker = new System.ComponentModel.BackgroundWorker();
+            this.GetGradingWorker2 = new System.ComponentModel.BackgroundWorker();
             this.bunifuShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -136,11 +137,11 @@ namespace Faculti.UI.Cards
             this.NextButton.ColorContrastOnClick = 45;
             this.NextButton.ColorContrastOnHover = 45;
             this.NextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.NextButton.CustomizableEdges = borderEdges1;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.NextButton.CustomizableEdges = borderEdges4;
             this.NextButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.NextButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.NextButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -229,11 +230,11 @@ namespace Faculti.UI.Cards
             this.PrevButton.ColorContrastOnClick = 45;
             this.PrevButton.ColorContrastOnHover = 45;
             this.PrevButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.PrevButton.CustomizableEdges = borderEdges2;
+            borderEdges5.BottomLeft = true;
+            borderEdges5.BottomRight = true;
+            borderEdges5.TopLeft = true;
+            borderEdges5.TopRight = true;
+            this.PrevButton.CustomizableEdges = borderEdges5;
             this.PrevButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.PrevButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.PrevButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -474,11 +475,11 @@ namespace Faculti.UI.Cards
             this.SubmitButton.ColorContrastOnClick = 45;
             this.SubmitButton.ColorContrastOnHover = 45;
             this.SubmitButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.SubmitButton.CustomizableEdges = borderEdges3;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.SubmitButton.CustomizableEdges = borderEdges6;
             this.SubmitButton.DialogResult = System.Windows.Forms.DialogResult.None;
             this.SubmitButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.SubmitButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -609,12 +610,13 @@ namespace Faculti.UI.Cards
             this.AverageCircleProgress.SuperScriptMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.AverageCircleProgress.SuperScriptText = "";
             this.AverageCircleProgress.TabIndex = 16;
-            this.AverageCircleProgress.Text = "0";
+            this.AverageCircleProgress.Text = "30";
             this.AverageCircleProgress.TextMargin = new System.Windows.Forms.Padding(1, 6, 0, 0);
             this.ToolTip.SetToolTip(this.AverageCircleProgress, "");
             this.ToolTip.SetToolTipIcon(this.AverageCircleProgress, null);
             this.ToolTip.SetToolTipTitle(this.AverageCircleProgress, "");
-            this.AverageCircleProgress.ValueByTransition = 0;
+            this.AverageCircleProgress.Value = 30;
+            this.AverageCircleProgress.ValueByTransition = 30;
             this.AverageCircleProgress.ValueMargin = new System.Windows.Forms.Padding(1, 6, 0, 0);
             this.AverageCircleProgress.ProgressChanged += new System.EventHandler<Bunifu.UI.WinForms.BunifuCircleProgress.ProgressChangedEventArgs>(this.AverageCircleProgress_ProgressChanged);
             // 
@@ -629,7 +631,7 @@ namespace Faculti.UI.Cards
             this.bunifuPanel11.Controls.Add(this.Home_LastSchoolDays_Label);
             this.bunifuPanel11.Controls.Add(this.InputLabel);
             this.bunifuPanel11.Controls.Add(this.Grading_Label);
-            this.bunifuPanel11.Location = new System.Drawing.Point(18, 16);
+            this.bunifuPanel11.Location = new System.Drawing.Point(18, 17);
             this.bunifuPanel11.Name = "bunifuPanel11";
             this.bunifuPanel11.ShowBorders = true;
             this.bunifuPanel11.Size = new System.Drawing.Size(130, 117);
@@ -674,12 +676,12 @@ namespace Faculti.UI.Cards
             this.Grading_Label.BackColor = System.Drawing.Color.Transparent;
             this.Grading_Label.Font = new System.Drawing.Font("Circular Spotify Tx T Bold", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grading_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Grading_Label.Location = new System.Drawing.Point(7, 16);
+            this.Grading_Label.Location = new System.Drawing.Point(-10, 16);
             this.Grading_Label.Margin = new System.Windows.Forms.Padding(0);
             this.Grading_Label.Name = "Grading_Label";
-            this.Grading_Label.Size = new System.Drawing.Size(116, 88);
+            this.Grading_Label.Size = new System.Drawing.Size(148, 88);
             this.Grading_Label.TabIndex = 24;
-            this.Grading_Label.Text = "2nd";
+            this.Grading_Label.Text = "—";
             this.Grading_Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.ToolTip.SetToolTip(this.Grading_Label, "");
             this.ToolTip.SetToolTipIcon(this.Grading_Label, null);
@@ -882,6 +884,11 @@ namespace Faculti.UI.Cards
             this.GetStudentsWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetStudentsWorker_DoWork);
             this.GetStudentsWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetStudentsWorker_RunWorkerCompleted);
             // 
+            // GetGradingWorker2
+            // 
+            this.GetGradingWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetGradingWorker2_DoWork);
+            this.GetGradingWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetGradingWorker2_RunWorkerCompleted);
+            // 
             // GradesTeacherPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -942,5 +949,6 @@ namespace Faculti.UI.Cards
         private System.Windows.Forms.Label Home_LastSchoolDays_Label;
         private System.Windows.Forms.Label InputLabel;
         private System.Windows.Forms.Label Grading_Label;
+        private System.ComponentModel.BackgroundWorker GetGradingWorker2;
     }
 }

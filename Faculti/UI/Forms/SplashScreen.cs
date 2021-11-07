@@ -56,5 +56,10 @@ namespace Faculti
                 this.Hide();
             }
         }
+
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+            this.Icon = Properties.Resources.faculti_icon;
+        }
     }
 }

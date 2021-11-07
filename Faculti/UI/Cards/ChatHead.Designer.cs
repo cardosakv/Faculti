@@ -166,10 +166,7 @@ namespace Faculti.UI.Cards
             this.CreateInboxWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.CreateInboxWorker_RunWorkerCompleted);
             // 
             // InboxUpdateWorker
-            // 
-            this.InboxUpdateWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.InboxUpdateWorker_DoWork);
-            this.InboxUpdateWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.InboxUpdateWorker_RunWorkerCompleted);
-            // 
+            //             // 
             // InboxUpdateTimer
             // 
             this.InboxUpdateTimer.Enabled = true;

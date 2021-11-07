@@ -182,9 +182,8 @@ namespace Faculti.UI.Cards
             this.LikeCountLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
             this.LikeCountLabel.Location = new System.Drawing.Point(43, 164);
             this.LikeCountLabel.Name = "LikeCountLabel";
-            this.LikeCountLabel.Size = new System.Drawing.Size(16, 12);
+            this.LikeCountLabel.Size = new System.Drawing.Size(0, 12);
             this.LikeCountLabel.TabIndex = 3;
-            this.LikeCountLabel.Text = "12";
             // 
             // PostBodyLabel
             // 
@@ -196,9 +195,8 @@ namespace Faculti.UI.Cards
             this.PostBodyLabel.MaximumSize = new System.Drawing.Size(442, 400);
             this.PostBodyLabel.Name = "PostBodyLabel";
             this.PostBodyLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.PostBodyLabel.Size = new System.Drawing.Size(89, 15);
+            this.PostBodyLabel.Size = new System.Drawing.Size(0, 15);
             this.PostBodyLabel.TabIndex = 55;
-            this.PostBodyLabel.Text = "This is a post";
             // 
             // CommentPostTextBox
             // 
@@ -318,15 +316,16 @@ namespace Faculti.UI.Cards
             this.PostPictureBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PostPictureBox.AutoSizeHeight = false;
             this.PostPictureBox.BorderRadius = 19;
-            this.PostPictureBox.Image = global::Faculti.Properties.Resources.profile;
+            this.PostPictureBox.Image = global::Faculti.Properties.Resources.default_profile;
             this.PostPictureBox.IsCircle = false;
-            this.PostPictureBox.Location = new System.Drawing.Point(0, -2);
+            this.PostPictureBox.Location = new System.Drawing.Point(0, 0);
             this.PostPictureBox.Name = "PostPictureBox";
             this.PostPictureBox.Size = new System.Drawing.Size(38, 38);
             this.PostPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PostPictureBox.TabIndex = 0;
             this.PostPictureBox.TabStop = false;
             this.PostPictureBox.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.PostPictureBox.Click += new System.EventHandler(this.PostPictureBox_Click);
             // 
             // PostDateTimeLabel
             // 
@@ -336,9 +335,8 @@ namespace Faculti.UI.Cards
             this.PostDateTimeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(109)))), ((int)(((byte)(124)))));
             this.PostDateTimeLabel.Location = new System.Drawing.Point(49, 22);
             this.PostDateTimeLabel.Name = "PostDateTimeLabel";
-            this.PostDateTimeLabel.Size = new System.Drawing.Size(94, 12);
+            this.PostDateTimeLabel.Size = new System.Drawing.Size(0, 12);
             this.PostDateTimeLabel.TabIndex = 2;
-            this.PostDateTimeLabel.Text = "Oct 10 • 7:34 PM";
             // 
             // PosterNameLabel
             // 
@@ -348,9 +346,8 @@ namespace Faculti.UI.Cards
             this.PosterNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.PosterNameLabel.Location = new System.Drawing.Point(47, 0);
             this.PosterNameLabel.Name = "PosterNameLabel";
-            this.PosterNameLabel.Size = new System.Drawing.Size(141, 21);
+            this.PosterNameLabel.Size = new System.Drawing.Size(0, 21);
             this.PosterNameLabel.TabIndex = 1;
-            this.PosterNameLabel.Text = "Bellatrix Lestrange";
             // 
             // PostTimer
             // 

@@ -95,7 +95,7 @@ namespace Faculti.UI.Cards
             this.MessageError.Controls.Add(this.RetryMessageButton);
             this.MessageError.Controls.Add(this.label3);
             this.MessageError.Controls.Add(this.label2);
-            this.MessageError.Location = new System.Drawing.Point(0, 0);
+            this.MessageError.Location = new System.Drawing.Point(12, 60);
             this.MessageError.Name = "MessageError";
             this.MessageError.Size = new System.Drawing.Size(567, 480);
             this.MessageError.TabIndex = 63;
@@ -153,8 +153,9 @@ namespace Faculti.UI.Cards
             this.ChatContainer.BorderRadius = 15;
             this.ChatContainer.BorderThickness = 0;
             this.ChatContainer.Controls.Add(this.NoMessageSelectedPanel);
-            this.ChatContainer.Controls.Add(this.bunifuSeparator1);
             this.ChatContainer.Controls.Add(this.MessageLoader);
+            this.ChatContainer.Controls.Add(this.MessageError);
+            this.ChatContainer.Controls.Add(this.bunifuSeparator1);
             this.ChatContainer.Controls.Add(this.MessageTextBox);
             this.ChatContainer.Controls.Add(this.ContactActiveStatusLabel);
             this.ChatContainer.Controls.Add(this.ContactName);
@@ -184,7 +185,7 @@ namespace Faculti.UI.Cards
             this.NoMessageSelectedPanel.Controls.Add(this.label6);
             this.NoMessageSelectedPanel.Controls.Add(this.label7);
             this.NoMessageSelectedPanel.Controls.Add(this.label8);
-            this.NoMessageSelectedPanel.Location = new System.Drawing.Point(12, 12);
+            this.NoMessageSelectedPanel.Location = new System.Drawing.Point(11, 14);
             this.NoMessageSelectedPanel.Name = "NoMessageSelectedPanel";
             this.NoMessageSelectedPanel.Size = new System.Drawing.Size(567, 574);
             this.NoMessageSelectedPanel.TabIndex = 64;
@@ -251,7 +252,6 @@ namespace Faculti.UI.Cards
             // MessageLoader
             // 
             this.MessageLoader.BackColor = System.Drawing.Color.White;
-            this.MessageLoader.Controls.Add(this.MessageError);
             this.MessageLoader.Controls.Add(this.pictureBox1);
             this.MessageLoader.Controls.Add(this.label39);
             this.MessageLoader.Location = new System.Drawing.Point(9, 64);
@@ -596,7 +596,8 @@ namespace Faculti.UI.Cards
             // 
             // ConstantUpdateTimer
             // 
-            this.ConstantUpdateTimer.Interval = 2000;
+            this.ConstantUpdateTimer.Enabled = true;
+            this.ConstantUpdateTimer.Interval = 5000;
             this.ConstantUpdateTimer.Tick += new System.EventHandler(this.ConstantUpdateTimer_Tick);
             // 
             // SendImageWorker

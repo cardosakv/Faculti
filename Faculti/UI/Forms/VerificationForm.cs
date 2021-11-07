@@ -48,8 +48,7 @@ namespace Faculti
 
                     LoginForm login = new LoginForm();
                     login.Show();
-                    this.Dispose();
-                    this.Close();
+                    signupForm.Close();
                 }
                 else if (verificationType == "forgot")
                 {
@@ -58,7 +57,6 @@ namespace Faculti
 
                     ChangePasswordForm changePasswordForm = new ChangePasswordForm { email = emailToSendCode };
                     changePasswordForm.ShowDialog();
-                    this.Dispose();
                     this.Close();
                 }
             }

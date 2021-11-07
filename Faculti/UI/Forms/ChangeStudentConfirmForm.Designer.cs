@@ -220,6 +220,7 @@
             this.ConfirmButton.TextMarginLeft = 0;
             this.ConfirmButton.TextPadding = new System.Windows.Forms.Padding(0);
             this.ConfirmButton.UseDefaultRadiusAndThickness = true;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // label1
             // 
@@ -237,18 +238,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.CancelButton;
             this.ClientSize = new System.Drawing.Size(337, 195);
             this.ControlBox = false;
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ChangeStudentConfirmForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ChangeStudentConfirmForm_FormClosed);
             this.Load += new System.EventHandler(this.ChangeStudentConfirmForm_Load);
             this.ResumeLayout(false);
 

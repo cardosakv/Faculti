@@ -1,4 +1,5 @@
-﻿using Oracle.ManagedDataAccess.Client;
+﻿using Faculti.UI.Forms;
+using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Faculti.Services.FacultiDB
     internal class DatabaseClient
     {
         #region Secret
-        private readonly string _cred = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_high; Connection Timeout = 60;";
+        private readonly string _cred = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_low; Connection Timeout = 60;";
         #endregion
 
         public readonly OracleConnection Conn;
@@ -26,9 +27,21 @@ namespace Faculti.Services.FacultiDB
             }
             catch (Exception)
             {
+                ErrorForm error = new ErrorForm();
+                if (error.ShowDialog() == DialogResult.OK)
+                {
+                    Conn.Close();
+                    error.Close();
 
+                    Conn = new OracleConnection { ConnectionString = _cred };
+                    Conn.Open();
+                }
             }
+        }
 
+        public void Close()
+        {
+            Conn.Close();
         }
 
         public void PerformNonQueryCommand(string commandText)
@@ -39,9 +52,13 @@ namespace Faculti.Services.FacultiDB
                 cmd.ExecuteNonQuery();
                 Conn.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.ToString());
+                ErrorForm error = new ErrorForm();
+                if (error.ShowDialog() == DialogResult.OK)
+                {
+                    PerformNonQueryCommand(commandText);
+                }
             }
 
         }
@@ -59,12 +76,12 @@ namespace Faculti.Services.FacultiDB
                 {
                     if (rdr.HasRows) records.Rows.Add(rdr.GetString(0));
                 }
-                rdr.Close();
                 Conn.Close();
+                Conn.Dispose();
             }
             catch (Exception)
             {
-                MessageBox.Show("Error in ListColumns()!");
+                //
             }
 
             return records;

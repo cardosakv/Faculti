@@ -10,24 +10,17 @@ using System.Windows.Forms;
 
 namespace Faculti.UI.Forms
 {
-    public partial class ChangeStudentConfirmForm : Form
+    public partial class ErrorForm : Form
     {
-        public ChangeStudentConfirmForm()
+        public ErrorForm()
         {
             InitializeComponent();
             ControlInteractives.SetButtonHoverEvent(ConfirmButton);
-            CancelButton.DialogResult = DialogResult.Cancel;
             ConfirmButton.DialogResult = DialogResult.OK;
         }
 
-        private void ChangeStudentConfirmForm_Load(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-            FormAnimation.FadeIn(this);
-        }
-
-        private void ConfirmButton_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

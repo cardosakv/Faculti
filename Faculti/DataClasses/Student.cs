@@ -87,61 +87,51 @@ namespace Faculti.DataClasses
         {
             Code = studentCode;
             DatabaseClient client = new DatabaseClient();
-            var cmdText = $"select student_id, first_name, last_name, age, sex, grade_level, teacher_id, parent_id from students where student_code = '{studentCode}'";
+            var cmdText = $"select student_id, first_name, last_name, age, sex, grade_level, teacher_id, parent_id, section_name from students where student_code = '{studentCode}'";
             OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
-            OracleDataReader rdr = cmd.ExecuteReader();
-            rdr.Read();
-
-            if (rdr.HasRows)
+            using (OracleDataReader rdr = cmd.ExecuteReader())
             {
-                Id = rdr.GetInt32(0);
-                FirstName = rdr.GetString(1);
-                LastName = rdr.GetString(2);
-                Age = rdr.GetInt32(3);
-                Sex = rdr.GetString(4);
-                GradeLevel = rdr.GetInt32(5);
-                TeacherId = rdr.GetInt32(6);
-                ParentId = rdr.IsDBNull(7) ? Convert.ToInt32(null) : rdr.GetInt32(7);
-                rdr.Close();
-
-                cmdText = $"select section_name from teachers where teacher_id = '{_teacherId}'";
-                cmd = new OracleCommand(cmdText, client.Conn);
-                rdr = cmd.ExecuteReader();
                 rdr.Read();
-                SectionName = rdr.GetString(0);
+
+                if (rdr.HasRows)
+                {
+                    Id = rdr.GetInt32(0);
+                    FirstName = rdr.GetString(1);
+                    LastName = rdr.GetString(2);
+                    Age = rdr.GetInt32(3);
+                    Sex = rdr.GetString(4);
+                    GradeLevel = rdr.GetInt32(5);
+                    TeacherId = rdr.GetInt32(6);
+                    ParentId = rdr.IsDBNull(7) ? 0 : rdr.GetInt32(7);
+                    SectionName = rdr.GetString(8);
+                }
             }
 
-            rdr.Close();
             client.Conn.Close();
         }
 
         public void GetInfo(int parentid)
         {
             DatabaseClient client = new DatabaseClient();
-            var cmdText = $"select student_id, first_name, last_name, age, sex, grade_level, teacher_id from students where parent_id = '{parentid}'";
+            var cmdText = $"select student_id, first_name, last_name, age, sex, grade_level, teacher_id, section_name from students where parent_id = {parentid}";
             OracleCommand cmd = new OracleCommand(cmdText, client.Conn);
-            OracleDataReader rdr = cmd.ExecuteReader();
-            rdr.Read();
-
-            if (rdr.HasRows)
+            using (OracleDataReader rdr = cmd.ExecuteReader())
             {
-                Id = rdr.GetInt32(0);
-                FirstName = rdr.GetString(1);
-                LastName = rdr.GetString(2);
-                Age = rdr.GetInt32(3);
-                Sex = rdr.GetString(4);
-                GradeLevel = rdr.GetInt32(5);
-                TeacherId = rdr.GetInt32(6);
-                rdr.Close();
-
-                cmdText = $"select section_name from teachers where teacher_id = '{_teacherId}'";
-                cmd = new OracleCommand(cmdText, client.Conn);
-                rdr = cmd.ExecuteReader();
                 rdr.Read();
-                SectionName = rdr.GetString(0);
-            }
 
-            rdr.Close();
+                if (rdr.HasRows)
+                {
+                    Id = rdr.GetInt32(0);
+                    FirstName = rdr.GetString(1);
+                    LastName = rdr.GetString(2);
+                    Age = rdr.GetInt32(3);
+                    Sex = rdr.GetString(4);
+                    GradeLevel = rdr.GetInt32(5);
+                    TeacherId = rdr.GetInt32(6);
+                    SectionName = rdr.GetString(7);
+                }
+            }
+                
             client.Conn.Close();
         }
     }

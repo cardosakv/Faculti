@@ -229,20 +229,18 @@ namespace Faculti
 
             if (_userType == "teachers")
             {
-                TeacherHomeForm homeForm = new TeacherHomeForm(_user.As<Teacher>());
+                HomeForm homeForm = new HomeForm(_user.As<Teacher>());
                 homeForm.Show();
-                Cursor = Cursors.Default;
-                this.Dispose();
-                this.Close();
             }
             else
             {
-                ParentHomeForm homeForm = new ParentHomeForm(_user.As<Parent>());
+                HomeForm homeForm = new HomeForm(_user.As<Parent>());
                 homeForm.Show();
-                Cursor = Cursors.Default;
-                this.Dispose();
-                this.Close();
             }
+
+            Cursor = Cursors.Default;
+            this.Dispose();
+            this.Close();
         }
 
         private void LoginForm_Shown(object sender, EventArgs e)

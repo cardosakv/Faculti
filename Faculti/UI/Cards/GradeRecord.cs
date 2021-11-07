@@ -130,7 +130,6 @@ namespace Faculti.UI.Cards
                 Grade2_TextBox.Enabled = false;
                 Grade3_TextBox.Enabled = false;
                 Grade4_TextBox.Enabled = false;
-                GradeFinal_Label.Enabled = false;
             }
         }
 

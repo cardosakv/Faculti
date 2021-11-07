@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,10 +16,12 @@ namespace Faculti.UI.Cards
     public partial class CommentCard : UserControl
     {
         public string CommentId;
+        private Image _commentPicture = Properties.Resources.default_profile;
         private string _commentBody;
         private string _firstName;
         private string _lastName;
         private DateTime _postTime = new DateTime();
+        private string _picName;
 
         public CommentCard(string commentId)
         {
@@ -55,7 +58,27 @@ namespace Faculti.UI.Cards
                 _firstName = rdr.GetString(0);
                 _lastName = rdr.GetString(1);
 
-                client.Conn.Close();
+                cmdText = $"select picture, pic_name from all_users where first_name = '{_firstName}' and last_name = '{_lastName}'";
+                cmd = new OracleCommand(cmdText, client.Conn);
+                rdr = cmd.ExecuteReader();
+                if (rdr.Read())
+                {
+                    var picName = rdr.IsDBNull(1) ? null : rdr.GetString(1);
+                    if (picName != _picName)
+                    {
+                        byte[] image = rdr.IsDBNull(0) ? null : (byte[])rdr["picture"];
+                        if (image != null)
+                        {
+                            MemoryStream ms = new MemoryStream(image);
+                            Image pic = Image.FromStream(ms);
+                            _commentPicture = pic;
+                        }
+
+                        _picName = picName;
+                    }
+                }
+
+                client.Close();
             }
             catch (Exception)
             {
@@ -77,6 +100,7 @@ namespace Faculti.UI.Cards
 
         public void DisplayCommentInfo()
         {
+            CommentPictureBox.Image = _commentPicture;
             CommentAuthorLabel.Text = $"{_firstName} {_lastName}";
             CommentBodyLabel.Text = $"{_commentBody}";
             CommentContainer.Height = CommentBodyLabel.Height + 40;
@@ -109,7 +133,7 @@ namespace Faculti.UI.Cards
 
         private void UpdateTimer_Tick(object sender, EventArgs e)
         {
-            DisplayCommentInfo();
+            if (!CommentWorker.IsBusy) CommentWorker.RunWorkerAsync();
         }
     }
 }

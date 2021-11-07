@@ -44,8 +44,8 @@ namespace Faculti
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
-            this.Dispose();
             this.Close();
+            this.Dispose();
         }
 
         private void AttemptSignup()
@@ -185,6 +185,7 @@ namespace Faculti
         private void LoginSignupForm_Load(object sender, EventArgs e)
         {
             FormAnimation.FadeIn(this);
+            this.Icon = Properties.Resources.faculti_icon;
 
             TeacherRadioButton.Checked = false;
             ParentRadioButton.Checked = false;

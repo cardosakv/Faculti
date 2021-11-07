@@ -49,7 +49,7 @@ namespace Faculti.UI.Cards
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CommentPictureBox.AutoSizeHeight = false;
             this.CommentPictureBox.BorderRadius = 15;
-            this.CommentPictureBox.Image = global::Faculti.Properties.Resources.profile;
+            this.CommentPictureBox.Image = global::Faculti.Properties.Resources.default_profile;
             this.CommentPictureBox.IsCircle = false;
             this.CommentPictureBox.Location = new System.Drawing.Point(31, 2);
             this.CommentPictureBox.Name = "CommentPictureBox";
@@ -67,9 +67,8 @@ namespace Faculti.UI.Cards
             this.CommentAuthorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(59)))), ((int)(((byte)(104)))));
             this.CommentAuthorLabel.Location = new System.Drawing.Point(11, 9);
             this.CommentAuthorLabel.Name = "CommentAuthorLabel";
-            this.CommentAuthorLabel.Size = new System.Drawing.Size(102, 15);
+            this.CommentAuthorLabel.Size = new System.Drawing.Size(0, 15);
             this.CommentAuthorLabel.TabIndex = 1;
-            this.CommentAuthorLabel.Text = "Bellatrix Lestrange";
             // 
             // CommentContainer
             // 
@@ -100,7 +99,6 @@ namespace Faculti.UI.Cards
             this.TimeLabel.Name = "TimeLabel";
             this.TimeLabel.Size = new System.Drawing.Size(31, 12);
             this.TimeLabel.TabIndex = 3;
-            this.TimeLabel.Text = "1m";
             this.TimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CommentBodyLabel
@@ -115,7 +113,6 @@ namespace Faculti.UI.Cards
             this.CommentBodyLabel.Name = "CommentBodyLabel";
             this.CommentBodyLabel.Size = new System.Drawing.Size(380, 12);
             this.CommentBodyLabel.TabIndex = 2;
-            this.CommentBodyLabel.Text = "Basta guys inom kayo ng isang basong tubig ";
             // 
             // CommentWorker
             // 
@@ -125,7 +122,7 @@ namespace Faculti.UI.Cards
             // UpdateTimer
             // 
             this.UpdateTimer.Enabled = true;
-            this.UpdateTimer.Interval = 1000;
+            this.UpdateTimer.Interval = 5000;
             this.UpdateTimer.Tick += new System.EventHandler(this.UpdateTimer_Tick);
             // 
             // CommentCard

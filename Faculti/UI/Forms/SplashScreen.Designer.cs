@@ -102,6 +102,7 @@ namespace Faculti
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Faculti";
+            this.Load += new System.EventHandler(this.SplashScreen_Load);
             this.Shown += new System.EventHandler(this.SplashScreen_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.LockupPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BouncingPictureBox)).EndInit();

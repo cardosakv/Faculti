@@ -16,18 +16,24 @@ namespace Faculti.UI.Cards
     public partial class GradesParentPanel : UserControl
     {
         private readonly Parent _parentUser;
+        private SecurityCheckPanel _securityCheck;
         private DatabaseClient _getGradesClient;
         private OracleDataReader _getGradesRdr;
         private Dictionary<string, int> _grades;
         private Dictionary<string, int> _gradeDiffs;
         private DateTime _lastUpdate;
-        private int _currGrading;
+        private int _currGrading = 0;
         private int _lastAverage;
 
         public GradesParentPanel(Parent parentUser)
         {
             InitializeComponent();
             _parentUser = parentUser;
+            _securityCheck = new SecurityCheckPanel(parentUser);
+            _securityCheck.Location = new Point(0, 0);
+            this.Controls.Add(_securityCheck);
+            _securityCheck.BringToFront();
+
             GetGradesWorker.RunWorkerAsync();
         }
 
@@ -36,7 +42,7 @@ namespace Faculti.UI.Cards
             try
             {
                 _getGradesClient = new DatabaseClient();
-                var cmdText = $"select sub_name, mark_1, mark_2, mark_3, mark_4, last_update, last_grading, last_average from grades where student_id = '{_parentUser.AssignedStudent.Id}' order by sub_name asc";
+                var cmdText = $"select sub_name, mark_1, mark_2, mark_3, mark_4, last_update, last_grading, last_average from grades where student_id = {_parentUser.StudentId} order by sub_name asc";
                 OracleCommand cmd = new OracleCommand(cmdText, _getGradesClient.Conn);
                 _getGradesRdr = cmd.ExecuteReader();
             }
@@ -50,46 +56,49 @@ namespace Faculti.UI.Cards
         {
             if (!e.Cancelled)
             {
-
-                while (_getGradesRdr.Read())
+                _getGradesRdr.Read();
+                var grading = _getGradesRdr.IsDBNull(6) ? 0 : _getGradesRdr.GetInt32(6);
+                
+                if (grading != _currGrading)
                 {
-                    var subName = _getGradesRdr.GetString(0);
-                    var grade1 = _getGradesRdr.IsDBNull(1) ? null : _getGradesRdr.GetString(1);
-                    var grade2 = _getGradesRdr.IsDBNull(2) ? null : _getGradesRdr.GetString(2);
-                    var grade3 = _getGradesRdr.IsDBNull(3) ? null : _getGradesRdr.GetString(3);
-                    var grade4 = _getGradesRdr.IsDBNull(4) ? null : _getGradesRdr.GetString(4);
-                    _lastUpdate = _getGradesRdr.IsDBNull(5) ? DateTime.MinValue : _getGradesRdr.GetOracleDate(5).Value;
-                    _currGrading = _getGradesRdr.IsDBNull(6) ? 0 : _getGradesRdr.GetInt32(6);
-                    _lastAverage = _getGradesRdr.IsDBNull(7) ? 0 : _getGradesRdr.GetInt32(7);
+                    GradeRecordLayoutPanel.Controls.Clear();
 
-                    _grades = new Dictionary<string, int>();
-                    _gradeDiffs = new Dictionary<string, int>();
-                    _grades.Add(subName, 0);
-                    _gradeDiffs.Add(subName, 0);
-
-                    GradeRecord subjectGrade = new GradeRecord(subName, grade1, grade2, grade3, grade4, _parentUser);
-                    GradeRecordLayoutPanel.Controls.Add(subjectGrade);
-                    CalculateGradeStats();
-                    DisplayStats();
-
-                    if (_lastAverage == 0)
+                    do
                     {
-                        GradeCover.Visible = true;
-                        NoGradeCover.Visible = true;
+                        var subName = _getGradesRdr.GetString(0);
+                        var grade1 = _getGradesRdr.IsDBNull(1) ? null : _getGradesRdr.GetString(1);
+                        var grade2 = _getGradesRdr.IsDBNull(2) ? null : _getGradesRdr.GetString(2);
+                        var grade3 = _getGradesRdr.IsDBNull(3) ? null : _getGradesRdr.GetString(3);
+                        var grade4 = _getGradesRdr.IsDBNull(4) ? null : _getGradesRdr.GetString(4);
+                        _lastUpdate = _getGradesRdr.IsDBNull(5) ? DateTime.MinValue : _getGradesRdr.GetOracleDate(5).Value;
+                        _currGrading = _getGradesRdr.IsDBNull(6) ? 0 : _getGradesRdr.GetInt32(6);
+                        _lastAverage = _getGradesRdr.IsDBNull(7) ? 0 : _getGradesRdr.GetInt32(7);
+
+                        _grades = new Dictionary<string, int>();
+                        _gradeDiffs = new Dictionary<string, int>();
+                        _grades.Add(subName, 0);
+                        _gradeDiffs.Add(subName, 0);
+
+                        GradeRecord subjectGrade = new GradeRecord(subName, grade1, grade2, grade3, grade4, _parentUser);
+                        GradeRecordLayoutPanel.Controls.Add(subjectGrade);
+                        CalculateGradeStats();
+                        DisplayStats();
+
+                        if (_lastAverage == 0)
+                        {
+                            GradeCover.Visible = true;
+                            NoGradeCover.Visible = true;
+                        }
+                        else
+                        {
+                            GradeCover.Visible = false;
+                            NoGradeCover.Visible = false;
+                        }
                     }
-                    else
-                    {
-                        GradeCover.Visible = false;
-                        NoGradeCover.Visible = false;
-                    }
+                    while (_getGradesRdr.Read());
                 }
-
-                _getGradesClient.Conn.Close();
-            }
-            else
-            {
-                _getGradesClient.Conn.Close();
-                GetGradesWorker.RunWorkerAsync();
+                
+                _getGradesClient.Close();
             }
         }
 
@@ -160,7 +169,8 @@ namespace Faculti.UI.Cards
             }
             else if (_currGrading == 4)
             {
-                Grading_Label.Text = "4th";
+                Input_Label.Text = "Grades";
+                Grading_Label.Text = "Final";
             }
             else if (_currGrading == 5)
             {
@@ -180,6 +190,11 @@ namespace Faculti.UI.Cards
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (!GetGradesWorker.IsBusy) GetGradesWorker.RunWorkerAsync();
         }
 
 

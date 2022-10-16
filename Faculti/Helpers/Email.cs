@@ -34,7 +34,7 @@ namespace Faculti.Helpers
                 mail.Body = "Your Faculti account confirmation code is: " + code + ".";
 
                 SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("info.faculti", "faculti1234");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("", "");
                 SmtpServer.EnableSsl = true;
 
                 SmtpServer.Send(mail);

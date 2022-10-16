@@ -13,7 +13,7 @@ namespace Faculti.Services.FacultiDB
     internal class DatabaseClient
     {
         #region Secret
-        private readonly string _cred = "User ID = ADMIN; Password = @SCHIFFER100.cairo; Data Source = facultidb_low; Connection Timeout = 60;";
+        private readonly string _cred = "User ID = ; Password = ; Data Source = ; Connection Timeout = 60;";
         #endregion
 
         public readonly OracleConnection Conn;
